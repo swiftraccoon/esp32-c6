@@ -1,0 +1,44 @@
+=== updating zephyr-lang-rust (modules/lang/rust):
+--- zephyr-lang-rust: initializing
+Initialized empty Git repository in /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/lang/rust/.git/
+--- zephyr-lang-rust: fetching, need revision dd73abc242e995784da62352fe8c70d9a6c7ac2e
+From https://github.com/zephyrproject-rtos/zephyr-lang-rust
+ * [new branch]      atomic-objects       -> refs/west/atomic-objects
+ * [new branch]      bounded              -> refs/west/bounded
+ * [new branch]      build                -> refs/west/build
+ * [new branch]      clippy               -> refs/west/clippy
+ * [new branch]      critical             -> refs/west/critical
+ * [new branch]      davidb-docs          -> refs/west/davidb-docs
+ * [new branch]      davidb-mutex-cell    -> refs/west/davidb-mutex-cell
+ * [new branch]      davidb-testcase-rust-tag -> refs/west/davidb-testcase-rust-tag
+ * [new branch]      deprecate-old-async  -> refs/west/deprecate-old-async
+ * [new branch]      devel                -> refs/west/devel
+ * [new branch]      doc-update           -> refs/west/doc-update
+ * [new branch]      dt                   -> refs/west/dt
+ * [new branch]      fix-ci               -> refs/west/fix-ci
+ * [new branch]      fix-gpio             -> refs/west/fix-gpio
+ * [new branch]      fix-ra4mq            -> refs/west/fix-ra4mq
+ * [new branch]      fix101               -> refs/west/fix101
+ * [new branch]      fixdocpush           -> refs/west/fixdocpush
+ * [new branch]      fmt                  -> refs/west/fmt
+ * [new branch]      for-4.0              -> refs/west/for-4.0
+ * [new branch]      hack                 -> refs/west/hack
+ * [new branch]      i2c                  -> refs/west/i2c
+ * [new branch]      kobj                 -> refs/west/kobj
+ * [new branch]      lock-cargo           -> refs/west/lock-cargo
+ * [new branch]      main                 -> refs/west/main
+ * [new branch]      notoken              -> refs/west/notoken
+ * [new branch]      onelabels            -> refs/west/onelabels
+ * [new branch]      phil-timeout         -> refs/west/phil-timeout
+ * [new branch]      reldebug             -> refs/west/reldebug
+ * [new branch]      tasks                -> refs/west/tasks
+ * [new branch]      test132              -> refs/west/test132
+ * [new branch]      thread               -> refs/west/thread
+ * [new branch]      time                 -> refs/west/time
+ * [new branch]      v4.0-branch          -> refs/west/v4.0-branch
+ * [new branch]      v4.1-branch          -> refs/west/v4.1-branch
+ * [new branch]      work                 -> refs/west/work
+ * [new branch]      workq-init           -> refs/west/workq-init
+ * [new branch]      zephyr-setup-failure -> refs/west/zephyr-setup-failure
+HEAD is now at dd73abc zephyr: work: Allow struct to have a additional fields
+HEAD is now at dd73abc zephyr: work: Allow struct to have a additional fields

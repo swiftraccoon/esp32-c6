@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+  79348	   5580	  71728	 156656	  263f0	.cache/zephyr-qualification/artifacts/zephyr.elf

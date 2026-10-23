@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "soc": "esp32c6",
+  "chip_revision": "0.2",
+  "board_model": null,
+  "flash_bytes": 8388608,
+  "scheduled_boots": 3,
+  "qualified_boots": 0,
+  "upstream_completion_banners": 3,
+  "retries": 0,
+  "restored_current_pre_session_image": true,
+  "restoration_verified_before_reset": true,
+  "reset_after_restoration": true,
+  "restored_utc": "2026-10-23T06:46:46.705Z",
+  "restored_backup_path_ignored_by_git": "backups/pre-zephyr-2026-10-23/flash-backup.bin",
+  "restored_backup_sha256": "863dc7b17018aea2a530ee27da5bedd675298f9a70e5f04c32f4a0cc3c43f9c4",
+  "efuse_provisioning_performed": false,
+  "final_firmware": "original application",
+  "post_reset_flash_immutability_established": false
+}

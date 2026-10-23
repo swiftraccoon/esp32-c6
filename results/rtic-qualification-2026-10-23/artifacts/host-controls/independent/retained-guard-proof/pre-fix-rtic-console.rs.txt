@@ -1,0 +1,728 @@
+//! Artifact-bound, single-boot qualification for the unmodified RTIC C6 example.
+//!
+//! Raw console bytes alone cannot establish elapsed silence. Capture and replay
+//! therefore share bounded framing and require a separate host receipt stream.
+//! Host pacing observations are neither device clock calibration nor benchmarks.
+
+use std::fs::{self, File};
+use std::io::{self, Read, Write};
+use std::path::Path;
+use std::time::{Duration, Instant, SystemTime, UNIX_EPOCH};
+
+use anyhow::{Context, Result, bail, ensure};
+use object::{Object, ObjectSegment};
+use serde::{Deserialize, Serialize};
+use serde_json::{Value, json};
+
+use crate::boot_text::{BootTextGuard, MAX_LINE_BYTES};
+use crate::qualification::{Admission, CapturePurpose};
+use crate::{compiler_version, digest, write_json};
+
+pub(crate) const EXPERIMENT: &str = "rtic-monotonic-qualification-v1";
+const CEILING_NS: u64 = 45_000_000_000;
+const GUARD_NS: u64 = 5_000_000_000;
+const NAMES: [&str; 7] = [
+    "init",
+    "hello from foo",
+    "hello from bar",
+    "hello from baz",
+    "bye from foo",
+    "bye from bar",
+    "bye from baz",
+];
+const TASKS: [&str; 3] = ["foo", "bar", "baz"];
+const PACING_NS: [(u64, u64); 3] = [
+    (1_500_000_000, 3_500_000_000),
+    (2_500_000_000, 4_500_000_000),
+    (3_500_000_000, 5_500_000_000),
+];
+
+/// Nanoseconds are measured from the host RTS-release request, not device reset.
+#[derive(Clone, Copy, Debug, Deserialize, Eq, PartialEq, Serialize)]
+#[serde(rename_all = "snake_case")]
+enum EndReason {
+    GuardElapsed,
+    Eof,
+    ReadError,
+    Timeout,
+    Rejected,
+}
+
+/// Every read advances a cumulative raw-byte boundary; polls do not.
+#[derive(Clone, Copy, Debug, Deserialize, Eq, PartialEq, Serialize)]
+#[serde(tag = "event", rename_all = "snake_case", deny_unknown_fields)]
+enum Receipt {
+    Start {
+        at_ns: u64,
+        raw_end: u64,
+    },
+    Read {
+        at_ns: u64,
+        raw_end: u64,
+    },
+    Poll {
+        at_ns: u64,
+        raw_end: u64,
+    },
+    End {
+        at_ns: u64,
+        raw_end: u64,
+        reason: EndReason,
+    },
+}
+
+impl Receipt {
+    fn coordinates(self) -> (u64, u64) {
+        match self {
+            Self::Start { at_ns, raw_end }
+            | Self::Read { at_ns, raw_end }
+            | Self::Poll { at_ns, raw_end }
+            | Self::End { at_ns, raw_end, .. } => (at_ns, raw_end),
+        }
+    }
+}
+
+#[derive(Clone, Copy, Debug, Serialize)]
+struct Marker {
+    name: &'static str,
+    at_ns: u64,
+    raw_end: u64,
+}
+
+/// One owned stream per attempt. No error permits resynchronization.
+#[derive(Debug, Default)]
+struct Console {
+    guard: BootTextGuard,
+    line: Vec<u8>,
+    bytes: u64,
+    initialized: bool,
+    hello: [bool; 3],
+    hello_order: Vec<&'static str>,
+    byes: usize,
+    markers: Vec<Marker>,
+    rejected: bool,
+}
+
+impl Console {
+    fn push(&mut self, bytes: &[u8], at_ns: u64) -> Result<()> {
+        ensure!(!self.rejected, "RTIC console attempt was already rejected");
+        let result = (|| {
+            for &byte in bytes {
+                self.bytes = self.bytes.checked_add(1).context("raw offset overflow")?;
+                if byte == b'\n' {
+                    self.accept_line(at_ns)?;
+                    self.line.clear();
+                } else {
+                    ensure!(
+                        self.line.len() < MAX_LINE_BYTES,
+                        "RTIC console line exceeds limit"
+                    );
+                    self.line.push(byte);
+                }
+            }
+            Ok(())
+        })();
+        if result.is_err() {
+            self.rejected = true;
+        }
+        result
+    }
+
+    fn accept_line(&mut self, at_ns: u64) -> Result<()> {
+        self.guard.observe(&self.line)?;
+        let line = std::str::from_utf8(&self.line)
+            .context("RTIC console contains invalid UTF-8")?
+            .trim_ascii();
+        if line.is_empty() {
+            return Ok(());
+        }
+        ensure!(
+            !line.starts_with(['{', '[']),
+            "JSON is not the RTIC console format"
+        );
+        if !self.initialized {
+            if line == NAMES[0] {
+                self.guard.start_console()?;
+                self.initialized = true;
+                self.markers.push(Marker {
+                    name: NAMES[0],
+                    at_ns,
+                    raw_end: self.bytes,
+                });
+                return Ok(());
+            }
+            ensure!(
+                allowed_startup(line),
+                "unexpected pre-init RTIC text: {line}"
+            );
+            return Ok(());
+        }
+        if let Some(index) = NAMES[1..4].iter().position(|&name| line == name) {
+            ensure!(self.byes == 0, "RTIC hello appeared after first bye");
+            ensure!(!self.hello[index], "duplicate RTIC hello");
+            self.hello[index] = true;
+            self.hello_order.push(TASKS[index]);
+            self.markers.push(Marker {
+                name: NAMES[index + 1],
+                at_ns,
+                raw_end: self.bytes,
+            });
+            return Ok(());
+        }
+        ensure!(
+            self.byes < 3 && line == NAMES[4 + self.byes],
+            "unexpected RTIC application line or bye order: {line}"
+        );
+        ensure!(
+            self.hello.iter().all(|&seen| seen),
+            "RTIC bye preceded all hellos"
+        );
+        let index = self.byes;
+        let hello = self
+            .markers
+            .iter()
+            .find(|marker| marker.name == NAMES[index + 1])
+            .context("missing own RTIC hello")?;
+        let elapsed = at_ns
+            .checked_sub(hello.at_ns)
+            .context("RTIC pacing time moved backwards")?;
+        let (minimum, maximum) = PACING_NS[index];
+        ensure!(
+            (minimum..=maximum).contains(&elapsed),
+            "RTIC {} host pacing outside inclusive budget: {elapsed} ns",
+            TASKS[index]
+        );
+        self.markers.push(Marker {
+            name: NAMES[index + 4],
+            at_ns,
+            raw_end: self.bytes,
+        });
+        self.byes += 1;
+        Ok(())
+    }
+
+    fn final_time(&self) -> Option<u64> {
+        (self.byes == 3)
+            .then(|| self.markers.last().map(|marker| marker.at_ns))
+            .flatten()
+    }
+
+    fn finish(&self, end_ns: u64, receipt_events: usize) -> Result<Value> {
+        ensure!(!self.rejected, "RTIC console attempt was already rejected");
+        std::str::from_utf8(&self.line).context("invalid trailing RTIC UTF-8")?;
+        ensure!(
+            self.line.trim_ascii().is_empty(),
+            "unterminated trailing RTIC text"
+        );
+        self.guard.finish()?;
+        let final_ns = self
+            .final_time()
+            .context("incomplete RTIC marker sequence")?;
+        let guard_ns = end_ns
+            .checked_sub(final_ns)
+            .context("RTIC guard time moved backwards")?;
+        ensure!(
+            end_ns <= CEILING_NS,
+            "RTIC observation exceeded host ceiling"
+        );
+        ensure!(guard_ns >= GUARD_NS, "RTIC post-marker guard is too short");
+        let mut pacing = serde_json::Map::new();
+        for (index, &task) in TASKS.iter().enumerate() {
+            let entry = self
+                .markers
+                .iter()
+                .find(|marker| marker.name == NAMES[index + 1])
+                .context("missing RTIC entry")?;
+            let exit = self
+                .markers
+                .iter()
+                .find(|marker| marker.name == NAMES[index + 4])
+                .context("missing RTIC exit")?;
+            pacing.insert(
+                task.into(),
+                json!({"observed": exit.at_ns-entry.at_ns,
+                "minimum": PACING_NS[index].0, "maximum": PACING_NS[index].1}),
+            );
+        }
+        Ok(json!({
+            "console": {"format": "rtic-monotonic-v1", "application_lines": self.markers.len(),
+                "hello_order": self.hello_order, "markers": self.markers, "host_pacing_ns": pacing,
+                "final_marker_at_ns": final_ns, "observation_end_at_ns": end_ns,
+                "guard_observed_ns": guard_ns, "raw_bytes": self.bytes, "receipt_events": receipt_events},
+            "qualification": {"passed": true,
+                "checks": ["single_c6_startup", "source_marker_order", "host_pacing_budgets", "post_marker_guard"],
+                "scope": "Unmodified RTIC C6 monotonic example startup and timer-dependent resumption",
+                "limits": ["Host receipt pacing is not device timer accuracy or interrupt latency",
+                    "Priority-zero polling does not qualify positive-priority task preemption",
+                    "Quiet UART does not prove liveness, sleep residency, power or CPU efficiency",
+                    "One warm-reset observation does not authenticate firmware or establish independent trials"]}
+        }))
+    }
+}
+
+fn allowed_startup(line: &str) -> bool {
+    [
+        "ESP-ROM:",
+        "Build:",
+        "rst:",
+        "Saved PC:",
+        "SPIWP:",
+        "mode:",
+        "load:",
+        "entry ",
+    ]
+    .iter()
+    .any(|prefix| line.starts_with(prefix))
+        || line
+            .strip_prefix("I (")
+            .and_then(|rest| rest.split_once(") "))
+            .is_some_and(|(time, message)| {
+                !time.is_empty()
+                    && time.bytes().all(|byte| byte.is_ascii_digit())
+                    && !message.is_empty()
+            })
+}
+
+/// Reconstructs newline receipt times and checks the entire five-second guard.
+///
+/// Requires the exact saved raw/receipt bytes. A failed terminal reason cannot
+/// become a success, even when all seven application markers precede it.
+pub(crate) fn validate_bytes(raw: &[u8], observations: &[u8]) -> Result<Value> {
+    ensure!(
+        !observations.is_empty(),
+        "missing RTIC observation receipts"
+    );
+    ensure!(
+        observations.ends_with(b"\n"),
+        "unterminated RTIC observation receipt"
+    );
+    let mut console = Console::default();
+    let mut last_time = None;
+    let mut raw_end = 0_usize;
+    let mut events = 0_usize;
+    let mut terminal = None;
+    for line in observations.split_inclusive(|&byte| byte == b'\n') {
+        ensure!(terminal.is_none(), "RTIC receipt after terminal event");
+        ensure!(
+            line.len() <= MAX_LINE_BYTES,
+            "RTIC receipt exceeds line limit"
+        );
+        let receipt: Receipt =
+            serde_json::from_slice(line).context("invalid RTIC observation receipt")?;
+        let (at_ns, end) = receipt.coordinates();
+        if events == 0 {
+            ensure!(
+                receipt
+                    == Receipt::Start {
+                        at_ns: 0,
+                        raw_end: 0
+                    },
+                "RTIC receipts must start at time/offset zero"
+            );
+        } else {
+            ensure!(
+                !matches!(receipt, Receipt::Start { .. }),
+                "duplicate RTIC start receipt"
+            );
+            ensure!(
+                last_time.is_some_and(|last| at_ns > last),
+                "RTIC receipt times must strictly increase"
+            );
+        }
+        ensure!(
+            at_ns <= CEILING_NS,
+            "RTIC observation exceeded host ceiling"
+        );
+        let end = usize::try_from(end).context("RTIC raw offset exceeds host usize")?;
+        ensure!(end <= raw.len(), "RTIC receipt exceeds raw length");
+        match receipt {
+            Receipt::Start { .. } => {}
+            Receipt::Read { .. } => {
+                ensure!(end > raw_end, "RTIC read receipt must advance raw offset");
+                console.push(&raw[raw_end..end], at_ns)?;
+            }
+            Receipt::Poll { .. } | Receipt::End { .. } => {
+                ensure!(end == raw_end, "RTIC poll/end receipt advanced raw offset");
+            }
+        }
+        if let Receipt::End { reason, .. } = receipt {
+            ensure!(
+                reason == EndReason::GuardElapsed,
+                "RTIC terminal reason is not guard_elapsed: {reason:?}"
+            );
+            ensure!(
+                end == raw.len(),
+                "RTIC terminal receipt does not cover all raw bytes"
+            );
+            terminal = Some(at_ns);
+        }
+        raw_end = end;
+        last_time = Some(at_ns);
+        events = events
+            .checked_add(1)
+            .context("RTIC receipt count overflow")?;
+    }
+    console.finish(terminal.context("missing RTIC terminal receipt")?, events)
+}
+
+pub(crate) fn validate_file(raw: &Path, observations: &Path) -> Result<Value> {
+    validate_bytes(&fs::read(raw)?, &fs::read(observations)?)
+}
+
+fn write_receipt(mut output: impl Write, receipt: Receipt) -> Result<()> {
+    serde_json::to_writer(&mut output, &receipt)?;
+    output.write_all(b"\n")?;
+    Ok(())
+}
+
+/// The injected clock/reader exercises actual capture without sleeping in tests.
+/// Entire received chunks are written before either receipt or text admission.
+fn capture_stream(
+    mut input: impl Read,
+    mut raw: impl Write,
+    mut observations: impl Write,
+    mut elapsed_ns: impl FnMut() -> Result<u64>,
+) -> Result<()> {
+    let mut console = Console::default();
+    let mut raw_end = 0_u64;
+    write_receipt(&mut observations, Receipt::Start { at_ns: 0, raw_end })?;
+    let mut chunk = [0_u8; 1024];
+    loop {
+        let now = elapsed_ns()?;
+        if now >= CEILING_NS {
+            write_receipt(
+                &mut observations,
+                Receipt::End {
+                    at_ns: now,
+                    raw_end,
+                    reason: EndReason::Timeout,
+                },
+            )?;
+            bail!("RTIC capture exceeded 45-second host ceiling");
+        }
+        if console
+            .final_time()
+            .is_some_and(|final_ns| now.saturating_sub(final_ns) >= GUARD_NS)
+        {
+            let result = console.finish(now, 0);
+            write_receipt(
+                &mut observations,
+                Receipt::End {
+                    at_ns: now,
+                    raw_end,
+                    reason: if result.is_ok() {
+                        EndReason::GuardElapsed
+                    } else {
+                        EndReason::Rejected
+                    },
+                },
+            )?;
+            result?;
+            return Ok(());
+        }
+        match input.read(&mut chunk) {
+            Ok(0) => {
+                write_receipt(
+                    &mut observations,
+                    Receipt::End {
+                        at_ns: elapsed_ns()?,
+                        raw_end,
+                        reason: EndReason::Eof,
+                    },
+                )?;
+                bail!("RTIC serial EOF before complete observation guard");
+            }
+            Ok(count) => {
+                let at_ns = elapsed_ns()?;
+                raw.write_all(&chunk[..count])
+                    .context("retaining RTIC serial read")?;
+                raw_end = raw_end
+                    .checked_add(u64::try_from(count)?)
+                    .context("RTIC capture offset overflow")?;
+                write_receipt(&mut observations, Receipt::Read { at_ns, raw_end })?;
+                let result = (|| {
+                    ensure!(
+                        at_ns < CEILING_NS,
+                        "RTIC capture read exceeded host ceiling"
+                    );
+                    console.push(&chunk[..count], at_ns)
+                })();
+                if let Err(error) = result {
+                    write_receipt(
+                        &mut observations,
+                        Receipt::End {
+                            at_ns: elapsed_ns()?,
+                            raw_end,
+                            reason: EndReason::Rejected,
+                        },
+                    )?;
+                    return Err(error);
+                }
+            }
+            Err(error)
+                if matches!(
+                    error.kind(),
+                    io::ErrorKind::TimedOut | io::ErrorKind::Interrupted
+                ) =>
+            {
+                write_receipt(
+                    &mut observations,
+                    Receipt::Poll {
+                        at_ns: elapsed_ns()?,
+                        raw_end,
+                    },
+                )?;
+            }
+            Err(error) => {
+                write_receipt(
+                    &mut observations,
+                    Receipt::End {
+                        at_ns: elapsed_ns()?,
+                        raw_end,
+                        reason: EndReason::ReadError,
+                    },
+                )?;
+                return Err(error).context("reading RTIC target output");
+            }
+        }
+    }
+}
+
+#[derive(Debug)]
+pub(crate) struct Capture<'a> {
+    pub(crate) purpose: CapturePurpose,
+    pub(crate) port: &'a str,
+    pub(crate) output: &'a Path,
+    pub(crate) elf: &'a Path,
+    pub(crate) provenance: &'a Path,
+    pub(crate) boot_id: &'a str,
+    pub(crate) run_order: u32,
+}
+
+fn inspect_inputs(firmware: &[u8], provenance: &[u8]) -> Result<Value> {
+    let file = object::File::parse(firmware).context("reading RTIC ELF")?;
+    ensure!(
+        file.format() == object::BinaryFormat::Elf
+            && file.architecture() == object::Architecture::Riscv32
+            && file.kind() == object::ObjectKind::Executable
+            && file
+                .segments()
+                .any(|segment| segment.size() > 0
+                    && segment.data().is_ok_and(|bytes| !bytes.is_empty())),
+        "RTIC requires a loadable RISC-V32 executable ELF"
+    );
+    for name in NAMES {
+        ensure!(
+            file.segments()
+                .any(|segment| segment.data().is_ok_and(|bytes| bytes
+                    .windows(name.len())
+                    .any(|window| window == name.as_bytes()))),
+            "required RTIC marker absent from loadable ELF: {name}"
+        );
+    }
+    let provenance: Value =
+        serde_json::from_slice(provenance).context("reading RTIC build provenance")?;
+    ensure!(
+        provenance.is_object(),
+        "RTIC build provenance must be an object"
+    );
+    Ok(provenance)
+}
+
+fn record_outcome(report: &mut Value, result: &Result<Value>) {
+    match result {
+        Ok(fields) => {
+            report["qualification"] = fields["qualification"].clone();
+            report["console"] = fields["console"].clone();
+            report["status"] = json!("pass");
+        }
+        Err(error) => {
+            report["status"] = json!("failed");
+            report["failure"] = json!(format!("{error:#}"));
+            for key in [
+                "qualification",
+                "console",
+                "summary",
+                "benchmarks",
+                "comparative_score",
+            ] {
+                report[key] = Value::Null;
+            }
+        }
+    }
+}
+
+/// Retains one fixed, qualification-only attempt; preflight performs no reset.
+///
+/// Files and serial access block on the single host thread. A disk/process
+/// failure can leave incomplete evidence, which cannot count as a passing boot.
+pub(crate) fn capture(config: Capture<'_>) -> Result<()> {
+    ensure!(
+        config.purpose == CapturePurpose::Qualification,
+        "RTIC capture is qualification only; comparison is unsupported"
+    );
+    ensure!(
+        !config.output.exists(),
+        "result directory already exists; refusing overwrite"
+    );
+    ensure!(
+        !config.boot_id.trim().is_empty(),
+        "RTIC boot ID must be nonempty"
+    );
+    ensure!(
+        (1..=3).contains(&config.run_order),
+        "RTIC run order must be 1 through 3"
+    );
+    let firmware = fs::read(config.elf).context("reading RTIC firmware ELF")?;
+    let provenance_bytes = fs::read(config.provenance).context("reading RTIC provenance")?;
+    let provenance = inspect_inputs(&firmware, &provenance_bytes)?;
+    let admission = Admission {
+        purpose: CapturePurpose::Qualification,
+        elf_sha256: digest(&firmware),
+        provenance_sha256: digest(&provenance_bytes),
+        method: None,
+    };
+    let collector = fs::read(std::env::current_exe()?)?;
+    let compiler = compiler_version()?;
+    let timestamp = SystemTime::now().duration_since(UNIX_EPOCH)?.as_millis();
+    if let Some(parent) = config
+        .output
+        .parent()
+        .filter(|parent| !parent.as_os_str().is_empty())
+    {
+        fs::create_dir_all(parent)?;
+    }
+    fs::create_dir(config.output)?;
+    fs::write(config.output.join("firmware.elf"), &firmware)?;
+    fs::write(config.output.join("provenance.json"), &provenance_bytes)?;
+    let mut report = json!({"schema_version": 4, "experiment": EXPERIMENT, "platform": "rtic",
+        "admission": admission, "status": "running", "timestamp_unix_ms": timestamp,
+        "independent_boot_id": config.boot_id, "run_order_index": config.run_order,
+        "reset_kind": "RTS warm-reset request; DTR deasserted",
+        "serial": {"baud": 115200, "data_bits": 8, "parity": "none", "stop_bits": 1},
+        "firmware_sha256": admission.elf_sha256, "provenance": provenance,
+        "serial_sha256": digest(b""), "observations_sha256": digest(b""),
+        "collector_version": env!("CARGO_PKG_VERSION"), "collector_executable_sha256": digest(&collector),
+        "host_rustc_at_capture": compiler, "qualification": null, "console": null,
+        "summary": null, "benchmarks": null, "comparative_score": null, "failure": null,
+        "limitations": ["Qualification only; no JSON benchmark protocol or comparative score",
+            "Host receipt pacing does not establish device clock accuracy or interrupt latency",
+            "A five-second quiet console guard does not prove continuing liveness",
+            "Warm-reset metadata does not authenticate hardware or establish independent trials",
+            "host_rustc_at_capture observes PATH, not the compiler that built this executable"]});
+    write_json(File::create(config.output.join("run.json"))?, &report)?;
+    let mut result = (|| {
+        let mut raw = File::create(config.output.join("serial.raw"))?;
+        let mut observations = File::create(config.output.join("observations.jsonl"))?;
+        let captured = (|| {
+            admission.check_inputs(&fs::read(config.elf)?, &fs::read(config.provenance)?)?;
+            let mut port = serialport::new(config.port, 115_200)
+                .timeout(Duration::from_millis(100))
+                .open()
+                .context("opening RTIC serial port")?;
+            port.write_data_terminal_ready(false)?;
+            port.write_request_to_send(true)?;
+            std::thread::sleep(Duration::from_millis(100));
+            port.clear(serialport::ClearBuffer::Input)?;
+            let start = Instant::now();
+            port.write_request_to_send(false)?;
+            capture_stream(&mut port, &mut raw, &mut observations, || {
+                u64::try_from(start.elapsed().as_nanos()).context("RTIC host clock overflow")
+            })
+        })();
+        raw.flush().context("flushing RTIC raw evidence")?;
+        observations
+            .flush()
+            .context("flushing RTIC timing evidence")?;
+        captured?;
+        validate_file(
+            &config.output.join("serial.raw"),
+            &config.output.join("observations.jsonl"),
+        )
+    })();
+    // Retained bytes, rather than an in-memory parser, bind the final result.
+    for (name, key) in [
+        ("serial.raw", "serial_sha256"),
+        ("observations.jsonl", "observations_sha256"),
+    ] {
+        match fs::read(config.output.join(name)) {
+            Ok(bytes) => report[key] = json!(digest(&bytes)),
+            Err(error) if result.is_ok() => {
+                result = Err(error).with_context(|| format!("hashing retained RTIC {name}"));
+            }
+            Err(_) => {} // Preserve the original failure; missing files cannot finalize.
+        }
+    }
+    record_outcome(&mut report, &result);
+    write_json(File::create(config.output.join("run.json"))?, &report)?;
+    result?;
+    println!(
+        "Validated RTIC qualification boot {}: {}",
+        config.boot_id,
+        config.output.display()
+    );
+    Ok(())
+}
+
+/// Checks retained admission and byte identities before archive replay.
+pub(crate) fn verify_archive_inputs(directory: &Path, report: &Value) -> Result<()> {
+    let admission: Admission = serde_json::from_value(report["admission"].clone())?;
+    ensure!(
+        report["schema_version"] == 4
+            && report["experiment"] == EXPERIMENT
+            && report["platform"] == "rtic"
+            && admission.purpose == CapturePurpose::Qualification
+            && admission.method.is_none()
+            && report["firmware_sha256"] == admission.elf_sha256,
+        "RTIC archive must preserve schema-4 qualification-only admission"
+    );
+    ensure!(
+        report["benchmarks"].is_null()
+            && report["comparative_score"].is_null()
+            && report["summary"].is_null(),
+        "RTIC archive cannot contain benchmark or comparative scores"
+    );
+    ensure!(
+        report["independent_boot_id"]
+            .as_str()
+            .is_some_and(|id| !id.trim().is_empty())
+            && report["run_order_index"]
+                .as_u64()
+                .is_some_and(|order| (1..=3).contains(&order)),
+        "RTIC archive has invalid boot/order metadata"
+    );
+    let firmware = fs::read(directory.join("firmware.elf"))?;
+    let provenance = fs::read(directory.join("provenance.json"))?;
+    admission.check_inputs(&firmware, &provenance)?;
+    ensure!(
+        report["provenance"] == inspect_inputs(&firmware, &provenance)?,
+        "RTIC provenance differs from retained original"
+    );
+    for (name, key) in [
+        ("serial.raw", "serial_sha256"),
+        ("observations.jsonl", "observations_sha256"),
+    ] {
+        ensure!(
+            report[key] == digest(&fs::read(directory.join(name))?),
+            "RTIC archive {name} hash differs"
+        );
+    }
+    match report["status"].as_str() {
+        Some("pass") => ensure!(
+            report["failure"].is_null()
+                && report["qualification"].is_object()
+                && report["console"].is_object(),
+            "RTIC passing report lacks derived fields or contains failure"
+        ),
+        Some("failed") => ensure!(
+            report["qualification"].is_null()
+                && report["console"].is_null()
+                && report["failure"]
+                    .as_str()
+                    .is_some_and(|failure| !failure.is_empty()),
+            "failed RTIC report retains favorable fields or lacks failure"
+        ),
+        _ => bail!("RTIC archived attempt is neither pass nor failed"),
+    }
+    Ok(())
+}

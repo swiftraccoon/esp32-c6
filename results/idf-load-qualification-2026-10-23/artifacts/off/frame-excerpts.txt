@@ -1,0 +1,74 @@
+4200d102 <load_probe::main>:
+4200d102:	81010113          	addi	sp,sp,-2032
+4200d106:	7e112623          	sw	ra,2028(sp)
+4200d10a:	7e812423          	sw	s0,2024(sp)
+4200d10e:	7e912223          	sw	s1,2020(sp)
+4200d112:	7f212023          	sw	s2,2016(sp)
+4200d116:	7d312e23          	sw	s3,2012(sp)
+4200d11a:	7d412c23          	sw	s4,2008(sp)
+4200d11e:	7d512a23          	sw	s5,2004(sp)
+4200d122:	7d612823          	sw	s6,2000(sp)
+4200d126:	7d712623          	sw	s7,1996(sp)
+4200d12a:	7d812423          	sw	s8,1992(sp)
+4200d12e:	7d912223          	sw	s9,1988(sp)
+4200d132:	7da12023          	sw	s10,1984(sp)
+4200d136:	7bb12e23          	sw	s11,1980(sp)
+4200d13a:	bc010113          	addi	sp,sp,-1088
+4200d13e:	7ff10d13          	addi	s10,sp,2047
+4200d142:	079d0d13          	addi	s10,s10,121
+4200d146:	fe7fa097          	auipc	ra,0xfe7fa
+4200d14a:	2ec080e7          	jalr	748(ra) # 40807432 <xTaskGetCurrentTaskHandle>
+4200d14e:	842a                	mv	s0,a0
+4200d150:	4501                	li	a0,0
+4200d152:	fe7f9097          	auipc	ra,0xfe7f9
+4200d156:	7e8080e7          	jalr	2024(ra) # 4080693a <uxTaskPriorityGet>
+--
+420140c0 <<load_probe::observer::Snapshot>::capture>:
+420140c0:	85010113          	addi	sp,sp,-1968
+420140c4:	7a112623          	sw	ra,1964(sp)
+420140c8:	7a812423          	sw	s0,1960(sp)
+420140cc:	7a912223          	sw	s1,1956(sp)
+420140d0:	7b212023          	sw	s2,1952(sp)
+420140d4:	79312e23          	sw	s3,1948(sp)
+420140d8:	79412c23          	sw	s4,1944(sp)
+420140dc:	79512a23          	sw	s5,1940(sp)
+420140e0:	79612823          	sw	s6,1936(sp)
+420140e4:	79712623          	sw	s7,1932(sp)
+420140e8:	79812423          	sw	s8,1928(sp)
+420140ec:	79912223          	sw	s9,1924(sp)
+420140f0:	79a12023          	sw	s10,1920(sp)
+420140f4:	77b12e23          	sw	s11,1916(sp)
+420140f8:	84ae                	mv	s1,a1
+420140fa:	4595                	li	a1,5
+420140fc:	8b2a                	mv	s6,a0
+420140fe:	0295e463          	bltu	a1,s1,42014126 <<load_probe::observer::Snapshot>::capture+0x66>
+42014102:	89be                	mv	s3,a5
+42014104:	8a3a                	mv	s4,a4
+42014106:	8ab6                	mv	s5,a3
+42014108:	8432                	mv	s0,a2
+4201410a:	4519                	li	a0,6
+--
+42016182 <load_probe::runtime::wake>:
+42016182:	1141                	addi	sp,sp,-16
+42016184:	c606                	sw	ra,12(sp)
+42016186:	c422                	sw	s0,8(sp)
+42016188:	c226                	sw	s1,4(sp)
+4201618a:	842a                	mv	s0,a0
+4201618c:	fe7f1097          	auipc	ra,0xfe7f1
+42016190:	2a6080e7          	jalr	678(ra) # 40807432 <xTaskGetCurrentTaskHandle>
+42016194:	84aa                	mv	s1,a0
+42016196:	4501                	li	a0,0
+42016198:	fe7f0097          	auipc	ra,0xfe7f0
+4201619c:	7a2080e7          	jalr	1954(ra) # 4080693a <uxTaskPriorityGet>
+420161a0:	c044                	sw	s1,4(s0)
+420161a2:	c408                	sw	a0,8(s0)
+420161a4:	4008                	lw	a0,0(s0)
+420161a6:	4585                	li	a1,1
+420161a8:	4689                	li	a3,2
+420161aa:	4485                	li	s1,1
+420161ac:	4601                	li	a2,0
+420161ae:	4701                	li	a4,0
+420161b0:	fe7f1097          	auipc	ra,0xfe7f1
+420161b4:	78a080e7          	jalr	1930(ra) # 4080793a <xTaskGenericNotify>
+420161b8:	c808                	sw	a0,16(s0)
+420161ba:	0431                	addi	s0,s0,12

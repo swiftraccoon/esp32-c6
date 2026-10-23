@@ -1,0 +1,41 @@
+   Compiling esp-idf-sys v0.37.2
+   Compiling esp-idf-baseline v0.1.0 (/Users/builduser/Git/esp32-c6/firmware/esp-idf)
+warning: constant `TICK_HZ` is never used
+ --> src/bin/queue_api/timer.rs:5:18
+  |
+5 | pub(super) const TICK_HZ: u64 = 16_000_000;
+  |                  ^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `COUNTER_LIMIT` is never used
+ --> src/bin/queue_api/timer.rs:6:7
+  |
+6 | const COUNTER_LIMIT: u64 = 1 << 52;
+  |       ^^^^^^^^^^^^^
+
+warning: struct `Tick` is never constructed
+  --> src/bin/queue_api/timer.rs:17:19
+   |
+17 | pub(super) struct Tick(pub(super) u64);
+   |                   ^^^^
+
+warning: associated items `now` and `elapsed` are never used
+  --> src/bin/queue_api/timer.rs:20:19
+   |
+19 | impl Tick {
+   | --------- associated items in this implementation
+20 |     pub(super) fn now() -> Self {
+   |                   ^^^
+...
+28 |     pub(super) fn elapsed(self, end: Self) -> io::Result<u64> {
+   |                   ^^^^^^^
+
+warning: function `esp_timer_impl_get_counter_reg` is never used
+  --> src/bin/queue_api/timer.rs:12:8
+   |
+12 |     fn esp_timer_impl_get_counter_reg() -> u64;
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `esp-idf-baseline` (bin "accounting-probe") generated 5 warnings
+    Finished `release` profile [optimized + debuginfo] target(s) in 51.61s

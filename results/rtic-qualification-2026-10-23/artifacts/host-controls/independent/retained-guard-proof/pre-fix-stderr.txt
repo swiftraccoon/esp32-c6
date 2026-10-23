@@ -1,0 +1,3 @@
+   Compiling benchctl v0.1.0 (/Users/builduser/Git/esp32-c6/.cache/rtic-independent-guard-probe)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.15s
+     Running unittests src/main.rs (.cache/rtic-independent-guard-probe/target/debug/deps/benchctl-d00b6c2bc156ae21)

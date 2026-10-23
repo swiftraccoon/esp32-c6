@@ -1,0 +1,119 @@
+420047f6 <accounting_probe::allocation_control>:
+420047f6:	b2010113          	addi	sp,sp,-1248
+420047fa:	4c112e23          	sw	ra,1244(sp)
+420047fe:	4c812c23          	sw	s0,1240(sp)
+42004802:	4c912a23          	sw	s1,1236(sp)
+42004806:	4d212823          	sw	s2,1232(sp)
+4200480a:	4d312623          	sw	s3,1228(sp)
+4200480e:	4d412423          	sw	s4,1224(sp)
+42004812:	4d512223          	sw	s5,1220(sp)
+42004816:	4d612023          	sw	s6,1216(sp)
+4200481a:	89b2                	mv	s3,a2
+4200481c:	8a2e                	mv	s4,a1
+4200481e:	892a                	mv	s2,a0
+42004820:	6511                	lui	a0,0x4
+42004822:	4591                	li	a1,4
+42004824:	6411                	lui	s0,0x4
+42004826:	fe7fc097          	auipc	ra,0xfe7fc
+4200482a:	efe080e7          	jalr	-258(ra) # 40800724 <heap_caps_malloc>
+4200482e:	c569                	beqz	a0,420048f8 <accounting_probe::allocation_control+0x102>
+42004830:	8aaa                	mv	s5,a0
+42004832:	4501                	li	a0,0
+42004834:	65a1                	lui	a1,0x8
+42004836:	28d58593          	addi	a1,a1,653 # 828d <CSR_UINTSTATUS+0x75dc>
+--
+42004b80 <accounting_probe::open_interval_control>:
+42004b80:	7175                	addi	sp,sp,-144
+42004b82:	c706                	sw	ra,140(sp)
+42004b84:	c522                	sw	s0,136(sp)
+42004b86:	c326                	sw	s1,132(sp)
+42004b88:	c14a                	sw	s2,128(sp)
+42004b8a:	dece                	sw	s3,124(sp)
+42004b8c:	dcd2                	sw	s4,120(sp)
+42004b8e:	dad6                	sw	s5,116(sp)
+42004b90:	d8da                	sw	s6,112(sp)
+42004b92:	d6de                	sw	s7,108(sp)
+42004b94:	d4e2                	sw	s8,104(sp)
+42004b96:	d2e6                	sw	s9,100(sp)
+42004b98:	d0ea                	sw	s10,96(sp)
+42004b9a:	ceee                	sw	s11,92(sp)
+42004b9c:	892a                	mv	s2,a0
+42004b9e:	0028                	addi	a0,sp,8
+42004ba0:	02800613          	li	a2,40
+42004ba4:	4581                	li	a1,0
+42004ba6:	fdffc097          	auipc	ra,0xfdffc
+42004baa:	902080e7          	jalr	-1790(ra) # 400004a8 <memset>
+42004bae:	1808                	addi	a0,sp,48
+42004bb0:	02800613          	li	a2,40
+--
+42004cfc <accounting_probe::main>:
+42004cfc:	7111                	addi	sp,sp,-256
+42004cfe:	df86                	sw	ra,252(sp)
+42004d00:	dda2                	sw	s0,248(sp)
+42004d02:	dba6                	sw	s1,244(sp)
+42004d04:	d9ca                	sw	s2,240(sp)
+42004d06:	d7ce                	sw	s3,236(sp)
+42004d08:	d5d2                	sw	s4,232(sp)
+42004d0a:	d3d6                	sw	s5,228(sp)
+42004d0c:	d1da                	sw	s6,224(sp)
+42004d0e:	cfde                	sw	s7,220(sp)
+42004d10:	cde2                	sw	s8,216(sp)
+42004d12:	cbe6                	sw	s9,212(sp)
+42004d14:	c9ea                	sw	s10,208(sp)
+42004d16:	c7ee                	sw	s11,204(sp)
+42004d18:	650d                	lui	a0,0x3
+42004d1a:	1c050513          	addi	a0,a0,448 # 31c0 <CSR_UINTSTATUS+0x250f>
+42004d1e:	40a10133          	sub	sp,sp,a0
+42004d22:	4521                	li	a0,8
+42004d24:	fe805097          	auipc	ra,0xfe805
+42004d28:	e82080e7          	jalr	-382(ra) # 40809ba6 <malloc>
+42004d2c:	e119                	bnez	a0,42004d32 <accounting_probe::main+0x36>
+42004d2e:	6ca0206f          	j	420073f8 <accounting_probe::main+0x26fc>
+--
+4200752a <accounting_probe::snapshot>:
+4200752a:	8e010113          	addi	sp,sp,-1824
+4200752e:	70112e23          	sw	ra,1820(sp)
+42007532:	70812c23          	sw	s0,1816(sp)
+42007536:	70912a23          	sw	s1,1812(sp)
+4200753a:	71212823          	sw	s2,1808(sp)
+4200753e:	84b2                	mv	s1,a2
+42007540:	892a                	mv	s2,a0
+42007542:	0808                	addi	a0,sp,16
+42007544:	ffffd097          	auipc	ra,0xffffd
+42007548:	144080e7          	jalr	324(ra) # 42004688 <accounting_probe::wait_blocked>
+4200754c:	01014503          	lbu	a0,16(sp)
+42007550:	4591                	li	a1,4
+42007552:	2eb51b63          	bne	a0,a1,42007848 <accounting_probe::snapshot+0x31e>
+42007556:	0808                	addi	a0,sp,16
+42007558:	28000613          	li	a2,640
+4200755c:	4581                	li	a1,0
+4200755e:	fdff9097          	auipc	ra,0xfdff9
+42007562:	f4a080e7          	jalr	-182(ra) # 400004a8 <memset>
+42007566:	2a012223          	sw	zero,676(sp)
+4200756a:	2a012423          	sw	zero,680(sp)
+4200756e:	2a012623          	sw	zero,684(sp)
+42007572:	28012a23          	sw	zero,660(sp)
+--
+4200de1c <app_main>:
+4200de1c:	1141                	addi	sp,sp,-16
+4200de1e:	c606                	sw	ra,12(sp)
+4200de20:	42005537          	lui	a0,0x42005
+4200de24:	cfc50513          	addi	a0,a0,-772 # 42004cfc <accounting_probe::main>
+4200de28:	c42a                	sw	a0,8(sp)
+4200de2a:	420535b7          	lui	a1,0x42053
+4200de2e:	a3058593          	addi	a1,a1,-1488 # 42052a30 <anon.26eb67ef0bc2a2ec2f685e5b476f6128.13.llvm.7465155168603238210>
+4200de32:	420536b7          	lui	a3,0x42053
+4200de36:	fbc68693          	addi	a3,a3,-68 # 42052fbc <anon.8e67c2c8a95d81f041cf0c1806b78de9.96.llvm.8026884784004655266>
+4200de3a:	0028                	addi	a0,sp,8
+4200de3c:	4601                	li	a2,0
+4200de3e:	4701                	li	a4,0
+4200de40:	00024097          	auipc	ra,0x24
+4200de44:	f62080e7          	jalr	-158(ra) # 42031da2 <std::rt::lang_start_internal>
+4200de48:	40b2                	lw	ra,12(sp)
+4200de4a:	0141                	addi	sp,sp,16
+4200de4c:	8082                	ret
+
+4200de4e <<alloc::raw_vec::RawVec<gimli::read::abbrev::Abbreviation>>::grow_one>:
+4200de4e:	1141                	addi	sp,sp,-16
+4200de50:	c606                	sw	ra,12(sp)
+4200de52:	410c                	lw	a1,0(a0)

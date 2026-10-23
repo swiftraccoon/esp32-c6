@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "experiment": "zephyr-native-tests-v1",
+  "frozen_utc": "2026-10-23T06:36:45.016552+00:00",
+  "zephyr_commit": "684c9e8f32e4373a21098559f748f06915f950c9",
+  "hal_espressif_commit": "b7953b8019361d09e613f7011d2ccc41b984d087",
+  "application": "tests/benchmarks/latency_measure",
+  "profile": "unmodified default",
+  "elf_sha256": "a9929eea623a79386cf4c9c90fbfeb3e73e38a9201e562576aaa7c1e63957f48",
+  "image_sha256": "71d71cfcf07de94aee9624f1cae9b83e4a8aff75352876b027a7cdbf4ad360a3",
+  "image_flash_offset": 0,
+  "expected_metrics_sha256": "c915e27687267d99768832d9d87868ce9c86123a4a9af3ef6554067830cff98d",
+  "metric_rows_per_boot": 47,
+  "capture_timeout_seconds": 120,
+  "post_marker_observation_seconds_minimum": 2,
+  "automatic_replacement": false,
+  "schedule": [
+    {
+      "run_order": 1,
+      "directory": "runs/01"
+    },
+    {
+      "run_order": 2,
+      "directory": "runs/02"
+    },
+    {
+      "run_order": 3,
+      "directory": "runs/03"
+    }
+  ],
+  "restoration_baseline": {
+    "path_ignored_by_git": "backups/pre-zephyr-2026-10-23/flash-backup.bin",
+    "bytes": 8388608,
+    "sha256": "863dc7b17018aea2a530ee27da5bedd675298f9a70e5f04c32f4a0cc3c43f9c4",
+    "full_device_digest_verified": true
+  },
+  "scope": "Existing default native-suite qualification; corrected batch averages, no common Rust workload or OS ranking"
+}

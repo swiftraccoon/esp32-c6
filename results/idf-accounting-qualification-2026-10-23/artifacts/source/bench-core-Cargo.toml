@@ -1,0 +1,11 @@
+[package]
+name = "bench-core"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Portable deterministic workloads for ESP32-C6 operating-system evaluation"
+keywords = ["benchmark", "embedded", "no-std"]
+categories = ["embedded", "no-std"]
+publish = false
+
+[dependencies]

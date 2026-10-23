@@ -1,0 +1,7 @@
+results/idf-load-qualification-2026-10-23/artifacts/on/firmware.elf:	file format elf32-littleriscv
+
+0x0007d88b: DW_TAG_structure_type
+              DW_AT_name	("Record")
+              DW_AT_byte_size	(0x18)
+              DW_AT_accessibility	(DW_ACCESS_protected)
+              DW_AT_alignment	(4)

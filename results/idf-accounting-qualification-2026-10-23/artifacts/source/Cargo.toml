@@ -1,0 +1,52 @@
+[package]
+name = "esp-idf-baseline"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.96"
+publish = false
+description = "ESP32-C6 ESP-IDF and FreeRTOS benchmark adapter"
+keywords = ["esp32-c6", "benchmark", "freertos"]
+categories = ["embedded", "development-tools::profiling"]
+
+[workspace]
+
+[[bin]]
+name = "esp-idf-baseline"
+harness = false
+
+[[bin]]
+name = "queue-api"
+path = "src/bin/queue-api.rs"
+harness = false
+required-features = ["queue-api"]
+
+[[bin]]
+name = "accounting-probe"
+path = "src/bin/accounting-probe.rs"
+harness = false
+required-features = ["accounting-probe"]
+
+[features]
+queue-api = []
+native-queue = ["queue-api"]
+accounting-probe = []
+
+[dependencies]
+bench-core = { path = "../../crates/bench-core" }
+esp-idf-sys = "=0.37.2"
+serde = { version = "=1.0.229", default-features = false, features = ["derive"] }
+
+[build-dependencies]
+embuild = "=0.33.5"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+debug = 2
+
+[package.metadata.esp-idf-sys]
+esp_idf_version = "tag:v5.5.6"
+esp_idf_tools_install_dir = "workspace"
+mcu = "esp32c6"

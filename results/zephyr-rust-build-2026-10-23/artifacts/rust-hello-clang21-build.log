@@ -1,0 +1,323 @@
+-- west build: generating a build system
+Loading Zephyr default modules (Zephyr base).
+-- Application: /var/folders/90/rc0chg5d6wv1_ydtc_1_j8r40000gn/T/esp32-c6-zephyr-rust-dd73-97hQMW/samples/hello_world
+-- CMake version: 4.4.4
+-- Found Python3: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/venv314/bin/python (found suitable version "3.14.9", minimum required is "3.12") found components: Interpreter
+-- Cache files will be written to: /Users/builduser/Library/Caches/zephyr
+-- Zephyr version: 4.4.0 (/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr)
+-- Found west (found suitable version "1.5.0", minimum required is "0.14.0")
+-- Board: esp32c6_devkitc, qualifiers: esp32c6/hpcore
+-- Found host-tools: zephyr 1.0.1 (/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/zephyr-sdk-1.0.1)
+-- Found toolchain: zephyr 1.0.1 (/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/zephyr-sdk-1.0.1)
+-- Found Dtc: /opt/homebrew/bin/dtc (found suitable version "1.8.1", minimum required is "1.4.6")
+-- Found BOARD.dts: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/boards/espressif/esp32c6_devkitc/esp32c6_devkitc_hpcore.dts
+-- Generated zephyr.dts: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/zephyr.dts
+-- Generated pickled edt: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/edt.pickle
+-- Generated devicetree_generated.h: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/devicetree_generated.h
+Parsing /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/Kconfig
+Loaded configuration '/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/boards/espressif/esp32c6_devkitc/esp32c6_devkitc_hpcore_defconfig'
+Merged configuration '/var/folders/90/rc0chg5d6wv1_ydtc_1_j8r40000gn/T/esp32-c6-zephyr-rust-dd73-97hQMW/samples/hello_world/prj.conf'
+Configuration saved to '/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/.config'
+Kconfig header saved to '/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/autoconf.h'
+-- Found GnuLd: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/zephyr-sdk-1.0.1/gnu/riscv64-zephyr-elf/riscv64-zephyr-elf/bin/ld.bfd (found version "2.43.1")
+-- The C compiler identification is GNU 14.3.0
+-- The CXX compiler identification is GNU 14.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/zephyr-sdk-1.0.1/gnu/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc
+-- Espressif HAL path: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif
+-- Image partition address: 0x0
+-- Found gen_kobject_list: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/scripts/build/gen_kobject_list.py
+-- Includes: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/soc/espressif;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/picolibc/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/common/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/posix/c_lib_ext/getopt;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/soc/espressif/common/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/soc/espressif/esp32c6/.;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/include/bt;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../common/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../port/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../port/include/boot;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bootloader_support/bootloader_flash/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bootloader_support/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bootloader_support/private_include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/controller/esp32c6;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/include/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/npl/zephyr/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/npl/zephyr/include/nimble;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/transport/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/deprecated;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/gpio/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/spi/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/uart/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/private_include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/esp32c6/private_include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_coex/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_common/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_driver_gpio/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_event/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ana_conv/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ana_conv/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_clock/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_clock/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_dma/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_dma/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpio/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpio/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpspi/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpspi/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2c/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2c/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2s/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2s/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ieee802154/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ieee802154/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ledc/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ledc/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mcpwm/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mcpwm/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mspi/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mspi/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pcnt/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pcnt/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pmu/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pmu/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_rtc_timer/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_rtc_timer/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_sd/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_sd/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_security/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_security/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_systimer/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_systimer/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_timg/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_timg/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_twai/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_twai/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_uart/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_uart/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_usb/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_usb/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_wdt/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_wdt/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/dma;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/etm/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/esp_private;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/hal;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/soc;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/soc/esp32c6;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/ldo/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/modem/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/mspi/mspi_intr/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/mspi/mspi_timing_tuning/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/esp32c6;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/esp32c6/private_include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/power_supply/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_mm/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_netif/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_phy/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_phy/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_phy/include/esp_private;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_pm/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6/include/esp32c6;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6/ld;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/include/esp_private;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/port/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/port/include/private;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/port/include/private/esp_private;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_timer/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_timer/private_include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_wifi/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_wifi/include/local;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/hal/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/hal/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/hal/platform_port/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/heap/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ieee802154/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ieee802154/private_include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/include/esp_private;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/include/xtensa;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/esp32c6/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/esp32c6/ld;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/esp32c6/register;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/spi_flash/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/spi_flash/include/esp_private;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/lp_core/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/lp_core/lp_core/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/lp_core/shared/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/ulp_common/include;/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6;$<TARGET_PROPERTY:compiler,nostdinc_include>
+-- Defines: KERNEL;__ZEPHYR__=1;$<TARGET_PROPERTY:compiler,security_fortify_compile_time>;__LINUX_ERRNO_EXTENSIONS__;PICOLIBC_LONG_LONG_PRINTF_SCANF;_POSIX_THREAD_SAFE_FUNCTIONS=200809L;ESP_PLATFORM;SOC_MMU_PAGE_SIZE=0x10000;__DECLARE_RCC_ATOMIC_ENV;__DECLARE_RCC_RC_ATOMIC_ENV;CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG_ENABLED=1;CONFIG_APP_BUILD_USE_FLASH_SECTIONS;asm=__asm__;typeof=__typeof__;ESP_PLATFORM;K_HEAP_MEM_POOL_SIZE=4096
+-- Building Rust llvm target riscv32i-unknown-none-elf
+-- Processing crates: 
+-- module: zephyr
+-- module: zephyr-build
+-- module: zephyr-sys
+-- Configuring done (5.6s)
+-- Generating done (0.4s)
+-- Build files have been written to: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21
+-- west build: building application
+[1/257] Preparing syscall dependency handling
+
+[2/257] Generating include/generated/zephyr/version.h
+-- Zephyr version: 4.4.0 (/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr), build: v4.4.0
+[3/257] Generating misc/generated/syscalls_subdirs.trigger
+[4/257] Generating misc/generated/syscalls.json, misc/generated/struct_tags.json
+[5/257] Generating include/generated/device-api-sections.ld, include/generated/device-api-sections.cmake
+[6/257] Generating include/generated/zephyr/syscall_dispatch.c, include/generated/zephyr/syscall_exports_llext.c, syscall_weakdefs_llext.c, include/generated/zephyr/syscall_list.h
+[7/257] Generating include/generated/zephyr/driver-validation.h
+[8/257] Generating include/generated/zephyr/kobj-types-enum.h, include/generated/zephyr/otype-to-str.h, include/generated/zephyr/otype-to-size.h
+[9/257] Building C object zephyr/lib/heap/CMakeFiles/heap_constants.dir/heap_constants.c.obj
+[10/257] Generating ../../include/generated/zephyr/heap_constants.h
+[11/257] Building C object zephyr/CMakeFiles/offsets.dir/arch/riscv/core/offsets/offsets.c.obj
+[12/257] Generating include/generated/zephyr/offsets.h
+[12/257] Building Rust application
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling memchr v2.8.3
+   Compiling libc v0.2.191
+   Compiling find-msvc-tools v0.1.15
+   Compiling shlex v2.0.1
+   Compiling cfg-if v1.0.5
+   Compiling regex-syntax v0.8.11
+   Compiling anyhow v1.0.104
+   Compiling glob v0.3.4
+   Compiling serde_core v1.0.229
+   Compiling ucd-trie v0.1.7
+   Compiling prettyplease v0.2.37
+   Compiling minimal-lexical v0.2.1
+   Compiling serde v1.0.229
+   Compiling either v1.19.0
+   Compiling hashbrown v0.17.1
+   Compiling libloading v0.8.9
+   Compiling unicode-width v0.1.14
+   Compiling equivalent v1.0.3
+   Compiling cc v1.9.0
+   Compiling bindgen v0.70.1
+   Compiling yansi-term v0.1.2
+   Compiling clang-sys v1.9.1
+   Compiling itertools v0.13.0
+   Compiling annotate-snippets v0.9.2
+   Compiling strsim v0.11.1
+   Compiling unsafe-libyaml v0.2.11
+   Compiling ryu v1.0.23
+   Compiling fnv v1.0.7
+   Compiling rustc-hash v1.1.0
+   Compiling log v0.4.34
+   Compiling shlex v1.3.0
+   Compiling itoa v1.0.18
+   Compiling bitflags v2.13.2
+   Compiling ident_case v1.0.1
+   Compiling indexmap v2.14.2
+   Compiling portable-atomic v1.15.0
+   Compiling aho-corasick v1.1.5
+   Compiling nom v7.1.3
+   Compiling portable-atomic-util v0.2.8
+   Compiling paste v1.0.15
+   Compiling critical-section v1.2.0
+   Compiling gcd v2.3.0
+   Compiling arrayvec v0.7.8
+   Compiling fugit v0.3.9
+   Compiling syn v2.0.119
+   Compiling syn v3.0.9
+   Compiling psm v0.1.24
+   Compiling stacker v0.1.25
+   Compiling regex-automata v0.4.18
+   Compiling pest v2.9.4
+   Compiling cexpr v0.6.0
+   Compiling serde_derive v1.0.229
+   Compiling pest_meta v2.9.4
+   Compiling regex v1.13.1
+   Compiling pest_generator v2.9.4
+   Compiling darling_core v0.20.11
+   Compiling pest_derive v2.9.4
+   Compiling serde_yaml_ng v0.10.0
+   Compiling darling_macro v0.20.11
+   Compiling darling v0.20.11
+   Compiling zephyr-macros v0.1.0 (/tmp/builduser/esp32-c6-zephyr-rust-dd73-97hQMW/zephyr-macros)
+   Compiling zephyr-build v0.1.0 (/tmp/builduser/esp32-c6-zephyr-rust-dd73-97hQMW/zephyr-build)
+   Compiling zephyr v0.1.0 (/tmp/builduser/esp32-c6-zephyr-rust-dd73-97hQMW/zephyr)
+   Compiling zephyr-sys v0.1.0 (/tmp/builduser/esp32-c6-zephyr-rust-dd73-97hQMW/zephyr-sys)
+warning: unnecessary transmute
+     --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-sys-e97ed79e2b0c835a/out/bindings.rs:14396:27
+      |
+14396 |             let val: u8 = ::core::mem::transmute(val);
+      |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      |
+      = note: `#[warn(unnecessary_transmutes)]` on by default
+help: replace this with
+      |
+14396 -             let val: u8 = ::core::mem::transmute(val);
+14396 +             let val: u8 = u8::from(val);
+      |
+
+warning: unnecessary transmute
+     --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-sys-e97ed79e2b0c835a/out/bindings.rs:14404:44
+      |
+14404 |             let initialized: u8 = unsafe { ::core::mem::transmute(initialized) };
+      |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      |
+help: replace this with
+      |
+14404 -             let initialized: u8 = unsafe { ::core::mem::transmute(initialized) };
+14404 +             let initialized: u8 = unsafe { u8::from(initialized) };
+      |
+
+warning: unnecessary transmute
+     --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-sys-e97ed79e2b0c835a/out/bindings.rs:20283:27
+      |
+20283 |             let val: u8 = ::core::mem::transmute(val);
+      |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      |
+help: replace this with
+      |
+20283 -             let val: u8 = ::core::mem::transmute(val);
+20283 +             let val: u8 = u8::from(val);
+      |
+
+warning: unnecessary transmute
+     --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-sys-e97ed79e2b0c835a/out/bindings.rs:20291:50
+      |
+20291 |             let no_explicit_erase: u8 = unsafe { ::core::mem::transmute(no_explicit_erase) };
+      |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      |
+help: replace this with
+      |
+20291 -             let no_explicit_erase: u8 = unsafe { ::core::mem::transmute(no_explicit_erase) };
+20291 +             let no_explicit_erase: u8 = unsafe { u8::from(no_explicit_erase) };
+      |
+
+warning: `zephyr-sys` (lib) generated 4 warnings (run `cargo fix --lib -p zephyr-sys` to apply 4 suggestions)
+error[E0425]: cannot find function `get_instance_raw` in module `super::super::super`
+    --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-1c725488c395d2b1/out/devicetree.rs:8740:63
+     |
+8740 | ...                   let device = super::super::super::get_instance_raw();
+     |                                                         ^^^^^^^^^^^^^^^^ not found in `super::super::super`
+     |
+help: consider importing this function through its public re-export
+     |
+8733 +                     use crate::devicetree::labels::gpio0::get_instance_raw;
+     |
+help: if you import `get_instance_raw`, refer to it directly
+     |
+8740 -                             let device = super::super::super::get_instance_raw();
+8740 +                             let device = get_instance_raw();
+     |
+
+error[E0425]: cannot find function `get_instance_raw` in module `super::super::super`
+    --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-1c725488c395d2b1/out/devicetree.rs:8940:63
+     |
+8940 | ...                   let device = super::super::super::get_instance_raw();
+     |                                                         ^^^^^^^^^^^^^^^^ not found in `super::super::super`
+     |
+help: consider importing this function through its public re-export
+     |
+8933 +                     use crate::devicetree::labels::gpio0::get_instance_raw;
+     |
+help: if you import `get_instance_raw`, refer to it directly
+     |
+8940 -                             let device = super::super::super::get_instance_raw();
+8940 +                             let device = get_instance_raw();
+     |
+
+error[E0425]: cannot find function `get_instance_raw` in module `super::super::super`
+    --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-1c725488c395d2b1/out/devicetree.rs:9140:63
+     |
+9140 | ...                   let device = super::super::super::get_instance_raw();
+     |                                                         ^^^^^^^^^^^^^^^^ not found in `super::super::super`
+     |
+help: consider importing this function through its public re-export
+     |
+9133 +                     use crate::devicetree::labels::gpio0::get_instance_raw;
+     |
+help: if you import `get_instance_raw`, refer to it directly
+     |
+9140 -                             let device = super::super::super::get_instance_raw();
+9140 +                             let device = get_instance_raw();
+     |
+
+error[E0425]: cannot find function `get_instance_raw` in module `super::super::super`
+    --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-1c725488c395d2b1/out/devicetree.rs:9340:63
+     |
+9340 | ...                   let device = super::super::super::get_instance_raw();
+     |                                                         ^^^^^^^^^^^^^^^^ not found in `super::super::super`
+     |
+help: consider importing this function through its public re-export
+     |
+9333 +                     use crate::devicetree::labels::gpio0::get_instance_raw;
+     |
+help: if you import `get_instance_raw`, refer to it directly
+     |
+9340 -                             let device = super::super::super::get_instance_raw();
+9340 +                             let device = get_instance_raw();
+     |
+
+error[E0425]: cannot find function `get_instance_raw` in module `super::super::super`
+    --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-1c725488c395d2b1/out/devicetree.rs:9540:63
+     |
+9540 | ...                   let device = super::super::super::get_instance_raw();
+     |                                                         ^^^^^^^^^^^^^^^^ not found in `super::super::super`
+     |
+help: consider importing this function through its public re-export
+     |
+9533 +                     use crate::devicetree::labels::gpio0::get_instance_raw;
+     |
+help: if you import `get_instance_raw`, refer to it directly
+     |
+9540 -                             let device = super::super::super::get_instance_raw();
+9540 +                             let device = get_instance_raw();
+     |
+
+error[E0425]: cannot find function `get_instance_raw` in module `super::super::super`
+    --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-1c725488c395d2b1/out/devicetree.rs:9740:63
+     |
+9740 | ...                   let device = super::super::super::get_instance_raw();
+     |                                                         ^^^^^^^^^^^^^^^^ not found in `super::super::super`
+     |
+help: consider importing this function through its public re-export
+     |
+9733 +                     use crate::devicetree::labels::gpio0::get_instance_raw;
+     |
+help: if you import `get_instance_raw`, refer to it directly
+     |
+9740 -                             let device = super::super::super::get_instance_raw();
+9740 +                             let device = get_instance_raw();
+     |
+
+error[E0425]: cannot find function `get_instance_raw` in module `super::super::super`
+    --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-1c725488c395d2b1/out/devicetree.rs:9940:63
+     |
+9940 | ...                   let device = super::super::super::get_instance_raw();
+     |                                                         ^^^^^^^^^^^^^^^^ not found in `super::super::super`
+     |
+help: consider importing this function through its public re-export
+     |
+9933 +                     use crate::devicetree::labels::gpio0::get_instance_raw;
+     |
+help: if you import `get_instance_raw`, refer to it directly
+     |
+9940 -                             let device = super::super::super::get_instance_raw();
+9940 +                             let device = get_instance_raw();
+     |
+
+error[E0425]: cannot find function `get_instance_raw` in module `super::super::super`
+     --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-1c725488c395d2b1/out/devicetree.rs:10140:63
+      |
+10140 | ...                   let device = super::super::super::get_instance_raw();
+      |                                                         ^^^^^^^^^^^^^^^^ not found in `super::super::super`
+      |
+help: consider importing this function through its public re-export
+      |
+10133 +                     use crate::devicetree::labels::gpio0::get_instance_raw;
+      |
+help: if you import `get_instance_raw`, refer to it directly
+      |
+10140 -                             let device = super::super::super::get_instance_raw();
+10140 +                             let device = get_instance_raw();
+      |
+
+error[E0425]: cannot find function `get_instance_raw` in module `super::super::super`
+     --> /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/build/zephyr-1c725488c395d2b1/out/devicetree.rs:10340:63
+      |
+10340 | ...                   let device = super::super::super::get_instance_raw();
+      |                                                         ^^^^^^^^^^^^^^^^ not found in `super::super::super`
+      |
+help: consider importing this function through its public re-export
+      |
+10333 +                     use crate::devicetree::labels::gpio0::get_instance_raw;
+      |
+help: if you import `get_instance_raw`, refer to it directly
+      |
+10340 -                             let device = super::super::super::get_instance_raw();
+10340 +                             let device = get_instance_raw();
+      |
+
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `zephyr` (lib) due to 9 previous errors
+[246/257] Linking C static library zephyr/kernel/libkernel.a
+FAILED: [code=101] always-run-cargo.dummy rust/target/riscv32i-unknown-none-elf/release/librustapp.a rust/wrapper.c /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/always-run-cargo.dummy /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target/riscv32i-unknown-none-elf/release/librustapp.a /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/wrapper.c 
+cd /var/folders/90/rc0chg5d6wv1_ydtc_1_j8r40000gn/T/esp32-c6-zephyr-rust-dd73-97hQMW/samples/hello_world && /opt/homebrew/bin/cmake -E env BUILD_DIR=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21 ZEPHYR_BASE=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr DOTCONFIG=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/.config ZEPHYR_DTS=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/zephyr.dts INCLUDE_DIRS="/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/soc/espressif /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/picolibc/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/common/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/posix/c_lib_ext/getopt /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/soc/espressif/common/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/soc/espressif/esp32c6/. /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/include/bt /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../common/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../port/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../port/include/boot /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bootloader_support/bootloader_flash/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bootloader_support/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bootloader_support/private_include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/controller/esp32c6 /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/include/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/npl/zephyr/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/npl/zephyr/include/nimble /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/transport/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/deprecated /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/gpio/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/spi/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/uart/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/private_include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/esp32c6/private_include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_coex/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_common/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_driver_gpio/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_event/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ana_conv/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ana_conv/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_clock/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_clock/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_dma/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_dma/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpio/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpio/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpspi/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpspi/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2c/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2c/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2s/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2s/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ieee802154/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ieee802154/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ledc/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ledc/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mcpwm/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mcpwm/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mspi/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mspi/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pcnt/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pcnt/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pmu/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pmu/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_rtc_timer/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_rtc_timer/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_sd/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_sd/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_security/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_security/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_systimer/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_systimer/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_timg/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_timg/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_twai/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_twai/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_uart/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_uart/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_usb/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_usb/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_wdt/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_wdt/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/dma /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/etm/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/esp_private /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/hal /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/soc /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/soc/esp32c6 /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/ldo/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/modem/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/mspi/mspi_intr/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/mspi/mspi_timing_tuning/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/esp32c6 /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/esp32c6/private_include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/power_supply/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_mm/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_netif/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_phy/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_phy/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_phy/include/esp_private /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_pm/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6 /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6/include/esp32c6 /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6/ld /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/include/esp_private /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/port/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/port/include/private /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/port/include/private/esp_private /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_timer/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_timer/private_include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_wifi/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_wifi/include/local /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/hal/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/hal/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/hal/platform_port/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/heap/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ieee802154/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ieee802154/private_include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/include/esp_private /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/include/xtensa /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/esp32c6/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/esp32c6/ld /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/esp32c6/register /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/spi_flash/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/spi_flash/include/esp_private /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/lp_core/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/lp_core/lp_core/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/lp_core/shared/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/ulp_common/include /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6 " INCLUDE_DEFINES="KERNEL __ZEPHYR__=1  __LINUX_ERRNO_EXTENSIONS__ PICOLIBC_LONG_LONG_PRINTF_SCANF _POSIX_THREAD_SAFE_FUNCTIONS=200809L ESP_PLATFORM SOC_MMU_PAGE_SIZE=0x10000 __DECLARE_RCC_ATOMIC_ENV __DECLARE_RCC_RC_ATOMIC_ENV CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG_ENABLED=1 CONFIG_APP_BUILD_USE_FLASH_SECTIONS asm=__asm__ typeof=__typeof__ ESP_PLATFORM K_HEAP_MEM_POOL_SIZE=4096" WRAPPER_FILE="/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/wrapper.c" DT_AUGMENTS="/tmp/builduser/esp32-c6-zephyr-rust-dd73-97hQMW/dt-rust.yaml" BINARY_DIR_INCLUDE_GENERATED="/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr" cargo build --release --config patch.crates-io.zephyr.path=\"/tmp/builduser/esp32-c6-zephyr-rust-dd73-97hQMW/zephyr\" --config patch.crates-io.zephyr-build.path=\"/tmp/builduser/esp32-c6-zephyr-rust-dd73-97hQMW/zephyr-build\" --config patch.crates-io.zephyr-sys.path=\"/tmp/builduser/esp32-c6-zephyr-rust-dd73-97hQMW/zephyr-sys\" --target riscv32i-unknown-none-elf --target-dir /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/rust/target
+ninja: build stopped: subcommand failed.
+FATAL ERROR: command exited with status 101: /opt/homebrew/bin/cmake --build /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21

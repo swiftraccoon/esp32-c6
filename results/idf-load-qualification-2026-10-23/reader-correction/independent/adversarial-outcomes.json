@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "purpose": "Independent offline adversarial receipts on actual captures; temporary mutations are auxiliary inspection inputs, not a maintained standalone suite or physical attempts.",
+  "frozen_collector_sha256": "f3211f0b3762cb1ba96ef81b6110a74eefc542076abcf55ae5f3720610db8cbe",
+  "corrected_reader_sha256": "4171af48b87cebfd8ec408be9f4fe6f96a4ba0fe49061a21bc7068d18911968f",
+  "positive_replays": [
+    {
+      "profile": "runtime-stats-disabled",
+      "exit": 0,
+      "standalone_output_identical_to_original_replay": true,
+      "original_raw_sha256": "2a1f06bcd087364bf04874f04929c572e4151b2ed478ae4008d357672c9a696b"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "exit": 0,
+      "standalone_output_identical_to_original_replay": true,
+      "original_raw_sha256": "77d30afc1cf8dde502a465ef518ca0c91fc4e3ef1f090f33d2f9d814322b0bbb"
+    }
+  ],
+  "negative_actual_raw_cases": [
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "pre-json-panic",
+      "temporary_mutant_sha256": "c9ec017dcf5c87b85278c6c8204ee8a561451a0ddc0e50a44ff3527a469f4c03",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: fatal or reboot diagnostic in capture: guru meditation"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "pre-json-reboot",
+      "temporary_mutant_sha256": "236cb0fac9c0c194304923c94b97b5875b3cc3c0f0837d9a3aff2be1354e31fd",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: fatal or reboot diagnostic in capture: rebooting"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "second-ROM",
+      "temporary_mutant_sha256": "e5f964d958a23ffa98137a2e3dc11c97643f27ff3a9dda8ca1d86f5591a4f446",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: additional ROM startup in the same attempt"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "trailing-panic",
+      "temporary_mutant_sha256": "2a3d10a862873a9967a31b511f60fb25846035319f679a98791f56eed1559555",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: fatal or reboot diagnostic in capture: guru meditation"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "counter-width",
+      "temporary_mutant_sha256": "dcf4e1af449dbd159964823c1454001d08842e7008f3dc46da888942d4829f24",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: wrong load counter width, availability or clock"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "required-clock-absent",
+      "temporary_mutant_sha256": "4c832a7038d31ba5dc6ac7574492c0cd1360042f12e6c11e5589916cb492a124",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: malformed load record\n\nCaused by:\n    missing field `counter_clock`"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "task-number-reused",
+      "temporary_mutant_sha256": "7dc83b777affc932b819fe2263321527d1cd2d9f093ee77c42f01115d8367335",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load task handle reused with changed number"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "producer-ready",
+      "temporary_mutant_sha256": "0e37a57d12aa8250c9c743eab03a0726f2760e55ecaee691f2abd048f1218096",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load roles are not running/blocked at settled boundaries"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "callback-extra",
+      "temporary_mutant_sha256": "8906b27b9652c80f83ec05c29b5336b7a97bdaa1980c3e4c842b35b938d9437b",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load callback count disagrees with attempts, early wakes and terminating wake"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "notification-stray",
+      "temporary_mutant_sha256": "ffdb69d7662c4ceeaaca727376fdaf8cf7d61c3a39002979e9f5c49c1d9c9adb",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load timer quiescence/queue/notification control failed"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "timer-not-quiescent",
+      "temporary_mutant_sha256": "817a88adf922055096bb29cd888e3f0badca350f7518d7f7a9e7068fa7b5667f",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load timer quiescence/queue/notification control failed"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "completion-missing",
+      "temporary_mutant_sha256": "90e1dd9bb004da1562bef46935100d50c862adc5c9fa14c66f6c69617a77d761",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: incomplete device protocol"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "work-checksum",
+      "temporary_mutant_sha256": "87421f9204e6a4748a3ff6c214e563a5cef94d69742223c526137e4f595b8b5c",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: wrong load workload checksum"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "forced-first-miss-hidden",
+      "temporary_mutant_sha256": "dcffc9a6ef3d23fd6ba5a1e65b5f9b2b7b45ac77e04cc725d7849ff359c13eba",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: forced-delay latest-slot control did not preserve missed releases"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "no-work-control-missing",
+      "temporary_mutant_sha256": "e9ee334a13dbb21f9196a3668f27625654aa7dc4cc5f537f3d3809b7830fda81",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: no-work generator control lost work or exceeded lateness bound"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "impossible-queue-full",
+      "temporary_mutant_sha256": "39626432db880460f6fb4676871f5daacf94d2333155ee731a317db5929e8d12",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: queue-full contradicts possible queued accepted history"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "impossible-queue-depth",
+      "temporary_mutant_sha256": "fc76baa340cf97c0dae09d23831bc56862f3c150c6fb788cbc46608d210e628a",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: post-send depth exceeds possible queued accepted history"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "missed-invented-observation",
+      "temporary_mutant_sha256": "0affed316952686020518ca278c759c8580baa367295be2255129ba7c8624156",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: generator-missed load row carries invented observations"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "full-invented-service",
+      "temporary_mutant_sha256": "7cf7e818ff6b40500abbbac278a7495b8af4af531388e422462ea8b8170ad535",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: queue-full load row has wrong depth or invented service"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "unavailable-or-decreased-counter",
+      "temporary_mutant_sha256": "3098817cfff27adc2e1ccfd749f02110a156c3364743980f2bfcd9dff3e57621",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load task counter availability disagrees with profile"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "drain-overrun",
+      "temporary_mutant_sha256": "84ea4ce5015d99b30350daa8e2e433447cba075f577dab3b63b09c98eca0de9f",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load completion exceeds drain bound"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "replayed-old-slot",
+      "temporary_mutant_sha256": "567ff0d337ff90937c0f049523eecd0503992f155f05ddcc2a27c3087f6c2570",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load offer is not in its latest nominal slot"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "clock-drift",
+      "temporary_mutant_sha256": "9f3f669c22144db428bf6d7d9cd8904af1dad88d335f2544134e3a1792c52a09",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: CPU readback differs from 160 MHz baseline"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "record-after-complete",
+      "temporary_mutant_sha256": "84aff7cd70c68ae21e009eb854e998d386296d8d7b04d4571a1fcb2623574a86",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load record is missing, extra, duplicated or out of order"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "unknown-field",
+      "temporary_mutant_sha256": "bf50b158918fe32fe16e35a0dbf92a787e88c3640dc0643bfe2644cbb06f782d",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: malformed load record\n\nCaused by:\n    unknown field `undocumented`, expected one of `protocol`, `experiment`, `profile`, `runtime_stats_enabled`, `counter_bits`, `counter_clock`, `task_capacity`, `coordinator_handle`, `producer_handle`, `consumer_handle`, `timer_handle`, `coordinator_priority`, `producer_priority`, `consumer_priority`, `timer_priority`, `coordinator_stack_bytes`, `producer_stack_bytes`, `consumer_stack_bytes`, `notification_index`, `notification_entries`, `queue_capacity`, `record_count`, `record_storage_bytes`, `snapshot_count`, `snapshot_storage_bytes`, `warmups_per_phase`, `config_before`"
+    },
+    {
+      "profile": "runtime-stats-disabled",
+      "case": "generation-after-bound",
+      "temporary_mutant_sha256": "0ab42aafb0aeb64294879248e58978b09eeb814fd52bdccae2f01f05d7528c3f",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load generation/drain chronology exceeds contract"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "pre-json-panic",
+      "temporary_mutant_sha256": "59c1af2ae6bfeb1465b677319126d99643a1b9667f18b73810c9e4a42bcfa813",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: fatal or reboot diagnostic in capture: guru meditation"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "pre-json-reboot",
+      "temporary_mutant_sha256": "0d1b45b6c51bd01a32b7a576d47e47518fd1aa63231b7cb9be3d5d2490f909c5",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: fatal or reboot diagnostic in capture: rebooting"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "second-ROM",
+      "temporary_mutant_sha256": "f7dc7ca38d28da51c9179e71b7835064c10c0d4a7b24688baca8259598989a32",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: additional ROM startup in the same attempt"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "trailing-panic",
+      "temporary_mutant_sha256": "0aa0363d63b6cae6fb237391ba361edbda60c6782a9b73847a237fc7dc6e4551",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: fatal or reboot diagnostic in capture: guru meditation"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "counter-width",
+      "temporary_mutant_sha256": "5ec838c9f5e4f2a60e357b4cfa12973153f629590b0a5eaa65bebefffbe9e6d2",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: wrong load counter width, availability or clock"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "required-clock-absent",
+      "temporary_mutant_sha256": "a0ab442d1385c9f0d06636a474214a1235d94412acd9239a89848b14d87ab5f1",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: malformed load record\n\nCaused by:\n    missing field `counter_clock`"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "task-number-reused",
+      "temporary_mutant_sha256": "b493fb9d6a1fba2b09ebfacea81eff78455902872dc6d476560bfd36b578d796",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load task handle reused with changed number"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "producer-ready",
+      "temporary_mutant_sha256": "c7220a628ed4fbaf1739eee9d9a68659d018b0ca859272829139a2aefa2eb2cd",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load roles are not running/blocked at settled boundaries"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "callback-extra",
+      "temporary_mutant_sha256": "047a88c745ebfb01c1de605e860794ea0f58d4d50bc5fc688de6984713f7f8e8",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load callback count disagrees with attempts, early wakes and terminating wake"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "notification-stray",
+      "temporary_mutant_sha256": "4baf23674e1879ceb971276293201debef12ef1be17e3c41073bb2fc15474fb9",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load timer quiescence/queue/notification control failed"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "timer-not-quiescent",
+      "temporary_mutant_sha256": "5d91c5beec1ac9a2604f8cfab94ff62e5c9caca386fc7e9441b0ac7ba3479424",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load timer quiescence/queue/notification control failed"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "completion-missing",
+      "temporary_mutant_sha256": "543361708408f37294dccf652c4e60576b1d8f44ecd17fcdf409766af0789988",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: incomplete device protocol"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "work-checksum",
+      "temporary_mutant_sha256": "bf8b5107a5db79bf25f5919d86e141187c217f21ab4cde7e53af24611e6002e8",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: wrong load workload checksum"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "forced-first-miss-hidden",
+      "temporary_mutant_sha256": "17b4677bf896963fa99233119901ad7404f4d120d318964bf00052764bb56880",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: forced-delay latest-slot control did not preserve missed releases"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "no-work-control-missing",
+      "temporary_mutant_sha256": "0bbc92ef3dbd31417de1e61e05fe50167cca94062763f596f6cfa4084d3653a2",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: no-work generator control lost work or exceeded lateness bound"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "impossible-queue-full",
+      "temporary_mutant_sha256": "cc9a1b8135a7311e840dda4390578c5b4e1480469c8e23e9d2609fdbfc452ba5",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: queue-full contradicts possible queued accepted history"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "impossible-queue-depth",
+      "temporary_mutant_sha256": "ed13232f72a6473ed032ff64577dea06babe80b5bb91cecc1157090f27a2346d",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: post-send depth exceeds possible queued accepted history"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "missed-invented-observation",
+      "temporary_mutant_sha256": "c62b70fd00c8c7a6c6b5ae2ee368f7ba7cb3dbc8695c9e43155718edeb86c04f",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: generator-missed load row carries invented observations"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "full-invented-service",
+      "temporary_mutant_sha256": "3e6846bdfcc1797fdac5cc3dbd0077f2a2320ef485653f505804030e71b4df59",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: queue-full load row has wrong depth or invented service"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "unavailable-or-decreased-counter",
+      "temporary_mutant_sha256": "cad8903d13e682c9665149c575eaadebe1d40da5b20d920ea673841d7ae05fbd",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load runtime counter decreased"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "drain-overrun",
+      "temporary_mutant_sha256": "25afe78ae50afcd4de7c68416eaf641d4480cab65fd4830a7424a7d35b134eb3",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load completion exceeds drain bound"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "replayed-old-slot",
+      "temporary_mutant_sha256": "b0c162a980d809a9c2e30935dc9599d81385203f41cd1a71fcfdb80968427cfa",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load offer is not in its latest nominal slot"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "clock-drift",
+      "temporary_mutant_sha256": "8a8cc95e9e610fa65387a26c67aa6cb33345ae643662ca092dad7fe5fb3dfd2a",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: CPU readback differs from 160 MHz baseline"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "record-after-complete",
+      "temporary_mutant_sha256": "979f665fafd02df4e485e57e7ba3cf64b25468593dcc72a87ab6c01da757b964",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load record is missing, extra, duplicated or out of order"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "unknown-field",
+      "temporary_mutant_sha256": "f80c5eabc53a8981c4b5b2a624cccf770b1812816db34d0b7c29ec8ec46a9489",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: malformed load record\n\nCaused by:\n    unknown field `undocumented`, expected one of `protocol`, `experiment`, `profile`, `runtime_stats_enabled`, `counter_bits`, `counter_clock`, `task_capacity`, `coordinator_handle`, `producer_handle`, `consumer_handle`, `timer_handle`, `coordinator_priority`, `producer_priority`, `consumer_priority`, `timer_priority`, `coordinator_stack_bytes`, `producer_stack_bytes`, `consumer_stack_bytes`, `notification_index`, `notification_entries`, `queue_capacity`, `record_count`, `record_storage_bytes`, `snapshot_count`, `snapshot_storage_bytes`, `warmups_per_phase`, `config_before`"
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "case": "generation-after-bound",
+      "temporary_mutant_sha256": "1523ba2af681ccfc09bdf75de6344f2d679b2a24b4a53e36d5a8b30cb12af5e6",
+      "frozen_collector_exit": 1,
+      "corrected_reader_exit": 1,
+      "corrected_reader_error": "Error: load generation/drain chronology exceeds contract"
+    }
+  ],
+  "archive_graph_cases": [
+    {
+      "case": "whole_repository",
+      "exit": 0,
+      "expected_accepted": true,
+      "stdout": "{\n  \"failed_captures_retained\": 0,\n  \"limits\": \"Reproduces retained protocol outputs only; does not qualify native console suites, physical accuracy or unrecorded events.\",\n  \"status\": \"replays_consistent\",\n  \"study_summaries\": 1,\n  \"successful_protocol_transcripts\": 66\n}",
+      "stderr": ""
+    },
+    {
+      "case": "actual_off_graph",
+      "exit": 0,
+      "expected_accepted": true,
+      "stdout": "{\n  \"failed_captures_retained\": 0,\n  \"limits\": \"Reproduces retained protocol outputs only; does not qualify native console suites, physical accuracy or unrecorded events.\",\n  \"status\": \"replays_consistent\",\n  \"study_summaries\": 0,\n  \"successful_protocol_transcripts\": 1\n}",
+      "stderr": ""
+    },
+    {
+      "case": "actual_off_mean_one_ulp_below",
+      "exit": 1,
+      "expected_accepted": false,
+      "stdout": "",
+      "stderr": "Error: load capture report differs from replay: phases"
+    },
+    {
+      "case": "actual_off_mean_one_ulp_above",
+      "exit": 1,
+      "expected_accepted": false,
+      "stdout": "",
+      "stderr": "Error: load capture report differs from replay: phases"
+    }
+  ],
+  "independent_analysis_checks": {
+    "profiles": 2,
+    "nominal_jobs": 4032,
+    "snapshot_records": 24,
+    "task_records": 120,
+    "completed_payload_checksums": 3556,
+    "distribution_objects": 60,
+    "counts_fifo_causality_deadlines_drains_checked": true,
+    "whole_phase_attribution_and_signed_residuals_checked": true,
+    "gross_observers_heap_and_stack_indicators_checked": true,
+    "no_cross_profile_estimator": true
+  },
+  "scope": "No board operations. Each negative raw was generated by mutating one retained actual transcript. No actual raw/run/replay/provenance or frozen input was modified. The two historical f321 executables used for the original negative run were byte-identical and are not independent validators."
+}

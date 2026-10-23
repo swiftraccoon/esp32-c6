@@ -1,0 +1,66 @@
+{
+  "benchmarks": {
+    "compute": {
+      "max_ns": 294000,
+      "mean_ns": 282781.25,
+      "min_ns": 282000,
+      "p50_ns": 283000,
+      "p95_ns": 283000,
+      "p99_ns": 294000,
+      "sample_count": 64
+    },
+    "message-roundtrip": {
+      "max_ns": 20000,
+      "mean_ns": 7138.0,
+      "min_ns": 7000,
+      "p50_ns": 7000,
+      "p95_ns": 8000,
+      "p99_ns": 8000,
+      "sample_count": 1000
+    },
+    "timer-overhead": {
+      "max_ns": 8000,
+      "mean_ns": 859.375,
+      "min_ns": 0,
+      "p50_ns": 1000,
+      "p95_ns": 1000,
+      "p99_ns": 8000,
+      "sample_count": 64
+    }
+  },
+  "hello": {
+    "benchmarks": {
+      "compute": 64,
+      "message-roundtrip": 1000,
+      "timer-overhead": 64
+    },
+    "clocks": {
+      "cpu_mhz": 160,
+      "flash_divider": 1,
+      "flash_mhz": 80,
+      "flash_source_mhz": 80,
+      "registers": {
+        "pcr_cpu_freq_conf": 0,
+        "pcr_mspi_clk_conf": 1280,
+        "pcr_sysclk_conf": 671154688,
+        "spi0_clock": 2147483648
+      },
+      "source": "register-readback"
+    },
+    "cpu_mhz": 160,
+    "message": {
+      "queue_capacity": 1,
+      "sample_buffer_bytes": 18048,
+      "transport": "embassy-sync-0.8.0-channel",
+      "warmup_iterations": 8
+    },
+    "platform": "embassy",
+    "protocol": 2,
+    "rounds": 4096,
+    "sample_count": 64,
+    "seed": 305419896,
+    "timer_resolution_ns": 1000,
+    "warmup_iterations": 8,
+    "workload": "integer-mix-v1"
+  }
+}

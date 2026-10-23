@@ -1,0 +1,59 @@
+# Available runners configured by board.cmake.
+runners:
+- openocd
+- esp32
+
+# Default flash runner if --runner is not given.
+flash-runner: esp32
+
+# Default debug runner if --runner is not given.
+debug-runner: openocd
+
+# Common runner configuration values.
+config:
+  board_dir: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/boards/espressif/esp32c6_devkitc
+  # Build outputs:
+  elf_file: zephyr.elf
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/zephyr-sdk-1.0.1/gnu/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gdb-py
+  openocd: /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/zephyr-sdk-1.0.1/hosttools/usr/bin/openocd
+  openocd_search:
+    - /Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/zephyr-sdk-1.0.1/hosttools/opt/openocd/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  openocd:
+    - --cmd-load
+    - flash write_image erase
+    - --cmd-verify
+    - verify_image
+    - --no-halt
+    - --no-targets
+    - --no-load
+    - --target-handle
+    - _TARGETNAME_0
+    - --gdb-init
+    - set remote hardware-watchpoint-limit 4
+    - --gdb-init
+    - maintenance flush register-cache
+    - --gdb-init
+    - mon esp appimage_offset 0x0
+    - --gdb-init
+    - mon reset halt
+    - --gdb-init
+    - thb main
+    - --file-type=bin
+    - --flash-address=0x0
+    - --cmd-load
+    - program_esp
+    - --cmd-verify
+    - esp verify_bank_hash 0
+  esp32:
+    - --esp-monitor-baud=115200
+    - --esp-idf-path=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif
+    - --esp-app-address=0x0
+    - --esp-flash-size=8MB
+    - --esp-flash-freq=80m
+    - --esp-flash-mode=dio
+    - --esp-idf-path=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif

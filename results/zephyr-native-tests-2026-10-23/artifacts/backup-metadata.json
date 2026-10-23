@@ -1,0 +1,13 @@
+{
+  "full_bytes": 8388608,
+  "fresh_prefix_bytes": 65536,
+  "previous_backup_sha256": "ecc182713fa7df6b1e3841b5344f4c91528a5fef4e80a3ab37273ca4e89a661a",
+  "current_backup_sha256": "863dc7b17018aea2a530ee27da5bedd675298f9a70e5f04c32f4a0cc3c43f9c4",
+  "changed_byte_count": 1993,
+  "changed_sectors": [
+    "0xb000",
+    "0xc000"
+  ],
+  "full_device_verification": "passed",
+  "method": "fresh 64KiB prefix plus previously verified complete image tail"
+}

@@ -1,0 +1,1717 @@
+{
+  "schema_version": 1,
+  "experiment": "idf-load-qualification-v1",
+  "purpose": "qualification",
+  "calculation_origin": "Direct integer recomputation from each retained serial.raw; capture aggregates were read only afterward for an agreement check. Payload recurrence separately implemented with explicit u32 masks.",
+  "cross_profile_estimator": null,
+  "source_commit": "093153160316e01f0dea364ef999f3be15ddc9d2",
+  "input_freeze_commit": "b23d17ac28391e79d6f7d4e6547b8a258339a45f",
+  "ledger_binding_commit": "671276baa196932f6afb0dc1ca7563cf701e35e9",
+  "counts": {
+    "scheduled_boots": 2,
+    "retained_boots": 2,
+    "qualification_passes": 2,
+    "replacement_attempts": 0,
+    "phases": 12,
+    "nominal_jobs": 4032,
+    "snapshots": 24,
+    "task_records": 120,
+    "checked_completed_payloads": 3556
+  },
+  "units": {
+    "durations": "nominal integer esp_timer microseconds",
+    "memory": "bytes",
+    "runtime": "settled task-attributed wall microseconds including generation+drain+boundary work; not physical CPU utilization"
+  },
+  "formulas": {
+    "offered": "generator_missed + queue_full + accepted",
+    "accepted": "completed_in_window + completed_in_drain; completed_at_or_before_cutoff counts in window",
+    "offered_deadline_failures": "N - count(finish_offset <= index*period + 2000)",
+    "nominal_latency": "finish_offset - index*period, completed subset only",
+    "send_entry_to_start": "start_offset - attempt_offset, completed subset only",
+    "send_entry_to_completion": "finish_offset - attempt_offset, completed subset only",
+    "service": "finish_offset - start_offset, completed subset only; gross wall span",
+    "attempt_lateness": "attempt_offset - index*period, attempted subset only",
+    "nearest_rank": "sorted[ceil(p*n)-1] using integer arithmetic",
+    "whole_phase_attribution": "after.total_runtime_us - before.total_runtime_us with (handle,number)-matched task deltas",
+    "boundary_residual": "whole_phase_total - sum(task_deltas), signed and not idle"
+  },
+  "profiles": [
+    {
+      "profile": "runtime-stats-disabled",
+      "boot_id": "load-off-01",
+      "raw_sha256": "2a1f06bcd087364bf04874f04929c572e4151b2ed478ae4008d357672c9a696b",
+      "json_records": 2043,
+      "nominal_jobs": 2016,
+      "snapshot_count": 12,
+      "task_records": 60,
+      "checked_completed_payloads": 1785,
+      "counter_bits": 32,
+      "counter_clock": null,
+      "record_storage_bytes": 48384,
+      "snapshot_storage_bytes": 8928,
+      "stack_indicators": [
+        {
+          "role": "coordinator",
+          "handle": 1082231080,
+          "minimum_observed_fill_free_bytes": 27852,
+          "declared_stack_bytes": 32768,
+          "reservation_minus_observed_fill_free_bytes": 4916
+        },
+        {
+          "role": "producer",
+          "handle": 1082645368,
+          "minimum_observed_fill_free_bytes": 7016,
+          "declared_stack_bytes": 8192,
+          "reservation_minus_observed_fill_free_bytes": 1176
+        },
+        {
+          "role": "consumer",
+          "handle": 1082644336,
+          "minimum_observed_fill_free_bytes": 7564,
+          "declared_stack_bytes": 8192,
+          "reservation_minus_observed_fill_free_bytes": 628
+        },
+        {
+          "role": "timer",
+          "handle": 1082196964,
+          "minimum_observed_fill_free_bytes": 3856,
+          "declared_stack_bytes": null,
+          "reservation_minus_observed_fill_free_bytes": null
+        }
+      ],
+      "phases": [
+        {
+          "index": 0,
+          "id": "control-no-work",
+          "period_us": 2000,
+          "slots": 125,
+          "window_us": 250000,
+          "rounds": 0,
+          "epoch_us": 2035985,
+          "cutoff_us": 2285985,
+          "counts": {
+            "offered": 125,
+            "generator_missed": 0,
+            "attempted": 125,
+            "queue_full": 0,
+            "accepted": 125,
+            "completed_in_window": 125,
+            "completed_in_drain": 0,
+            "deadline_met": 125,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 0,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 125,
+            "min_us": 18,
+            "p50_us": 18,
+            "p95_us": 18,
+            "p99_us": 21,
+            "max_us": 25,
+            "sum_us": 2260,
+            "mean_numerator_us": 2260,
+            "mean_denominator": 125
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 125,
+            "min_us": 36,
+            "p50_us": 36,
+            "p95_us": 36,
+            "p99_us": 43,
+            "max_us": 83,
+            "sum_us": 4554,
+            "mean_numerator_us": 4554,
+            "mean_denominator": 125
+          },
+          "send_entry_to_start_us": {
+            "count": 125,
+            "min_us": 16,
+            "p50_us": 16,
+            "p95_us": 16,
+            "p99_us": 16,
+            "max_us": 59,
+            "sum_us": 2043,
+            "mean_numerator_us": 2043,
+            "mean_denominator": 125
+          },
+          "send_entry_to_completion_us": {
+            "count": 125,
+            "min_us": 18,
+            "p50_us": 18,
+            "p95_us": 18,
+            "p99_us": 18,
+            "max_us": 62,
+            "sum_us": 2294,
+            "mean_numerator_us": 2294,
+            "mean_denominator": 125
+          },
+          "service_us": {
+            "count": 125,
+            "min_us": 2,
+            "p50_us": 2,
+            "p95_us": 2,
+            "p99_us": 2,
+            "max_us": 3,
+            "sum_us": 251,
+            "mean_numerator_us": 251,
+            "mean_denominator": 125
+          },
+          "generation_done_after_cutoff_us": 29,
+          "drain_after_cutoff_us": 111,
+          "callbacks": 126,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 3,
+              "task_enumeration_us": 1508,
+              "heap_info_us": 50
+            },
+            "after": {
+              "empty_timer_bracket_us": 2,
+              "task_enumeration_us": 1504,
+              "heap_info_us": 37
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "after": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": null
+        },
+        {
+          "index": 1,
+          "id": "control-delayed",
+          "period_us": 500,
+          "slots": 16,
+          "window_us": 8000,
+          "rounds": 0,
+          "epoch_us": 2311723,
+          "cutoff_us": 2319723,
+          "counts": {
+            "offered": 16,
+            "generator_missed": 4,
+            "attempted": 12,
+            "queue_full": 0,
+            "accepted": 12,
+            "completed_in_window": 12,
+            "completed_in_drain": 0,
+            "deadline_met": 12,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 4,
+            "unfinished": 0
+          },
+          "generator_qualified": false,
+          "attempt_lateness_us": {
+            "count": 12,
+            "min_us": 18,
+            "p50_us": 18,
+            "p95_us": 19,
+            "p99_us": 19,
+            "max_us": 19,
+            "sum_us": 217,
+            "mean_numerator_us": 217,
+            "mean_denominator": 12
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 12,
+            "min_us": 36,
+            "p50_us": 36,
+            "p95_us": 37,
+            "p99_us": 37,
+            "max_us": 37,
+            "sum_us": 433,
+            "mean_numerator_us": 433,
+            "mean_denominator": 12
+          },
+          "send_entry_to_start_us": {
+            "count": 12,
+            "min_us": 16,
+            "p50_us": 16,
+            "p95_us": 17,
+            "p99_us": 17,
+            "max_us": 17,
+            "sum_us": 193,
+            "mean_numerator_us": 193,
+            "mean_denominator": 12
+          },
+          "send_entry_to_completion_us": {
+            "count": 12,
+            "min_us": 18,
+            "p50_us": 18,
+            "p95_us": 18,
+            "p99_us": 18,
+            "max_us": 18,
+            "sum_us": 216,
+            "mean_numerator_us": 216,
+            "mean_denominator": 12
+          },
+          "service_us": {
+            "count": 12,
+            "min_us": 1,
+            "p50_us": 2,
+            "p95_us": 2,
+            "p99_us": 2,
+            "max_us": 2,
+            "sum_us": 23,
+            "mean_numerator_us": 23,
+            "mean_denominator": 12
+          },
+          "generation_done_after_cutoff_us": 22,
+          "drain_after_cutoff_us": 78,
+          "callbacks": 13,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1508,
+              "heap_info_us": 39
+            },
+            "after": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1503,
+              "heap_info_us": 38
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "after": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": null
+        },
+        {
+          "index": 2,
+          "id": "period-2000-us",
+          "period_us": 2000,
+          "slots": 125,
+          "window_us": 250000,
+          "rounds": 4096,
+          "epoch_us": 2345397,
+          "cutoff_us": 2595397,
+          "counts": {
+            "offered": 125,
+            "generator_missed": 0,
+            "attempted": 125,
+            "queue_full": 0,
+            "accepted": 125,
+            "completed_in_window": 125,
+            "completed_in_drain": 0,
+            "deadline_met": 125,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 0,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 125,
+            "min_us": 18,
+            "p50_us": 18,
+            "p95_us": 18,
+            "p99_us": 18,
+            "max_us": 18,
+            "sum_us": 2250,
+            "mean_numerator_us": 2250,
+            "mean_denominator": 125
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 125,
+            "min_us": 317,
+            "p50_us": 317,
+            "p95_us": 324,
+            "p99_us": 324,
+            "max_us": 324,
+            "sum_us": 39800,
+            "mean_numerator_us": 39800,
+            "mean_denominator": 125
+          },
+          "send_entry_to_start_us": {
+            "count": 125,
+            "min_us": 16,
+            "p50_us": 16,
+            "p95_us": 16,
+            "p99_us": 16,
+            "max_us": 16,
+            "sum_us": 2000,
+            "mean_numerator_us": 2000,
+            "mean_denominator": 125
+          },
+          "send_entry_to_completion_us": {
+            "count": 125,
+            "min_us": 299,
+            "p50_us": 299,
+            "p95_us": 306,
+            "p99_us": 306,
+            "max_us": 306,
+            "sum_us": 37550,
+            "mean_numerator_us": 37550,
+            "mean_denominator": 125
+          },
+          "service_us": {
+            "count": 125,
+            "min_us": 283,
+            "p50_us": 283,
+            "p95_us": 290,
+            "p99_us": 290,
+            "max_us": 290,
+            "sum_us": 35550,
+            "mean_numerator_us": 35550,
+            "mean_denominator": 125
+          },
+          "generation_done_after_cutoff_us": 22,
+          "drain_after_cutoff_us": 86,
+          "callbacks": 126,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 2,
+              "task_enumeration_us": 1498,
+              "heap_info_us": 40
+            },
+            "after": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1500,
+              "heap_info_us": 38
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "after": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": null
+        },
+        {
+          "index": 3,
+          "id": "period-1000-us",
+          "period_us": 1000,
+          "slots": 250,
+          "window_us": 250000,
+          "rounds": 4096,
+          "epoch_us": 2621060,
+          "cutoff_us": 2871060,
+          "counts": {
+            "offered": 250,
+            "generator_missed": 0,
+            "attempted": 250,
+            "queue_full": 0,
+            "accepted": 250,
+            "completed_in_window": 250,
+            "completed_in_drain": 0,
+            "deadline_met": 250,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 0,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 250,
+            "min_us": 18,
+            "p50_us": 18,
+            "p95_us": 18,
+            "p99_us": 18,
+            "max_us": 18,
+            "sum_us": 4500,
+            "mean_numerator_us": 4500,
+            "mean_denominator": 250
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 250,
+            "min_us": 317,
+            "p50_us": 317,
+            "p95_us": 317,
+            "p99_us": 317,
+            "max_us": 317,
+            "sum_us": 79250,
+            "mean_numerator_us": 79250,
+            "mean_denominator": 250
+          },
+          "send_entry_to_start_us": {
+            "count": 250,
+            "min_us": 16,
+            "p50_us": 16,
+            "p95_us": 16,
+            "p99_us": 16,
+            "max_us": 16,
+            "sum_us": 4000,
+            "mean_numerator_us": 4000,
+            "mean_denominator": 250
+          },
+          "send_entry_to_completion_us": {
+            "count": 250,
+            "min_us": 299,
+            "p50_us": 299,
+            "p95_us": 299,
+            "p99_us": 299,
+            "max_us": 299,
+            "sum_us": 74750,
+            "mean_numerator_us": 74750,
+            "mean_denominator": 250
+          },
+          "service_us": {
+            "count": 250,
+            "min_us": 283,
+            "p50_us": 283,
+            "p95_us": 283,
+            "p99_us": 283,
+            "max_us": 283,
+            "sum_us": 70750,
+            "mean_numerator_us": 70750,
+            "mean_denominator": 250
+          },
+          "generation_done_after_cutoff_us": 22,
+          "drain_after_cutoff_us": 77,
+          "callbacks": 251,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1499,
+              "heap_info_us": 39
+            },
+            "after": {
+              "empty_timer_bracket_us": 2,
+              "task_enumeration_us": 1510,
+              "heap_info_us": 38
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "after": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": null
+        },
+        {
+          "index": 4,
+          "id": "period-500-us",
+          "period_us": 500,
+          "slots": 500,
+          "window_us": 250000,
+          "rounds": 4096,
+          "epoch_us": 2896733,
+          "cutoff_us": 3146733,
+          "counts": {
+            "offered": 500,
+            "generator_missed": 0,
+            "attempted": 500,
+            "queue_full": 0,
+            "accepted": 500,
+            "completed_in_window": 500,
+            "completed_in_drain": 0,
+            "deadline_met": 500,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 0,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 500,
+            "min_us": 18,
+            "p50_us": 18,
+            "p95_us": 18,
+            "p99_us": 18,
+            "max_us": 19,
+            "sum_us": 9001,
+            "mean_numerator_us": 9001,
+            "mean_denominator": 500
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 500,
+            "min_us": 317,
+            "p50_us": 317,
+            "p95_us": 317,
+            "p99_us": 317,
+            "max_us": 318,
+            "sum_us": 158501,
+            "mean_numerator_us": 158501,
+            "mean_denominator": 500
+          },
+          "send_entry_to_start_us": {
+            "count": 500,
+            "min_us": 16,
+            "p50_us": 16,
+            "p95_us": 16,
+            "p99_us": 16,
+            "max_us": 16,
+            "sum_us": 8000,
+            "mean_numerator_us": 8000,
+            "mean_denominator": 500
+          },
+          "send_entry_to_completion_us": {
+            "count": 500,
+            "min_us": 299,
+            "p50_us": 299,
+            "p95_us": 299,
+            "p99_us": 299,
+            "max_us": 299,
+            "sum_us": 149500,
+            "mean_numerator_us": 149500,
+            "mean_denominator": 500
+          },
+          "service_us": {
+            "count": 500,
+            "min_us": 283,
+            "p50_us": 283,
+            "p95_us": 283,
+            "p99_us": 283,
+            "max_us": 283,
+            "sum_us": 141500,
+            "mean_numerator_us": 141500,
+            "mean_denominator": 500
+          },
+          "generation_done_after_cutoff_us": 22,
+          "drain_after_cutoff_us": 86,
+          "callbacks": 501,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 2,
+              "task_enumeration_us": 1498,
+              "heap_info_us": 39
+            },
+            "after": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1500,
+              "heap_info_us": 38
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "after": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": null
+        },
+        {
+          "index": 5,
+          "id": "period-250-us",
+          "period_us": 250,
+          "slots": 1000,
+          "window_us": 250000,
+          "rounds": 4096,
+          "epoch_us": 3172403,
+          "cutoff_us": 3422403,
+          "counts": {
+            "offered": 1000,
+            "generator_missed": 0,
+            "attempted": 1000,
+            "queue_full": 227,
+            "accepted": 773,
+            "completed_in_window": 764,
+            "completed_in_drain": 9,
+            "deadline_met": 22,
+            "deadline_missed_accepted": 751,
+            "offered_deadline_failures": 978,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 1000,
+            "min_us": 18,
+            "p50_us": 19,
+            "p95_us": 19,
+            "p99_us": 26,
+            "max_us": 26,
+            "sum_us": 18935,
+            "mean_numerator_us": 18935,
+            "mean_denominator": 1000
+          },
+          "post_send_queue_peak": 8,
+          "nominal_to_completion_us": {
+            "count": 773,
+            "min_us": 350,
+            "p50_us": 2835,
+            "p95_us": 2938,
+            "p99_us": 2948,
+            "max_us": 2954,
+            "sum_us": 2147086,
+            "mean_numerator_us": 2147086,
+            "mean_denominator": 773
+          },
+          "send_entry_to_start_us": {
+            "count": 773,
+            "min_us": 16,
+            "p50_us": 2470,
+            "p95_us": 2604,
+            "p99_us": 2613,
+            "max_us": 2620,
+            "sum_us": 1882741,
+            "mean_numerator_us": 1882741,
+            "mean_denominator": 773
+          },
+          "send_entry_to_completion_us": {
+            "count": 773,
+            "min_us": 331,
+            "p50_us": 2815,
+            "p95_us": 2919,
+            "p99_us": 2928,
+            "max_us": 2934,
+            "sum_us": 2132498,
+            "mean_numerator_us": 2132498,
+            "mean_denominator": 773
+          },
+          "service_us": {
+            "count": 773,
+            "min_us": 283,
+            "p50_us": 314,
+            "p95_us": 345,
+            "p99_us": 352,
+            "max_us": 374,
+            "sum_us": 249757,
+            "mean_numerator_us": 249757,
+            "mean_denominator": 773
+          },
+          "generation_done_after_cutoff_us": 23,
+          "drain_after_cutoff_us": 2413,
+          "callbacks": 1001,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1506,
+              "heap_info_us": 39
+            },
+            "after": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1502,
+              "heap_info_us": 38
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "after": {
+              "free_bytes": 353220,
+              "allocated_bytes": 119984,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352276
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": null
+        }
+      ],
+      "reported_aggregates_match_after_recalculation": true
+    },
+    {
+      "profile": "runtime-stats-enabled",
+      "boot_id": "load-on-01",
+      "raw_sha256": "77d30afc1cf8dde502a465ef518ca0c91fc4e3ef1f090f33d2f9d814322b0bbb",
+      "json_records": 2043,
+      "nominal_jobs": 2016,
+      "snapshot_count": 12,
+      "task_records": 60,
+      "checked_completed_payloads": 1771,
+      "counter_bits": 64,
+      "counter_clock": "esp_timer_get_time",
+      "record_storage_bytes": 48384,
+      "snapshot_storage_bytes": 8928,
+      "stack_indicators": [
+        {
+          "role": "coordinator",
+          "handle": 1082231268,
+          "minimum_observed_fill_free_bytes": 27776,
+          "declared_stack_bytes": 32768,
+          "reservation_minus_observed_fill_free_bytes": 4992
+        },
+        {
+          "role": "producer",
+          "handle": 1082645384,
+          "minimum_observed_fill_free_bytes": 7012,
+          "declared_stack_bytes": 8192,
+          "reservation_minus_observed_fill_free_bytes": 1180
+        },
+        {
+          "role": "consumer",
+          "handle": 1082644336,
+          "minimum_observed_fill_free_bytes": 7560,
+          "declared_stack_bytes": 8192,
+          "reservation_minus_observed_fill_free_bytes": 632
+        },
+        {
+          "role": "timer",
+          "handle": 1082197140,
+          "minimum_observed_fill_free_bytes": 3872,
+          "declared_stack_bytes": null,
+          "reservation_minus_observed_fill_free_bytes": null
+        }
+      ],
+      "phases": [
+        {
+          "index": 0,
+          "id": "control-no-work",
+          "period_us": 2000,
+          "slots": 125,
+          "window_us": 250000,
+          "rounds": 0,
+          "epoch_us": 2035987,
+          "cutoff_us": 2285987,
+          "counts": {
+            "offered": 125,
+            "generator_missed": 0,
+            "attempted": 125,
+            "queue_full": 0,
+            "accepted": 125,
+            "completed_in_window": 125,
+            "completed_in_drain": 0,
+            "deadline_met": 125,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 0,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 125,
+            "min_us": 22,
+            "p50_us": 22,
+            "p95_us": 22,
+            "p99_us": 24,
+            "max_us": 28,
+            "sum_us": 2758,
+            "mean_numerator_us": 2758,
+            "mean_denominator": 125
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 125,
+            "min_us": 41,
+            "p50_us": 41,
+            "p95_us": 41,
+            "p99_us": 47,
+            "max_us": 90,
+            "sum_us": 5180,
+            "mean_numerator_us": 5180,
+            "mean_denominator": 125
+          },
+          "send_entry_to_start_us": {
+            "count": 125,
+            "min_us": 17,
+            "p50_us": 17,
+            "p95_us": 17,
+            "p99_us": 17,
+            "max_us": 60,
+            "sum_us": 2168,
+            "mean_numerator_us": 2168,
+            "mean_denominator": 125
+          },
+          "send_entry_to_completion_us": {
+            "count": 125,
+            "min_us": 19,
+            "p50_us": 19,
+            "p95_us": 19,
+            "p99_us": 19,
+            "max_us": 66,
+            "sum_us": 2422,
+            "mean_numerator_us": 2422,
+            "mean_denominator": 125
+          },
+          "service_us": {
+            "count": 125,
+            "min_us": 2,
+            "p50_us": 2,
+            "p95_us": 2,
+            "p99_us": 2,
+            "max_us": 6,
+            "sum_us": 254,
+            "mean_numerator_us": 254,
+            "mean_denominator": 125
+          },
+          "generation_done_after_cutoff_us": 35,
+          "drain_after_cutoff_us": 111,
+          "callbacks": 126,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 3,
+              "task_enumeration_us": 1505,
+              "heap_info_us": 50
+            },
+            "after": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1500,
+              "heap_info_us": 38
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "after": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": {
+            "whole_phase_total_elapsed_us": 271761,
+            "task_deltas": [
+              {
+                "handle": 1082197140,
+                "number": 1,
+                "role": "timer",
+                "runtime_us": 1765
+              },
+              {
+                "handle": 1082231268,
+                "number": 2,
+                "role": "coordinator",
+                "runtime_us": 1865
+              },
+              {
+                "handle": 1082233172,
+                "number": 3,
+                "role": "other-sdk-task",
+                "runtime_us": 264172
+              },
+              {
+                "handle": 1082644336,
+                "number": 4,
+                "role": "consumer",
+                "runtime_us": 1915
+              },
+              {
+                "handle": 1082645384,
+                "number": 5,
+                "role": "producer",
+                "runtime_us": 2141
+              }
+            ],
+            "summed_task_runtime_us": 271858,
+            "unattributed_boundary_residual_us": -97
+          }
+        },
+        {
+          "index": 1,
+          "id": "control-delayed",
+          "period_us": 500,
+          "slots": 16,
+          "window_us": 8000,
+          "rounds": 0,
+          "epoch_us": 2311740,
+          "cutoff_us": 2319740,
+          "counts": {
+            "offered": 16,
+            "generator_missed": 4,
+            "attempted": 12,
+            "queue_full": 0,
+            "accepted": 12,
+            "completed_in_window": 12,
+            "completed_in_drain": 0,
+            "deadline_met": 12,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 4,
+            "unfinished": 0
+          },
+          "generator_qualified": false,
+          "attempt_lateness_us": {
+            "count": 12,
+            "min_us": 21,
+            "p50_us": 21,
+            "p95_us": 24,
+            "p99_us": 24,
+            "max_us": 24,
+            "sum_us": 255,
+            "mean_numerator_us": 255,
+            "mean_denominator": 12
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 12,
+            "min_us": 40,
+            "p50_us": 40,
+            "p95_us": 43,
+            "p99_us": 43,
+            "max_us": 43,
+            "sum_us": 483,
+            "mean_numerator_us": 483,
+            "mean_denominator": 12
+          },
+          "send_entry_to_start_us": {
+            "count": 12,
+            "min_us": 17,
+            "p50_us": 17,
+            "p95_us": 18,
+            "p99_us": 18,
+            "max_us": 18,
+            "sum_us": 205,
+            "mean_numerator_us": 205,
+            "mean_denominator": 12
+          },
+          "send_entry_to_completion_us": {
+            "count": 12,
+            "min_us": 19,
+            "p50_us": 19,
+            "p95_us": 19,
+            "p99_us": 19,
+            "max_us": 19,
+            "sum_us": 228,
+            "mean_numerator_us": 228,
+            "mean_denominator": 12
+          },
+          "service_us": {
+            "count": 12,
+            "min_us": 1,
+            "p50_us": 2,
+            "p95_us": 2,
+            "p99_us": 2,
+            "max_us": 2,
+            "sum_us": 23,
+            "mean_numerator_us": 23,
+            "mean_denominator": 12
+          },
+          "generation_done_after_cutoff_us": 25,
+          "drain_after_cutoff_us": 79,
+          "callbacks": 13,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 2,
+              "task_enumeration_us": 1507,
+              "heap_info_us": 37
+            },
+            "after": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1499,
+              "heap_info_us": 38
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "after": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": {
+            "whole_phase_total_elapsed_us": 29667,
+            "task_deltas": [
+              {
+                "handle": 1082197140,
+                "number": 1,
+                "role": "timer",
+                "runtime_us": 184
+              },
+              {
+                "handle": 1082231268,
+                "number": 2,
+                "role": "coordinator",
+                "runtime_us": 1690
+              },
+              {
+                "handle": 1082233172,
+                "number": 3,
+                "role": "other-sdk-task",
+                "runtime_us": 27329
+              },
+              {
+                "handle": 1082644336,
+                "number": 4,
+                "role": "consumer",
+                "runtime_us": 189
+              },
+              {
+                "handle": 1082645384,
+                "number": 5,
+                "role": "producer",
+                "runtime_us": 278
+              }
+            ],
+            "summed_task_runtime_us": 29670,
+            "unattributed_boundary_residual_us": -3
+          }
+        },
+        {
+          "index": 2,
+          "id": "period-2000-us",
+          "period_us": 2000,
+          "slots": 125,
+          "window_us": 250000,
+          "rounds": 4096,
+          "epoch_us": 2345425,
+          "cutoff_us": 2595425,
+          "counts": {
+            "offered": 125,
+            "generator_missed": 0,
+            "attempted": 125,
+            "queue_full": 0,
+            "accepted": 125,
+            "completed_in_window": 125,
+            "completed_in_drain": 0,
+            "deadline_met": 125,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 0,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 125,
+            "min_us": 21,
+            "p50_us": 21,
+            "p95_us": 21,
+            "p99_us": 21,
+            "max_us": 21,
+            "sum_us": 2625,
+            "mean_numerator_us": 2625,
+            "mean_denominator": 125
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 125,
+            "min_us": 321,
+            "p50_us": 321,
+            "p95_us": 328,
+            "p99_us": 328,
+            "max_us": 328,
+            "sum_us": 40300,
+            "mean_numerator_us": 40300,
+            "mean_denominator": 125
+          },
+          "send_entry_to_start_us": {
+            "count": 125,
+            "min_us": 17,
+            "p50_us": 17,
+            "p95_us": 17,
+            "p99_us": 17,
+            "max_us": 17,
+            "sum_us": 2125,
+            "mean_numerator_us": 2125,
+            "mean_denominator": 125
+          },
+          "send_entry_to_completion_us": {
+            "count": 125,
+            "min_us": 300,
+            "p50_us": 300,
+            "p95_us": 307,
+            "p99_us": 307,
+            "max_us": 307,
+            "sum_us": 37675,
+            "mean_numerator_us": 37675,
+            "mean_denominator": 125
+          },
+          "service_us": {
+            "count": 125,
+            "min_us": 283,
+            "p50_us": 283,
+            "p95_us": 290,
+            "p99_us": 290,
+            "max_us": 290,
+            "sum_us": 35550,
+            "mean_numerator_us": 35550,
+            "mean_denominator": 125
+          },
+          "generation_done_after_cutoff_us": 25,
+          "drain_after_cutoff_us": 85,
+          "callbacks": 126,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1496,
+              "heap_info_us": 38
+            },
+            "after": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1496,
+              "heap_info_us": 37
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "after": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": {
+            "whole_phase_total_elapsed_us": 271664,
+            "task_deltas": [
+              {
+                "handle": 1082197140,
+                "number": 1,
+                "role": "timer",
+                "runtime_us": 1764
+              },
+              {
+                "handle": 1082231268,
+                "number": 2,
+                "role": "coordinator",
+                "runtime_us": 1670
+              },
+              {
+                "handle": 1082233172,
+                "number": 3,
+                "role": "other-sdk-task",
+                "runtime_us": 228957
+              },
+              {
+                "handle": 1082644336,
+                "number": 4,
+                "role": "consumer",
+                "runtime_us": 37068
+              },
+              {
+                "handle": 1082645384,
+                "number": 5,
+                "role": "producer",
+                "runtime_us": 2205
+              }
+            ],
+            "summed_task_runtime_us": 271664,
+            "unattributed_boundary_residual_us": 0
+          }
+        },
+        {
+          "index": 3,
+          "id": "period-1000-us",
+          "period_us": 1000,
+          "slots": 250,
+          "window_us": 250000,
+          "rounds": 4096,
+          "epoch_us": 2621102,
+          "cutoff_us": 2871102,
+          "counts": {
+            "offered": 250,
+            "generator_missed": 0,
+            "attempted": 250,
+            "queue_full": 0,
+            "accepted": 250,
+            "completed_in_window": 250,
+            "completed_in_drain": 0,
+            "deadline_met": 250,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 0,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 250,
+            "min_us": 21,
+            "p50_us": 21,
+            "p95_us": 21,
+            "p99_us": 21,
+            "max_us": 22,
+            "sum_us": 5251,
+            "mean_numerator_us": 5251,
+            "mean_denominator": 250
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 250,
+            "min_us": 321,
+            "p50_us": 321,
+            "p95_us": 321,
+            "p99_us": 321,
+            "max_us": 322,
+            "sum_us": 80251,
+            "mean_numerator_us": 80251,
+            "mean_denominator": 250
+          },
+          "send_entry_to_start_us": {
+            "count": 250,
+            "min_us": 17,
+            "p50_us": 17,
+            "p95_us": 17,
+            "p99_us": 17,
+            "max_us": 17,
+            "sum_us": 4250,
+            "mean_numerator_us": 4250,
+            "mean_denominator": 250
+          },
+          "send_entry_to_completion_us": {
+            "count": 250,
+            "min_us": 300,
+            "p50_us": 300,
+            "p95_us": 300,
+            "p99_us": 300,
+            "max_us": 300,
+            "sum_us": 75000,
+            "mean_numerator_us": 75000,
+            "mean_denominator": 250
+          },
+          "service_us": {
+            "count": 250,
+            "min_us": 283,
+            "p50_us": 283,
+            "p95_us": 283,
+            "p99_us": 283,
+            "max_us": 283,
+            "sum_us": 70750,
+            "mean_numerator_us": 70750,
+            "mean_denominator": 250
+          },
+          "generation_done_after_cutoff_us": 25,
+          "drain_after_cutoff_us": 77,
+          "callbacks": 251,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 2,
+              "task_enumeration_us": 1497,
+              "heap_info_us": 37
+            },
+            "after": {
+              "empty_timer_bracket_us": 2,
+              "task_enumeration_us": 1506,
+              "heap_info_us": 37
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "after": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": {
+            "whole_phase_total_elapsed_us": 271671,
+            "task_deltas": [
+              {
+                "handle": 1082197140,
+                "number": 1,
+                "role": "timer",
+                "runtime_us": 3514
+              },
+              {
+                "handle": 1082231268,
+                "number": 2,
+                "role": "coordinator",
+                "runtime_us": 1679
+              },
+              {
+                "handle": 1082233172,
+                "number": 3,
+                "role": "other-sdk-task",
+                "runtime_us": 188373
+              },
+              {
+                "handle": 1082644336,
+                "number": 4,
+                "role": "consumer",
+                "runtime_us": 73770
+              },
+              {
+                "handle": 1082645384,
+                "number": 5,
+                "role": "producer",
+                "runtime_us": 4322
+              }
+            ],
+            "summed_task_runtime_us": 271658,
+            "unattributed_boundary_residual_us": 13
+          }
+        },
+        {
+          "index": 4,
+          "id": "period-500-us",
+          "period_us": 500,
+          "slots": 500,
+          "window_us": 250000,
+          "rounds": 4096,
+          "epoch_us": 2896786,
+          "cutoff_us": 3146786,
+          "counts": {
+            "offered": 500,
+            "generator_missed": 0,
+            "attempted": 500,
+            "queue_full": 0,
+            "accepted": 500,
+            "completed_in_window": 500,
+            "completed_in_drain": 0,
+            "deadline_met": 500,
+            "deadline_missed_accepted": 0,
+            "offered_deadline_failures": 0,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 500,
+            "min_us": 21,
+            "p50_us": 21,
+            "p95_us": 21,
+            "p99_us": 21,
+            "max_us": 22,
+            "sum_us": 10501,
+            "mean_numerator_us": 10501,
+            "mean_denominator": 500
+          },
+          "post_send_queue_peak": 1,
+          "nominal_to_completion_us": {
+            "count": 500,
+            "min_us": 321,
+            "p50_us": 321,
+            "p95_us": 321,
+            "p99_us": 321,
+            "max_us": 322,
+            "sum_us": 160501,
+            "mean_numerator_us": 160501,
+            "mean_denominator": 500
+          },
+          "send_entry_to_start_us": {
+            "count": 500,
+            "min_us": 17,
+            "p50_us": 17,
+            "p95_us": 17,
+            "p99_us": 17,
+            "max_us": 17,
+            "sum_us": 8500,
+            "mean_numerator_us": 8500,
+            "mean_denominator": 500
+          },
+          "send_entry_to_completion_us": {
+            "count": 500,
+            "min_us": 300,
+            "p50_us": 300,
+            "p95_us": 300,
+            "p99_us": 300,
+            "max_us": 300,
+            "sum_us": 150000,
+            "mean_numerator_us": 150000,
+            "mean_denominator": 500
+          },
+          "service_us": {
+            "count": 500,
+            "min_us": 283,
+            "p50_us": 283,
+            "p95_us": 283,
+            "p99_us": 283,
+            "max_us": 283,
+            "sum_us": 141500,
+            "mean_numerator_us": 141500,
+            "mean_denominator": 500
+          },
+          "generation_done_after_cutoff_us": 25,
+          "drain_after_cutoff_us": 85,
+          "callbacks": 501,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1497,
+              "heap_info_us": 37
+            },
+            "after": {
+              "empty_timer_bracket_us": 1,
+              "task_enumeration_us": 1496,
+              "heap_info_us": 37
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "after": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": {
+            "whole_phase_total_elapsed_us": 271664,
+            "task_deltas": [
+              {
+                "handle": 1082197140,
+                "number": 1,
+                "role": "timer",
+                "runtime_us": 7014
+              },
+              {
+                "handle": 1082231268,
+                "number": 2,
+                "role": "coordinator",
+                "runtime_us": 1671
+              },
+              {
+                "handle": 1082233172,
+                "number": 3,
+                "role": "other-sdk-task",
+                "runtime_us": 106882
+              },
+              {
+                "handle": 1082644336,
+                "number": 4,
+                "role": "consumer",
+                "runtime_us": 147518
+              },
+              {
+                "handle": 1082645384,
+                "number": 5,
+                "role": "producer",
+                "runtime_us": 8579
+              }
+            ],
+            "summed_task_runtime_us": 271664,
+            "unattributed_boundary_residual_us": 0
+          }
+        },
+        {
+          "index": 5,
+          "id": "period-250-us",
+          "period_us": 250,
+          "slots": 1000,
+          "window_us": 250000,
+          "rounds": 4096,
+          "epoch_us": 3172470,
+          "cutoff_us": 3422470,
+          "counts": {
+            "offered": 1000,
+            "generator_missed": 0,
+            "attempted": 1000,
+            "queue_full": 241,
+            "accepted": 759,
+            "completed_in_window": 751,
+            "completed_in_drain": 8,
+            "deadline_met": 21,
+            "deadline_missed_accepted": 738,
+            "offered_deadline_failures": 979,
+            "unfinished": 0
+          },
+          "generator_qualified": true,
+          "attempt_lateness_us": {
+            "count": 1000,
+            "min_us": 21,
+            "p50_us": 21,
+            "p95_us": 22,
+            "p99_us": 22,
+            "max_us": 22,
+            "sum_us": 21244,
+            "mean_numerator_us": 21244,
+            "mean_denominator": 1000
+          },
+          "post_send_queue_peak": 8,
+          "nominal_to_completion_us": {
+            "count": 759,
+            "min_us": 356,
+            "p50_us": 2883,
+            "p95_us": 2984,
+            "p99_us": 2992,
+            "max_us": 2999,
+            "sum_us": 2149737,
+            "mean_numerator_us": 2149737,
+            "mean_denominator": 759
+          },
+          "send_entry_to_start_us": {
+            "count": 759,
+            "min_us": 17,
+            "p50_us": 2544,
+            "p95_us": 2644,
+            "p99_us": 2653,
+            "max_us": 2660,
+            "sum_us": 1884041,
+            "mean_numerator_us": 1884041,
+            "mean_denominator": 759
+          },
+          "send_entry_to_completion_us": {
+            "count": 759,
+            "min_us": 335,
+            "p50_us": 2862,
+            "p95_us": 2963,
+            "p99_us": 2971,
+            "max_us": 2978,
+            "sum_us": 2133557,
+            "mean_numerator_us": 2133557,
+            "mean_denominator": 759
+          },
+          "service_us": {
+            "count": 759,
+            "min_us": 283,
+            "p50_us": 318,
+            "p95_us": 353,
+            "p99_us": 359,
+            "max_us": 360,
+            "sum_us": 249516,
+            "mean_numerator_us": 249516,
+            "mean_denominator": 759
+          },
+          "generation_done_after_cutoff_us": 25,
+          "drain_after_cutoff_us": 2274,
+          "callbacks": 1001,
+          "early_wakes": 0,
+          "observer_gross_us": {
+            "before": {
+              "empty_timer_bracket_us": 2,
+              "task_enumeration_us": 1504,
+              "heap_info_us": 37
+            },
+            "after": {
+              "empty_timer_bracket_us": 2,
+              "task_enumeration_us": 1499,
+              "heap_info_us": 37
+            }
+          },
+          "heap": {
+            "before": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "after": {
+              "free_bytes": 352984,
+              "allocated_bytes": 120044,
+              "largest_free_block": 327680,
+              "minimum_free_bytes": 352032
+            },
+            "free_after_minus_before_bytes": 0,
+            "allocated_after_minus_before_bytes": 0
+          },
+          "settled_accounting": {
+            "whole_phase_total_elapsed_us": 273863,
+            "task_deltas": [
+              {
+                "handle": 1082197140,
+                "number": 1,
+                "role": "timer",
+                "runtime_us": 14014
+              },
+              {
+                "handle": 1082231268,
+                "number": 2,
+                "role": "coordinator",
+                "runtime_us": 1685
+              },
+              {
+                "handle": 1082233172,
+                "number": 3,
+                "role": "other-sdk-task",
+                "runtime_us": 19873
+              },
+              {
+                "handle": 1082644336,
+                "number": 4,
+                "role": "consumer",
+                "runtime_us": 222456
+              },
+              {
+                "handle": 1082645384,
+                "number": 5,
+                "role": "producer",
+                "runtime_us": 15834
+              }
+            ],
+            "summed_task_runtime_us": 273862,
+            "unattributed_boundary_residual_us": 1
+          }
+        }
+      ],
+      "reported_aggregates_match_after_recalculation": true
+    }
+  ],
+  "comparative_estimator": null,
+  "limits": [
+    "One warm-reset qualification capture per profile, fixed disabled-then-enabled order on one board; no profiling-effect difference, ratio or paired estimator is defined.",
+    "Finite 250ms work pulses and an experimental 2000us completion reference do not establish sustainable capacity or a product deadline.",
+    "Both profiles retain common timestamp/record/observer work; disabled is not an uninstrumented baseline.",
+    "Accepted-only distributions exclude missed/full jobs by definition; those jobs remain counted in offered-work failures, never invented zero-latency samples.",
+    "Heap/stack-fill observations are scoped indicators, not global runtime peaks, fragmentation or application headroom.",
+    "Counter attribution is ISR-inclusive, has open-interval boundary residuals and includes drain; no physical busy/idle or exclusive ISR percentage is calculated.",
+    "No external timing or power instrument, radio experiment, SMP result or overall platform decision is supplied."
+  ]
+}

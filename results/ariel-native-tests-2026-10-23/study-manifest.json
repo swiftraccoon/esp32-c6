@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "experiment": "ariel-native-tests-v1",
+  "frozen_utc": "2026-10-23T06:13:36.335475+00:00",
+  "upstream_commit": "13bddaca1c2bcd51489c044b80408e917d5946d9",
+  "rust_toolchain": "1.99.1",
+  "laze_version": "0.1.39",
+  "espflash_version": "4.6.0",
+  "esptool_version": "5.1.0",
+  "capture_timeout_seconds": 30,
+  "post_marker_observation_seconds_minimum": 2,
+  "automatic_replacement": false,
+  "capture_format": "rendered espflash serial monitor in PTY/script; no raw UART claim",
+  "images": {
+    "bench-sched-yield": {
+      "elf_sha256": "eca8fe3e5400cffb48ae7d2fd786e5dc048f486160da03761c2286ec58678111",
+      "image_sha256": "865434c1a589c9e93ef228599bf739e348d5e74df362a32c7e4d924fd898bd39"
+    },
+    "bench-sched-flags": {
+      "elf_sha256": "4a33fc518f6ced8f9791f8f986e1a4523ff48cdac80f2667cb253035c2a0596a",
+      "image_sha256": "8d2556bd3250e199c79744ec5f9a00b3fd0ee8aaa645d3ddaa7ddce9d293ba64"
+    },
+    "threading-dynamic-prios": {
+      "elf_sha256": "266cae2a70cf9b31f7a47ae9d258b64da2c940c235a83c8b25f2c3b097ddec70",
+      "image_sha256": "11edb1aa2ca25ac37b5b11c6c3dc8e57e796f6e60cb8969c2515a581df288718"
+    },
+    "threading-lock": {
+      "elf_sha256": "2b2cba8d93e305071f640897e112e33c790c1d454b17f07020c9b3d6dd290d30",
+      "image_sha256": "7811dfa78171664561cff1165fbb2efdb8e5464a4b294bef9b00f50227508515"
+    }
+  },
+  "schedule": [
+    {
+      "run_order": 1,
+      "round": 1,
+      "app": "bench-sched-yield",
+      "directory": "runs/01-bench-sched-yield"
+    },
+    {
+      "run_order": 2,
+      "round": 1,
+      "app": "bench-sched-flags",
+      "directory": "runs/02-bench-sched-flags"
+    },
+    {
+      "run_order": 3,
+      "round": 1,
+      "app": "threading-dynamic-prios",
+      "directory": "runs/03-threading-dynamic-prios"
+    },
+    {
+      "run_order": 4,
+      "round": 1,
+      "app": "threading-lock",
+      "directory": "runs/04-threading-lock"
+    },
+    {
+      "run_order": 5,
+      "round": 2,
+      "app": "bench-sched-yield",
+      "directory": "runs/05-bench-sched-yield"
+    },
+    {
+      "run_order": 6,
+      "round": 2,
+      "app": "bench-sched-flags",
+      "directory": "runs/06-bench-sched-flags"
+    },
+    {
+      "run_order": 7,
+      "round": 2,
+      "app": "threading-dynamic-prios",
+      "directory": "runs/07-threading-dynamic-prios"
+    },
+    {
+      "run_order": 8,
+      "round": 2,
+      "app": "threading-lock",
+      "directory": "runs/08-threading-lock"
+    },
+    {
+      "run_order": 9,
+      "round": 3,
+      "app": "bench-sched-yield",
+      "directory": "runs/09-bench-sched-yield"
+    },
+    {
+      "run_order": 10,
+      "round": 3,
+      "app": "bench-sched-flags",
+      "directory": "runs/10-bench-sched-flags"
+    },
+    {
+      "run_order": 11,
+      "round": 3,
+      "app": "threading-dynamic-prios",
+      "directory": "runs/11-threading-dynamic-prios"
+    },
+    {
+      "run_order": 12,
+      "round": 3,
+      "app": "threading-lock",
+      "directory": "runs/12-threading-lock"
+    }
+  ],
+  "restoration_baseline": {
+    "path_ignored_by_git": "backups/pre-native-2026-10-23/flash-backup.bin",
+    "bytes": 8388608,
+    "sha256": "ecc182713fa7df6b1e3841b5344f4c91528a5fef4e80a3ab37273ca4e89a661a",
+    "method": "original image tail plus freshly read 64KiB prefix; full-device digest verified before test writes"
+  },
+  "scope": "Existing native-test qualification; aggregate integer ticks, no common Rust RTT or OS ranking"
+}

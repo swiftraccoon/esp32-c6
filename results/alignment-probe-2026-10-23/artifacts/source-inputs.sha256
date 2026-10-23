@@ -1,0 +1,9 @@
+c59d6e651197cf0fe0a287e412462bb78309a0fe3a13fd92eb5b04fe26987596  firmware/esp-hal/src/bin/bare_metal.rs
+e43ee6c0226cc815237c9fb780e5a7cd1ce8de0f043dbdcac61ddfe802edef6f  firmware/esp-hal/src/measurements.rs
+809acc669b5d8ca7081b5e361fa62f3f3979578633afa5cb78146650ef213f68  firmware/esp-hal/src/clocks.rs
+0b61537a1371fa4eb4d7c3b25f118c9798e673b9df594a4f8b5266c355b4b7e9  firmware/esp-hal/build.rs
+be7897a926df00dba40f99b31e791a3cab4eadb98e899a9b18585b3c042684fd  firmware/esp-hal/Cargo.toml
+fe83fea7296603dd9a461ed872fcecab02b277754a18060b0ac0e8cbc48ed89f  firmware/esp-hal/Cargo.lock
+c89d6df6cd0df9ced760f8f49f609a2ff61a721b77e9d69445ebcfe3c9ad2095  firmware/esp-hal/.cargo/config.toml
+2807c510edc92e3b591993979d2bee9f0a4ea16b4768f16e8155c54fab696053  firmware/esp-hal/rust-toolchain.toml
+27447ee945989a682ee778646f488e7c986d8831a38515e1057eaa143992ab9e  crates/bench-core/src/lib.rs

@@ -1,0 +1,44 @@
+{
+  "status": "build-only; no board execution",
+  "zephyr": {
+    "version": "4.4.0",
+    "commit": "684c9e8f32e4373a21098559f748f06915f950c9",
+    "source_modified": false
+  },
+  "hal_espressif": {
+    "commit": "b7953b8019361d09e613f7011d2ccc41b984d087",
+    "source_modified": false
+  },
+  "board": "esp32c6_devkitc/esp32c6/hpcore",
+  "application": "tests/benchmarks/latency_measure",
+  "variant": "default, no extra configuration or devicetree overlay",
+  "toolchain": {
+    "sdk": "1.0.1",
+    "compiler": "riscv64-zephyr-elf-gcc 14.3.0",
+    "host": "macOS arm64",
+    "sdk_minimal_archive_sha256": "867063901f39528a6175a80ebc20367bd6cb440593e7e2650eda30392f1f6b65",
+    "sdk_riscv_archive_sha256": "bc9026ee24c34d79f89bb9f1eb7f86a60232ed8eb1b85d301178482f6544cee7"
+  },
+  "host_tools": {
+    "python": "3.14.8",
+    "west": "1.5.0",
+    "cmake": "4.4.3",
+    "ninja": "1.13.2",
+    "image_converter_esptool": "5.6.0"
+  },
+  "image": {
+    "offset": "0x0",
+    "flash_size": "8MB",
+    "flash_mode": "dio",
+    "flash_frequency": "80m",
+    "simple_boot": true
+  },
+  "expected_default_metric_rows": 47,
+  "sha256": {
+    "zephyr.elf": "a9929eea623a79386cf4c9c90fbfeb3e73e38a9201e562576aaa7c1e63957f48",
+    "zephyr.bin": "71d71cfcf07de94aee9624f1cae9b83e4a8aff75352876b027a7cdbf4ad360a3",
+    "zephyr.map": "b3db2b230179792ca76f82194610d332cfdeaa95b9025b97ee370998c30b96cb",
+    "zephyr.config": "9797f6033f9593443984125a177888c6fbe5a22a8b704fd4cdcf049167e6a382",
+    "zephyr.dts": "8ed622e820be0d8cb504028f8d8dd7ca33f6392a98b4175cf515d2f50c3d8a05"
+  }
+}

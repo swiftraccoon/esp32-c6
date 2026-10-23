@@ -1,0 +1,245 @@
+{
+  "schema": "esp32-c6-upstream-startup-qualification-v1",
+  "dataset": "ariel-qualification-2026-10-22",
+  "qualification_date_local": "2026-10-22",
+  "timezone": "America/New_York",
+  "classification": "physical-startup-uart-smoke-test",
+  "physical_passes": 2,
+  "benchmark_measurements": false,
+  "upstream": {
+    "repository": "https://github.com/ariel-os/ariel-os",
+    "commit": "13bddaca1c2bcd51489c044b80408e917d5946d9",
+    "workspace_package_version": "0.6.0",
+    "checkout": ".cache/ariel-os",
+    "working_tree_clean": true,
+    "working_tree_check": "git -C .cache/ariel-os status --porcelain produced no output",
+    "authored_adapter_or_upstream_patch": false,
+    "source_archive": "artifacts/ariel-source.tar.gz",
+    "source_archive_sha256": "532ad51cfc1aad0f607a317b0880468a7544f72cf779751237574a9bd0e618c8",
+    "lockfile": "artifacts/Cargo.lock",
+    "lockfile_sha256": "159199a6c23e65309e255bde02a6d8968af062e64acfaca4bcd952dc8167409d"
+  },
+  "hardware": {
+    "chip": "ESP32-C6",
+    "chip_revision": "0.2",
+    "flash_bytes": 8388608,
+    "crystal_mhz": 40,
+    "selected_upstream_board_configuration": "espressif-esp32-c6-devkitc-1",
+    "physical_board_model_verified": false,
+    "serial_port": "/dev/cu.SERIAL_PORT",
+    "logging_transport": "UART through attached USB-to-UART bridge",
+    "baud": 115200,
+    "native_usb_logging_tested": false
+  },
+  "toolchain": {
+    "rustc": "1.99.1",
+    "rustc_commit": "58cf8f9c35b355199727627d07ae34a4e2846d67",
+    "rustc_commit_date": "2026-10-13",
+    "host": "aarch64-apple-darwin",
+    "llvm": "23.1.1",
+    "target": "riscv32imac-unknown-none-elf",
+    "language_edition": "2024",
+    "declared_upstream_msrv": "1.98",
+    "msrv_compiler_tested": false,
+    "rust_1_96_attempt": "failed declared compiler requirements; no physical run",
+    "laze": "0.1.39",
+    "laze_install_compiler": "1.96.0",
+    "laze_binary_sha256": "66761cac030ba943a8c2ea87eeba83004c48cbb15098a357cf019f9c5db23205",
+    "espflash": "4.6.0",
+    "esptool": "5.1.0"
+  },
+  "resolved_dependency_highlights": {
+    "esp-hal": {
+      "version": "1.1.1",
+      "repository": "https://github.com/ariel-os/esp-hal",
+      "revision": "ce9bcf390ab6b7abc8ae3bc4989360a493c354e7"
+    },
+    "esp-bootloader-esp-idf": {
+      "version": "0.5.0",
+      "repository": "https://github.com/ariel-os/esp-hal",
+      "revision": "ce9bcf390ab6b7abc8ae3bc4989360a493c354e7"
+    },
+    "embassy-executor": {
+      "version": "0.10.0",
+      "source": "crates.io release"
+    },
+    "embassy-time": {
+      "version": "0.5.1",
+      "repository": "https://github.com/ariel-os/embassy",
+      "revision": "3c1b5fbf28237ea7144ae970c3aec11c38023c3f"
+    },
+    "embassy-embedded-hal": {
+      "version": "0.6.0",
+      "repository": "https://github.com/ariel-os/embassy",
+      "revision": "35b4b7a7f612c4d9bfe13c595d52172a5f8b9bbb"
+    },
+    "embassy-sync": {
+      "version": "0.8.0",
+      "source": "crates.io release"
+    },
+    "esp32c6-pac": {
+      "version": "0.23.2",
+      "source": "crates.io release"
+    }
+  },
+  "build": {
+    "working_directory": "evaluation repository root",
+    "environment": {
+      "RUSTUP_TOOLCHAIN": "1.99.1",
+      "PATH_prefix": "$PWD/.tools/bin"
+    },
+    "program": ".tools/bin/laze",
+    "arguments": [
+      "-C",
+      ".cache/ariel-os/examples",
+      "-g",
+      "build",
+      "-b",
+      "espressif-esp32-c6-devkitc-1",
+      "-a",
+      "hello-world,hello-world-threading",
+      "-s",
+      "logging-over-uart,log",
+      "-D",
+      "CARGO_ARGS=--locked"
+    ],
+    "locked": true,
+    "profile": "release",
+    "lto": "fat",
+    "codegen_units": 1,
+    "embed_bitcode": true,
+    "force_frame_pointers": true,
+    "executor_stack_bytes": 8192,
+    "isr_stack_bytes": 4096,
+    "generated_commands": "artifacts/build-global.ninja",
+    "build_log": "artifacts/build-rust-1.99-uart.log",
+    "prior_attempt_logs": [
+      "artifacts/build-rust-1.96-failed.log",
+      "artifacts/build-rust-1.99-default.log"
+    ],
+    "default_transport_build_flashed": false
+  },
+  "image_generation": {
+    "program": ".tools/bin/espflash",
+    "arguments_template": [
+      "save-image",
+      "--chip",
+      "esp32c6",
+      "--flash-mode",
+      "dio",
+      "--flash-size",
+      "8mb",
+      "--flash-freq",
+      "80mhz",
+      "--xtal-freq",
+      "40mhz",
+      "--merge",
+      "--skip-padding",
+      "<example>/firmware.elf",
+      "<example>/flash.bin"
+    ],
+    "template_path_base": "results/ariel-qualification-2026-10-22",
+    "flash_mode": "dio",
+    "flash_frequency_image_setting_mhz": 80,
+    "flash_size_image_setting_bytes": 8388608,
+    "final_runtime_clock_register_readback": false
+  },
+  "flashing": {
+    "program": "esptool",
+    "arguments_template": [
+      "--chip",
+      "esp32c6",
+      "--port",
+      "/dev/cu.SERIAL_PORT",
+      "--baud",
+      "115200",
+      "--after",
+      "no-reset",
+      "write-flash",
+      "0",
+      "<example>/flash.bin"
+    ],
+    "stdout_and_stderr": "<example>/flash.log",
+    "verification_criterion": "Hash of data verified.",
+    "post_flash_state": "bootloader until subsequent monitor connection/reset"
+  },
+  "monitoring": {
+    "program": ".tools/bin/espflash",
+    "arguments": [
+      "monitor",
+      "--chip",
+      "esp32c6",
+      "--port",
+      "/dev/cu.SERIAL_PORT",
+      "--baud",
+      "115200",
+      "--monitor-baud",
+      "115200",
+      "--non-interactive",
+      "--log-format",
+      "serial"
+    ],
+    "stdout_and_stderr": "<example>/monitor.log",
+    "reset": "separate monitor connection/reset for each image; ROM reports rst:0x1 POWERON",
+    "physical_power_cycle_count_claimed": false,
+    "stop_condition": "operator sent Ctrl-C after expected Hello World output",
+    "success_criterion": "[INFO] Hello World! after ROM/bootloader startup"
+  },
+  "examples": [
+    {
+      "name": "hello-world",
+      "upstream_entry": "#[ariel_os::task(autostart)] async main",
+      "physical_smoke_test": "passed",
+      "elf": "hello-world/firmware.elf",
+      "elf_bytes": 1484208,
+      "elf_sha256": "a359f54fc50731e0579190871c956fa01ed22711dd4ca42bf13a75cba72f113d",
+      "image": "hello-world/flash.bin",
+      "image_bytes": 163328,
+      "image_sha256": "53e1f3009de7671a27a3e771ef1970cab4e7d4ccac3b669b991b5adb64d4a9c1",
+      "flash_log": "hello-world/flash.log",
+      "monitor_log": "hello-world/monitor.log",
+      "monitor_started_utc": "2026-10-23T03:55:43Z"
+    },
+    {
+      "name": "hello-world-threading",
+      "upstream_entry": "#[ariel_os::thread(autostart)] stackful main",
+      "physical_smoke_test": "passed",
+      "elf": "hello-world-threading/firmware.elf",
+      "elf_bytes": 1466212,
+      "elf_sha256": "f0b40d4d7814d66b76b842b3cb32a7967f83b3b249f04dd95afa7284a294f253",
+      "image": "hello-world-threading/flash.bin",
+      "image_bytes": 163632,
+      "image_sha256": "86f200da4435c55dbe21819a8a94a8b6e91e2a1ff299e8cee646039e69d21339",
+      "flash_log": "hello-world-threading/flash.log",
+      "monitor_log": "hello-world-threading/monitor.log",
+      "monitor_started_utc": "2026-10-23T03:56:37Z"
+    }
+  ],
+  "backup_and_restoration": {
+    "original_backup_in_dataset": false,
+    "original_backup_ignored_path": "backups/original-2026-10-22/flash-backup.bin",
+    "original_backup_bytes": 8388608,
+    "original_backup_sha256": "13cde854575fbb57fe3b49ba6f77dd96d32abae487ec5640c590771f57c9faf4",
+    "preflash_verification": "full original device digest matched backup before either qualification flash",
+    "preflash_verification_ignored_log": "backups/original-2026-10-22/pre-clock-v2-verify.log",
+    "final_restoration_status": "full original image restored, independently digest-verified against device and hard-reset into original application",
+    "final_restoration_record": "../clocked-handoff-2026-10-23/device-state.json",
+    "restoration_success_claimed_by_this_dataset": true
+  },
+  "evidence_integrity": {
+    "manifest": "SHA256SUMS",
+    "manifest_scope": "all archived files plus README.md and provenance.json; SHA256SUMS itself excluded",
+    "raw_monitor_output_modified": false,
+    "physical_operator": "root agent",
+    "independent_documentation_review": "HAL/Ariel qualification agent read preserved artifacts without hardware access"
+  },
+  "limits": [
+    "No benchmark samples or performance rankings are established.",
+    "One startup observation per example does not establish long-duration stability.",
+    "Selected upstream board configuration does not prove physical board model.",
+    "No final runtime CPU or flash clock register readback is present.",
+    "Compiler, HAL, LTO and frame-pointer settings differ from controlled benchmark baseline.",
+    "No radio, peripheral coverage, power, deadline or memory high-water result is established.",
+    "Output precedes upstream exit call; post-exit behavior was not independently tested."
+  ]
+}

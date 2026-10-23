@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "packaging_state": "finalized",
+  "sealed_utc": "2026-10-23T07:49:27.837875+00:00",
+  "sealing_kind": "retrospective_current_artifact_identity",
+  "capture_time_freeze_claimed": false,
+  "original_capture_and_report_bytes_changed": false,
+  "limitations": [
+    "This manifest was added after collection and later audits; it does not establish a pre-capture freeze.",
+    "Hashes establish current artifact identity, not physical correctness or resolved initial runtime flash clocks."
+  ]
+}

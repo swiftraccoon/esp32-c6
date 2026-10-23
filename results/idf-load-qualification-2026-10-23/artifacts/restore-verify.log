@@ -1,0 +1,20 @@
+esptool v5.1.0
+Serial port /dev/cu.SERIAL_PORT:
+Connecting....
+Connected to ESP32-C6 on /dev/cu.SERIAL_PORT:
+Chip type:          ESP32-C6 (QFN40) (revision v0.2)
+Features:           Wi-Fi 6, BT 5 (LE), IEEE802.15.4, Single Core + LP Core, 160MHz
+Crystal frequency:  40MHz
+MAC: <device>
+BASE MAC: <device>
+MAC_EXT: <device>
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+
+Configuring flash size...
+Verifying 0x800000 (8388608) bytes at 0x00000000 in flash against 'backups/pre-load-2026-10-23/flash-backup.bin'...
+Verification successful (digest matched).
+
+Hard resetting via RTS pin...

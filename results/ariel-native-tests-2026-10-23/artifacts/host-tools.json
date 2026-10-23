@@ -1,0 +1,45 @@
+{
+  "espflash": {
+    "path_at_collection": ".tools/bin/espflash",
+    "sha256": "cee90b1e08a9a9b53704153a1e7c6f6f6de41e3ac9b3555fa3afaa0b80e46e0b"
+  },
+  "laze": {
+    "path_at_collection": ".tools/bin/laze",
+    "sha256": "66761cac030ba943a8c2ea87eeba83004c48cbb15098a357cf019f9c5db23205"
+  },
+  "esptool": {
+    "path_at_collection": "/Users/builduser/.local/bin/esptool",
+    "sha256": "337ef3d007b8b11af88f8939baf576d8668e14033aa28f340c000f988a5d383d"
+  },
+  "timeout": {
+    "path_at_collection": "/opt/homebrew/bin/timeout",
+    "sha256": "6a7b0620313d337d70366cd4d3b969b49854abfeb1db602bdf3328122e223c6d"
+  },
+  "script": {
+    "path_at_collection": "/usr/bin/script",
+    "sha256": "e8d2ae6a64d3bb6139a649e2a6acd0819087140ec512b7ec400581d1b5794396"
+  },
+  "monitor_command": [
+    "timeout",
+    "--signal=INT",
+    "--kill-after=2s",
+    "30s",
+    "/usr/bin/script",
+    "-q",
+    "<run>/monitor.log",
+    ".tools/bin/espflash",
+    "monitor",
+    "--port",
+    "/dev/cu.SERIAL_PORT",
+    "--chip",
+    "esp32c6",
+    "--non-interactive",
+    "--log-format",
+    "serial",
+    "--monitor-baud",
+    "115200",
+    "--elf",
+    "<selected.elf>",
+    "--skip-update-check"
+  ]
+}

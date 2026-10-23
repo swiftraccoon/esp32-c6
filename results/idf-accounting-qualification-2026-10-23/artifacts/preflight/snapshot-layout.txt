@@ -1,0 +1,7 @@
+results/idf-accounting-qualification-2026-10-23/artifacts/firmware.elf:	file format elf32-littleriscv
+
+0x0002f1f0: DW_TAG_structure_type
+              DW_AT_name	("Snapshot")
+              DW_AT_byte_size	(0x0250)
+              DW_AT_accessibility	(DW_ACCESS_private)
+              DW_AT_alignment	(8)

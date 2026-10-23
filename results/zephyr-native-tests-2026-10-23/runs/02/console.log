@@ -1,0 +1,78 @@
+[2026-10-23T06:41:43Z INFO ] Serial port: '/dev/cu.SERIAL_PORT'
+[2026-10-23T06:41:43Z INFO ] Connecting...
+[2026-10-23T06:41:43Z INFO ] Using flash stub
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40800000,len:0x9d70
+load:0x40809d80,len:0x1940
+SHA-256 comparison failed:
+Calculated: 4d04a62e914caf8e16b81c0996f6c456e61f4c9c1573dc9bc00cbe85e314c046
+Expected: 0000000010490000000000000000000000000000000000000000000000000000
+Attempting to boot anyway...
+entry 0x40801520
+I (soc_init): ESP Simple boot
+I (soc_init): compile time Oct 23 2026 02:17:21
+I (soc_init): chip revision: v0.2
+I (flash_init): SPI Speed      : 80MHz
+I (flash_init): SPI Mode       : DIO
+I (flash_init): SPI Flash Size : 8MB
+I (boot): DRAM	: lma=00000020h vma=40800000h size=09d70h ( 40304)
+I (boot): DRAM	: lma=00009d98h vma=40809d80h size=01940h (  6464)
+I (boot): IROM	: lma=00010000h vma=42800000h size=01b24h (  6948)
+I (boot): IROM	: lma=00020000h vma=42000000h size=079f0h ( 31216)
+I (boot): libc heap size 433 kB.
+I (spi_flash): detected chip: generic
+I (spi_flash): flash io: dio
+*** Booting Zephyr OS build v4.4.0 ***
+thread.yield.preemptive.ctx.k_to_k       - Context switch via k_yield                         :      26 cycles ,     1652 ns : 
+thread.yield.cooperative.ctx.k_to_k      - Context switch via k_yield                         :      26 cycles ,     1649 ns : 
+isr.resume.interrupted.thread.kernel     - Return from ISR to interrupted thread              :       6 cycles ,      401 ns : 
+isr.resume.different.thread.kernel       - Return from ISR to another thread                  :      16 cycles ,     1049 ns : 
+thread.create.kernel.from.kernel         - Create thread                                      :      38 cycles ,     2402 ns : 
+thread.start.kernel.from.kernel          - Start thread                                       :      40 cycles ,     2524 ns : 
+thread.suspend.kernel.from.kernel        - Suspend thread                                     :      25 cycles ,     1588 ns : 
+thread.resume.kernel.from.kernel         - Resume thread                                      :      28 cycles ,     1774 ns : 
+thread.abort.kernel.from.kernel          - Abort thread                                       :      19 cycles ,     1211 ns : 
+fifo.put.immediate.kernel                - Add data to FIFO (no ctx switch)                   :       9 cycles ,      574 ns : 
+fifo.get.immediate.kernel                - Get data from FIFO (no ctx switch)                 :       8 cycles ,      500 ns : 
+fifo.put.alloc.immediate.kernel          - Allocate to add data to FIFO (no ctx switch)       :      82 cycles ,     5125 ns : 
+fifo.get.free.immediate.kernel           - Free when getting data from FIFO (no ctx switch)   :      86 cycles ,     5376 ns : 
+fifo.get.blocking.k_to_k                 - Get data from FIFO (w/ ctx switch)                 :      55 cycles ,     3479 ns : 
+fifo.put.wake+ctx.k_to_k                 - Add data to FIFO (w/ ctx switch)                   :      63 cycles ,     3951 ns : 
+fifo.get.free.blocking.k_to_k            - Free when getting data from FIFO (w/ ctx switch)   :      56 cycles ,     3500 ns : 
+fifo.put.alloc.wake+ctx.k_to_k           - Allocate to add data to FIFO (w/ ctx switch)       :      63 cycles ,     3937 ns : 
+lifo.put.immediate.kernel                - Add data to LIFO (no ctx switch)                   :       9 cycles ,      599 ns : 
+lifo.get.immediate.kernel                - Get data from LIFO (no ctx switch)                 :       8 cycles ,      500 ns : 
+lifo.put.alloc.immediate.kernel          - Allocate to add data to LIFO (no ctx switch)       :      82 cycles ,     5126 ns : 
+lifo.get.free.immediate.kernel           - Free when getting data from LIFO (no ctx switch)   :      86 cycles ,     5375 ns : 
+lifo.get.blocking.k_to_k                 - Get data from LIFO (w/ ctx switch)                 :      56 cycles ,     3502 ns : 
+lifo.put.wake+ctx.k_to_k                 - Add data to LIFO (w/ ctx switch)                   :      63 cycles ,     3938 ns : 
+lifo.get.free.blocking.k_to_k            - Free when getting data from LIFO (w/ ctx switch)   :      55 cycles ,     3476 ns : 
+lifo.put.alloc.wake+ctx.k_to_k           - Allocate to add data to LIFO (w/ ctx switch)       :      63 cycles ,     3975 ns : 
+events.post.immediate.kernel             - Post events (nothing wakes)                        :      16 cycles ,     1029 ns : 
+events.set.immediate.kernel              - Set events (nothing wakes)                         :      16 cycles ,     1029 ns : 
+events.wait.immediate.kernel             - Wait for any events (no ctx switch)                :       9 cycles ,      608 ns : 
+events.wait_all.immediate.kernel         - Wait for all events (no ctx switch)                :       9 cycles ,      614 ns : 
+events.wait.blocking.k_to_k              - Wait for any events (w/ ctx switch)                :      41 cycles ,     2589 ns : 
+events.set.wake+ctx.k_to_k               - Set events (w/ ctx switch)                         :      56 cycles ,     3525 ns : 
+events.wait_all.blocking.k_to_k          - Wait for all events (w/ ctx switch)                :      58 cycles ,     3676 ns : 
+events.post.wake+ctx.k_to_k              - Post events (w/ ctx switch)                        :      74 cycles ,     4625 ns : 
+semaphore.give.immediate.kernel          - Give a semaphore (no waiters)                      :       6 cycles ,      387 ns : 
+semaphore.take.immediate.kernel          - Take a semaphore (no blocking)                     :       6 cycles ,      404 ns : 
+semaphore.take.blocking.k_to_k           - Take a semaphore (context switch)                  :      37 cycles ,     2326 ns : 
+semaphore.give.wake+ctx.k_to_k           - Give a semaphore (context switch)                  :      41 cycles ,     2600 ns : 
+condvar.wait.blocking.k_to_k             - Wait for a condvar (context switch)                :      62 cycles ,     3930 ns : 
+condvar.signal.wake+ctx.k_to_k           - Signal a condvar (context switch)                  :      67 cycles ,     4225 ns : 
+stack.push.immediate.kernel              - Add data to k_stack (no ctx switch)                :       5 cycles ,      374 ns : 
+stack.pop.immediate.kernel               - Get data from k_stack (no ctx switch)              :       6 cycles ,      375 ns : 
+stack.pop.blocking.k_to_k                - Get data from k_stack (w/ ctx switch)              :      55 cycles ,     3479 ns : 
+stack.push.wake+ctx.k_to_k               - Add data to k_stack (w/ ctx switch)                :      62 cycles ,     3875 ns : 
+mutex.lock.immediate.recursive.kernel    - Lock a mutex                                       :       8 cycles ,      503 ns : 
+mutex.unlock.immediate.recursive.kernel  - Unlock a mutex                                     :       4 cycles ,      258 ns : 
+heap.malloc.immediate                    - Average time for heap malloc                       :     107 cycles ,     6734 ns : 
+heap.free.immediate                      - Average time for heap free                         :     127 cycles ,     7981 ns : 
+===================================================================
+PROJECT EXECUTION SUCCESSFUL

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "interpretation_revision": 2,
+  "original_operator_pass_reports_preserved": 12,
+  "artifact_visible_expected_uart_output_checks": 12,
+  "first_boot_post_marker_guard": {
+    "reported_lower_bound_ms": 5000,
+    "evidence_kind": "operator-attested",
+    "original_wait_receipt_retained": false,
+    "independently_reconstructable_from_archive": false,
+    "guard_failure_proven": false
+  },
+  "other_post_marker_guards": "Recorded timestamp/timeout arithmetic reproduces conditionally; no independent physical trace",
+  "yield_peer_progress_counter": false,
+  "per_iteration_peer_acknowledgment": false,
+  "actual_context_switch_count_validated": false,
+  "derived_77_tick_value": "Upstream arithmetic from floored155tickmean, not validated single-switch latency",
+  "capture_bytes_and_original_reports_changed": false,
+  "review": "docs/reviews/native-suite-qualification.md"
+}

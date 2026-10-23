@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "experiment": "rtic-monotonic-qualification-v1",
+  "input_freeze_commit": "33975191f16cec1c28e5f1f87c9255fefdfd5c57",
+  "binding_commit": "096f8a6c754be101b62eabdb269dfa548978aa1b",
+  "outcome": "failed_qualification",
+  "scheduled_attempts": 3,
+  "executed_attempts": 1,
+  "failed_attempts": 1,
+  "qualification_passes": 0,
+  "not_run_attempts": 2,
+  "attempts": [
+    {
+      "boot_id": "rtic-monotonic-01",
+      "run_order": 1,
+      "directory": "runs/01",
+      "status": "failed",
+      "report": "runs/01/run.json",
+      "failure": "additional ROM startup in the same attempt"
+    },
+    {
+      "boot_id": "rtic-monotonic-02",
+      "run_order": 2,
+      "directory": "runs/02",
+      "status": "not_run",
+      "reason": "Schedule stopped after the first failed qualification attempt; no replacement or subsequent RTIC boot was collected."
+    },
+    {
+      "boot_id": "rtic-monotonic-03",
+      "run_order": 3,
+      "directory": "runs/03",
+      "status": "not_run",
+      "reason": "Schedule stopped after the first failed qualification attempt; no replacement or subsequent RTIC boot was collected."
+    }
+  ],
+  "reset_cause": "unconfirmed; no second reset-reason line is present in the retained capture",
+  "restoration": "device-state.json"
+}

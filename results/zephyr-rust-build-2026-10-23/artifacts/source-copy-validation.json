@@ -1,0 +1,5 @@
+{
+  "upstream_files_compared": 139,
+  "all_original_bytes_match": true,
+  "additional_generated_file": "samples/hello_world/Cargo.lock"
+}

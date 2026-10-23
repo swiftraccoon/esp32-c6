@@ -1,0 +1,18 @@
+{
+  "source": "ioreg -a -r -c IOUSBHostDevice plus /dev/cu.* inventory; serial identifiers omitted",
+  "usb_devices": [
+    {
+      "USB Product Name": "CP2102N USB to UART Bridge Controller",
+      "USB Vendor Name": "Silicon Labs",
+      "idVendor": 4292,
+      "idProduct": 60000
+    }
+  ],
+  "serial_ports": [
+    "cu.SERIAL_PORT"
+  ],
+  "limits": "Host enumeration only, not a physical cable inspection or proof of the firmware backend selected after reset.",
+  "system_profiler_note": "SPUSBDataType returned an empty device list; no absence inference used from that result.",
+  "espressif_usb_device_count": 0,
+  "unrelated_devices_and_ports": "omitted"
+}

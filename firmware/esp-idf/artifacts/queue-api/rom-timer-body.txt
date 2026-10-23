@@ -1,0 +1,57 @@
+
+.embuild/espressif/tools/esp-rom-elfs/20260528/esp32c6_rev0_rom.elf:	file format elf32-littleriscv
+
+Disassembly of section .text:
+
+40020864 <systimer_hal_get_counter_value>:
+40020864: 411c         	lw	a5, 0x0(a0)
+40020866: ed8d         	bnez	a1, 0x400208a0 <systimer_hal_get_counter_value+0x3c>
+40020868: 43d8         	lw	a4, 0x4(a5)
+4002086a: 400006b7     	lui	a3, 0x40000
+4002086e: 8f55         	or	a4, a4, a3
+40020870: c3d8         	sw	a4, 0x4(a5)
+40020872: 4685         	li	a3, 0x1
+40020874: ed9d         	bnez	a1, 0x400208b2 <systimer_hal_get_counter_value+0x4e>
+40020876: 43d8         	lw	a4, 0x4(a5)
+40020878: 8375         	srli	a4, a4, 0x1d
+4002087a: 8b05         	andi	a4, a4, 0x1
+4002087c: df65         	beqz	a4, 0x40020874 <systimer_hal_get_counter_value+0x10>
+4002087e: ed95         	bnez	a1, 0x400208ba <systimer_hal_get_counter_value+0x56>
+40020880: 43e8         	lw	a0, 0x44(a5)
+40020882: 00100637     	lui	a2, 0x100
+40020886: 4805         	li	a6, 0x1
+40020888: 167d         	addi	a2, a2, -0x1
+4002088a: e1a1         	bnez	a1, 0x400208ca <systimer_hal_get_counter_value+0x66>
+4002088c: 43b8         	lw	a4, 0x40(a5)
+4002088e: 43f4         	lw	a3, 0x44(a5)
+40020890: 8f71         	and	a4, a4, a2
+40020892: 02d51a63     	bne	a0, a3, 0x400208c6 <systimer_hal_get_counter_value+0x62>
+40020896: 001005b7     	lui	a1, 0x100
+4002089a: 15fd         	addi	a1, a1, -0x1
+4002089c: 8df9         	and	a1, a1, a4
+4002089e: 8082         	ret
+400208a0: 4705         	li	a4, 0x1
+400208a2: fce598e3     	bne	a1, a4, 0x40020872 <systimer_hal_get_counter_value+0xe>
+400208a6: 4798         	lw	a4, 0x8(a5)
+400208a8: 400006b7     	lui	a3, 0x40000
+400208ac: 8f55         	or	a4, a4, a3
+400208ae: c798         	sw	a4, 0x8(a5)
+400208b0: b7c9         	j	0x40020872 <systimer_hal_get_counter_value+0xe>
+400208b2: fcd591e3     	bne	a1, a3, 0x40020874 <systimer_hal_get_counter_value+0x10>
+400208b6: 4798         	lw	a4, 0x8(a5)
+400208b8: b7c1         	j	0x40020878 <systimer_hal_get_counter_value+0x14>
+400208ba: 4705         	li	a4, 0x1
+400208bc: 4501         	li	a0, 0x0
+400208be: fce592e3     	bne	a1, a4, 0x40020882 <systimer_hal_get_counter_value+0x1e>
+400208c2: 47e8         	lw	a0, 0x4c(a5)
+400208c4: bf7d         	j	0x40020882 <systimer_hal_get_counter_value+0x1e>
+400208c6: 8536         	mv	a0, a3
+400208c8: b7c9         	j	0x4002088a <systimer_hal_get_counter_value+0x26>
+400208ca: 01059663     	bne	a1, a6, 0x400208d6 <systimer_hal_get_counter_value+0x72>
+400208ce: 47b8         	lw	a4, 0x48(a5)
+400208d0: 47f4         	lw	a3, 0x4c(a5)
+400208d2: 8f71         	and	a4, a4, a2
+400208d4: bf7d         	j	0x40020892 <systimer_hal_get_counter_value+0x2e>
+400208d6: 4701         	li	a4, 0x0
+400208d8: 4681         	li	a3, 0x0
+400208da: bf65         	j	0x40020892 <systimer_hal_get_counter_value+0x2e>

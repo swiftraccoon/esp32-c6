@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "platform": "bare-metal",
+  "hardware": {
+    "soc": "esp32c6",
+    "chip_revision": "0.2",
+    "flash_bytes": 8388608,
+    "board_model": null,
+    "uart_bridge": "CP2102N",
+    "uart_pins": {
+      "tx": 16,
+      "rx": 17
+    }
+  },
+  "software": {
+    "rust": "1.96.0",
+    "rust_commit": "ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96",
+    "llvm": "22.1.2",
+    "target": "riscv32imac-unknown-none-elf",
+    "esp_hal": "1.2.0",
+    "esp_rtos": null,
+    "embassy_executor": null,
+    "embassy_time": null,
+    "esp_bootloader_esp_idf": "0.6.0",
+    "espflash": "4.6.0",
+    "esptool": "5.1.0",
+    "source_snapshot": "results/initial-2026-10-22/artifacts/esp-hal-source.tar.gz",
+    "source_snapshot_sha256": "c1a667d640e4ba616a647b751cfced489fd65358db4cafb12f56154de9c18656",
+    "workload_source_sha256": "27447ee945989a682ee778646f488e7c986d8831a38515e1057eaa143992ab9e",
+    "cargo_lock_sha256": "5f6082fbe117dc7b79a10a7452f79d0407fff370fd2e422d167195d25e4c2687",
+    "git_commit": null
+  },
+  "configuration": {
+    "cpu_mhz": 160,
+    "flash_mode": "dio",
+    "flash_mhz": 40,
+    "lto": "thin",
+    "opt_level": 3,
+    "codegen_units": 1,
+    "panic": "abort",
+    "radios": "not initialized",
+    "logging": "protocol emitted after all samples",
+    "startup_settle_ms": 2000,
+    "warmup_iterations": 8,
+    "sample_count_per_benchmark": 64,
+    "clock_source": "esp_hal::time::Instant",
+    "timer_resolution_ns": 1000
+  },
+  "scope": "Compute and timer observer pilot; no scheduling, IRQ, power or radio result",
+  "build_command": "cargo build --locked --release --bin bare-metal",
+  "build_directory": "firmware/esp-hal"
+}

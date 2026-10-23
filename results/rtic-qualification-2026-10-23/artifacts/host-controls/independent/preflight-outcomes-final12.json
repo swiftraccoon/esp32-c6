@@ -1,0 +1,114 @@
+{
+  "purpose": "Final12s independent preflight/failure controls, nonexistent port only; no real serial or device access.",
+  "collector_sha256": "f06cb6e82e1e01e86dba08a5172b5e4cc0b3ebd588f3cd6fd2395cbfbdbc84dd",
+  "cases": [
+    {
+      "case": "comparison",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: RTIC capture is qualification only; comparison is unsupported"
+    },
+    {
+      "case": "run-order-zero",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: RTIC run order must be 1 through 3"
+    },
+    {
+      "case": "run-order-four",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: RTIC run order must be 1 through 3"
+    },
+    {
+      "case": "empty-boot-id",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: RTIC boot ID must be nonempty"
+    },
+    {
+      "case": "existing-output",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: result directory already exists; refusing overwrite"
+    },
+    {
+      "case": "missing-elf",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: reading RTIC firmware ELF\n\nCaused by:\n    No such file or directory (os error 2)"
+    },
+    {
+      "case": "not-elf",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: reading RTIC ELF\n\nCaused by:\n    Unknown file magic"
+    },
+    {
+      "case": "wrong-architecture",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: RTIC requires a loadable RISC-V32 executable ELF"
+    },
+    {
+      "case": "relocatable",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: RTIC requires a loadable RISC-V32 executable ELF"
+    },
+    {
+      "case": "missing-marker",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: required RTIC marker absent from loadable ELF: bye from baz"
+    },
+    {
+      "case": "array-provenance",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: RTIC build provenance must be an object"
+    },
+    {
+      "case": "malformed-provenance",
+      "exit": 1,
+      "no_output_created_or_existing_untouched": true,
+      "error": "Error: reading RTIC build provenance\n\nCaused by:\n    EOF while parsing an object at line 2 column 0"
+    },
+    {
+      "case": "actual-wrapper-nonexistent-port-failure",
+      "exit": 1,
+      "error": "Error: opening RTIC serial port\n\nCaused by:\n    No such file or directory",
+      "failed_report_has_null_results": true,
+      "original_inputs_identical": true,
+      "archive_replay_exit": 0,
+      "archive_replay": {
+        "failed_captures_retained": 1,
+        "limits": "Reproduces supported protocol outputs and the RTIC raw/receipt adapter only; other native console suites, physical accuracy and unrecorded events remain outside this replay.",
+        "status": "replays_consistent",
+        "study_summaries": 0,
+        "successful_console_captures": 0,
+        "successful_protocol_transcripts": 0
+      }
+    },
+    {
+      "case": "actual-failed-wrapper-not-promoted-by-valid-looking-data",
+      "archive_replay_exit": 0,
+      "archive_replay": {
+        "failed_captures_retained": 1,
+        "limits": "Reproduces supported protocol outputs and the RTIC raw/receipt adapter only; other native console suites, physical accuracy and unrecorded events remain outside this replay.",
+        "status": "replays_consistent",
+        "study_summaries": 0,
+        "successful_console_captures": 0,
+        "successful_protocol_transcripts": 0
+      }
+    }
+  ],
+  "existing_whole_archive_replay": {
+    "failed_captures_retained": 0,
+    "limits": "Reproduces supported protocol outputs and the RTIC raw/receipt adapter only; other native console suites, physical accuracy and unrecorded events remain outside this replay.",
+    "status": "replays_consistent",
+    "study_summaries": 1,
+    "successful_console_captures": 0,
+    "successful_protocol_transcripts": 66
+  }
+}

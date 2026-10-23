@@ -1,0 +1,17 @@
+[build]
+target = "riscv32imac-esp-espidf"
+
+[target.riscv32imac-esp-espidf]
+linker = "ldproxy"
+rustflags = ["--cfg", "espidf_time64"]
+
+[unstable]
+build-std = ["std", "panic_abort"]
+
+[env]
+# Cargo must also receive this variable before startup (see README.md). Scope
+# build-std's unstable support to this component and the pinned stable compiler.
+RUSTC_BOOTSTRAP = "1"
+MCU = "esp32c6"
+ESP_IDF_VERSION = "tag:v5.5.6"
+ESP_IDF_TOOLS_INSTALL_DIR = "workspace"

@@ -1,0 +1,9 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on shared package cache
+   Compiling rtic-image-correction v0.1.0 (/Users/builduser/Git/esp32-c6/.cache/rtic-qualification-2026-10-23/packaging-helper)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.47s
+     Running `target/debug/rtic-image-correction boot ../artifacts/bootloader.bin ../artifacts/bootloader-corrected.bin`
+input_sha256=d4a3f6fabf032e8dd144a028915948f22725dabaa02d95236276df28a9c46be4
+output_sha256=b1d7d018cc62f3fb30b901d5bacf95f58ab879f70ebec50d231f092e976c9318
+bytes=22016

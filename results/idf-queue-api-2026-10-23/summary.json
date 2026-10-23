@@ -1,0 +1,906 @@
+{
+  "blocks": [
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 6373439242571345464,
+            "directory": "runs/s1-b01-01-std",
+            "p50_ticks": 1006,
+            "report_sha256": "4f8200874aa095b8555242c07afd4aef425fd0d230c0c8e916b41bd655f6635b",
+            "serial_sha256": "33f8077fb379380284ca145a57a857046cb63a0acacfe05e0869c3ed367969cc",
+            "timestamp_unix_ms": 1792733569026
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 2663647276356437790,
+            "directory": "runs/s1-b01-02-native",
+            "p50_ticks": 319,
+            "report_sha256": "c79dc83a6fc392aed89fa26b755f602d67e3149de0fdbc795b60ca9d136c2a30",
+            "serial_sha256": "398e1410934ff049467a907eb7171d2b214a3cc5c195e89c8f3331ec06218cf4",
+            "timestamp_unix_ms": 1792733621083
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 1,
+      "native_minus_std_p50_ticks": -687,
+      "session": 1
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 5440983259265053615,
+            "directory": "runs/s1-b02-01-std",
+            "p50_ticks": 1006,
+            "report_sha256": "40ee2044fcaf07b3879a99d37b05aad4b2951fd122e1c95d2ecfb36c8b0e56a4",
+            "serial_sha256": "2a69db9712723ef7313e178a4ace45c1b81eb1b7aab04b9c487a9ace58dee66b",
+            "timestamp_unix_ms": 1792733672142
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 12665383743962855212,
+            "directory": "runs/s1-b02-02-native",
+            "p50_ticks": 319,
+            "report_sha256": "568cb39b6c8291035a50359373068aef1e5703ef5b6a61dd391197151940ee2d",
+            "serial_sha256": "83a738c10d24a1db1d670900c058dd084cb3412a3e813051846479b9f29189a0",
+            "timestamp_unix_ms": 1792733724281
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 2,
+      "native_minus_std_p50_ticks": -687,
+      "session": 1
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 4231128120526203274,
+            "directory": "runs/s1-b03-01-native",
+            "p50_ticks": 319,
+            "report_sha256": "d3b4b8efa37ad636aab4b1f4b07a99ecc62d470513dd2a6088ad63d9f7dd25f9",
+            "serial_sha256": "9748bb09db58e17b57a71b4fcec169c0facf8eaee97fe4f3636bd6477ac982be",
+            "timestamp_unix_ms": 1792733775201
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 9514221402222169895,
+            "directory": "runs/s1-b03-02-std",
+            "p50_ticks": 1006,
+            "report_sha256": "e2126c1772f049af0fc09648d5761824565f7a605ed25e976206796ab7bfc834",
+            "serial_sha256": "ecebed54773807b8a34206debce5329106758df6b87e245546458139fa256027",
+            "timestamp_unix_ms": 1792733826291
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 3,
+      "native_minus_std_p50_ticks": -687,
+      "session": 1
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 6699678078755987772,
+            "directory": "runs/s1-b04-01-native",
+            "p50_ticks": 319,
+            "report_sha256": "2a91609b6c44774857ee20f2e7f44237962c1cde514617343374737036e721e5",
+            "serial_sha256": "e2f0029aa8b91b999974f7fa34a5331af0ae017e7810336430e2cd52946fea2c",
+            "timestamp_unix_ms": 1792733878324
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 17866016263083196020,
+            "directory": "runs/s1-b04-02-std",
+            "p50_ticks": 1006,
+            "report_sha256": "3ed8708b0b992fe75fb785bc7cc750ae9b683315c41f7bfaa338d9d4f7f0295a",
+            "serial_sha256": "3a4f091b94c4128cd3957f47156c87a5922087c0cb3bd21f146275f0227c28fc",
+            "timestamp_unix_ms": 1792733929212
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 4,
+      "native_minus_std_p50_ticks": -687,
+      "session": 1
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 4947038696501300154,
+            "directory": "runs/s2-b05-01-native",
+            "p50_ticks": 319,
+            "report_sha256": "9bb1fc712468296c71637af60d7695ac1ec58f8045d67760cbeef74ebd77e090",
+            "serial_sha256": "ae6f68dbaa452674dacd2669d0411b897c50be3db1017f55a0484f7a0f280668",
+            "timestamp_unix_ms": 1792733981300
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 13588756261728772066,
+            "directory": "runs/s2-b05-02-std",
+            "p50_ticks": 1006,
+            "report_sha256": "0437b57dd29399c8e33f6baf47e631653b0969b1d2dadf165e103592a2877fbf",
+            "serial_sha256": "725c80704a3c3b8fbd222b575444e399ff5bcddb0bfbb98c130e6cc0f312454b",
+            "timestamp_unix_ms": 1792734032196
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 5,
+      "native_minus_std_p50_ticks": -687,
+      "session": 2
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 3237937435858389458,
+            "directory": "runs/s2-b06-01-std",
+            "p50_ticks": 1006,
+            "report_sha256": "cee5b07f7a3a21100841abf77920a9e482a246654ac98cca22d133cd3c1d6434",
+            "serial_sha256": "8a46e8afa76376a63c5428cb35179de3fae001e465ad22ca0228b5ce28fd2fe5",
+            "timestamp_unix_ms": 1792734084592
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 6154467895162252129,
+            "directory": "runs/s2-b06-02-native",
+            "p50_ticks": 319,
+            "report_sha256": "df86ab14ed30c0fdada23cf16e215de8cc0df83b9c28777a3978338ce41edc84",
+            "serial_sha256": "557756295237d3741f2d13ff1660fb4039065107dec55dd6560bb70b4e6757c1",
+            "timestamp_unix_ms": 1792734136764
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 6,
+      "native_minus_std_p50_ticks": -687,
+      "session": 2
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 12105054914936546722,
+            "directory": "runs/s2-b07-01-native",
+            "p50_ticks": 319,
+            "report_sha256": "b5aadba08d9a4b5692052d736fe840ac3a26753aac67076451617f13c51413b2",
+            "serial_sha256": "19e9326ac9dbcf62487d89371eb0b77215928549f251cfc333ff2ec698a0c374",
+            "timestamp_unix_ms": 1792734187560
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 1947201451829972917,
+            "directory": "runs/s2-b07-02-std",
+            "p50_ticks": 1006,
+            "report_sha256": "043d2f7e2b6988df93e4747e4a23825012e63e9b5396fb2612a0234974359bce",
+            "serial_sha256": "d9a7be7dc4a2660b16585df015c34616348033b5730522f065fd90bf41475629",
+            "timestamp_unix_ms": 1792734238700
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 7,
+      "native_minus_std_p50_ticks": -687,
+      "session": 2
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 7999740813907623773,
+            "directory": "runs/s2-b08-01-std",
+            "p50_ticks": 1006,
+            "report_sha256": "51ac09b019a7581e6f3f88e85ba92f5713a9624a8f5d88cdab16b99cb28d52f7",
+            "serial_sha256": "2028a4d18d9a403c2724a1e1ee48195c4cccae37459c6d3f63fbe5e13d88b18f",
+            "timestamp_unix_ms": 1792734290805
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 7412831238484626637,
+            "directory": "runs/s2-b08-02-native",
+            "p50_ticks": 319,
+            "report_sha256": "085698c2fe94ff2607d20d2d63000ef21f6da62a99187c30c545c3253984bb75",
+            "serial_sha256": "82b221f84bb4ce8be2d8534aa2899df66d8ad0ac349224dd850a5a40ddf2e32c",
+            "timestamp_unix_ms": 1792734342735
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 8,
+      "native_minus_std_p50_ticks": -687,
+      "session": 2
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 3599099619968781279,
+            "directory": "runs/s3-b09-01-native",
+            "p50_ticks": 319,
+            "report_sha256": "7b832cd45350a4f034692935a590cb65bacafb3e1bc23f2360339d11e376d502",
+            "serial_sha256": "418232f5bfa2d363a6d61777222775d53d676df0c0d990dfbd6fb3f8256c53a3",
+            "timestamp_unix_ms": 1792734393476
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 10776260223301941235,
+            "directory": "runs/s3-b09-02-std",
+            "p50_ticks": 1006,
+            "report_sha256": "226dca7e38a4a17b7e09ccbc0ac931cdebc8b71ecd4c7100b063894c1eaca7b6",
+            "serial_sha256": "40e1d6b79d9d71b92bc1081304d8708b2f63aeb4cc4863d263572f142c516feb",
+            "timestamp_unix_ms": 1792734444410
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 9,
+      "native_minus_std_p50_ticks": -687,
+      "session": 3
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 8401298840717557425,
+            "directory": "runs/s3-b10-01-std",
+            "p50_ticks": 1006,
+            "report_sha256": "01472f364aeb3448f9fba59e46031a7d6238fb7b57a3563c054271bcc1831cac",
+            "serial_sha256": "5351bf5a2710d732e053494d104922191bd024c67483023276ce22397d89e403",
+            "timestamp_unix_ms": 1792734496671
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 5082376481397956886,
+            "directory": "runs/s3-b10-02-native",
+            "p50_ticks": 319,
+            "report_sha256": "3c59ede5fff6ba91d0f241e16fd04b428a72cb5373a142712c4a79e35aedc166",
+            "serial_sha256": "c96ade29bc32d9fc2aa1effa2973063194b5978de255206ba2d9bbf5b9aaf57c",
+            "timestamp_unix_ms": 1792734548730
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 10,
+      "native_minus_std_p50_ticks": -687,
+      "session": 3
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 14165808824537030741,
+            "directory": "runs/s3-b11-01-std",
+            "p50_ticks": 1006,
+            "report_sha256": "0f97f69a2661f94a79b3c8b9191ead708a5d375a7a353288f87631bc5155795a",
+            "serial_sha256": "4f3dfbfcbcfca21745198558422c51b7a34e8d6f895c07ec17a7ad5978c34f6f",
+            "timestamp_unix_ms": 1792734599726
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 8313982274114085266,
+            "directory": "runs/s3-b11-02-native",
+            "p50_ticks": 319,
+            "report_sha256": "e8d70f8a059972234e14a2356aae3eb0b2db78576d068ddea5bbcf86e1aaa557",
+            "serial_sha256": "6af86734728cc4e198eedee7a21a039b8089555bc6352e0637f231b211dc4a3f",
+            "timestamp_unix_ms": 1792734651970
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 11,
+      "native_minus_std_p50_ticks": -687,
+      "session": 3
+    },
+    {
+      "attempts": [
+        {
+          "evidence": {
+            "backend": "freertos-queue",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 426,
+                "mean_ticks": 318.964,
+                "min_ticks": 318,
+                "p50_ticks": 319,
+                "p95_ticks": 319,
+                "p99_ticks": 319,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 16,
+                "mean_ticks": 14.801,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 13628265474858992797,
+            "directory": "runs/s3-b12-01-native",
+            "p50_ticks": 319,
+            "report_sha256": "97799857640f1763566497a171bfd1940f9318ca12fa7c7f0ee11d2add3bab3b",
+            "serial_sha256": "a5f4bba2f38b6f2cc8e18f90884757acdffdb6a51dc5071730e24f09c89b3a07",
+            "timestamp_unix_ms": 1792734702752
+          },
+          "status": "pass"
+        },
+        {
+          "evidence": {
+            "backend": "rust-std-sync-channel",
+            "benchmarks": {
+              "message-roundtrip": {
+                "max_ticks": 1280,
+                "mean_ticks": 1006.54,
+                "min_ticks": 1005,
+                "p50_ticks": 1006,
+                "p95_ticks": 1006,
+                "p99_ticks": 1006,
+                "sample_count": 1000
+              },
+              "timer-overhead": {
+                "max_ticks": 36,
+                "mean_ticks": 14.821,
+                "min_ticks": 14,
+                "p50_ticks": 15,
+                "p95_ticks": 15,
+                "p99_ticks": 15,
+                "sample_count": 1000
+              }
+            },
+            "boot_nonce": 15909536762229932470,
+            "directory": "runs/s3-b12-02-std",
+            "p50_ticks": 1006,
+            "report_sha256": "5d10de136257899bdd09d1840017878d46b267192ed0bce5aa74c1494e104a00",
+            "serial_sha256": "7de62076b8b11f4abd9b1bfd96acadb3529e45971e8daa258216f3a5dae9fc53",
+            "timestamp_unix_ms": 1792734753937
+          },
+          "status": "pass"
+        }
+      ],
+      "block": 12,
+      "native_minus_std_p50_ticks": -687,
+      "session": 3
+    }
+  ],
+  "complete_blocks": 12,
+  "conditional_median_interval": {
+    "assumption": "Independent identically distributed block contrasts; ties can increase coverage",
+    "coverage_continuous_iid": 0.96142578125,
+    "estimand": "Median paired difference of boot p50 ticks, native minus std",
+    "lower_ticks": -687,
+    "upper_ticks": -687
+  },
+  "descriptive_complete_pairs": {
+    "blocks": 12,
+    "median_difference_ticks": -687.0
+  },
+  "difference_direction": "native minus std; negative means smaller native-path p50",
+  "experiment": "idf-native-queue-v1",
+  "limitations": [
+    "One board, fixed images, warm resets; no manufacturing-population estimate",
+    "Read chronological/session/order evidence before relying on IID interval assumptions",
+    "Capture/replay and image hashes do not attest physical flashing or oscillator calibration",
+    "Fixture invalidations and their one permitted block repeat require an explicit external attempt ledger"
+  ],
+  "manifest_sha256": "e7b753b6612e47a7469df1d66e603fea0c3fb193553e9447cc1b6d6085b6a4fe",
+  "order_native_then_std": {
+    "blocks": 6,
+    "median_difference_ticks": -687.0
+  },
+  "order_std_then_native": {
+    "blocks": 6,
+    "median_difference_ticks": -687.0
+  },
+  "schedule_sha256": "07543b3ddcea1ede44c8f9e7c676308fe8a86cc13aeffebb6a18bd13eba4b5df",
+  "scheduled_blocks": 12,
+  "schema_version": 1,
+  "seed": 11647397086240600225,
+  "sessions": [
+    {
+      "blocks": 4,
+      "median_difference_ticks": -687.0
+    },
+    {
+      "blocks": 4,
+      "median_difference_ticks": -687.0
+    },
+    {
+      "blocks": 4,
+      "median_difference_ticks": -687.0
+    }
+  ],
+  "status": "complete",
+  "tick_hz": 16000000,
+  "validated_boots": 24
+}

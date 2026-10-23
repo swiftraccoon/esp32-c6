@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "soc": "esp32c6",
+  "chip_revision": "0.2",
+  "flash_bytes": 8388608,
+  "backup_sha256": "13cde854575fbb57fe3b49ba6f77dd96d32abae487ec5640c590771f57c9faf4",
+  "backup_path_ignored_by_git": "backups/original-2026-10-22/flash-backup.bin",
+  "backup_verified_against_device": true,
+  "measured_warm_reset_boots": 15,
+  "measured_boots_passed": 15,
+  "restore_full_original_flash": true,
+  "restore_verified_against_device": true,
+  "reset_after_restoration": true,
+  "final_firmware": "original application",
+  "efuse_provisioning_performed": false,
+  "serial_baud": 115200
+}

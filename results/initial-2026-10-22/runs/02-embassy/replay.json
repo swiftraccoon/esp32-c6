@@ -1,0 +1,33 @@
+{
+  "benchmarks": {
+    "compute": {
+      "max_ns": 293000,
+      "mean_ns": 282656.25,
+      "min_ns": 282000,
+      "p50_ns": 282000,
+      "p95_ns": 283000,
+      "p99_ns": 293000,
+      "sample_count": 64
+    },
+    "timer-overhead": {
+      "max_ns": 9000,
+      "mean_ns": 906.25,
+      "min_ns": 0,
+      "p50_ns": 1000,
+      "p95_ns": 1000,
+      "p99_ns": 9000,
+      "sample_count": 64
+    }
+  },
+  "hello": {
+    "cpu_mhz": 160,
+    "platform": "embassy",
+    "protocol": 1,
+    "rounds": 4096,
+    "sample_count": 64,
+    "seed": 305419896,
+    "timer_resolution_ns": 1000,
+    "warmup_iterations": 8,
+    "workload": "integer-mix-v1"
+  }
+}

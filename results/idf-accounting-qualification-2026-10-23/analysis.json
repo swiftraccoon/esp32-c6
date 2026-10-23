@@ -1,0 +1,1072 @@
+{
+  "schema_version": 1,
+  "experiment": "idf-accounting-qualification-v1",
+  "purpose": "qualification",
+  "calculation_origin": "Direct integer recomputation from each retained serial.raw; reported run/replay aggregates were not calculation inputs. Calculated phase fields were compared with run.json only afterward.",
+  "units": {
+    "durations": "integer nominal esp_timer microseconds",
+    "heap_stack_and_storage": "bytes",
+    "runtime": "task-attributed wall microseconds including interrupts and possible WFI; not exclusive CPU time"
+  },
+  "formulas": {
+    "phase_total": "after.total_runtime_us - before.total_runtime_us",
+    "task_delta": "after.runtime_us - before.runtime_us, matched by (handle, number)",
+    "boundary_residual": "phase_total - sum(all task_delta), signed; not idle",
+    "busy_checksum": "sum(0xa3944d55 XOR i for i=0..iterations-1) modulo 2^32",
+    "allocation_checksum": "65 complete cycles of bytes0..250 plus bytes0..68 = 2041721",
+    "observer_gross": "end_us - start_us for each independently retained bracket; no subtraction"
+  },
+  "source_commit": "c931379e2042b04cdb59c93e57441cc1182f5f19",
+  "input_freeze_commit": "f80cf87d316b6c02143adbe4114ee51764f14802",
+  "ledger_binding_commit": "e15f4f9be646461df21fb5c36b04728b2e50bab7",
+  "counts": {
+    "scheduled_boots": 3,
+    "retained_boots": 3,
+    "qualifying_boots": 3,
+    "replacement_boots": 0,
+    "snapshots": 18,
+    "task_records": 72,
+    "allocation_controls": 3,
+    "allocation_bytes_each": 16384,
+    "reported_busy_iterations_total": 2430
+  },
+  "harness": {
+    "snapshot_bytes_each": 592,
+    "stored_snapshots": 6,
+    "declared_stored_snapshot_bytes": 3552,
+    "is_total_ram_cost": false,
+    "excludes": "temporary status arrays, compiler temporaries/copies, helper/call frames, channels, std/SDK allocations, later join/output paths and other platform costs"
+  },
+  "boots": [
+    {
+      "boot": "01",
+      "raw_path": "runs/01/serial.raw",
+      "raw_sha256": "578e5fc7bf75e81e5f341463b9c723c849f7d5f0f69d2960d87bb6a93e0f9044",
+      "records": 12,
+      "rom_startups": 1,
+      "reset_reason_lines": 1,
+      "complete_task_identity_set": [
+        {
+          "handle": 1082196308,
+          "number": 1
+        },
+        {
+          "handle": 1082230428,
+          "number": 2
+        },
+        {
+          "handle": 1082232324,
+          "number": 3
+        },
+        {
+          "handle": 1082651412,
+          "number": 4
+        }
+      ],
+      "worker_handle": 1082651412,
+      "sampler_handle": 1082230428,
+      "idle_handle": 1082232324,
+      "capacity_control": {
+        "returned_count": 0,
+        "sentinel_unchanged": true
+      },
+      "open_interval_control": {
+        "start_us": 2011708,
+        "end_us": 2021708,
+        "duration_us": 10000,
+        "runtime_before_us": 680,
+        "runtime_after_us": 680,
+        "stored_runtime_delta_us": 0
+      },
+      "busy_work": {
+        "start_us": 2282750,
+        "end_us": 2532965,
+        "span_us": 250215,
+        "iterations": 810,
+        "rounds_per_iteration": 4096,
+        "reported_checksum": 2470336773,
+        "independently_expected_checksum": 2470336773,
+        "checksum_matches": true
+      },
+      "adjacent_snapshot_deltas": [
+        {
+          "from": "blocked-before",
+          "to": "blocked-after",
+          "total_elapsed_us": 259857,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 11217,
+          "idle_task_attributed_us": 258783,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 11217
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 258783
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 270000,
+          "unattributed_boundary_residual_us": -10143
+        },
+        {
+          "from": "blocked-after",
+          "to": "busy-after",
+          "total_elapsed_us": 251333,
+          "worker_attributed_us": 250262,
+          "sampler_attributed_us": 1060,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 1060
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 250262
+            }
+          ],
+          "summed_task_runtime_us": 251322,
+          "unattributed_boundary_residual_us": 11
+        },
+        {
+          "from": "busy-after",
+          "to": "heap-control",
+          "total_elapsed_us": 1029,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 0,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 0,
+          "unattributed_boundary_residual_us": 1029
+        },
+        {
+          "from": "heap-control",
+          "to": "heap-held",
+          "total_elapsed_us": 3570,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 0,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 0,
+          "unattributed_boundary_residual_us": 3570
+        },
+        {
+          "from": "heap-held",
+          "to": "heap-freed",
+          "total_elapsed_us": 980,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 0,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 0,
+          "unattributed_boundary_residual_us": 980
+        }
+      ],
+      "snapshots": [
+        {
+          "id": "blocked-before",
+          "worker_phase": 0,
+          "total_runtime_us": 2022793,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 970,
+            "heap_info": 39
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18224
+        },
+        {
+          "id": "blocked-after",
+          "worker_phase": 0,
+          "total_runtime_us": 2282650,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 969,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18220
+        },
+        {
+          "id": "busy-after",
+          "worker_phase": 1,
+          "total_runtime_us": 2533983,
+          "gross_observer_us": {
+            "empty_timer_bracket": 1,
+            "task_enumeration": 969,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18220
+        },
+        {
+          "id": "heap-control",
+          "worker_phase": 1,
+          "total_runtime_us": 2535012,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 969,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18220
+        },
+        {
+          "id": "heap-held",
+          "worker_phase": 1,
+          "total_runtime_us": 2538582,
+          "gross_observer_us": {
+            "empty_timer_bracket": 1,
+            "task_enumeration": 929,
+            "heap_info": 30
+          },
+          "heap": {
+            "free_bytes": 404884,
+            "allocated_bytes": 69120,
+            "largest_free_block": 385024,
+            "minimum_free_bytes": 404884
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 16976
+        },
+        {
+          "id": "heap-freed",
+          "worker_phase": 1,
+          "total_runtime_us": 2539562,
+          "gross_observer_us": {
+            "empty_timer_bracket": 1,
+            "task_enumeration": 930,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 404884
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 16972
+        }
+      ],
+      "allocation": {
+        "bytes": 16384,
+        "caps": 4,
+        "reported_checksum": 2041721,
+        "independently_expected_checksum": 2041721,
+        "free_heap_control_drift_bytes": 0,
+        "free_heap_drop_bytes": 16388,
+        "allocated_bytes_increase": 16384,
+        "free_heap_recovery_drift_bytes": 0
+      },
+      "minimum_recorded_stack_fill_free_bytes": {
+        "sampler": 16972,
+        "worker": 7248
+      },
+      "independent_phase_summaries_match_report": true
+    },
+    {
+      "boot": "02",
+      "raw_path": "runs/02/serial.raw",
+      "raw_sha256": "110a1290c40b2fc602f49a15217da057155c61ad3f0233fa340167cf2ab110e0",
+      "records": 12,
+      "rom_startups": 1,
+      "reset_reason_lines": 1,
+      "complete_task_identity_set": [
+        {
+          "handle": 1082196308,
+          "number": 1
+        },
+        {
+          "handle": 1082230428,
+          "number": 2
+        },
+        {
+          "handle": 1082232324,
+          "number": 3
+        },
+        {
+          "handle": 1082651412,
+          "number": 4
+        }
+      ],
+      "worker_handle": 1082651412,
+      "sampler_handle": 1082230428,
+      "idle_handle": 1082232324,
+      "capacity_control": {
+        "returned_count": 0,
+        "sentinel_unchanged": true
+      },
+      "open_interval_control": {
+        "start_us": 2011708,
+        "end_us": 2021708,
+        "duration_us": 10000,
+        "runtime_before_us": 681,
+        "runtime_after_us": 681,
+        "stored_runtime_delta_us": 0
+      },
+      "busy_work": {
+        "start_us": 2282750,
+        "end_us": 2532965,
+        "span_us": 250215,
+        "iterations": 810,
+        "rounds_per_iteration": 4096,
+        "reported_checksum": 2470336773,
+        "independently_expected_checksum": 2470336773,
+        "checksum_matches": true
+      },
+      "adjacent_snapshot_deltas": [
+        {
+          "from": "blocked-before",
+          "to": "blocked-after",
+          "total_elapsed_us": 259857,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 11217,
+          "idle_task_attributed_us": 258783,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 11217
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 258783
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 270000,
+          "unattributed_boundary_residual_us": -10143
+        },
+        {
+          "from": "blocked-after",
+          "to": "busy-after",
+          "total_elapsed_us": 251333,
+          "worker_attributed_us": 250262,
+          "sampler_attributed_us": 1060,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 1060
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 250262
+            }
+          ],
+          "summed_task_runtime_us": 251322,
+          "unattributed_boundary_residual_us": 11
+        },
+        {
+          "from": "busy-after",
+          "to": "heap-control",
+          "total_elapsed_us": 1029,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 0,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 0,
+          "unattributed_boundary_residual_us": 1029
+        },
+        {
+          "from": "heap-control",
+          "to": "heap-held",
+          "total_elapsed_us": 3569,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 0,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 0,
+          "unattributed_boundary_residual_us": 3569
+        },
+        {
+          "from": "heap-held",
+          "to": "heap-freed",
+          "total_elapsed_us": 981,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 0,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 0,
+          "unattributed_boundary_residual_us": 981
+        }
+      ],
+      "snapshots": [
+        {
+          "id": "blocked-before",
+          "worker_phase": 0,
+          "total_runtime_us": 2022793,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 969,
+            "heap_info": 39
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18224
+        },
+        {
+          "id": "blocked-after",
+          "worker_phase": 0,
+          "total_runtime_us": 2282650,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 968,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18220
+        },
+        {
+          "id": "busy-after",
+          "worker_phase": 1,
+          "total_runtime_us": 2533983,
+          "gross_observer_us": {
+            "empty_timer_bracket": 1,
+            "task_enumeration": 969,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18220
+        },
+        {
+          "id": "heap-control",
+          "worker_phase": 1,
+          "total_runtime_us": 2535012,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 968,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18220
+        },
+        {
+          "id": "heap-held",
+          "worker_phase": 1,
+          "total_runtime_us": 2538581,
+          "gross_observer_us": {
+            "empty_timer_bracket": 1,
+            "task_enumeration": 930,
+            "heap_info": 30
+          },
+          "heap": {
+            "free_bytes": 404884,
+            "allocated_bytes": 69120,
+            "largest_free_block": 385024,
+            "minimum_free_bytes": 404884
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 16976
+        },
+        {
+          "id": "heap-freed",
+          "worker_phase": 1,
+          "total_runtime_us": 2539562,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 930,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 404884
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 16972
+        }
+      ],
+      "allocation": {
+        "bytes": 16384,
+        "caps": 4,
+        "reported_checksum": 2041721,
+        "independently_expected_checksum": 2041721,
+        "free_heap_control_drift_bytes": 0,
+        "free_heap_drop_bytes": 16388,
+        "allocated_bytes_increase": 16384,
+        "free_heap_recovery_drift_bytes": 0
+      },
+      "minimum_recorded_stack_fill_free_bytes": {
+        "sampler": 16972,
+        "worker": 7248
+      },
+      "independent_phase_summaries_match_report": true
+    },
+    {
+      "boot": "03",
+      "raw_path": "runs/03/serial.raw",
+      "raw_sha256": "b21815625ea3f492d2315c6ae4aafa3f8151b512571122de242478a666c631c3",
+      "records": 12,
+      "rom_startups": 1,
+      "reset_reason_lines": 1,
+      "complete_task_identity_set": [
+        {
+          "handle": 1082196308,
+          "number": 1
+        },
+        {
+          "handle": 1082230428,
+          "number": 2
+        },
+        {
+          "handle": 1082232324,
+          "number": 3
+        },
+        {
+          "handle": 1082651412,
+          "number": 4
+        }
+      ],
+      "worker_handle": 1082651412,
+      "sampler_handle": 1082230428,
+      "idle_handle": 1082232324,
+      "capacity_control": {
+        "returned_count": 0,
+        "sentinel_unchanged": true
+      },
+      "open_interval_control": {
+        "start_us": 2011708,
+        "end_us": 2021708,
+        "duration_us": 10000,
+        "runtime_before_us": 680,
+        "runtime_after_us": 680,
+        "stored_runtime_delta_us": 0
+      },
+      "busy_work": {
+        "start_us": 2282750,
+        "end_us": 2532965,
+        "span_us": 250215,
+        "iterations": 810,
+        "rounds_per_iteration": 4096,
+        "reported_checksum": 2470336773,
+        "independently_expected_checksum": 2470336773,
+        "checksum_matches": true
+      },
+      "adjacent_snapshot_deltas": [
+        {
+          "from": "blocked-before",
+          "to": "blocked-after",
+          "total_elapsed_us": 259857,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 11217,
+          "idle_task_attributed_us": 258783,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 11217
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 258783
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 270000,
+          "unattributed_boundary_residual_us": -10143
+        },
+        {
+          "from": "blocked-after",
+          "to": "busy-after",
+          "total_elapsed_us": 251333,
+          "worker_attributed_us": 250262,
+          "sampler_attributed_us": 1060,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 1060
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 250262
+            }
+          ],
+          "summed_task_runtime_us": 251322,
+          "unattributed_boundary_residual_us": 11
+        },
+        {
+          "from": "busy-after",
+          "to": "heap-control",
+          "total_elapsed_us": 1029,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 0,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 0,
+          "unattributed_boundary_residual_us": 1029
+        },
+        {
+          "from": "heap-control",
+          "to": "heap-held",
+          "total_elapsed_us": 3569,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 0,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 0,
+          "unattributed_boundary_residual_us": 3569
+        },
+        {
+          "from": "heap-held",
+          "to": "heap-freed",
+          "total_elapsed_us": 981,
+          "worker_attributed_us": 0,
+          "sampler_attributed_us": 0,
+          "idle_task_attributed_us": 0,
+          "task_deltas": [
+            {
+              "handle": 1082196308,
+              "number": 1,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082230428,
+              "number": 2,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082232324,
+              "number": 3,
+              "runtime_us": 0
+            },
+            {
+              "handle": 1082651412,
+              "number": 4,
+              "runtime_us": 0
+            }
+          ],
+          "summed_task_runtime_us": 0,
+          "unattributed_boundary_residual_us": 981
+        }
+      ],
+      "snapshots": [
+        {
+          "id": "blocked-before",
+          "worker_phase": 0,
+          "total_runtime_us": 2022793,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 970,
+            "heap_info": 39
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18224
+        },
+        {
+          "id": "blocked-after",
+          "worker_phase": 0,
+          "total_runtime_us": 2282650,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 968,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18220
+        },
+        {
+          "id": "busy-after",
+          "worker_phase": 1,
+          "total_runtime_us": 2533983,
+          "gross_observer_us": {
+            "empty_timer_bracket": 1,
+            "task_enumeration": 969,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18220
+        },
+        {
+          "id": "heap-control",
+          "worker_phase": 1,
+          "total_runtime_us": 2535012,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 969,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 421272
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 18220
+        },
+        {
+          "id": "heap-held",
+          "worker_phase": 1,
+          "total_runtime_us": 2538581,
+          "gross_observer_us": {
+            "empty_timer_bracket": 1,
+            "task_enumeration": 930,
+            "heap_info": 30
+          },
+          "heap": {
+            "free_bytes": 404884,
+            "allocated_bytes": 69120,
+            "largest_free_block": 385024,
+            "minimum_free_bytes": 404884
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 16976
+        },
+        {
+          "id": "heap-freed",
+          "worker_phase": 1,
+          "total_runtime_us": 2539562,
+          "gross_observer_us": {
+            "empty_timer_bracket": 2,
+            "task_enumeration": 930,
+            "heap_info": 28
+          },
+          "heap": {
+            "free_bytes": 421272,
+            "allocated_bytes": 52736,
+            "largest_free_block": 401408,
+            "minimum_free_bytes": 404884
+          },
+          "worker_stack_fill_free_bytes": 7248,
+          "sampler_stack_fill_free_bytes": 16972
+        }
+      ],
+      "allocation": {
+        "bytes": 16384,
+        "caps": 4,
+        "reported_checksum": 2041721,
+        "independently_expected_checksum": 2041721,
+        "free_heap_control_drift_bytes": 0,
+        "free_heap_drop_bytes": 16388,
+        "allocated_bytes_increase": 16384,
+        "free_heap_recovery_drift_bytes": 0
+      },
+      "minimum_recorded_stack_fill_free_bytes": {
+        "sampler": 16972,
+        "worker": 7248
+      },
+      "independent_phase_summaries_match_report": true
+    }
+  ],
+  "restoration": {
+    "state": "full_image_written_separately_digest_verified_then_RTS_reset",
+    "bytes": 8388608,
+    "backup_sha256": "863dc7b17018aea2a530ee27da5bedd675298f9a70e5f04c32f4a0cc3c43f9c4",
+    "receipt": "device-state.json",
+    "write_log": "artifacts/restore.log",
+    "separate_verification_log": "artifacts/restore-verify.log",
+    "post_boot_persistent_state_constancy_claimed": false
+  },
+  "limitations": [
+    "Diagnostic method qualification only; no comparative estimator, sustainable-capacity result, physical CPU busy/idle result, exclusive ISR accounting, global runtime heap/stack peak, fragmentation score, external timing accuracy, energy result or OS ranking.",
+    "Three scheduled warm resets of one image on one board; tied coarse phase values do not establish independent statistical replicates, variability bounds or absolute precision.",
+    "Task enumeration scans stack fill while scheduling is suspended; gross observer durations include the actual scan path and possible interrupt interference, without profiling-on/off isolation.",
+    "Snapshots precede worker join and JSON output. Later allocation/stack paths and short-lived peaks are outside these retained indicators.",
+    "Matching source snapshots and artifact identities are not hardware authentication."
+  ]
+}

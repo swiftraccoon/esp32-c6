@@ -1,0 +1,13 @@
+criterion,kind,general_iot_weight,battery_thread_weight,control_weight,custom_os_learning_weight,evidence
+Required peripheral and radio support,gate,,,,,Demonstrated on physical C6 at pinned revision
+Reliable Rust application build,gate,,,,,Clean build and physical smoke test
+Recovery and update requirements,gate,,,,,Crash and interrupted update recovery exercise
+License and dependency acceptability,gate,,,,,Component and radio binary inventory
+Application reliability,score,25,20,20,10,Declared duration mixed workload and fault recovery
+Rust development and maintenance,score,25,15,15,20,Person hours patches APIs and reproducibility
+Energy per useful operation,score,10,30,5,5,Instrumented successful report including sleep
+Response latency and deadline misses,score,10,5,35,15,External measurements under declared load
+Required connectivity performance,score,15,20,5,5,Goodput loss join reconnect and coexistence
+Memory and flash footprint,score,5,5,10,10,Equivalent features linked image and peak RAM
+Portability and ecosystem,score,10,5,10,5,Required alternative boards drivers and maintained libraries
+Learning and architectural control,score,0,0,0,30,Explicit research objectives and delivered custom features

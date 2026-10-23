@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "experiment": "zephyr-native-tests-v1",
+  "analysis_revision": 2,
+  "scheduled_attempts": 3,
+  "attempted": 3,
+  "qualified_under_frozen_contract": 0,
+  "upstream_completion_banners": 3,
+  "row_parser_correction": "Apply the unchanged row grammar separately to each line; multiline whitespace had consumed alternate rows. Original reports/metrics remain untouched.",
+  "attempts": [
+    {
+      "directory": "runs/01",
+      "schema_version": 1,
+      "analysis_revision": 2,
+      "status": "failed",
+      "original_run_report_unchanged": true,
+      "console_sha256": "294d700e9ef65ab74ad26adbeb516809265df8ee3046dbe9d469e1a28357862f",
+      "visible_metric_rows": 47,
+      "exact_expected_order": true,
+      "all_notes_empty": true,
+      "frequency_headers": 0,
+      "rom_sha_comparison_failure": 1,
+      "upstream_completion_banners": 1,
+      "failure_reasons": [
+        "Required frequency header absent; compiled out in the frozen configuration",
+        "ROM reports SHA-256 comparison failed, then boots anyway"
+      ],
+      "initial_inspection_metric_rows": 24,
+      "interpretation": "Observed console output only; no post-hoc acceptance-rule change or replacement capture"
+    },
+    {
+      "directory": "runs/02",
+      "schema_version": 1,
+      "analysis_revision": 2,
+      "status": "failed",
+      "original_run_report_unchanged": true,
+      "console_sha256": "ee06e6ba5925e2adf8d33174238df497ab3f2a0090c607686b1217b991fa1235",
+      "visible_metric_rows": 47,
+      "exact_expected_order": true,
+      "all_notes_empty": true,
+      "frequency_headers": 0,
+      "rom_sha_comparison_failure": 1,
+      "upstream_completion_banners": 1,
+      "failure_reasons": [
+        "Required frequency header absent; compiled out in the frozen configuration",
+        "ROM reports SHA-256 comparison failed, then boots anyway"
+      ],
+      "initial_inspection_metric_rows": 24,
+      "interpretation": "Observed console output only; no post-hoc acceptance-rule change or replacement capture"
+    },
+    {
+      "directory": "runs/03",
+      "schema_version": 1,
+      "analysis_revision": 2,
+      "status": "failed",
+      "original_run_report_unchanged": true,
+      "console_sha256": "1839a5af0320cf584725cda62db697b7d21906ca19e0517e5af09955761639ec",
+      "visible_metric_rows": 47,
+      "exact_expected_order": true,
+      "all_notes_empty": true,
+      "frequency_headers": 0,
+      "rom_sha_comparison_failure": 1,
+      "upstream_completion_banners": 1,
+      "failure_reasons": [
+        "Required frequency header absent; compiled out in the frozen configuration",
+        "ROM reports SHA-256 comparison failed, then boots anyway"
+      ],
+      "initial_inspection_metric_rows": 24,
+      "interpretation": "Observed console output only; no post-hoc acceptance-rule change or replacement capture"
+    }
+  ],
+  "scope": "Failed qualification; retain console observations without using them as admitted performance results",
+  "restored": true,
+  "restoration_verified": true
+}

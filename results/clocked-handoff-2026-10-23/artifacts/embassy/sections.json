@@ -1,0 +1,122 @@
+{
+  "allocated_section_bytes_by_kind": {
+    "Data": 5672,
+    "ReadOnlyData": 256,
+    "ReadOnlyString": 14968,
+    "Text": 51592,
+    "UninitializedData": 489896
+  },
+  "allocated_sections": [
+    {
+      "address": 1082130432,
+      "kind": "Text",
+      "name": ".trap",
+      "size_bytes": 1980
+    },
+    {
+      "address": 1082132412,
+      "kind": "Text",
+      "name": ".rwtext",
+      "size_bytes": 4876
+    },
+    {
+      "address": 1082137288,
+      "kind": "ReadOnlyData",
+      "name": ".rwtext.wifi",
+      "size_bytes": 0
+    },
+    {
+      "address": 1082137288,
+      "kind": "Data",
+      "name": ".data",
+      "size_bytes": 5672
+    },
+    {
+      "address": 1082142960,
+      "kind": "Data",
+      "name": ".data.wifi",
+      "size_bytes": 0
+    },
+    {
+      "address": 1082142960,
+      "kind": "UninitializedData",
+      "name": ".bss",
+      "size_bytes": 19012
+    },
+    {
+      "address": 1082161972,
+      "kind": "UninitializedData",
+      "name": ".noinit",
+      "size_bytes": 0
+    },
+    {
+      "address": 1107296288,
+      "kind": "ReadOnlyData",
+      "name": ".flash.appdesc",
+      "size_bytes": 256
+    },
+    {
+      "address": 1107296544,
+      "kind": "ReadOnlyData",
+      "name": ".rodata_merge",
+      "size_bytes": 0
+    },
+    {
+      "address": 1107296544,
+      "kind": "ReadOnlyString",
+      "name": ".rodata",
+      "size_bytes": 14968
+    },
+    {
+      "address": 1107311512,
+      "kind": "ReadOnlyData",
+      "name": ".rodata.wifi",
+      "size_bytes": 0
+    },
+    {
+      "address": 1107311512,
+      "kind": "UninitializedData",
+      "name": ".text_gap",
+      "size_bytes": 50312
+    },
+    {
+      "address": 1107361824,
+      "kind": "Text",
+      "name": ".text",
+      "size_bytes": 44736
+    },
+    {
+      "address": 1342177280,
+      "kind": "ReadOnlyData",
+      "name": ".rtc_fast.text",
+      "size_bytes": 0
+    },
+    {
+      "address": 1342177280,
+      "kind": "ReadOnlyData",
+      "name": ".rtc_fast.data",
+      "size_bytes": 0
+    },
+    {
+      "address": 1342177280,
+      "kind": "UninitializedData",
+      "name": ".rtc_fast.bss",
+      "size_bytes": 0
+    },
+    {
+      "address": 1342177280,
+      "kind": "UninitializedData",
+      "name": ".rtc_fast.persistent",
+      "size_bytes": 0
+    },
+    {
+      "address": 1082161972,
+      "kind": "UninitializedData",
+      "name": ".stack",
+      "size_bytes": 420572
+    }
+  ],
+  "elf_file_bytes": 2008324,
+  "elf_sha256": "8d06354ca14e9a51550fd3183c9f29750f32fc73880140c6d9ca8151e0a18d44",
+  "limitations": "ELF file bytes include non-flashed data; sections are not peak RAM or complete flash-image footprint."
+}

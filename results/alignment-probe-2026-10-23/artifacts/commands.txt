@@ -1,0 +1,5 @@
+Build working directory: firmware/esp-hal
+RUSTFLAGS='-C llvm-args=-align-all-functions=2' cargo +1.96.0 build --verbose --release --locked --bin bare-metal --target-dir ../../.cache/aligned-hal-target
+
+Image working directory: repository root
+.tools/bin/espflash save-image --skip-update-check --chip esp32c6 --flash-mode dio --flash-freq 80mhz --flash-size 8mb --xtal-freq 40mhz --merge --skip-padding results/alignment-probe-2026-10-23/artifacts/firmware.elf results/alignment-probe-2026-10-23/artifacts/flash.bin

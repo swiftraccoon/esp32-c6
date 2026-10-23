@@ -1,0 +1,34 @@
+{
+  "definition": {
+    "path": "quality/methods/idf-queue-v1.json",
+    "sha256": "79dbfe71970bc260b858d9a1a9c800c5d45b2868b9e16a24325d38d6c5b51f24"
+  },
+  "limits": "Artifact/control consistency only. Labels, ELF strings and transcripts do not establish semantic correctness, independence, physical authenticity or absolute accuracy.",
+  "method_id": "idf-queue-v1",
+  "schema_version": 1,
+  "status": "controls_passed",
+  "variants": [
+    {
+      "negative_controls_rejected": [
+        "panic_before_json",
+        "reboot_before_json",
+        "additional_startup",
+        "missing_completion",
+        "wrong_checksum"
+      ],
+      "positive_control": "pass",
+      "variant": "std"
+    },
+    {
+      "negative_controls_rejected": [
+        "panic_before_json",
+        "reboot_before_json",
+        "additional_startup",
+        "missing_completion",
+        "wrong_checksum"
+      ],
+      "positive_control": "pass",
+      "variant": "native"
+    }
+  ]
+}

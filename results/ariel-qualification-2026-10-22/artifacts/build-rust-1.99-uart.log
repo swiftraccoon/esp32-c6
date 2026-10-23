@@ -1,0 +1,111 @@
+laze: project root: /Users/builduser/Git/esp32-c6/.cache/ariel-os relpath: examples project_file: laze-project.yml
+laze: building hello-world, hello-world-threading for espressif-esp32-c6-devkitc-1
+laze: reading cache: No such file or directory (os error 2)
+laze: parsing 83 files took 86.648625ms
+laze: stat'ing 83 files took 403.375µs
+configuring hello-world for espressif-esp32-c6-devkitc-1
+configuring hello-world-threading for espressif-esp32-c6-devkitc-1
+configured 2 builds (took 27.289875ms).
+laze: writing cache took 2.32875ms.
+ninja: Jobserver mode detected: -j --jobserver-auth=fifo:/tmp/__rust_jobslot_fifo_e3cadfcfa05fefddc611ff9aa7d021d9
+[0/2] CARGO build/bin/espressif-esp32-c6-devkitc-1/cargo/riscv32imac-unknown-none-elf/release/hello-world
+   Compiling critical-section v1.2.0
+   Compiling cfg-if v1.0.3
+   Compiling byteorder v1.5.0
+   Compiling embedded-hal v1.0.0
+   Compiling stable_deref_trait v1.2.0
+   Compiling futures-core v0.3.32
+   Compiling embedded-io-async v0.6.1
+   Compiling futures-sink v0.3.32
+   Compiling embedded-io v0.7.1
+   Compiling embedded-io v0.6.1
+   Compiling riscv-pac v0.2.0
+   Compiling embassy-sync v0.8.0
+   Compiling heapless v0.9.3
+   Compiling heapless v0.8.0
+   Compiling pin-project-lite v0.2.16
+   Compiling futures-task v0.3.32
+   Compiling embassy-sync v0.6.2
+   Compiling riscv-rt v0.16.0
+   Compiling typenum v1.18.0
+   Compiling embassy-sync v0.7.2
+   Compiling esp-sync v0.2.1 (https://github.com/ariel-os/esp-hal?rev=ce9bcf390ab6b7abc8ae3bc4989360a493c354e7#ce9bcf39)
+   Compiling embedded-hal-async v1.0.0
+   Compiling riscv v0.15.0
+   Compiling embedded-io-async v0.7.0
+   Compiling esp-metadata-generated v0.4.0 (https://github.com/ariel-os/esp-hal?rev=ce9bcf390ab6b7abc8ae3bc4989360a493c354e7#ce9bcf39)
+   Compiling futures-util v0.3.32
+   Compiling nb v1.1.0
+   Compiling esp-rom-sys v0.1.4 (https://github.com/ariel-os/esp-hal?rev=ce9bcf390ab6b7abc8ae3bc4989360a493c354e7#ce9bcf39)
+   Compiling hash32 v0.3.1
+   Compiling generic-array v0.14.7
+   Compiling esp32c6 v0.23.2
+   Compiling num-traits v0.2.19
+   Compiling esp-riscv-rt v0.14.0 (https://github.com/ariel-os/esp-hal?rev=ce9bcf390ab6b7abc8ae3bc4989360a493c354e7#ce9bcf39)
+   Compiling void v1.0.2
+   Compiling nb v0.1.3
+   Compiling vcell v0.1.3
+   Compiling typewit v1.11.0
+   Compiling embedded-storage v0.3.1
+   Compiling embedded-hal v0.2.7
+   Compiling embassy-hal-internal v0.5.0 (https://github.com/ariel-os/embassy?rev=c7024cd2ee96f83d95f91570b2d445f95a222512#c7024cd2)
+   Compiling portable-atomic v1.13.0
+   Compiling const-str v1.1.0
+   Compiling esp-println v0.17.0 (https://github.com/ariel-os/esp-hal?rev=ce9bcf390ab6b7abc8ae3bc4989360a493c354e7#ce9bcf39)
+   Compiling enumset v1.1.6
+   Compiling embedded-storage-async v0.4.1
+   Compiling strum v0.27.2
+   Compiling esp-hal v1.1.1 (https://github.com/ariel-os/esp-hal?rev=ce9bcf390ab6b7abc8ae3bc4989360a493c354e7#ce9bcf39)
+   Compiling esp-config v0.7.0 (https://github.com/ariel-os/esp-hal?rev=ce9bcf390ab6b7abc8ae3bc4989360a493c354e7#ce9bcf39)
+   Compiling log v0.4.34
+   Compiling gcd v2.3.0
+   Compiling const_panic v0.2.15
+   Compiling embassy-futures v0.1.2
+   Compiling bitfield v0.19.4
+   Compiling embedded-can v0.4.1
+   Compiling fugit v0.3.7
+   Compiling rand_core v0.10.1
+   Compiling ariel-os-utils v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-utils)
+   Compiling bitflags v2.13.2
+   Compiling rand_core v0.9.3
+   Compiling rand_core v0.6.4
+   Compiling ufmt-write v0.1.0
+   Compiling bytemuck v1.24.0
+   Compiling embassy-time-driver v0.2.2
+   Compiling const-default v1.0.0
+   Compiling esp-alloc v0.10.0 (https://github.com/ariel-os/esp-hal?rev=ce9bcf390ab6b7abc8ae3bc4989360a493c354e7#ce9bcf39)
+   Compiling embassy-executor v0.10.0
+   Compiling linked_list_allocator v0.10.5
+   Compiling allocator-api2 v0.3.1
+   Compiling linkme v0.3.33
+   Compiling rlsf v0.2.3
+   Compiling embassy-time v0.5.1 (https://github.com/ariel-os/embassy?rev=3c1b5fbf28237ea7144ae970c3aec11c38023c3f#3c1b5fbf)
+   Compiling embassy-executor-timer-queue v0.1.0
+   Compiling static_cell v2.1.1
+   Compiling ariel-os-runqueue v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-runqueue)
+   Compiling cordyceps v0.3.5
+   Compiling esp-bootloader-esp-idf v0.5.0 (https://github.com/ariel-os/esp-hal?rev=ce9bcf390ab6b7abc8ae3bc4989360a493c354e7#ce9bcf39)
+   Compiling ariel-os-rt v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-rt)
+   Compiling ariel-os-buildinfo v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-buildinfo)
+   Compiling ariel-os-debug v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-debug)
+   Compiling const-sha1 v0.3.0
+   Compiling ariel-os-boards v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-boards)
+   Compiling ariel-os-embassy-common v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-embassy-common)
+   Compiling crypto-common v0.1.6
+   Compiling block-buffer v0.10.4
+   Compiling digest v0.10.7
+   Compiling embassy-embedded-hal v0.6.0 (https://github.com/ariel-os/embassy?rev=35b4b7a7f612c4d9bfe13c595d52172a5f8b9bbb#35b4b7a7)
+   Compiling ariel-os-log v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-log)
+   Compiling ariel-os-alloc v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-alloc)
+   Compiling ariel-os-threads v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-threads)
+   Compiling ariel-os-power v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-power)
+   Compiling ariel-os-esp v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-esp)
+   Compiling ariel-os-hal v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-hal)
+   Compiling ariel-os-identity v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-identity)
+   Compiling ariel-os-embassy v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-embassy)
+   Compiling ariel-os v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os)
+   Compiling hello-world v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/examples/hello-world)
+    Finished `release` profile [optimized + debuginfo] target(s) in 17.91s
+[1/2] CARGO build/bin/espressif-esp32-c6-devkitc-1/cargo/riscv32imac-unknown-none-elf/release/hello-world-threading
+   Compiling hello-world-threading v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/examples/hello-world-threading)
+    Finished `release` profile [optimized + debuginfo] target(s) in 2.10s

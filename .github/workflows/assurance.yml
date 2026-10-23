@@ -1,0 +1,40 @@
+name: Evidence and method checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  assurance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out source and experiment records
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Install host build prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends pkg-config libudev-dev
+          rustup toolchain install 1.96.0 --profile minimal --component rustfmt --component clippy
+      - name: Check Rust formatting
+        run: cargo +1.96.0 fmt --all -- --check
+      - name: Exercise positive and adversarial tests
+        run: cargo +1.96.0 test --workspace --locked
+      - name: Check lints and documentation
+        run: |
+          cargo +1.96.0 clippy --workspace --locked --all-targets -- -D warnings
+          cargo +1.96.0 doc --workspace --locked --no-deps
+      - name: Build the read-only checks
+        run: cargo +1.96.0 build --release --locked -p benchctl
+      - name: Verify public lineage, historical declarations and retained raw replays
+        run: target/release/benchctl verify-public-snapshot --root . --ledger quality/evidence.json --manifest quality/publication.json
+      # Omitted binaries and replaced Git ancestry prevent exact-artifact method,
+      # original-freeze and comparative-study qualification in this public copy.
+      # Complete-bundle commands and adversarial unit fixtures remain intact.

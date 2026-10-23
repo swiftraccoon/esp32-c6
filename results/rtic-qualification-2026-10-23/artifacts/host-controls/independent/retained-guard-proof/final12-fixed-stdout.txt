@@ -1,0 +1,15 @@
+
+running 1 test
+capture_is_ok=false reader_calls=5 pending_panic_unread=false replay_is_ok=false
+{"event":"start","at_ns":0,"raw_end":0}
+{"event":"read","at_ns":100000000,"raw_end":75}
+{"event":"read","at_ns":2100000000,"raw_end":88}
+{"event":"read","at_ns":3100000000,"raw_end":101}
+{"event":"read","at_ns":4100000000,"raw_end":114}
+{"event":"read","at_ns":16100000001,"raw_end":120}
+{"event":"end","at_ns":16100000002,"raw_end":120,"reason":"rejected"}
+
+test rtic_console::independent_pending_guard_probe::independent_loop_top_jump_reads_and_rejects_pending_panic ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 108 filtered out; finished in 0.01s
+

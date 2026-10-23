@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "experiment": "idf-accounting-qualification-v1",
+  "purpose": "qualification",
+  "source_commit": "c931379e2042b04cdb59c93e57441cc1182f5f19",
+  "source_snapshot": "artifacts/source",
+  "firmware": {
+    "rust": "1.96.0",
+    "target": "riscv32imac-esp-espidf",
+    "edition": 2024,
+    "features": [
+      "accounting-probe"
+    ],
+    "release": {
+      "opt_level": 3,
+      "lto": "thin",
+      "codegen_units": 1,
+      "panic": "abort",
+      "debug": 2
+    },
+    "elf_sha256": "c535eb9e8a30fdffdbc922c0dfdc1c63426a35dbadf43721241325a47edd1794",
+    "image_sha256": "c3cfe3791b3c83e8ba7215eafab13e33ef60c3e2a99ffd0c6379edf2f3a5e824",
+    "app_descriptor_version": "f1fc734-dirty",
+    "source_tree_clean_at_build": false,
+    "snapshot_storage_bytes": 3552
+  },
+  "sdk": {
+    "version": "5.5.6",
+    "commit": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
+    "rust_sys": "0.37.2",
+    "config": "artifacts/sdk/sdkconfig",
+    "bindings": "artifacts/sdk/bindings.rs",
+    "counter_bits": 64,
+    "counter_clock": "esp_timer_get_time",
+    "bootloader_sha256": "1488142ce9c3b2d3bfddba7a397a8ef09a14ae513d2aa262f0cc5afdd3447cbd",
+    "partition_table_sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+  },
+  "packaging": {
+    "tool": "esptool 5.1.0",
+    "method": "elf2image --chip esp32c6 --flash-mode dio --flash-freq 80m --flash-size 8MB --elf-sha256-offset 0xb0",
+    "application_bytes": 413472,
+    "flash_offsets": {
+      "bootloader": "0x0",
+      "partition_table": "0x8000",
+      "application": "0x10000"
+    },
+    "rejected_candidate": "artifacts/preflight/espflash-candidate.bin"
+  },
+  "collector": {
+    "sha256": "31f56d6c04dd960e9fb52be16b7e2706b6fbddcd769955ae381a1cf51a6ebc8c",
+    "source_commit": "c931379e2042b04cdb59c93e57441cc1182f5f19",
+    "binary": "artifacts/benchctl"
+  },
+  "limits": [
+    "Source files were built before the implementation commit; exact source snapshots and their later matching commit are retained. No clean-at-build claim is made.",
+    "This profile enables instrumentation. It is not compared with an uninstrumented image and supplies no profiling-cost score.",
+    "Qualification controls do not establish physical CPU utilization, exclusive ISR time, capacity, memory peaks, power or an OS choice."
+  ]
+}

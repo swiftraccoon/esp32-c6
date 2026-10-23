@@ -1,0 +1,45 @@
+esptool v5.1.0
+Image size: 450624 bytes
+
+ESP32C6 Image Header
+====================
+Image version: 1
+Entry point: 0x408002e8
+Segments: 4
+Flash size: 8MB
+Flash freq: 80m
+Flash mode: DIO
+
+ESP32C6 Extended Image Header
+=============================
+WP pin: 0xee (disabled)
+Flash pins drive settings: clk_drv: 0x0, q_drv: 0x0, d_drv: 0x0, cs0_drv: 0x0, hd_drv: 0x0, wp_drv: 0x0
+Chip ID: 13 (ESP32-C6)
+Minimal chip revision: v0.0, (legacy min_rev = 0)
+Maximal chip revision: v655.35
+
+Segments Information
+====================
+Segment   Length   Load addr   File offs  Memory types
+-------  -------  ----------  ----------  ------------
+      0  0x0f530  0x42060020  0x00000018  DROM, IROM
+      1  0x00ac0  0x40800000  0x0000f550  DRAM, BYTE_ACCESSIBLE, IRAM
+      2  0x51268  0x42000020  0x00010018  DROM, IROM
+      3  0x0cd80  0x40800ac0  0x00061288  DRAM, BYTE_ACCESSIBLE, IRAM
+
+ESP32C6 Image Footer
+====================
+Checksum: 0xcf (valid)
+Validation hash: 0da7e581fad22e8277401cc55f26fd9af7f12acba93c3be504ac3ceae4ef69ce (valid)
+
+Application Information
+=======================
+Project name: libespidf
+App version: 160ff3d-dirty
+Compile time: Oct 23 2026 10:38:12
+ELF file SHA256: e4379b0405e9bb4fb1f521058a7145724946f28c16e0f1ccd0e1a3a9c25d2fcd
+ESP-IDF: v5.5.6
+Minimal eFuse block revision: 0.0
+Maximal eFuse block revision: 0.99
+MMU page size: 64 KB
+Secure version: 0

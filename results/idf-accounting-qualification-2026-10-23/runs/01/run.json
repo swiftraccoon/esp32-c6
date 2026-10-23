@@ -1,0 +1,590 @@
+{
+  "admission": {
+    "elf_sha256": "c535eb9e8a30fdffdbc922c0dfdc1c63426a35dbadf43721241325a47edd1794",
+    "method": null,
+    "provenance_sha256": "15da2b4a221c47dee1313018200d61e897dcd09e1f072757fd2b5aea774b4a12",
+    "purpose": "qualification"
+  },
+  "allocation": {
+    "bytes": 16384,
+    "caps": 4,
+    "checksum": 2041721
+  },
+  "benchmarks": null,
+  "busy_work": {
+    "checksum": 2470336773,
+    "end_us": 2532965,
+    "iterations": 810,
+    "start_us": 2282750
+  },
+  "capacity_control": {
+    "returned_count": 0,
+    "sentinel_unchanged": true
+  },
+  "collector_executable_sha256": "31f56d6c04dd960e9fb52be16b7e2706b6fbddcd769955ae381a1cf51a6ebc8c",
+  "collector_version": "0.1.0",
+  "config_after": {
+    "clocks": {
+      "cpu_mhz": 160,
+      "flash_divider": 1,
+      "flash_mhz": 80,
+      "flash_source_mhz": 80,
+      "registers": {
+        "pcr_cpu_freq_conf": 0,
+        "pcr_mspi_clk_conf": 1280,
+        "pcr_sysclk_conf": 671154688,
+        "spi0_clock": 2147483648
+      },
+      "source": "register-readback"
+    },
+    "timer": {
+      "enabled": true,
+      "pcr_systimer_conf": 1,
+      "pcr_systimer_func_clk_conf": 4194304,
+      "source": "xtal",
+      "systimer_conf": 4143972354,
+      "unit0_enabled": true,
+      "unit0_stalls_cpu": true
+    }
+  },
+  "experiment": "idf-accounting-qualification-v1",
+  "failure": null,
+  "firmware_sha256": "c535eb9e8a30fdffdbc922c0dfdc1c63426a35dbadf43721241325a47edd1794",
+  "hello": {
+    "allocation_bytes": 16384,
+    "allocation_caps": 4,
+    "clock": "esp_timer_get_time",
+    "config_before": {
+      "clocks": {
+        "cpu_mhz": 160,
+        "flash_divider": 1,
+        "flash_mhz": 80,
+        "flash_source_mhz": 80,
+        "registers": {
+          "pcr_cpu_freq_conf": 0,
+          "pcr_mspi_clk_conf": 1280,
+          "pcr_sysclk_conf": 671154688,
+          "spi0_clock": 2147483648
+        },
+        "source": "register-readback"
+      },
+      "timer": {
+        "enabled": true,
+        "pcr_systimer_conf": 1,
+        "pcr_systimer_func_clk_conf": 4194304,
+        "source": "xtal",
+        "systimer_conf": 4143972354,
+        "unit0_enabled": true,
+        "unit0_stalls_cpu": true
+      }
+    },
+    "counter_bits": 64,
+    "experiment": "idf-accounting-qualification-v1",
+    "idle_handle": 1082232324,
+    "protocol": 4,
+    "sampler_handle": 1082230428,
+    "sampler_priority": 1,
+    "sampler_stack_bytes": 32768,
+    "snapshot_storage_bytes": 3552,
+    "target_phase_us": 250000,
+    "task_capacity": 16,
+    "worker_handle": 1082651412,
+    "worker_priority": 5,
+    "worker_stack_bytes": 8192
+  },
+  "host_rustc_at_capture": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "independent_boot_id": "accounting-01",
+  "limitations": [
+    "Qualification-only diagnostic; no comparative estimator or OS score",
+    "Warm reset does not establish statistical independence or authenticate flashed firmware",
+    "64-bit task-attributed wall microseconds include interrupts and possible WFI, not physical CPU utilization",
+    "No external timing, power, capacity, runtime-peak or instrumentation-cost qualification",
+    "Capture ends after completion and its received chunk; later diagnostics are unobserved",
+    "host_rustc_at_capture observes PATH, not the compiler used to build this executable"
+  ],
+  "open_interval_control": {
+    "end_us": 2021708,
+    "runtime_after_us": 680,
+    "runtime_before_us": 680,
+    "start_us": 2011708
+  },
+  "platform": "esp-idf-freertos",
+  "provenance": {
+    "collector": {
+      "binary": "artifacts/benchctl",
+      "sha256": "31f56d6c04dd960e9fb52be16b7e2706b6fbddcd769955ae381a1cf51a6ebc8c",
+      "source_commit": "c931379e2042b04cdb59c93e57441cc1182f5f19"
+    },
+    "experiment": "idf-accounting-qualification-v1",
+    "firmware": {
+      "app_descriptor_version": "f1fc734-dirty",
+      "edition": 2024,
+      "elf_sha256": "c535eb9e8a30fdffdbc922c0dfdc1c63426a35dbadf43721241325a47edd1794",
+      "features": [
+        "accounting-probe"
+      ],
+      "image_sha256": "c3cfe3791b3c83e8ba7215eafab13e33ef60c3e2a99ffd0c6379edf2f3a5e824",
+      "release": {
+        "codegen_units": 1,
+        "debug": 2,
+        "lto": "thin",
+        "opt_level": 3,
+        "panic": "abort"
+      },
+      "rust": "1.96.0",
+      "snapshot_storage_bytes": 3552,
+      "source_tree_clean_at_build": false,
+      "target": "riscv32imac-esp-espidf"
+    },
+    "limits": [
+      "Source files were built before the implementation commit; exact source snapshots and their later matching commit are retained. No clean-at-build claim is made.",
+      "This profile enables instrumentation. It is not compared with an uninstrumented image and supplies no profiling-cost score.",
+      "Qualification controls do not establish physical CPU utilization, exclusive ISR time, capacity, memory peaks, power or an OS choice."
+    ],
+    "packaging": {
+      "application_bytes": 413472,
+      "flash_offsets": {
+        "application": "0x10000",
+        "bootloader": "0x0",
+        "partition_table": "0x8000"
+      },
+      "method": "elf2image --chip esp32c6 --flash-mode dio --flash-freq 80m --flash-size 8MB --elf-sha256-offset 0xb0",
+      "rejected_candidate": "artifacts/preflight/espflash-candidate.bin",
+      "tool": "esptool 5.1.0"
+    },
+    "purpose": "qualification",
+    "schema_version": 1,
+    "sdk": {
+      "bindings": "artifacts/sdk/bindings.rs",
+      "bootloader_sha256": "1488142ce9c3b2d3bfddba7a397a8ef09a14ae513d2aa262f0cc5afdd3447cbd",
+      "commit": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
+      "config": "artifacts/sdk/sdkconfig",
+      "counter_bits": 64,
+      "counter_clock": "esp_timer_get_time",
+      "partition_table_sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820",
+      "rust_sys": "0.37.2",
+      "version": "5.5.6"
+    },
+    "source_commit": "c931379e2042b04cdb59c93e57441cc1182f5f19",
+    "source_snapshot": "artifacts/source"
+  },
+  "qualification": {
+    "blocked_phase": {
+      "idle_task_attributed_us": 258783,
+      "summed_task_runtime_us": 270000,
+      "task_deltas": {
+        "1082196308": {
+          "number": 1,
+          "runtime_us": 0
+        },
+        "1082230428": {
+          "number": 2,
+          "runtime_us": 11217
+        },
+        "1082232324": {
+          "number": 3,
+          "runtime_us": 258783
+        },
+        "1082651412": {
+          "number": 4,
+          "runtime_us": 0
+        }
+      },
+      "total_elapsed_us": 259857,
+      "unattributed_boundary_residual_us": -10143,
+      "worker_attributed_us": 0
+    },
+    "busy_phase": {
+      "idle_task_attributed_us": 0,
+      "summed_task_runtime_us": 251322,
+      "task_deltas": {
+        "1082196308": {
+          "number": 1,
+          "runtime_us": 0
+        },
+        "1082230428": {
+          "number": 2,
+          "runtime_us": 1060
+        },
+        "1082232324": {
+          "number": 3,
+          "runtime_us": 0
+        },
+        "1082651412": {
+          "number": 4,
+          "runtime_us": 250262
+        }
+      },
+      "total_elapsed_us": 251333,
+      "unattributed_boundary_residual_us": 11,
+      "worker_attributed_us": 250262
+    },
+    "heap_allocation_drop_bytes": 16388,
+    "heap_control_drift_bytes": 0,
+    "heap_recovery_drift_bytes": 0,
+    "limits": [
+      "Task counters attribute switch intervals including interrupts and possible WFI; not exclusive CPU time or physical busy/idle",
+      "Signed unattributed boundary residual includes current-task open intervals and noninstantaneous scans; it is not idle time",
+      "Gross observer costs are retained without subtraction; no instrumentation-on/off control",
+      "Allocator and stack-fill indicators do not establish global runtime peaks or fragmentation",
+      "Onboard nominal microsecond clock, not an external frequency calibration"
+    ],
+    "observer_gross": [
+      {
+        "empty_timer_bracket_us": 2,
+        "heap_info_us": 39,
+        "id": "blocked-before",
+        "task_enumeration_us": 970
+      },
+      {
+        "empty_timer_bracket_us": 2,
+        "heap_info_us": 28,
+        "id": "blocked-after",
+        "task_enumeration_us": 969
+      },
+      {
+        "empty_timer_bracket_us": 1,
+        "heap_info_us": 28,
+        "id": "busy-after",
+        "task_enumeration_us": 969
+      },
+      {
+        "empty_timer_bracket_us": 2,
+        "heap_info_us": 28,
+        "id": "heap-control",
+        "task_enumeration_us": 969
+      },
+      {
+        "empty_timer_bracket_us": 1,
+        "heap_info_us": 30,
+        "id": "heap-held",
+        "task_enumeration_us": 929
+      },
+      {
+        "empty_timer_bracket_us": 1,
+        "heap_info_us": 28,
+        "id": "heap-freed",
+        "task_enumeration_us": 930
+      }
+    ]
+  },
+  "reset_kind": "RTS warm-reset request; DTR deasserted",
+  "run_order_index": 1,
+  "schema_version": 4,
+  "serial": {
+    "baud": 115200,
+    "data_bits": 8,
+    "parity": "none",
+    "stop_bits": 1
+  },
+  "snapshots": [
+    {
+      "bracket_end_us": 2021822,
+      "bracket_start_us": 2021820,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 421272
+      },
+      "heap_end_us": 2022848,
+      "heap_start_us": 2022809,
+      "id": "blocked-before",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 680,
+          "stack_free_bytes": 18224,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2008387,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 928,
+          "stack_free_bytes": 7248,
+          "state": 2
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        }
+      ],
+      "tasks_end_us": 2022795,
+      "tasks_start_us": 2021825,
+      "total_runtime_us": 2022793,
+      "worker_phase": 0
+    },
+    {
+      "bracket_end_us": 2281682,
+      "bracket_start_us": 2281680,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 421272
+      },
+      "heap_end_us": 2282681,
+      "heap_start_us": 2282653,
+      "id": "blocked-after",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 11897,
+          "stack_free_bytes": 18220,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 928,
+          "stack_free_bytes": 7248,
+          "state": 2
+        }
+      ],
+      "tasks_end_us": 2282652,
+      "tasks_start_us": 2281683,
+      "total_runtime_us": 2282650,
+      "worker_phase": 0
+    },
+    {
+      "bracket_end_us": 2533015,
+      "bracket_start_us": 2533014,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 421272
+      },
+      "heap_end_us": 2534015,
+      "heap_start_us": 2533987,
+      "id": "busy-after",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 12957,
+          "stack_free_bytes": 18220,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 251190,
+          "stack_free_bytes": 7248,
+          "state": 2
+        }
+      ],
+      "tasks_end_us": 2533985,
+      "tasks_start_us": 2533016,
+      "total_runtime_us": 2533983,
+      "worker_phase": 1
+    },
+    {
+      "bracket_end_us": 2534044,
+      "bracket_start_us": 2534042,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 421272
+      },
+      "heap_end_us": 2535043,
+      "heap_start_us": 2535015,
+      "id": "heap-control",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 12957,
+          "stack_free_bytes": 18220,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 251190,
+          "stack_free_bytes": 7248,
+          "state": 2
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        }
+      ],
+      "tasks_end_us": 2535014,
+      "tasks_start_us": 2534045,
+      "total_runtime_us": 2535012,
+      "worker_phase": 1
+    },
+    {
+      "bracket_end_us": 2537652,
+      "bracket_start_us": 2537651,
+      "heap": {
+        "allocated_bytes": 69120,
+        "free_bytes": 404884,
+        "largest_free_block": 385024,
+        "minimum_free_bytes": 404884
+      },
+      "heap_end_us": 2538615,
+      "heap_start_us": 2538585,
+      "id": "heap-held",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 12957,
+          "stack_free_bytes": 16976,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 251190,
+          "stack_free_bytes": 7248,
+          "state": 2
+        }
+      ],
+      "tasks_end_us": 2538583,
+      "tasks_start_us": 2537654,
+      "total_runtime_us": 2538582,
+      "worker_phase": 1
+    },
+    {
+      "bracket_end_us": 2538633,
+      "bracket_start_us": 2538632,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 404884
+      },
+      "heap_end_us": 2539593,
+      "heap_start_us": 2539565,
+      "id": "heap-freed",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 12957,
+          "stack_free_bytes": 16972,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 251190,
+          "stack_free_bytes": 7248,
+          "state": 2
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        }
+      ],
+      "tasks_end_us": 2539564,
+      "tasks_start_us": 2538634,
+      "total_runtime_us": 2539562,
+      "worker_phase": 1
+    }
+  ],
+  "status": "pass",
+  "timestamp_unix_ms": 1792759274559
+}

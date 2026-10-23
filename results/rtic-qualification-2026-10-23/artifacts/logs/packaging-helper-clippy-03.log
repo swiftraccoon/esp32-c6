@@ -1,0 +1,19 @@
+    Checking rtic-image-correction v0.1.0 (/Users/builduser/Git/esp32-c6/.cache/rtic-qualification-2026-10-23/packaging-helper)
+error: needlessly taken reference of both operands
+   --> src/main.rs:173:17
+    |
+173 |                 &bytes[offset..offset + count] == &data[consumed..consumed + count],
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.96.0/index.html#op_ref
+    = note: `-D clippy::op-ref` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::op_ref)]`
+help: use the values directly
+    |
+173 -                 &bytes[offset..offset + count] == &data[consumed..consumed + count],
+173 +                 bytes[offset..offset + count] == data[consumed..consumed + count],
+    |
+
+error: could not compile `rtic-image-correction` (bin "rtic-image-correction") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rtic-image-correction` (bin "rtic-image-correction" test) due to 1 previous error

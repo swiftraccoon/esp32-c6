@@ -1,0 +1,40 @@
+laze: project root: /Users/builduser/Git/esp32-c6/.cache/ariel-os relpath: tests project_file: laze-project.yml
+laze: building bench-sched-yield, bench-sched-flags, threading-dynamic-prios, threading-lock for espressif-esp32-c6-devkitc-1
+laze: reading cache: apps don't match
+laze: parsing 83 files took 12.872666ms
+laze: stat'ing 83 files took 219.125µs
+configuring bench-sched-yield for espressif-esp32-c6-devkitc-1
+configuring threading-lock for espressif-esp32-c6-devkitc-1
+configuring bench-sched-flags for espressif-esp32-c6-devkitc-1
+configuring threading-dynamic-prios for espressif-esp32-c6-devkitc-1
+configured 4 builds (took 934.416µs).
+laze: writing cache took 607.333µs.
+ninja: Jobserver mode detected: -j --jobserver-auth=fifo:/tmp/__rust_jobslot_fifo_9b1879df792dd2d79800c66d6cb8384a
+[0/4] CARGO build/bin/espressif-esp32-c6-devkitc-1/cargo/riscv32imac-unknown-none-elf/release/threading-dynamic-prios
+   Compiling threading-dynamic-prios v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/tests/threading-dynamic-prios)
+    Finished `release` profile [optimized + debuginfo] target(s) in 2.53s
+[1/4] CARGO build/bin/espressif-esp32-c6-devkitc-1/cargo/riscv32imac-unknown-none-elf/release/threading-lock
+   Compiling embassy-time-driver v0.2.2
+   Compiling embassy-executor-timer-queue v0.1.0
+   Compiling embassy-time-queue-utils v0.3.2
+   Compiling embassy-executor v0.10.0
+   Compiling ariel-os-embassy-common v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-embassy-common)
+   Compiling embassy-time v0.5.1 (https://github.com/ariel-os/embassy?rev=3c1b5fbf28237ea7144ae970c3aec11c38023c3f#3c1b5fbf)
+   Compiling ariel-os-threads v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-threads)
+   Compiling ariel-os-rt v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-rt)
+   Compiling ariel-os-esp v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-esp)
+   Compiling ariel-os-hal v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-hal)
+   Compiling ariel-os-identity v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-identity)
+   Compiling ariel-os-boards v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-boards)
+   Compiling ariel-os-embassy v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-embassy)
+   Compiling ariel-os v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os)
+   Compiling threading-lock v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/tests/threading-lock)
+    Finished `release` profile [optimized + debuginfo] target(s) in 2.80s
+[2/4] CARGO build/bin/espressif-esp32-c6-devkitc-1/cargo/riscv32imac-unknown-none-elf/release/bench-sched-flags
+   Compiling ariel-os-bench v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os-bench)
+   Compiling ariel-os v0.6.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/src/ariel-os)
+   Compiling bench-sched-flags v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/tests/benchmarks/bench-sched-flags)
+    Finished `release` profile [optimized + debuginfo] target(s) in 1.60s
+[3/4] CARGO build/bin/espressif-esp32-c6-devkitc-1/cargo/riscv32imac-unknown-none-elf/release/bench-sched-yield
+   Compiling bench-sched-yield v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/ariel-os/tests/benchmarks/bench-sched-yield)
+    Finished `release` profile [optimized + debuginfo] target(s) in 1.43s

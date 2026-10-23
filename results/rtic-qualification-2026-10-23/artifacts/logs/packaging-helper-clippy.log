@@ -1,0 +1,78 @@
+    Checking typenum v1.20.1
+    Checking memchr v2.8.3
+    Checking cfg-if v1.0.5
+    Checking libc v0.2.191
+    Checking anyhow v1.0.104
+    Checking object v0.40.0
+    Checking generic-array v0.14.7
+    Checking cpufeatures v0.2.17
+    Checking block-buffer v0.10.4
+    Checking crypto-common v0.1.7
+    Checking digest v0.10.7
+    Checking sha2 v0.10.9
+    Checking rtic-image-correction v0.1.0 (/Users/builduser/Git/esp32-c6/.cache/rtic-qualification-2026-10-23/packaging-helper)
+error[E0027]: pattern does not mention field `sh_type`
+   --> src/main.rs:128:13
+    |
+128 |         let object::SectionFlags::Elf { sh_flags } = section.flags() else {
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ missing field `sh_type`
+    |
+help: include the missing field in the pattern
+    |
+128 |         let object::SectionFlags::Elf { sh_flags, sh_type } = section.flags() else {
+    |                                                 +++++++++
+help: if you don't care about this missing field, you can explicitly ignore it
+    |
+128 |         let object::SectionFlags::Elf { sh_flags, sh_type: _ } = section.flags() else {
+    |                                                 ++++++++++++
+help: or always ignore missing fields here
+    |
+128 |         let object::SectionFlags::Elf { sh_flags, .. } = section.flags() else {
+    |                                                 ++++
+
+error[E0277]: the trait bound `u64: std::convert::From<object::elf::SectionFlags>` is not satisfied
+   --> src/main.rs:131:23
+    |
+131 |         if sh_flags & u64::from(object::elf::SHF_ALLOC) == 0
+    |                       ^^^ the trait `std::convert::From<object::elf::SectionFlags>` is not implemented for `u64`
+    |
+    = help: `u64` implements trait `std::convert::From<T>`:
+              std::convert::From<bool>
+              std::convert::From<char>
+              std::convert::From<object::U64<E>>
+              std::convert::From<std::ascii::Char>
+              std::convert::From<u16>
+              std::convert::From<u32>
+              std::convert::From<u8>
+
+error[E0308]: mismatched types
+   --> src/main.rs:131:23
+    |
+131 |         if sh_flags & u64::from(object::elf::SHF_ALLOC) == 0
+    |            --------   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `SectionFlags`, found `u64`
+    |            |
+    |            expected because this is `object::elf::SectionFlags`
+    |
+help: try wrapping the expression in `object::elf::SectionFlags`
+    |
+131 |         if sh_flags & object::elf::SectionFlags(u64::from(object::elf::SHF_ALLOC)) == 0
+    |                       ++++++++++++++++++++++++++                                 +
+
+error[E0308]: mismatched types
+   --> src/main.rs:131:60
+    |
+131 |         if sh_flags & u64::from(object::elf::SHF_ALLOC) == 0
+    |            --------------------------------------------    ^ expected `SectionFlags`, found integer
+    |            |
+    |            expected because this is `object::elf::SectionFlags`
+    |
+help: try wrapping the expression in `object::elf::SectionFlags`
+    |
+131 |         if sh_flags & u64::from(object::elf::SHF_ALLOC) == object::elf::SectionFlags(0)
+    |                                                            ++++++++++++++++++++++++++ +
+
+Some errors have detailed explanations: E0027, E0277, E0308.
+For more information about an error, try `rustc --explain E0027`.
+error: could not compile `rtic-image-correction` (bin "rtic-image-correction") due to 4 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `rtic-image-correction` (bin "rtic-image-correction" test) due to 4 previous errors

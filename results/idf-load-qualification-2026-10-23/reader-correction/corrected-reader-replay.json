@@ -1,0 +1,7 @@
+{
+  "failed_captures_retained": 0,
+  "limits": "Reproduces retained protocol outputs only; does not qualify native console suites, physical accuracy or unrecorded events.",
+  "status": "replays_consistent",
+  "study_summaries": 1,
+  "successful_protocol_transcripts": 66
+}

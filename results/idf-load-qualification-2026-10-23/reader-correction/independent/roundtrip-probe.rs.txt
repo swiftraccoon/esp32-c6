@@ -1,0 +1,49 @@
+use serde_json::Value;
+
+fn walk(value: &Value, path: &str) {
+    match value {
+        Value::Object(fields) => {
+            if let (Some(sum), Some(count), Some(parsed)) = (
+                fields.get("sum_us").and_then(Value::as_u64),
+                fields.get("count").and_then(Value::as_u64),
+                fields.get("mean_us").and_then(Value::as_f64),
+            ) {
+                let fresh = sum as f64 / count as f64;
+                if fresh.to_bits() != parsed.to_bits() {
+                    println!(
+                        "{path}.mean_us sum={sum} count={count} parsed={parsed:?} fresh={fresh:?} parsed_bits={:016x} fresh_bits={:016x} parsed_json={} fresh_json={}",
+                        parsed.to_bits(),
+                        fresh.to_bits(),
+                        serde_json::to_string(&parsed).unwrap(),
+                        serde_json::to_string(&fresh).unwrap()
+                    );
+                }
+            }
+            for (key, child) in fields {
+                walk(child, &format!("{path}.{key}"));
+            }
+        }
+        Value::Array(items) => {
+            for (index, child) in items.iter().enumerate() {
+                walk(child, &format!("{path}[{index}]"));
+            }
+        }
+        _ => {}
+    }
+}
+
+fn main() {
+    let parsed: f64 = serde_json::from_str("2758.7296248382922").unwrap();
+    let fresh = 2132498_f64 / 773_f64;
+    println!(
+        "known parsed_bits={:016x} fresh_bits={:016x} identical={}",
+        parsed.to_bits(),
+        fresh.to_bits(),
+        parsed.to_bits() == fresh.to_bits()
+    );
+    for file in std::env::args().skip(1) {
+        let bytes = std::fs::read(&file).unwrap();
+        let value: Value = serde_json::from_slice(&bytes).unwrap();
+        walk(&value["phases"], &format!("{file}:phases"));
+    }
+}

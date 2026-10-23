@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "scope": "Pre-physical local checks only; no RTIC image flashed at this checkpoint.",
+  "evaluation_source_commit": "8008dbf0283403980fa237981a82fec63d3f391a",
+  "rust": "1.96.0",
+  "host": "aarch64-apple-darwin",
+  "unit_tests_passed": 110,
+  "doctests_passed": 2,
+  "commands_passed": [
+    "cargo fmt --all --check",
+    "cargo test --locked --workspace",
+    "cargo clippy --workspace --locked --all-targets -- -D warnings",
+    "cargo doc --workspace --locked --no-deps",
+    "cargo build --release --locked -p benchctl"
+  ],
+  "historical_replay": {
+    "protocol_transcripts": 66,
+    "study_summaries": 1,
+    "console_captures": 0
+  },
+  "historical_method_controls": "two positive and ten negative controls pass",
+  "independent_host_controls": {
+    "cli_cases": 78,
+    "archive_cases": 30,
+    "pre_serial_negatives": 12,
+    "review": "docs/reviews/rtic-admission.md"
+  },
+  "packaging_helper": "Three unit tests and Clippy/format pass; independent esptool and root byte/checksum/digest inspection pass.",
+  "limitations": "Host checks/builds/image inspection do not establish physical execution, independent oscillator accuracy, continued liveness or whole-platform qualification."
+}

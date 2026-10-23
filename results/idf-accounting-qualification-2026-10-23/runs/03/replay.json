@@ -1,0 +1,497 @@
+{
+  "allocation": {
+    "bytes": 16384,
+    "caps": 4,
+    "checksum": 2041721
+  },
+  "busy_work": {
+    "checksum": 2470336773,
+    "end_us": 2532965,
+    "iterations": 810,
+    "start_us": 2282750
+  },
+  "capacity_control": {
+    "returned_count": 0,
+    "sentinel_unchanged": true
+  },
+  "config_after": {
+    "clocks": {
+      "cpu_mhz": 160,
+      "flash_divider": 1,
+      "flash_mhz": 80,
+      "flash_source_mhz": 80,
+      "registers": {
+        "pcr_cpu_freq_conf": 0,
+        "pcr_mspi_clk_conf": 1280,
+        "pcr_sysclk_conf": 671154688,
+        "spi0_clock": 2147483648
+      },
+      "source": "register-readback"
+    },
+    "timer": {
+      "enabled": true,
+      "pcr_systimer_conf": 1,
+      "pcr_systimer_func_clk_conf": 4194304,
+      "source": "xtal",
+      "systimer_conf": 4143972354,
+      "unit0_enabled": true,
+      "unit0_stalls_cpu": true
+    }
+  },
+  "hello": {
+    "allocation_bytes": 16384,
+    "allocation_caps": 4,
+    "clock": "esp_timer_get_time",
+    "config_before": {
+      "clocks": {
+        "cpu_mhz": 160,
+        "flash_divider": 1,
+        "flash_mhz": 80,
+        "flash_source_mhz": 80,
+        "registers": {
+          "pcr_cpu_freq_conf": 0,
+          "pcr_mspi_clk_conf": 1280,
+          "pcr_sysclk_conf": 671154688,
+          "spi0_clock": 2147483648
+        },
+        "source": "register-readback"
+      },
+      "timer": {
+        "enabled": true,
+        "pcr_systimer_conf": 1,
+        "pcr_systimer_func_clk_conf": 4194304,
+        "source": "xtal",
+        "systimer_conf": 4143972354,
+        "unit0_enabled": true,
+        "unit0_stalls_cpu": true
+      }
+    },
+    "counter_bits": 64,
+    "experiment": "idf-accounting-qualification-v1",
+    "idle_handle": 1082232324,
+    "protocol": 4,
+    "sampler_handle": 1082230428,
+    "sampler_priority": 1,
+    "sampler_stack_bytes": 32768,
+    "snapshot_storage_bytes": 3552,
+    "target_phase_us": 250000,
+    "task_capacity": 16,
+    "worker_handle": 1082651412,
+    "worker_priority": 5,
+    "worker_stack_bytes": 8192
+  },
+  "open_interval_control": {
+    "end_us": 2021708,
+    "runtime_after_us": 680,
+    "runtime_before_us": 680,
+    "start_us": 2011708
+  },
+  "qualification": {
+    "blocked_phase": {
+      "idle_task_attributed_us": 258783,
+      "summed_task_runtime_us": 270000,
+      "task_deltas": {
+        "1082196308": {
+          "number": 1,
+          "runtime_us": 0
+        },
+        "1082230428": {
+          "number": 2,
+          "runtime_us": 11217
+        },
+        "1082232324": {
+          "number": 3,
+          "runtime_us": 258783
+        },
+        "1082651412": {
+          "number": 4,
+          "runtime_us": 0
+        }
+      },
+      "total_elapsed_us": 259857,
+      "unattributed_boundary_residual_us": -10143,
+      "worker_attributed_us": 0
+    },
+    "busy_phase": {
+      "idle_task_attributed_us": 0,
+      "summed_task_runtime_us": 251322,
+      "task_deltas": {
+        "1082196308": {
+          "number": 1,
+          "runtime_us": 0
+        },
+        "1082230428": {
+          "number": 2,
+          "runtime_us": 1060
+        },
+        "1082232324": {
+          "number": 3,
+          "runtime_us": 0
+        },
+        "1082651412": {
+          "number": 4,
+          "runtime_us": 250262
+        }
+      },
+      "total_elapsed_us": 251333,
+      "unattributed_boundary_residual_us": 11,
+      "worker_attributed_us": 250262
+    },
+    "heap_allocation_drop_bytes": 16388,
+    "heap_control_drift_bytes": 0,
+    "heap_recovery_drift_bytes": 0,
+    "limits": [
+      "Task counters attribute switch intervals including interrupts and possible WFI; not exclusive CPU time or physical busy/idle",
+      "Signed unattributed boundary residual includes current-task open intervals and noninstantaneous scans; it is not idle time",
+      "Gross observer costs are retained without subtraction; no instrumentation-on/off control",
+      "Allocator and stack-fill indicators do not establish global runtime peaks or fragmentation",
+      "Onboard nominal microsecond clock, not an external frequency calibration"
+    ],
+    "observer_gross": [
+      {
+        "empty_timer_bracket_us": 2,
+        "heap_info_us": 39,
+        "id": "blocked-before",
+        "task_enumeration_us": 970
+      },
+      {
+        "empty_timer_bracket_us": 2,
+        "heap_info_us": 28,
+        "id": "blocked-after",
+        "task_enumeration_us": 968
+      },
+      {
+        "empty_timer_bracket_us": 1,
+        "heap_info_us": 28,
+        "id": "busy-after",
+        "task_enumeration_us": 969
+      },
+      {
+        "empty_timer_bracket_us": 2,
+        "heap_info_us": 28,
+        "id": "heap-control",
+        "task_enumeration_us": 969
+      },
+      {
+        "empty_timer_bracket_us": 1,
+        "heap_info_us": 30,
+        "id": "heap-held",
+        "task_enumeration_us": 930
+      },
+      {
+        "empty_timer_bracket_us": 2,
+        "heap_info_us": 28,
+        "id": "heap-freed",
+        "task_enumeration_us": 930
+      }
+    ]
+  },
+  "snapshots": [
+    {
+      "bracket_end_us": 2021822,
+      "bracket_start_us": 2021820,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 421272
+      },
+      "heap_end_us": 2022848,
+      "heap_start_us": 2022809,
+      "id": "blocked-before",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 680,
+          "stack_free_bytes": 18224,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2008387,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 928,
+          "stack_free_bytes": 7248,
+          "state": 2
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        }
+      ],
+      "tasks_end_us": 2022795,
+      "tasks_start_us": 2021825,
+      "total_runtime_us": 2022793,
+      "worker_phase": 0
+    },
+    {
+      "bracket_end_us": 2281682,
+      "bracket_start_us": 2281680,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 421272
+      },
+      "heap_end_us": 2282681,
+      "heap_start_us": 2282653,
+      "id": "blocked-after",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 11897,
+          "stack_free_bytes": 18220,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 928,
+          "stack_free_bytes": 7248,
+          "state": 2
+        }
+      ],
+      "tasks_end_us": 2282651,
+      "tasks_start_us": 2281683,
+      "total_runtime_us": 2282650,
+      "worker_phase": 0
+    },
+    {
+      "bracket_end_us": 2533015,
+      "bracket_start_us": 2533014,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 421272
+      },
+      "heap_end_us": 2534015,
+      "heap_start_us": 2533987,
+      "id": "busy-after",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 12957,
+          "stack_free_bytes": 18220,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 251190,
+          "stack_free_bytes": 7248,
+          "state": 2
+        }
+      ],
+      "tasks_end_us": 2533985,
+      "tasks_start_us": 2533016,
+      "total_runtime_us": 2533983,
+      "worker_phase": 1
+    },
+    {
+      "bracket_end_us": 2534044,
+      "bracket_start_us": 2534042,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 421272
+      },
+      "heap_end_us": 2535043,
+      "heap_start_us": 2535015,
+      "id": "heap-control",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 12957,
+          "stack_free_bytes": 18220,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 251190,
+          "stack_free_bytes": 7248,
+          "state": 2
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        }
+      ],
+      "tasks_end_us": 2535014,
+      "tasks_start_us": 2534045,
+      "total_runtime_us": 2535012,
+      "worker_phase": 1
+    },
+    {
+      "bracket_end_us": 2537652,
+      "bracket_start_us": 2537651,
+      "heap": {
+        "allocated_bytes": 69120,
+        "free_bytes": 404884,
+        "largest_free_block": 385024,
+        "minimum_free_bytes": 404884
+      },
+      "heap_end_us": 2538615,
+      "heap_start_us": 2538585,
+      "id": "heap-held",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 12957,
+          "stack_free_bytes": 16976,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 251190,
+          "stack_free_bytes": 7248,
+          "state": 2
+        }
+      ],
+      "tasks_end_us": 2538583,
+      "tasks_start_us": 2537653,
+      "total_runtime_us": 2538581,
+      "worker_phase": 1
+    },
+    {
+      "bracket_end_us": 2538633,
+      "bracket_start_us": 2538631,
+      "heap": {
+        "allocated_bytes": 52736,
+        "free_bytes": 421272,
+        "largest_free_block": 401408,
+        "minimum_free_bytes": 404884
+      },
+      "heap_end_us": 2539593,
+      "heap_start_us": 2539565,
+      "id": "heap-freed",
+      "tasks": [
+        {
+          "handle": 1082230428,
+          "number": 2,
+          "priority": 1,
+          "runtime_us": 12957,
+          "stack_free_bytes": 16972,
+          "state": 0
+        },
+        {
+          "handle": 1082232324,
+          "number": 3,
+          "priority": 0,
+          "runtime_us": 2267170,
+          "stack_free_bytes": 1312,
+          "state": 1
+        },
+        {
+          "handle": 1082651412,
+          "number": 4,
+          "priority": 5,
+          "runtime_us": 251190,
+          "stack_free_bytes": 7248,
+          "state": 2
+        },
+        {
+          "handle": 1082196308,
+          "number": 1,
+          "priority": 22,
+          "runtime_us": 1673,
+          "stack_free_bytes": 3888,
+          "state": 3
+        }
+      ],
+      "tasks_end_us": 2539564,
+      "tasks_start_us": 2538634,
+      "total_runtime_us": 2539562,
+      "worker_phase": 1
+    }
+  ]
+}

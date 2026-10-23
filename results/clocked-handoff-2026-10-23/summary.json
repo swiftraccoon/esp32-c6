@@ -1,0 +1,992 @@
+{
+  "schema_version": 1,
+  "dataset": "clocked-handoff-2026-10-23",
+  "audited_on": "2026-10-23",
+  "measurement_units": {
+    "timing": "ns",
+    "clock": "MHz",
+    "storage": "bytes"
+  },
+  "timer_resolution_ns": 1000,
+  "aggregation": "Per-boot nearest-rank statistics recomputed from every raw-preserved sample. Platform ranges summarize the five per-boot statistics; no pooled percentile or confidence interval.",
+  "independently_requested_warm_resets": 15,
+  "validated_observations": {
+    "compute": 960,
+    "timer-overhead": 960,
+    "message-roundtrip": 10000,
+    "total": 11920
+  },
+  "audit": {
+    "full_raw_replays_passed": 15,
+    "raw_and_parsed_streams_equal": 15,
+    "per_boot_statistics_recomputed_equal": 15,
+    "clock_snapshots_decoded_and_equal": 15,
+    "copied_elf_hashes_equal": 15,
+    "provenance_matches_shared_artifacts": 15,
+    "source_snapshot_and_lock_hashes_verified": true
+  },
+  "clocks": {
+    "source": "register-readback",
+    "cpu_mhz": 160,
+    "flash_source_mhz": 80,
+    "flash_mhz": 80,
+    "flash_divider": 1,
+    "registers": {
+      "pcr_sysclk_conf": 671154688,
+      "pcr_cpu_freq_conf": 0,
+      "pcr_mspi_clk_conf": 1280,
+      "spi0_clock": 2147483648
+    }
+  },
+  "collector_executable_sha256": "6f1a1a38c5079492f957a12ea76193f6b3ce7a8fe5d9dbbbb81c1331b327ac55",
+  "source_snapshots": [
+    {
+      "platform": "bare-metal",
+      "path": "results/clocked-handoff-2026-10-23/artifacts/esp-hal-source.tar.gz",
+      "sha256": "5d46a17fae89ca31c79802c55aa2610fd2affeee24af35f28c59ba9a8e3504c6",
+      "cargo_lock_sha256": "fe83fea7296603dd9a461ed872fcecab02b277754a18060b0ac0e8cbc48ed89f",
+      "workload_source_sha256": "27447ee945989a682ee778646f488e7c986d8831a38515e1057eaa143992ab9e"
+    },
+    {
+      "platform": "embassy",
+      "path": "results/clocked-handoff-2026-10-23/artifacts/esp-hal-source.tar.gz",
+      "sha256": "5d46a17fae89ca31c79802c55aa2610fd2affeee24af35f28c59ba9a8e3504c6",
+      "cargo_lock_sha256": "fe83fea7296603dd9a461ed872fcecab02b277754a18060b0ac0e8cbc48ed89f",
+      "workload_source_sha256": "27447ee945989a682ee778646f488e7c986d8831a38515e1057eaa143992ab9e"
+    },
+    {
+      "platform": "esp-idf-freertos",
+      "path": "results/clocked-handoff-2026-10-23/artifacts/esp-idf-source.tar.gz",
+      "sha256": "aa860679084bd723623c283f119b778ee7b99c37fc7a8d4c69ff2bfbd84b9958",
+      "cargo_lock_sha256": "72d9f6a550922507b682a7ebc40623da22e62cdf12c138249a09de40ef5adace",
+      "workload_source_sha256": "27447ee945989a682ee778646f488e7c986d8831a38515e1057eaa143992ab9e"
+    }
+  ],
+  "platforms": {
+    "bare-metal": {
+      "independently_requested_warm_resets": 5,
+      "benchmarks": {
+        "compute": {
+          "observations_per_boot": 64,
+          "total_observations": 320,
+          "per_boot_statistic_ranges": {
+            "min_ns": {
+              "min": 308000,
+              "median": 308000,
+              "max": 308000
+            },
+            "p50_ns": {
+              "min": 308000,
+              "median": 308000,
+              "max": 308000
+            },
+            "p95_ns": {
+              "min": 309000,
+              "median": 309000,
+              "max": 309000
+            },
+            "p99_ns": {
+              "min": 318000,
+              "median": 318000,
+              "max": 319000
+            },
+            "max_ns": {
+              "min": 318000,
+              "median": 318000,
+              "max": 319000
+            },
+            "mean_ns": {
+              "min": 308234.375,
+              "median": 308296.875,
+              "max": 308328.125
+            }
+          }
+        },
+        "timer-overhead": {
+          "observations_per_boot": 64,
+          "total_observations": 320,
+          "per_boot_statistic_ranges": {
+            "min_ns": {
+              "min": 0,
+              "median": 0,
+              "max": 0
+            },
+            "p50_ns": {
+              "min": 1000,
+              "median": 1000,
+              "max": 1000
+            },
+            "p95_ns": {
+              "min": 1000,
+              "median": 1000,
+              "max": 1000
+            },
+            "p99_ns": {
+              "min": 7000,
+              "median": 7000,
+              "max": 8000
+            },
+            "max_ns": {
+              "min": 7000,
+              "median": 7000,
+              "max": 8000
+            },
+            "mean_ns": {
+              "min": 859.375,
+              "median": 875,
+              "max": 875
+            }
+          }
+        }
+      }
+    },
+    "embassy": {
+      "independently_requested_warm_resets": 5,
+      "benchmarks": {
+        "compute": {
+          "observations_per_boot": 64,
+          "total_observations": 320,
+          "per_boot_statistic_ranges": {
+            "min_ns": {
+              "min": 282000,
+              "median": 282000,
+              "max": 282000
+            },
+            "p50_ns": {
+              "min": 283000,
+              "median": 283000,
+              "max": 283000
+            },
+            "p95_ns": {
+              "min": 283000,
+              "median": 283000,
+              "max": 283000
+            },
+            "p99_ns": {
+              "min": 293000,
+              "median": 294000,
+              "max": 294000
+            },
+            "max_ns": {
+              "min": 293000,
+              "median": 294000,
+              "max": 294000
+            },
+            "mean_ns": {
+              "min": 282765.625,
+              "median": 282781.25,
+              "max": 282781.25
+            }
+          }
+        },
+        "message-roundtrip": {
+          "observations_per_boot": 1000,
+          "total_observations": 5000,
+          "per_boot_statistic_ranges": {
+            "min_ns": {
+              "min": 7000,
+              "median": 7000,
+              "max": 7000
+            },
+            "p50_ns": {
+              "min": 7000,
+              "median": 7000,
+              "max": 7000
+            },
+            "p95_ns": {
+              "min": 8000,
+              "median": 8000,
+              "max": 8000
+            },
+            "p99_ns": {
+              "min": 8000,
+              "median": 8000,
+              "max": 8000
+            },
+            "max_ns": {
+              "min": 20000,
+              "median": 20000,
+              "max": 20000
+            },
+            "mean_ns": {
+              "min": 7138,
+              "median": 7138,
+              "max": 7263
+            }
+          }
+        },
+        "timer-overhead": {
+          "observations_per_boot": 64,
+          "total_observations": 320,
+          "per_boot_statistic_ranges": {
+            "min_ns": {
+              "min": 0,
+              "median": 0,
+              "max": 0
+            },
+            "p50_ns": {
+              "min": 1000,
+              "median": 1000,
+              "max": 1000
+            },
+            "p95_ns": {
+              "min": 1000,
+              "median": 1000,
+              "max": 1000
+            },
+            "p99_ns": {
+              "min": 8000,
+              "median": 8000,
+              "max": 8000
+            },
+            "max_ns": {
+              "min": 8000,
+              "median": 8000,
+              "max": 8000
+            },
+            "mean_ns": {
+              "min": 859.375,
+              "median": 859.375,
+              "max": 875
+            }
+          }
+        }
+      }
+    },
+    "esp-idf-freertos": {
+      "independently_requested_warm_resets": 5,
+      "benchmarks": {
+        "compute": {
+          "observations_per_boot": 64,
+          "total_observations": 320,
+          "per_boot_statistic_ranges": {
+            "min_ns": {
+              "min": 282000,
+              "median": 282000,
+              "max": 282000
+            },
+            "p50_ns": {
+              "min": 283000,
+              "median": 283000,
+              "max": 283000
+            },
+            "p95_ns": {
+              "min": 283000,
+              "median": 283000,
+              "max": 283000
+            },
+            "p99_ns": {
+              "min": 290000,
+              "median": 290000,
+              "max": 290000
+            },
+            "max_ns": {
+              "min": 290000,
+              "median": 290000,
+              "max": 290000
+            },
+            "mean_ns": {
+              "min": 283078.125,
+              "median": 283078.125,
+              "max": 283093.75
+            }
+          }
+        },
+        "message-roundtrip": {
+          "observations_per_boot": 1000,
+          "total_observations": 5000,
+          "per_boot_statistic_ranges": {
+            "min_ns": {
+              "min": 62000,
+              "median": 62000,
+              "max": 62000
+            },
+            "p50_ns": {
+              "min": 62000,
+              "median": 62000,
+              "max": 62000
+            },
+            "p95_ns": {
+              "min": 63000,
+              "median": 63000,
+              "max": 63000
+            },
+            "p99_ns": {
+              "min": 63000,
+              "median": 63000,
+              "max": 63000
+            },
+            "max_ns": {
+              "min": 69000,
+              "median": 69000,
+              "max": 69000
+            },
+            "mean_ns": {
+              "min": 62276,
+              "median": 62277,
+              "max": 62280
+            }
+          }
+        },
+        "timer-overhead": {
+          "observations_per_boot": 64,
+          "total_observations": 320,
+          "per_boot_statistic_ranges": {
+            "min_ns": {
+              "min": 1000,
+              "median": 1000,
+              "max": 1000
+            },
+            "p50_ns": {
+              "min": 1000,
+              "median": 1000,
+              "max": 1000
+            },
+            "p95_ns": {
+              "min": 1000,
+              "median": 1000,
+              "max": 1000
+            },
+            "p99_ns": {
+              "min": 2000,
+              "median": 2000,
+              "max": 2000
+            },
+            "max_ns": {
+              "min": 2000,
+              "median": 2000,
+              "max": 2000
+            },
+            "mean_ns": {
+              "min": 1015.625,
+              "median": 1031.25,
+              "max": 1031.25
+            }
+          }
+        }
+      }
+    }
+  },
+  "per_boot": [
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/01-bare-metal/run.json",
+      "independent_boot_id": "bare-metal-01",
+      "run_order_index": 1,
+      "platform": "bare-metal",
+      "firmware_sha256": "be14bac3563b52d5e043485c9f798a4e23d6ed8702b72c9a3028c1cf46f58d0b",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 308000,
+          "p50_ns": 308000,
+          "p95_ns": 309000,
+          "p99_ns": 318000,
+          "max_ns": 318000,
+          "mean_ns": 308234.375
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 7000,
+          "max_ns": 7000,
+          "mean_ns": 875
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "65212118b44b12f57f470ef128ee35123dc9438c25dd2dafd611b019009ac407",
+        "serial_raw": "2d7a9cae39fbce278f9587aa2e44ed928e2d0313d4148a3db334dba5db0c8a07",
+        "records_jsonl": "d45503475298626507dc63e34825c7e67928aadd429385849526b8c50bca812d"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/02-embassy/run.json",
+      "independent_boot_id": "embassy-02",
+      "run_order_index": 2,
+      "platform": "embassy",
+      "firmware_sha256": "8d06354ca14e9a51550fd3183c9f29750f32fc73880140c6d9ca8151e0a18d44",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 293000,
+          "max_ns": 293000,
+          "mean_ns": 282765.625
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 7000,
+          "p50_ns": 7000,
+          "p95_ns": 8000,
+          "p99_ns": 8000,
+          "max_ns": 20000,
+          "mean_ns": 7263
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 8000,
+          "max_ns": 8000,
+          "mean_ns": 859.375
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "2ef8869ac79d74a767c564e06b820927adbad5d70c265ab445c37fae9337d2d2",
+        "serial_raw": "d648fefe7020624039577de1bbdb6789d5071c19c1cf05a43828beb7639672bc",
+        "records_jsonl": "8c632fcbe711e62c08bc0af4beaf5d17d600dac06891c6216ccef900724a3c9a"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/03-esp-idf-freertos/run.json",
+      "independent_boot_id": "esp-idf-freertos-03",
+      "run_order_index": 3,
+      "platform": "esp-idf-freertos",
+      "firmware_sha256": "2c29bbbc2c7fe9ebb433907d9a2121c121ad67c460d4f1ead99f50e552991cf9",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 290000,
+          "max_ns": 290000,
+          "mean_ns": 283078.125
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 62000,
+          "p50_ns": 62000,
+          "p95_ns": 63000,
+          "p99_ns": 63000,
+          "max_ns": 69000,
+          "mean_ns": 62277
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 1000,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 2000,
+          "max_ns": 2000,
+          "mean_ns": 1031.25
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "fdec1a17d787e9c01ef1be205475d88c6e5516738654cb4e4061284e8060b3a7",
+        "serial_raw": "3942d947e1d4bb5f5b21de46e499c5178e927498f72848c783300b9bdf8bd6d1",
+        "records_jsonl": "6a86dddf85e3e62aab7e936edfc7e45b593ea81b51bbbb4f7917bf2a3285d35b"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/04-esp-idf-freertos/run.json",
+      "independent_boot_id": "esp-idf-freertos-04",
+      "run_order_index": 4,
+      "platform": "esp-idf-freertos",
+      "firmware_sha256": "2c29bbbc2c7fe9ebb433907d9a2121c121ad67c460d4f1ead99f50e552991cf9",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 290000,
+          "max_ns": 290000,
+          "mean_ns": 283093.75
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 62000,
+          "p50_ns": 62000,
+          "p95_ns": 63000,
+          "p99_ns": 63000,
+          "max_ns": 69000,
+          "mean_ns": 62276
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 1000,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 2000,
+          "max_ns": 2000,
+          "mean_ns": 1031.25
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "3cc7c438beecfa6fb3528b8ec0b06a97709a885021a3d68659364b5e9158a4e8",
+        "serial_raw": "c997c865c5a98dc7048df9db77b8cdb631f2ae5711ad34fb4008c9308ec2cac6",
+        "records_jsonl": "4f8f46e5adc4fa3f04f53324ffbe3a2e9f7bf2160a5de0359d71829bf6223881"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/05-embassy/run.json",
+      "independent_boot_id": "embassy-05",
+      "run_order_index": 5,
+      "platform": "embassy",
+      "firmware_sha256": "8d06354ca14e9a51550fd3183c9f29750f32fc73880140c6d9ca8151e0a18d44",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 294000,
+          "max_ns": 294000,
+          "mean_ns": 282781.25
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 7000,
+          "p50_ns": 7000,
+          "p95_ns": 8000,
+          "p99_ns": 8000,
+          "max_ns": 20000,
+          "mean_ns": 7138
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 8000,
+          "max_ns": 8000,
+          "mean_ns": 859.375
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "cc9436f0d94b5a2f2b42ec830bbe4a72fb5ecf956a775f9dc4b488fffd78ec63",
+        "serial_raw": "cf214d4f2f924558967477ce6581b9ae87bc1dc3ef2b04a6b00cc563f62936bd",
+        "records_jsonl": "72fb4916dd1f9c2416c10a44fecbcdc60c8cee83bfdba95d4720df844329baa9"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/06-bare-metal/run.json",
+      "independent_boot_id": "bare-metal-06",
+      "run_order_index": 6,
+      "platform": "bare-metal",
+      "firmware_sha256": "be14bac3563b52d5e043485c9f798a4e23d6ed8702b72c9a3028c1cf46f58d0b",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 308000,
+          "p50_ns": 308000,
+          "p95_ns": 309000,
+          "p99_ns": 318000,
+          "max_ns": 318000,
+          "mean_ns": 308296.875
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 7000,
+          "max_ns": 7000,
+          "mean_ns": 875
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "a76e67ed5300c746b2f01f07a151a1b519ca757217f39531b1d31f5a4dca7e8a",
+        "serial_raw": "e2f62d7d25c2ce8f825e52adc9cb951a90877b459f22863a9171e68f199f8bf9",
+        "records_jsonl": "a195af190fa474f148826355dfd7d5c512aaaeff9771dd3fc316e2505e85cea2"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/07-embassy/run.json",
+      "independent_boot_id": "embassy-07",
+      "run_order_index": 7,
+      "platform": "embassy",
+      "firmware_sha256": "8d06354ca14e9a51550fd3183c9f29750f32fc73880140c6d9ca8151e0a18d44",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 294000,
+          "max_ns": 294000,
+          "mean_ns": 282781.25
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 7000,
+          "p50_ns": 7000,
+          "p95_ns": 8000,
+          "p99_ns": 8000,
+          "max_ns": 20000,
+          "mean_ns": 7138
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 8000,
+          "max_ns": 8000,
+          "mean_ns": 859.375
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "46cff8fb2805c98997fa4a52cd0775a463899ddf786c905841c13be9ae3078e7",
+        "serial_raw": "cf214d4f2f924558967477ce6581b9ae87bc1dc3ef2b04a6b00cc563f62936bd",
+        "records_jsonl": "72fb4916dd1f9c2416c10a44fecbcdc60c8cee83bfdba95d4720df844329baa9"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/08-bare-metal/run.json",
+      "independent_boot_id": "bare-metal-08",
+      "run_order_index": 8,
+      "platform": "bare-metal",
+      "firmware_sha256": "be14bac3563b52d5e043485c9f798a4e23d6ed8702b72c9a3028c1cf46f58d0b",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 308000,
+          "p50_ns": 308000,
+          "p95_ns": 309000,
+          "p99_ns": 319000,
+          "max_ns": 319000,
+          "mean_ns": 308328.125
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 8000,
+          "max_ns": 8000,
+          "mean_ns": 875
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "51edaae7f5fc3add90a1068f5fde780dced8b466d70bc2dc62f53f5a13b82415",
+        "serial_raw": "fb67626c1845324484fe27c126d3e101644cf04c77589606025a7e0c95e9fc50",
+        "records_jsonl": "d0e3e377e7da9ec44526109f1386cf77b1948b53c7fe8117d2acf248d543b767"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/09-esp-idf-freertos/run.json",
+      "independent_boot_id": "esp-idf-freertos-09",
+      "run_order_index": 9,
+      "platform": "esp-idf-freertos",
+      "firmware_sha256": "2c29bbbc2c7fe9ebb433907d9a2121c121ad67c460d4f1ead99f50e552991cf9",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 290000,
+          "max_ns": 290000,
+          "mean_ns": 283078.125
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 62000,
+          "p50_ns": 62000,
+          "p95_ns": 63000,
+          "p99_ns": 63000,
+          "max_ns": 69000,
+          "mean_ns": 62277
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 1000,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 2000,
+          "max_ns": 2000,
+          "mean_ns": 1031.25
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "26545eeb17e5728688e9280d02208eab402d2259c66dedf2e47949fcc434f3f3",
+        "serial_raw": "3942d947e1d4bb5f5b21de46e499c5178e927498f72848c783300b9bdf8bd6d1",
+        "records_jsonl": "6a86dddf85e3e62aab7e936edfc7e45b593ea81b51bbbb4f7917bf2a3285d35b"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/10-bare-metal/run.json",
+      "independent_boot_id": "bare-metal-10",
+      "run_order_index": 10,
+      "platform": "bare-metal",
+      "firmware_sha256": "be14bac3563b52d5e043485c9f798a4e23d6ed8702b72c9a3028c1cf46f58d0b",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 308000,
+          "p50_ns": 308000,
+          "p95_ns": 309000,
+          "p99_ns": 318000,
+          "max_ns": 318000,
+          "mean_ns": 308296.875
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 7000,
+          "max_ns": 7000,
+          "mean_ns": 875
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "92db6e13c1f5ee936ba91b252004fa6ae4ca973adffe4feb0c588181db6db66c",
+        "serial_raw": "e2f62d7d25c2ce8f825e52adc9cb951a90877b459f22863a9171e68f199f8bf9",
+        "records_jsonl": "a195af190fa474f148826355dfd7d5c512aaaeff9771dd3fc316e2505e85cea2"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/11-esp-idf-freertos/run.json",
+      "independent_boot_id": "esp-idf-freertos-11",
+      "run_order_index": 11,
+      "platform": "esp-idf-freertos",
+      "firmware_sha256": "2c29bbbc2c7fe9ebb433907d9a2121c121ad67c460d4f1ead99f50e552991cf9",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 290000,
+          "max_ns": 290000,
+          "mean_ns": 283093.75
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 62000,
+          "p50_ns": 62000,
+          "p95_ns": 63000,
+          "p99_ns": 63000,
+          "max_ns": 69000,
+          "mean_ns": 62280
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 1000,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 2000,
+          "max_ns": 2000,
+          "mean_ns": 1015.625
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "b6009b1219bc1739b2737bf1842a3f74af5b8ad52719fee600820c0ab1d42ff6",
+        "serial_raw": "e6fc83fdba206391e4e924afb8285a5673fc01909bd33708d83c7184701c5946",
+        "records_jsonl": "c9597fbf02f48d1098b7a74154462d4660b258b70d9cda5f70a4beb9cb3dd807"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/12-embassy/run.json",
+      "independent_boot_id": "embassy-12",
+      "run_order_index": 12,
+      "platform": "embassy",
+      "firmware_sha256": "8d06354ca14e9a51550fd3183c9f29750f32fc73880140c6d9ca8151e0a18d44",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 294000,
+          "max_ns": 294000,
+          "mean_ns": 282781.25
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 7000,
+          "p50_ns": 7000,
+          "p95_ns": 8000,
+          "p99_ns": 8000,
+          "max_ns": 20000,
+          "mean_ns": 7138
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 8000,
+          "max_ns": 8000,
+          "mean_ns": 859.375
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "a29db9f37d309b969fdab11358eb9472b3a834fd2ff9d31f9c8ee6a3fa15f1f9",
+        "serial_raw": "cf214d4f2f924558967477ce6581b9ae87bc1dc3ef2b04a6b00cc563f62936bd",
+        "records_jsonl": "72fb4916dd1f9c2416c10a44fecbcdc60c8cee83bfdba95d4720df844329baa9"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/13-embassy/run.json",
+      "independent_boot_id": "embassy-13",
+      "run_order_index": 13,
+      "platform": "embassy",
+      "firmware_sha256": "8d06354ca14e9a51550fd3183c9f29750f32fc73880140c6d9ca8151e0a18d44",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 294000,
+          "max_ns": 294000,
+          "mean_ns": 282781.25
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 7000,
+          "p50_ns": 7000,
+          "p95_ns": 8000,
+          "p99_ns": 8000,
+          "max_ns": 20000,
+          "mean_ns": 7138
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 8000,
+          "max_ns": 8000,
+          "mean_ns": 875
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "4bb5bb9bfb919c51fea68ceff48d541f0b06e9cdc4a6e4a013a4cfd88fff6616",
+        "serial_raw": "4b459648ab63d0d7abbd71cd371661b5e28616c5955ddad95e7de66163c83edd",
+        "records_jsonl": "5e2b6632b1c85ae0bdd16cca28f8bad6a207ee350df6b77e01b3db89ca484bd1"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/14-esp-idf-freertos/run.json",
+      "independent_boot_id": "esp-idf-freertos-14",
+      "run_order_index": 14,
+      "platform": "esp-idf-freertos",
+      "firmware_sha256": "2c29bbbc2c7fe9ebb433907d9a2121c121ad67c460d4f1ead99f50e552991cf9",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 290000,
+          "max_ns": 290000,
+          "mean_ns": 283078.125
+        },
+        "message-roundtrip": {
+          "sample_count": 1000,
+          "min_ns": 62000,
+          "p50_ns": 62000,
+          "p95_ns": 63000,
+          "p99_ns": 63000,
+          "max_ns": 69000,
+          "mean_ns": 62277
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 1000,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 2000,
+          "max_ns": 2000,
+          "mean_ns": 1031.25
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "24662d058cd902cbaf1923c50cb052302fc061ae8ab6f4ff5a67bfe2955f953d",
+        "serial_raw": "3942d947e1d4bb5f5b21de46e499c5178e927498f72848c783300b9bdf8bd6d1",
+        "records_jsonl": "6a86dddf85e3e62aab7e936edfc7e45b593ea81b51bbbb4f7917bf2a3285d35b"
+      }
+    },
+    {
+      "path": "results/clocked-handoff-2026-10-23/runs/15-bare-metal/run.json",
+      "independent_boot_id": "bare-metal-15",
+      "run_order_index": 15,
+      "platform": "bare-metal",
+      "firmware_sha256": "be14bac3563b52d5e043485c9f798a4e23d6ed8702b72c9a3028c1cf46f58d0b",
+      "benchmarks": {
+        "compute": {
+          "sample_count": 64,
+          "min_ns": 308000,
+          "p50_ns": 308000,
+          "p95_ns": 309000,
+          "p99_ns": 318000,
+          "max_ns": 318000,
+          "mean_ns": 308265.625
+        },
+        "timer-overhead": {
+          "sample_count": 64,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 7000,
+          "max_ns": 7000,
+          "mean_ns": 859.375
+        }
+      },
+      "source_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "evidence_sha256": {
+        "run_json": "e1357189f4ab37e0b610528131b47667b19f7674b98c6c95294547d20f62b23e",
+        "serial_raw": "a4f1325e8c7baf2d8c97245d8530d22a75f19a41334a683d3642977d62e1cdcb",
+        "records_jsonl": "3a1eaa670fcc9e9289346835cd67bc75241986f815a8357632b8f813c79415fa"
+      }
+    }
+  ],
+  "byte_identical_transcripts": [
+    {
+      "serial_raw_sha256": "3942d947e1d4bb5f5b21de46e499c5178e927498f72848c783300b9bdf8bd6d1",
+      "boot_ids": [
+        "esp-idf-freertos-03",
+        "esp-idf-freertos-09",
+        "esp-idf-freertos-14"
+      ]
+    },
+    {
+      "serial_raw_sha256": "cf214d4f2f924558967477ce6581b9ae87bc1dc3ef2b04a6b00cc563f62936bd",
+      "boot_ids": [
+        "embassy-05",
+        "embassy-07",
+        "embassy-12"
+      ]
+    },
+    {
+      "serial_raw_sha256": "e2f62d7d25c2ce8f825e52adc9cb951a90877b459f22863a9171e68f199f8bf9",
+      "boot_ids": [
+        "bare-metal-06",
+        "bare-metal-10"
+      ]
+    }
+  ],
+  "limitations": [
+    "Five requested warm-reset captures per platform on one physical board; physical cold power cycles were not performed.",
+    "Boot IDs are host labels. The protocol has no device-generated nonce, so identical quantized transcripts do not independently authenticate a fresh boot.",
+    "1000 message observations within each boot are not 1000 independent boot trials; per-boot p99 values are descriptive and not worst-case bounds.",
+    "All outliers are retained, including message maxima of 20000 ns for Embassy and 69000 ns for IDF; no timer subtraction or outlier removal.",
+    "Embassy tasks share one cooperative executor/OS thread; IDF uses distinct OS tasks and a different Rust channel implementation, with observed priorities 1 and 5.",
+    "Register readback assumes the documented SPLL source; equal endpoint snapshots do not measure oscillator accuracy or rule out transient changes.",
+    "Baseline compute medians differ with workload placement; consult the separate alignment-probe dataset before attributing that gap to runtime overhead.",
+    "No radio, IRQ response, power, peripheral coverage, stack/heap peak, or long-duration reliability result is established."
+  ]
+}

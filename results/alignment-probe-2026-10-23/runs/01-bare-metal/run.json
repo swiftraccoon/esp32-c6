@@ -1,0 +1,149 @@
+{
+  "benchmarks": {
+    "compute": {
+      "max_ns": 291000,
+      "mean_ns": 282640.625,
+      "min_ns": 282000,
+      "p50_ns": 283000,
+      "p95_ns": 283000,
+      "p99_ns": 291000,
+      "sample_count": 64
+    },
+    "timer-overhead": {
+      "max_ns": 10000,
+      "mean_ns": 906.25,
+      "min_ns": 0,
+      "p50_ns": 1000,
+      "p95_ns": 1000,
+      "p99_ns": 10000,
+      "sample_count": 64
+    }
+  },
+  "clocks_after": {
+    "cpu_mhz": 160,
+    "flash_divider": 1,
+    "flash_mhz": 80,
+    "flash_source_mhz": 80,
+    "registers": {
+      "pcr_cpu_freq_conf": 0,
+      "pcr_mspi_clk_conf": 1280,
+      "pcr_sysclk_conf": 671154688,
+      "spi0_clock": 2147483648
+    },
+    "source": "register-readback"
+  },
+  "collector_executable_sha256": "6f1a1a38c5079492f957a12ea76193f6b3ce7a8fe5d9dbbbb81c1331b327ac55",
+  "collector_version": "0.1.0",
+  "failure": null,
+  "firmware_sha256": "19184daf8b628b690655fa0ea23453fd5519f630e58450141a7280395d33f741",
+  "hello": {
+    "benchmarks": {
+      "compute": 64,
+      "timer-overhead": 64
+    },
+    "clocks": {
+      "cpu_mhz": 160,
+      "flash_divider": 1,
+      "flash_mhz": 80,
+      "flash_source_mhz": 80,
+      "registers": {
+        "pcr_cpu_freq_conf": 0,
+        "pcr_mspi_clk_conf": 1280,
+        "pcr_sysclk_conf": 671154688,
+        "spi0_clock": 2147483648
+      },
+      "source": "register-readback"
+    },
+    "cpu_mhz": 160,
+    "platform": "bare-metal",
+    "protocol": 2,
+    "rounds": 4096,
+    "sample_count": 64,
+    "seed": 305419896,
+    "timer_resolution_ns": 1000,
+    "warmup_iterations": 8,
+    "workload": "integer-mix-v1"
+  },
+  "host_rustc_at_capture": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "independent_boot_id": "alignment-bare-metal-01",
+  "limitations": [
+    "Warm reset only; no externally referenced boot timing",
+    "Internal microsecond timer; no external IRQ or power instrument",
+    "64 compute/calibration observations per boot; scheduler adapters additionally record 1000 message roundtrips; nearest-rank percentiles",
+    "Compute includes timer observer overhead; no subtraction",
+    "host_rustc_at_capture observes PATH at collection time, not the compiler used to build this executable",
+    "Clock evidence decodes register readback before/after timing; no external frequency measurement"
+  ],
+  "platform": "bare-metal",
+  "provenance": {
+    "build_command": "env RUSTFLAGS=\"-C llvm-args=-align-all-functions=2\" cargo +1.96.0 build --release --locked --bin bare-metal --target-dir ../../.cache/aligned-hal-target",
+    "build_directory": "firmware/esp-hal",
+    "configuration": {
+      "benchmarks": {
+        "compute": 64,
+        "timer-overhead": 64
+      },
+      "clock_source": "esp_hal::time::Instant",
+      "codegen_units": 1,
+      "cpu_mhz": 160,
+      "flash_mhz": 80,
+      "flash_mhz_evidence": "Requested image setting; actual CPU/MSPI/SPI0 registers independently decoded from hello.clocks and complete.clocks_after",
+      "flash_mode": "dio",
+      "function_alignment_bytes": 4,
+      "logging": "protocol emitted after all samples",
+      "lto": "thin",
+      "opt_level": 3,
+      "panic": "abort",
+      "protocol": 2,
+      "radios": "not initialized",
+      "startup_settle_ms": 2000,
+      "timer_resolution_ns": 1000,
+      "warmup_iterations": 8
+    },
+    "experiment": "Exploratory all-function alignment build; separate from main15boot dataset",
+    "hardware": {
+      "board_model": null,
+      "chip_revision": "0.2",
+      "flash_bytes": 8388608,
+      "soc": "esp32c6",
+      "uart_bridge": "CP2102N",
+      "uart_pins": {
+        "rx": 17,
+        "tx": 16
+      }
+    },
+    "platform": "bare-metal",
+    "schema_version": 2,
+    "scope": "Clock-controlled compute and timer observations; scheduler platforms additionally measure full Rust request/reply path; no isolated context-switch, IRQ, power or radio result",
+    "software": {
+      "cargo_lock_sha256": "fe83fea7296603dd9a461ed872fcecab02b277754a18060b0ac0e8cbc48ed89f",
+      "embassy_executor": null,
+      "embassy_time": null,
+      "esp_bootloader_esp_idf": "0.6.0",
+      "esp_hal": "1.2.0",
+      "esp_rtos": null,
+      "espflash": "4.6.0",
+      "esptool": "5.1.0",
+      "extra_rustflags": "-C llvm-args=-align-all-functions=2",
+      "git_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626",
+      "llvm": "22.1.2",
+      "rust": "1.96.0",
+      "rust_commit": "ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96",
+      "source_snapshot": "results/clocked-handoff-2026-10-23/artifacts/esp-hal-source.tar.gz",
+      "source_snapshot_sha256": "5d46a17fae89ca31c79802c55aa2610fd2affeee24af35f28c59ba9a8e3504c6",
+      "target": "riscv32imac-unknown-none-elf",
+      "workload_source_sha256": "27447ee945989a682ee778646f488e7c986d8831a38515e1057eaa143992ab9e"
+    }
+  },
+  "reset_kind": "RTS warm-reset request; DTR deasserted",
+  "run_order_index": 1,
+  "schema_version": 1,
+  "serial": {
+    "baud": 115200,
+    "data_bits": 8,
+    "parity": "none",
+    "stop_bits": 1
+  },
+  "status": "pass",
+  "timestamp_unix_ms": 1792728565962
+}

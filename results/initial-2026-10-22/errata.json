@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "experiment": "initial-2026-10-22",
+  "corrections": [
+    {
+      "field": "provenance.configuration.flash_mhz",
+      "captured_value": 40,
+      "meaning": "Requested image-header configuration, not a runtime clock measurement",
+      "affected_platforms": ["bare-metal", "embassy", "esp-idf-freertos"],
+      "evidence": {
+        "all_image_headers": "DIO, 40 MHz, 8 MB",
+        "hal_boot_logs": "All ten measured HAL boot logs report SPI Speed 80MHz",
+        "hal_source": "esp-hal 1.2.0 C6 PRESET_160 configures an 80 MHz MSPI source; downstream divider still matters",
+        "idf_sdkconfig": "DIO, 40 MHz, 8 MB",
+        "runtime_clock_readback": "not performed"
+      },
+      "consequence": "Flash frequency was not established as a common controlled value. Results remain valid observations of these exact binaries, not an isolated OS performance comparison.",
+      "next_action": "Read back runtime flash source/divider and align supported settings before controlled performance comparisons"
+    }
+  ],
+  "raw_captures_modified": false,
+  "firmware_artifacts_modified": false,
+  "post_capture_tree_cleanup": "Removed one trailing blank line from four esp-hal TOML files before the initial commit. The archived source snapshot preserves the exact measured build inputs; parsed configuration is unchanged."
+}

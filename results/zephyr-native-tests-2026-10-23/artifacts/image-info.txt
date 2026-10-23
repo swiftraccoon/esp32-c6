@@ -1,0 +1,30 @@
+esptool v5.6.0
+Image size: 162288 bytes
+
+ESP32-C6 Image Header
+=====================
+Image version: 1
+Entry point: 0x40801520
+Segments: 2
+Flash size: 8MB
+Flash freq: 80m
+Flash mode: DIO
+
+ESP32-C6 Extended Image Header
+==============================
+WP pin: 0xee (disabled)
+Flash pins drive settings: clk_drv: 0x0, q_drv: 0x0, d_drv: 0x0, cs0_drv: 0x0, hd_drv: 0x0, wp_drv: 0x0
+Chip ID: 13 (ESP32-C6)
+Minimal chip revision: v0.0, (legacy min_rev = 0)
+Maximal chip revision: v655.35
+
+Segments Information
+====================
+Segment   Length   Load addr   File offs  Memory types
+-------  -------  ----------  ----------  ------------
+      0  0x09d70  0x40800000  0x00000018  DRAM, BYTE_ACCESSIBLE, IRAM
+      1  0x01940  0x40809d80  0x00009d90  DRAM, BYTE_ACCESSIBLE, IRAM
+
+ESP32-C6 Image Footer
+=====================
+Checksum: 0x13 (valid)

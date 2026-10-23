@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "experiment": "zephyr-rust-hello-build-v1",
+  "status": "build-failed; not flashed",
+  "zephyr_commit": "684c9e8f32e4373a21098559f748f06915f950c9",
+  "rust_module_commit": "dd73abc242e995784da62352fe8c70d9a6c7ac2e",
+  "hal_espressif_commit": "b7953b8019361d09e613f7011d2ccc41b984d087",
+  "rust_toolchain": "1.96.0",
+  "rust_target": "riscv32i-unknown-none-elf",
+  "zephyr_sdk": "1.0.1",
+  "c_compiler": "riscv64-zephyr-elf-gcc 14.3.0",
+  "board_target": "esp32c6_devkitc/esp32c6/hpcore",
+  "upstream_sample": "samples/hello_world",
+  "sample_source_modified": false,
+  "kernel_hal_module_source_modified": false,
+  "isolated_module_original_files_compared": 139,
+  "declarative_build_selection": "ZEPHYR_MODULES=existing hal_espressif;isolated pristine Rust module copy",
+  "cargo_build_locked_flag": false,
+  "resolved_lockfile_retained": true,
+  "workspace_project_filter_restored": true,
+  "attempts": [
+    {
+      "order": 1,
+      "label": "workspace-membership",
+      "status": "failed",
+      "exit_code": 101,
+      "failure_stage": "Cargo rejects ancestor workspace membership before Rust compilation",
+      "rust_errors": null,
+      "log_sha256": "0ca91a08b5003da2a76ddfc7cf7f63196bcb42d4a6891a59ffefa005dce68ee1"
+    },
+    {
+      "order": 2,
+      "label": "clang23-layout",
+      "status": "failed",
+      "exit_code": 101,
+      "failure_stage": "zephyr-sys generated layout checks",
+      "rust_errors": 27,
+      "log_sha256": "94330bcb13f191fe4f4c4284f7158c589f1f45d94894b3960f1fb6373243deab",
+      "libclang_path": "/opt/homebrew/opt/llvm/lib",
+      "libclang_version": "Homebrew clang 23.1.4",
+      "diagnostic": "Rust opaque one-byte records disagree with generated C layout sizes"
+    },
+    {
+      "order": 3,
+      "label": "clang21-devicetree",
+      "status": "failed",
+      "exit_code": 101,
+      "failure_stage": "zephyr generated devicetree name resolution",
+      "rust_errors": 9,
+      "log_sha256": "67fa03e7049096f578bd066cc824c543c4f5c1c29275966b860fdfb0f52d42ee",
+      "libclang_path": "/opt/homebrew/opt/llvm@21/lib",
+      "clang_path_prefix": "/opt/homebrew/opt/llvm@21/bin",
+      "libclang_version": "Homebrew clang 21.1.8",
+      "generated_sys_warnings": 4,
+      "diagnostic": "Flash-partition generated Rust calls missing parent get_instance_raw"
+    }
+  ],
+  "firmware_elf": null,
+  "firmware_bin": null,
+  "board_executed": false,
+  "serial_access_performed": false,
+  "limitations": [
+    "Source architecture admission is not a successful link or runtime pass",
+    "Clang23 vs21 changed both host library selection and executable PATH; exact causal mechanism not isolated",
+    "The final generator failure is specific to this recorded tuple; no general ESP32-C6 Rust impossibility claim",
+    "No source or generated-code patch was applied; layout checks stayed enabled"
+  ]
+}

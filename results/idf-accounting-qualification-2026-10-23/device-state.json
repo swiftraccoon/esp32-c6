@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "restoration": "completed_and_separately_verified",
+  "verification_observed_complete_utc": "2026-10-23T12:43:33Z",
+  "bytes": 8388608,
+  "backup_sha256": "863dc7b17018aea2a530ee27da5bedd675298f9a70e5f04c32f4a0cc3c43f9c4",
+  "private_backup": "backups/pre-accounting-2026-10-23/flash-backup.bin",
+  "before_write": "artifacts/preflight/backup-verify.log",
+  "write_log": "artifacts/restore.log",
+  "separate_verification_log": "artifacts/restore-verify.log",
+  "reset_after_verification": "hard reset via RTS",
+  "limitations": [
+    "The timestamp records when successful verification/reset was observed complete, not an externally measured reset edge.",
+    "The application may alter persistent state after boot. This is not a guarantee of post-boot NVS constancy or deployed recovery."
+  ]
+}

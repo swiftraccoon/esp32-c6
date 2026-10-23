@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "printed_counter_hz": 16000000,
+  "rows": [
+    {
+      "name": "thread.yield.preemptive.ctx.k_to_k",
+      "description": "Context switch via k_yield",
+      "printed_cycles": 26,
+      "printed_ns": 1652,
+      "notes": "thread.yield.cooperative.ctx.k_to_k      - Context switch via k_yield                         :      26 cycles ,     1649 ns :"
+    },
+    {
+      "name": "isr.resume.interrupted.thread.kernel",
+      "description": "Return from ISR to interrupted thread",
+      "printed_cycles": 7,
+      "printed_ns": 463,
+      "notes": "isr.resume.different.thread.kernel       - Return from ISR to another thread                  :      16 cycles ,     1049 ns :"
+    },
+    {
+      "name": "thread.create.kernel.from.kernel",
+      "description": "Create thread",
+      "printed_cycles": 38,
+      "printed_ns": 2402,
+      "notes": "thread.start.kernel.from.kernel          - Start thread                                       :      39 cycles ,     2462 ns :"
+    },
+    {
+      "name": "thread.suspend.kernel.from.kernel",
+      "description": "Suspend thread",
+      "printed_cycles": 25,
+      "printed_ns": 1588,
+      "notes": "thread.resume.kernel.from.kernel         - Resume thread                                      :      29 cycles ,     1837 ns :"
+    },
+    {
+      "name": "thread.abort.kernel.from.kernel",
+      "description": "Abort thread",
+      "printed_cycles": 18,
+      "printed_ns": 1149,
+      "notes": "fifo.put.immediate.kernel                - Add data to FIFO (no ctx switch)                   :       9 cycles ,      573 ns :"
+    },
+    {
+      "name": "fifo.get.immediate.kernel",
+      "description": "Get data from FIFO (no ctx switch)",
+      "printed_cycles": 8,
+      "printed_ns": 500,
+      "notes": "fifo.put.alloc.immediate.kernel          - Allocate to add data to FIFO (no ctx switch)       :      82 cycles ,     5125 ns :"
+    },
+    {
+      "name": "fifo.get.free.immediate.kernel",
+      "description": "Free when getting data from FIFO (no ctx switch)",
+      "printed_cycles": 86,
+      "printed_ns": 5376,
+      "notes": "fifo.get.blocking.k_to_k                 - Get data from FIFO (w/ ctx switch)                 :      55 cycles ,     3479 ns :"
+    },
+    {
+      "name": "fifo.put.wake+ctx.k_to_k",
+      "description": "Add data to FIFO (w/ ctx switch)",
+      "printed_cycles": 63,
+      "printed_ns": 3951,
+      "notes": "fifo.get.free.blocking.k_to_k            - Free when getting data from FIFO (w/ ctx switch)   :      56 cycles ,     3500 ns :"
+    },
+    {
+      "name": "fifo.put.alloc.wake+ctx.k_to_k",
+      "description": "Allocate to add data to FIFO (w/ ctx switch)",
+      "printed_cycles": 63,
+      "printed_ns": 3937,
+      "notes": "lifo.put.immediate.kernel                - Add data to LIFO (no ctx switch)                   :       9 cycles ,      599 ns :"
+    },
+    {
+      "name": "lifo.get.immediate.kernel",
+      "description": "Get data from LIFO (no ctx switch)",
+      "printed_cycles": 8,
+      "printed_ns": 500,
+      "notes": "lifo.put.alloc.immediate.kernel          - Allocate to add data to LIFO (no ctx switch)       :      82 cycles ,     5126 ns :"
+    },
+    {
+      "name": "lifo.get.free.immediate.kernel",
+      "description": "Free when getting data from LIFO (no ctx switch)",
+      "printed_cycles": 86,
+      "printed_ns": 5375,
+      "notes": "lifo.get.blocking.k_to_k                 - Get data from LIFO (w/ ctx switch)                 :      56 cycles ,     3502 ns :"
+    },
+    {
+      "name": "lifo.put.wake+ctx.k_to_k",
+      "description": "Add data to LIFO (w/ ctx switch)",
+      "printed_cycles": 64,
+      "printed_ns": 4000,
+      "notes": "lifo.get.free.blocking.k_to_k            - Free when getting data from LIFO (w/ ctx switch)   :      55 cycles ,     3476 ns :"
+    },
+    {
+      "name": "lifo.put.alloc.wake+ctx.k_to_k",
+      "description": "Allocate to add data to LIFO (w/ ctx switch)",
+      "printed_cycles": 63,
+      "printed_ns": 3974,
+      "notes": "events.post.immediate.kernel             - Post events (nothing wakes)                        :      16 cycles ,     1029 ns :"
+    },
+    {
+      "name": "events.set.immediate.kernel",
+      "description": "Set events (nothing wakes)",
+      "printed_cycles": 16,
+      "printed_ns": 1028,
+      "notes": "events.wait.immediate.kernel             - Wait for any events (no ctx switch)                :       9 cycles ,      608 ns :"
+    },
+    {
+      "name": "events.wait_all.immediate.kernel",
+      "description": "Wait for all events (no ctx switch)",
+      "printed_cycles": 9,
+      "printed_ns": 614,
+      "notes": "events.wait.blocking.k_to_k              - Wait for any events (w/ ctx switch)                :      41 cycles ,     2589 ns :"
+    },
+    {
+      "name": "events.set.wake+ctx.k_to_k",
+      "description": "Set events (w/ ctx switch)",
+      "printed_cycles": 56,
+      "printed_ns": 3525,
+      "notes": "events.wait_all.blocking.k_to_k          - Wait for all events (w/ ctx switch)                :      58 cycles ,     3676 ns :"
+    },
+    {
+      "name": "events.post.wake+ctx.k_to_k",
+      "description": "Post events (w/ ctx switch)",
+      "printed_cycles": 74,
+      "printed_ns": 4625,
+      "notes": "semaphore.give.immediate.kernel          - Give a semaphore (no waiters)                      :       6 cycles ,      387 ns :"
+    },
+    {
+      "name": "semaphore.take.immediate.kernel",
+      "description": "Take a semaphore (no blocking)",
+      "printed_cycles": 6,
+      "printed_ns": 404,
+      "notes": "semaphore.take.blocking.k_to_k           - Take a semaphore (context switch)                  :      37 cycles ,     2326 ns :"
+    },
+    {
+      "name": "semaphore.give.wake+ctx.k_to_k",
+      "description": "Give a semaphore (context switch)",
+      "printed_cycles": 41,
+      "printed_ns": 2600,
+      "notes": "condvar.wait.blocking.k_to_k             - Wait for a condvar (context switch)                :      62 cycles ,     3930 ns :"
+    },
+    {
+      "name": "condvar.signal.wake+ctx.k_to_k",
+      "description": "Signal a condvar (context switch)",
+      "printed_cycles": 67,
+      "printed_ns": 4225,
+      "notes": "stack.push.immediate.kernel              - Add data to k_stack (no ctx switch)                :       5 cycles ,      374 ns :"
+    },
+    {
+      "name": "stack.pop.immediate.kernel",
+      "description": "Get data from k_stack (no ctx switch)",
+      "printed_cycles": 6,
+      "printed_ns": 375,
+      "notes": "stack.pop.blocking.k_to_k                - Get data from k_stack (w/ ctx switch)              :      55 cycles ,     3479 ns :"
+    },
+    {
+      "name": "stack.push.wake+ctx.k_to_k",
+      "description": "Add data to k_stack (w/ ctx switch)",
+      "printed_cycles": 62,
+      "printed_ns": 3875,
+      "notes": "mutex.lock.immediate.recursive.kernel    - Lock a mutex                                       :       8 cycles ,      503 ns :"
+    },
+    {
+      "name": "mutex.unlock.immediate.recursive.kernel",
+      "description": "Unlock a mutex",
+      "printed_cycles": 4,
+      "printed_ns": 258,
+      "notes": "heap.malloc.immediate                    - Average time for heap malloc                       :     107 cycles ,     6733 ns :"
+    },
+    {
+      "name": "heap.free.immediate",
+      "description": "Average time for heap free",
+      "printed_cycles": 127,
+      "printed_ns": 7980,
+      "notes": "==================================================================="
+    }
+  ],
+  "units_note": "printed cycles are nominal16MHz SYSTIMER UNIT1 ticks; upstream corrected averages except heap; preserve independently rounded ns"
+}

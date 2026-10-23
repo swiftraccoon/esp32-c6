@@ -1,0 +1,5 @@
+Chip type:         esp32c6
+Merge:             true
+Skip padding:      true
+App/part. size:    409,936/1,048,576 bytes, 39.09%
+[2026-10-23T05:21:58Z INFO ] Image successfully saved!

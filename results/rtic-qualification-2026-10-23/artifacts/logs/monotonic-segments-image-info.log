@@ -1,0 +1,10 @@
+                                                                                
+ Usage: esptool image-info [OPTIONS] FILENAME                                   
+                                                                                
+ Try 'esptool image-info -h' for help                                           
+╭─ Error ──────────────────────────────────────────────────────────────────────╮
+│ Invalid value for 'FILENAME': [Errno 2] No such file or directory:           │
+│ '.cache/rtic-qualification-2026-10-23/artifacts/monotonic-segments.bin'      │
+╰──────────────────────────────────────────────────────────────────────────────╯
+                                                                                
+esptool v5.1.0

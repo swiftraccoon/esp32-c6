@@ -1,0 +1,25 @@
+
+results/alignment-probe-2026-10-23/artifacts/firmware.elf:	file format elf32-littleriscv
+
+Disassembly of section .text:
+
+42011a48 <_ZN10bench_core8workload17h2bec9f0ad370606aE>:
+42011a48: c995         	beqz	a1, 0x42011a7c <_ZN10bench_core8workload17h2bec9f0ad370606aE+0x34>
+42011a4a: 4701         	li	a4, 0x0
+42011a4c: 9e378637     	lui	a2, 0x9e378
+42011a50: 85ebd6b7     	lui	a3, 0x85ebd
+42011a54: 9b960613     	addi	a2, a2, -0x647
+42011a58: a6b68693     	addi	a3, a3, -0x595
+42011a5c: 00170793     	addi	a5, a4, 0x1
+42011a60: 8f31         	xor	a4, a4, a2
+42011a62: 953a         	add	a0, a0, a4
+42011a64: 01955713     	srli	a4, a0, 0x19
+42011a68: 051e         	slli	a0, a0, 0x7
+42011a6a: 8d59         	or	a0, a0, a4
+42011a6c: 02d50533     	mul	a0, a0, a3
+42011a70: 01055713     	srli	a4, a0, 0x10
+42011a74: 8d39         	xor	a0, a0, a4
+42011a76: 873e         	mv	a4, a5
+42011a78: fef592e3     	bne	a1, a5, 0x42011a5c <_ZN10bench_core8workload17h2bec9f0ad370606aE+0x14>
+42011a7c: 8082         	ret
+42011a7e: 0000         	unimp

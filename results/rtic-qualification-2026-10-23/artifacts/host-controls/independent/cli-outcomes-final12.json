@@ -1,0 +1,708 @@
+{
+  "purpose": "Independent host-only fixtures, final12s contract; no physical observations.",
+  "collector_sha256": "f06cb6e82e1e01e86dba08a5172b5e4cc0b3ebd588f3cd6fd2395cbfbdbc84dd",
+  "cases": [
+    {
+      "case": "positive-foo-bar-baz",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "46f7de001f5346509900dcf4711c88e4b8fe28459f014928909d00c53a8710f9",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-foo-baz-bar",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "6ee4ffb0b5df0a8845677473633f2b05d335e2ef9cdcf725f12ae66ff7e071b5",
+      "observations_sha256": "4f59529b44f3a0b22fdf1b0d785ac794adcee4b24786f0c0e453e5e05cbd0f94",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-bar-foo-baz",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "5d740ca25eeb49a236d1ffa3198bd3fb964f121b9fb0b6ef1d2e87de3c2a6120",
+      "observations_sha256": "8828872b431f14b498fbaf0b7b629ab910f3497667723518ff3d92d64d44aac7",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-bar-baz-foo",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "e4211c7bea4695058dae29e7e94e3b05901f8ca8d7752f1941004e76c37f8ce8",
+      "observations_sha256": "430f5057c2a66798efc59c5a06a0942371b4cd938c03121577ebb8c220bc1f21",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-baz-foo-bar",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "2ca3836881bfc66a0c810fa6ffaffee5aa315086a668f67d412df6ab8886ee6a",
+      "observations_sha256": "ae1be6b103a2c9eb6b5524ad41cd45c8e96208c48949ec3b4b8b078ce030f963",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-baz-bar-foo",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "d003709181c0aea573ed5b239db416a88e6bacb82a994db8e95be41f6c98b4a5",
+      "observations_sha256": "cfd46bcaa93ce5fb9e0dc70591fcd72b228d0df6c3e6a613e78dd2030e19ec06",
+      "matched_expectation": true
+    },
+    {
+      "case": "missing-marker-0",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected pre-init RTIC text: hello from foo",
+      "raw_sha256": "658f420793b2b9ba8acc1c108fd53af48fa0bb24e765d3fc19fc9608ed2b8cf8",
+      "observations_sha256": "4ce2152947406fe29062747ed9298f7b675fcfd62878a88a56ba101ed111d182",
+      "matched_expectation": true
+    },
+    {
+      "case": "missing-marker-1",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC bye preceded all hellos",
+      "raw_sha256": "5452d5efe0aade7f0b85e8f7d064c98d121b66a46283613c58486e9aa8f17bf8",
+      "observations_sha256": "4b4adbafb3e826798537eca3e3b3df19a0e7dd99b61388bc8714f06401c7e509",
+      "matched_expectation": true
+    },
+    {
+      "case": "missing-marker-2",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC bye preceded all hellos",
+      "raw_sha256": "ec15557be028ff8244b837bfb58355a06a957776424f60eaaf0b7ae703e2579a",
+      "observations_sha256": "a5b8af3bbe17cf029406ea14b318d0548da939aa0cf7a24e2a6b93f33a1ee375",
+      "matched_expectation": true
+    },
+    {
+      "case": "missing-marker-3",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC bye preceded all hellos",
+      "raw_sha256": "e768c7dd8173b716c205bae80a63b27823b14c490b65e0d982967d7c801f5189",
+      "observations_sha256": "c55812e702d1b46caf7fcfc7af1387f01a948b31695d1c0949701b14841ff401",
+      "matched_expectation": true
+    },
+    {
+      "case": "missing-marker-4",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected RTIC application line or bye order: bye from bar",
+      "raw_sha256": "a8043e28ff2e3c2231f305427449dc91945bb92e9d16851f02afff25d4f2d133",
+      "observations_sha256": "a542ec324a9c159e57f76f44efbe4518640c932c4def3d98096b690bf628f378",
+      "matched_expectation": true
+    },
+    {
+      "case": "missing-marker-5",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected RTIC application line or bye order: bye from baz",
+      "raw_sha256": "66268c1ab133694c1b383b3aea88fbc28798f86a3d3634b374e048068c84ae9e",
+      "observations_sha256": "d0f791d74c70f7a7b1e7b496a8f259c5c5aaf19f8a09f368f9a0e0f0736f79c6",
+      "matched_expectation": true
+    },
+    {
+      "case": "missing-marker-6",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC final timeout poll preceded full guard interval",
+      "raw_sha256": "ebe019b6c5f0ed225b008059bee46d8e1caba04088176d9b2a7c8661dd472860",
+      "observations_sha256": "3728ff983cb991c4d82d9f76e449827cae085945ce025fe228a698c69c2fd53c",
+      "matched_expectation": true
+    },
+    {
+      "case": "duplicate-marker-0",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected RTIC application line or bye order: init",
+      "raw_sha256": "16e9617729a087dad43ae9e5b39a910b714d1f462dfae74df415b3380fbdce5d",
+      "observations_sha256": "576177e535bd49b1f8afe088894e65d28a8e183cde45e63c4daef9c09cbb3491",
+      "matched_expectation": true
+    },
+    {
+      "case": "duplicate-marker-1",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: duplicate RTIC hello",
+      "raw_sha256": "2388db599a8cf961e316ab6ebd4cd05265e4439f85d75f07c96a113ce52171d9",
+      "observations_sha256": "f7b49cf7e205b86fe6df6023fcbf004cdeabad94727422e9f3b38dbb450e8508",
+      "matched_expectation": true
+    },
+    {
+      "case": "duplicate-marker-2",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: duplicate RTIC hello",
+      "raw_sha256": "30344608640947719e90837804d52bf473adb708f1152622be261fd3cdc09c25",
+      "observations_sha256": "9087e193645b15f9ca71f4d40e399e5ccb6dd39b3449607abbd8d6e6095f17c5",
+      "matched_expectation": true
+    },
+    {
+      "case": "duplicate-marker-3",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: duplicate RTIC hello",
+      "raw_sha256": "24d592d9df331fa7d8170a9b0714c28c96571bedf2a804d3fc0a74d68b17c25d",
+      "observations_sha256": "7891dc930e7c2ba9cc5f58f175b1267a68f54c8345bfd08565d10a70c493f7e1",
+      "matched_expectation": true
+    },
+    {
+      "case": "duplicate-marker-4",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected RTIC application line or bye order: bye from foo",
+      "raw_sha256": "98305b9b1f85c95f75d793b3b57c8cef0af6218eb59fa3f572d86bf9389a07bc",
+      "observations_sha256": "a693d25c7bee5d51b7e662ddd1eae6b6c42f95b506d578f4d9d3535cf861e896",
+      "matched_expectation": true
+    },
+    {
+      "case": "duplicate-marker-5",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected RTIC application line or bye order: bye from bar",
+      "raw_sha256": "051f24d6832ab9c400b29ba535afb5eed01d9e083266717f4a98252af39ce17f",
+      "observations_sha256": "b63842971b74c8a5767e86b4e5fdd7cc7236d8fa6f0ef37e76ed624afd0a31d6",
+      "matched_expectation": true
+    },
+    {
+      "case": "duplicate-marker-6",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected RTIC application line or bye order: bye from baz",
+      "raw_sha256": "0bfed0d3744e781a84ce981f7e24b45bd62b320c4da3fd89f93ee9ee4d1dedc8",
+      "observations_sha256": "8defa963ce3cb9b1340518030506242bf1502fd7aa328ba39ce8d1d17bd6f5ab",
+      "matched_expectation": true
+    },
+    {
+      "case": "panic-before-init",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: fatal or reboot diagnostic in capture: panic",
+      "raw_sha256": "bbdfe89eac6a8d01f1be81d9b0f8d6f04b210e1264a03bd99a08c2c14d2f9888",
+      "observations_sha256": "56f62b15b3fa7515f49ce7020ca53eb78714b27e8b382994adc4fa3d97515456",
+      "matched_expectation": true
+    },
+    {
+      "case": "panic-after-final",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: fatal or reboot diagnostic in capture: panic",
+      "raw_sha256": "8a394ad79fec4cdee0dad3038fb2ca76dcb161cadfdc0aa3d75af5d290e9c3c4",
+      "observations_sha256": "1325637a1cb67849b511047b65ccc2e11ad3cd3667fa8a7ba96baf02d927f455",
+      "matched_expectation": true
+    },
+    {
+      "case": "exception-before-init",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: fatal or reboot diagnostic in capture: exception '",
+      "raw_sha256": "b8b5842aa884790ec9de7b9346bd0d7a7f902c91637c9c71d76666cc1d5a773e",
+      "observations_sha256": "968fc6d59456f98c405d66eb7adc2e712d04679367f6c7593b9dcaab0756a3fc",
+      "matched_expectation": true
+    },
+    {
+      "case": "exception-after-final",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: fatal or reboot diagnostic in capture: exception '",
+      "raw_sha256": "e5facaf380f7084fb1a236d8ae2cb474fec10fa084a09cf8207aa6b744c10c4c",
+      "observations_sha256": "fb55380989a38e5eb78b500fdb7cdd345e8261cbdd0407bbfd13fc3b39388bf5",
+      "matched_expectation": true
+    },
+    {
+      "case": "stack-overflow-before-init",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: fatal or reboot diagnostic in capture: stack overflow detected",
+      "raw_sha256": "c9637cb690b3c3109424c3da92ff1079983cff9b5679587daec632b6a3c095d5",
+      "observations_sha256": "1413d3c0b2c69d93659c2c7d1f96ea834b3085881e0a33f254db02a6c3c14b6f",
+      "matched_expectation": true
+    },
+    {
+      "case": "stack-overflow-after-final",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: fatal or reboot diagnostic in capture: stack overflow detected",
+      "raw_sha256": "76a3aec0ffce3ff73fac5a1ea81bc029f62adc015ccb9968595808acaa6aa311",
+      "observations_sha256": "7692f9f3fbc2141f6bb4ccd1d4460dcdcc72d1b854df3a5241c7fbd678949d9f",
+      "matched_expectation": true
+    },
+    {
+      "case": "reboot-before-init",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: fatal or reboot diagnostic in capture: rebooting",
+      "raw_sha256": "5198b0d05e3ac8d042fcf14a2f256d4b974226878a0e04385e7a42bec7f504b4",
+      "observations_sha256": "745d9f6b3a1a02d55b1ac6ccb18a68b6f92b3d366c2fd33c4a7f9e1fc43aac8f",
+      "matched_expectation": true
+    },
+    {
+      "case": "reboot-after-final",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: fatal or reboot diagnostic in capture: rebooting",
+      "raw_sha256": "54141ffbde3442927c9f52edfedbc0e2e97de7036c5d69b9096b8adb2d602770",
+      "observations_sha256": "e504662b359b36d292c6869562db50a0331bef6349afbd091476cf8690651347",
+      "matched_expectation": true
+    },
+    {
+      "case": "extra-ROM-before-init",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: additional ROM startup in the same attempt",
+      "raw_sha256": "e61d13fa340016cb12ed1b9452f7f4c11b1441a3926abe12142e2e0700029278",
+      "observations_sha256": "955f2ba481815b4727c0563292eea1c1e5ca3faf549eea0ef34534932cdf7864",
+      "matched_expectation": true
+    },
+    {
+      "case": "extra-ROM-after-final",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: additional ROM startup in the same attempt",
+      "raw_sha256": "08f1a9ab8aa25c35620fc15bb620ec8acf9e24423eb6f2200f190f35d20f48ac",
+      "observations_sha256": "a073d5c8af87daac31fa1894aec2a2c9f033ef2d81651ff8536d25101ff1484d",
+      "matched_expectation": true
+    },
+    {
+      "case": "no-ROM",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: console marker preceded the C6 ROM startup",
+      "raw_sha256": "7e9facf13d9da7cd163c75adba8fac033c83a7bcc1ccffbcf8f5134c3a6789b4",
+      "observations_sha256": "a72b8a79b1d5ad6cae359efe862e92b5ed8097502884ebc2db69f9e0e964e8ae",
+      "matched_expectation": true
+    },
+    {
+      "case": "extra-reset-after-final",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: additional reset reason in the same attempt",
+      "raw_sha256": "629cf10e319144d21edacc5a9c1f01722afc01b6f3012a7251be15258d7388f1",
+      "observations_sha256": "4fe05ad73740b4f93e8954eb5c21a8485733ad5c0d22d7f4ff65fe1766388aa9",
+      "matched_expectation": true
+    },
+    {
+      "case": "button-after-init",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected RTIC application line or bye order: button",
+      "raw_sha256": "5e22b1f7b9d6421540ab89f650f96668932796a869011205dc017f665df8cdee",
+      "observations_sha256": "3ac8883a67bf5b652c76acd2aecabeca39d8a45691731addfbfa38c7d5b4b90c",
+      "matched_expectation": true
+    },
+    {
+      "case": "unknown-after-final",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected RTIC application line or bye order: unexpected output",
+      "raw_sha256": "7b0d87a8a47d102c5c54801d518be85075be6bab2c150833e1d1223e6ae63a33",
+      "observations_sha256": "b48f03fc2604b458894f628f30dbad7dfbfb148e5e26efee8bcdbad93ddfc6d7",
+      "matched_expectation": true
+    },
+    {
+      "case": "JSON-before-init",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: JSON is not the RTIC console format",
+      "raw_sha256": "24353316eb8601de73c5abddc0d0a0d51adcec9bdccd1a7c9b32623fbd43b952",
+      "observations_sha256": "d8af5c934c7037c2fd7d9e683f41898b1318c156b4c7947547b8b65b3d24026f",
+      "matched_expectation": true
+    },
+    {
+      "case": "invalid-UTF8-after-final",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC console contains invalid UTF-8\n\nCaused by:\n    invalid utf-8 sequence of 1 bytes from index 0",
+      "raw_sha256": "2d586c4a770da425e5f596fe79e1acc8020249da13b7268191df994882149c1a",
+      "observations_sha256": "2b43236ad5c64ac8972c6565a5bf02b27507199791f74c7225b0f4b66a462c1f",
+      "matched_expectation": true
+    },
+    {
+      "case": "line-too-long",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC console line exceeds limit",
+      "raw_sha256": "d065d6105a6f171ba77082d2b30dac7c53da570dbbeaa62bc0d81a4309ef4196",
+      "observations_sha256": "c9d59f0b73ad50f33facb85e2977a06c88d93472c13f147e5bb2aab2f22f3a08",
+      "matched_expectation": true
+    },
+    {
+      "case": "unterminated-final",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC final timeout poll preceded full guard interval",
+      "raw_sha256": "e42fed40e53c7ad250d9a2d8ba8bac59f853c426f1f8adc2e681f1d7d26b0e7b",
+      "observations_sha256": "60cd97225608f6e53ff420cd2e9ec27bcd74a4e0d61ba08031234f607dccf5ba",
+      "matched_expectation": true
+    },
+    {
+      "case": "unterminated-trailing-panic",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unterminated trailing RTIC text",
+      "raw_sha256": "0b36327dc7ed8df58ff4dc9fbb7b6e35a8c329b885ad6c680cf5b3463dc78e30",
+      "observations_sha256": "224a94a77b9f0745c4c52a2e032580f78163ca59da9a969941d0b6f97bf5e47e",
+      "matched_expectation": true
+    },
+    {
+      "case": "bye-before-all-hellos",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC bye preceded all hellos",
+      "raw_sha256": "63114fc38ff8ac212b0bad314b481d5295584e11d7948cd49f38ced14927bc77",
+      "observations_sha256": "0b1ba46ac90df9b7d4f2a4ee3aa91e65e9abdd38f6e7bb492d8ab4d1c96f96b0",
+      "matched_expectation": true
+    },
+    {
+      "case": "byes-wrong-order",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: unexpected RTIC application line or bye order: bye from bar",
+      "raw_sha256": "33032bf6cbb2a1cff9e0b2ba0a61141a0d6c557fbec9fd85e84120c996d7dc72",
+      "observations_sha256": "9c9fe613747a5d3bae80d1e26739ed692d06c2d0f847b86c59e373cf04672a19",
+      "matched_expectation": true
+    },
+    {
+      "case": "guard-one-ns-short",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC final timeout poll preceded full guard interval",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "b4d89e585016f597f973f875985f047cd8e186e2424b6c5fa114c7e8f863a548",
+      "matched_expectation": true
+    },
+    {
+      "case": "guard-one-ns-extra",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "d43b88cb798ff379df6fed3d8d4afbbd21083ddfef7df98182f3d0ac68071137",
+      "matched_expectation": true
+    },
+    {
+      "case": "terminal-eof",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC terminal reason is not guard_elapsed: Eof",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "9017d42770831ea5c4be07d6740b21b133b5b27ad5a12771fabcb909ba142968",
+      "matched_expectation": true
+    },
+    {
+      "case": "terminal-read_error",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC terminal reason is not guard_elapsed: ReadError",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "ec7c811134eef5e5ea16731cd94013a50f83c0737e58d384de400e0d93791f75",
+      "matched_expectation": true
+    },
+    {
+      "case": "terminal-timeout",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC terminal reason is not guard_elapsed: Timeout",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "ad2a96a6b047bb6cccebfa6377a620cf125d81ee8b5901e4ab1e4414a55a0c58",
+      "matched_expectation": true
+    },
+    {
+      "case": "terminal-rejected",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC terminal reason is not guard_elapsed: Rejected",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "524ef1b1e3f9e728ecfcb5096e441f94afb239a181921ef9c47557093ec10e46",
+      "matched_expectation": true
+    },
+    {
+      "case": "end-offset-wrong",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC poll/end receipt advanced raw offset",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "41b4ad58f3f026d8a2c2bb5c45f23d288d695047de590ecbb9b5b995e9e23278",
+      "matched_expectation": true
+    },
+    {
+      "case": "read-no-progress",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC read receipt must advance raw offset",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "ef98392e654a16eb63e72dbdf7f5f466127d025e2c3af742713159e58630f728",
+      "matched_expectation": true
+    },
+    {
+      "case": "read-backwards-offset",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC read receipt must advance raw offset",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "9dd68875f7dbb1fbaef0ef00adf76b94c5f42ad61e5b86856db359d9f10f06d3",
+      "matched_expectation": true
+    },
+    {
+      "case": "read-past-file",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC receipt exceeds raw length",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "c6cc86003fd2a834c09a171df5f21920f2349f610cf64e1167757efd5f3b16af",
+      "matched_expectation": true
+    },
+    {
+      "case": "receipt-time-equal",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC receipt times must strictly increase except adjacent poll/end equality",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "571ec81d557cf657732c8d71825f045682a3eb2c01af4b55c55ae73c106781f3",
+      "matched_expectation": true
+    },
+    {
+      "case": "receipt-time-backwards",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC receipt times must strictly increase except adjacent poll/end equality",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "bab1ed8375bf4794e5c8c01ee32eedbd9889818a2adf716b1cb55b642189e133",
+      "matched_expectation": true
+    },
+    {
+      "case": "start-not-zero",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC receipts must start at time/offset zero",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "5a882431ea5763ef4e70adceadfea16e1065becc27891fa907c11dc4718d3738",
+      "matched_expectation": true
+    },
+    {
+      "case": "start-offset-not-zero",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC receipts must start at time/offset zero",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "489147ae319fcdf206fd62daed0c343937cb8906af574b909c4fe381d553c5f9",
+      "matched_expectation": true
+    },
+    {
+      "case": "end-after-ceiling",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC observation exceeded host ceiling",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "c3eb4a1338c02a0ef5a71261c18455048d1eac0c0b0f11325de0edfe2382884a",
+      "matched_expectation": true
+    },
+    {
+      "case": "unknown-receipt-field",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: invalid RTIC observation receipt\n\nCaused by:\n    unknown field `unrecognized`, expected `at_ns` or `raw_end`",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "c03668018d75a770e35d35d4c2eb8b751e723cb5c6d801585cab252b54ba1157",
+      "matched_expectation": true
+    },
+    {
+      "case": "unknown-receipt-event",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: invalid RTIC observation receipt\n\nCaused by:\n    unknown variant `unrecognized`, expected one of `start`, `read`, `poll`, `end` at line 1 column 23",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "f60e731665cf892559d4400e068f3084938b2f4901f0536edb262f179302f5d9",
+      "matched_expectation": true
+    },
+    {
+      "case": "missing-receipt-time",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: invalid RTIC observation receipt\n\nCaused by:\n    missing field `at_ns`",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "46e99b0749e37ca1857795da3cfcdab4d496c89da2e15fb3944b76d16146a33c",
+      "matched_expectation": true
+    },
+    {
+      "case": "float-receipt-time",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: invalid RTIC observation receipt\n\nCaused by:\n    invalid type: floating point `1.5`, expected u64",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "b41c4b8ea625db92525dea08af9952f423560b593513c20713e4951efbfd0dca",
+      "matched_expectation": true
+    },
+    {
+      "case": "negative-receipt-time",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: invalid RTIC observation receipt\n\nCaused by:\n    invalid value: integer `-1`, expected u64",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "d8a5969b80acf78ca3ea94a9bc1d64c66e360c79b474fd6e57d69abf7d492921",
+      "matched_expectation": true
+    },
+    {
+      "case": "no-terminal-event",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: missing RTIC terminal receipt",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "139defaf8ca5205a34cbf721a7b9f0fa91bb8338c6bb337047882d615a830526",
+      "matched_expectation": true
+    },
+    {
+      "case": "missing-start",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC receipts must start at time/offset zero",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "2413a63900d671384248f565b3f4dfa2cda61f66ae397cd1f465614097bc9dd3",
+      "matched_expectation": true
+    },
+    {
+      "case": "extra-event-after-end",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC receipt after terminal event",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "eaa8bff38d73f55ebc6a9c9e44858c67680333df499660b6eef0a6a36d884df9",
+      "matched_expectation": true
+    },
+    {
+      "case": "poll-advances-bytes",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC poll/end receipt advanced raw offset",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "ef6ddf1c4fd4a427518293cb7fe840417b803b8379b4efd84950eba74baa93f3",
+      "matched_expectation": true
+    },
+    {
+      "case": "pacing-all-lower-inclusive",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "ec91179cf49bf9e4b22d88950121266205c57a04b7d5c9ab58c6eb717f0f2f97",
+      "matched_expectation": true
+    },
+    {
+      "case": "pacing-all-upper-inclusive",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "31a97db5fabf1c90f566d17edce2deadea2ba8522ad5f3e8b12065a2703fdee0",
+      "matched_expectation": true
+    },
+    {
+      "case": "pacing-foo-one-ns-low",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC foo host pacing outside inclusive budget: 1499999999 ns",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "5c01826d072fdb5012ed5009ed5e1f35189d9e366308a49b6fd194994cf367ed",
+      "matched_expectation": true
+    },
+    {
+      "case": "pacing-baz-one-ns-high",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC baz host pacing outside inclusive budget: 5500000001 ns",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "306955d771c23efb2a9666c219bd82ad6bdf39392ccf75a449f3fad51b9ed19a",
+      "matched_expectation": true
+    },
+    {
+      "case": "all-markers-coalesced",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC foo host pacing outside inclusive budget: 0 ns",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "e3dbb26c3b7a784d304dd635d5289c78ce5312b7b1477f83962bea04123590a6",
+      "matched_expectation": true
+    },
+    {
+      "case": "guard-no-final-poll",
+      "expected_accepted": false,
+      "exit": 1,
+      "stderr": "Error: RTIC guard needs an actual final timeout poll",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "1c16054f5c4dfc6bae7a86fa4ab649b9cc999e0c9bf83213c1563c8085c7f18d",
+      "matched_expectation": true
+    },
+    {
+      "case": "poll-end-same-time",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "847d21e558b323ba655fd6c6d559c151a2023d719381f5d3fdf0c4432f43be9f",
+      "matched_expectation": true
+    },
+    {
+      "case": "administrative-end-stall",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "d778b2feb394d0a7aca0944110189ee570687a99e7d3162763657efba128744e",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-byte-chunks",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "9fd89d6c338c34a77e275762b3c97bf00812a574b26f174549d0d94ab94f6346",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-hello-chunk",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "41753e622176f2531ffc59c55bb8098862b0a7507b11cc1b2fe5b4143d2e81fd",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-guard-polls",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "0d4bf5057cd3f1c32ad67d43c4d8107d9b250dba6e96985f68e624a3bb0d9832",
+      "observations_sha256": "c6e4f7f395720d23a416f649e4e751b5622bc00fb2319b76074c77cca2dc44a6",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-trailing-whitespace",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "2095f8621479c41b75ab0c546b7d6b836298a2d8441550478384ab6fcba35db8",
+      "observations_sha256": "5504a359a007e1a9c43f33aec8c560c41a08cd0b22eab15efa85b930df8e50a7",
+      "matched_expectation": true
+    },
+    {
+      "case": "positive-CRLF",
+      "expected_accepted": true,
+      "exit": 0,
+      "stderr": "",
+      "raw_sha256": "427233915740580046c85e5b9135b6c9d7f144dacd34ac2d1e59808b1b0e57a4",
+      "observations_sha256": "88821c3d9c1c5599efda0c1c8aa4e9cb441fe375f60a50bd0baf8f74eaa532c2",
+      "matched_expectation": true
+    }
+  ]
+}

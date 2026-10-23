@@ -1,0 +1,134 @@
+
+File: .cache/rtic-qualification-2026-10-23/upstream/examples/esp32c6/target/riscv32imac-unknown-none-elf/release/examples/monotonic
+Format: elf32-littleriscv
+Arch: riscv32
+AddressSize: 32bit
+LoadName: <Not found>
+ElfHeader {
+  Ident {
+    Magic: (7F 45 4C 46)
+    Class: 32-bit (0x1)
+    DataEncoding: LittleEndian (0x1)
+    FileVersion: 1
+    OS/ABI: GNU/Linux (0x3)
+    ABIVersion: 0
+    Unused: (00 00 00 00 00 00 00)
+  }
+  Type: Executable (0x2)
+  Machine: EM_RISCV (0xF3)
+  Version: 1
+  Entry: 0x42001248
+  ProgramHeaderOffset: 0x34
+  SectionHeaderOffset: 0x23818
+  Flags [ (0x1)
+    EF_RISCV_RVC (0x1)
+  ]
+  HeaderSize: 52
+  ProgramHeaderEntrySize: 32
+  ProgramHeaderCount: 8
+  SectionHeaderEntrySize: 40
+  SectionHeaderCount: 25
+  StringTableSectionIndex: 23
+}
+ProgramHeaders [
+  ProgramHeader {
+    Type: PT_LOAD (0x1)
+    Offset: 0x1000
+    VirtualAddress: 0x40800000
+    PhysicalAddress: 0x40800000
+    FileSize: 2572
+    MemSize: 2572
+    Flags [ (0x5)
+      PF_R (0x4)
+      PF_X (0x1)
+    ]
+    Alignment: 4096
+  }
+  ProgramHeader {
+    Type: PT_LOAD (0x1)
+    Offset: 0x1A0C
+    VirtualAddress: 0x40800A0C
+    PhysicalAddress: 0x40800A0C
+    FileSize: 188
+    MemSize: 188
+    Flags [ (0x4)
+      PF_R (0x4)
+    ]
+    Alignment: 4096
+  }
+  ProgramHeader {
+    Type: PT_LOAD (0x1)
+    Offset: 0x1AC8
+    VirtualAddress: 0x40800AC8
+    PhysicalAddress: 0x40800AC8
+    FileSize: 0
+    MemSize: 652
+    Flags [ (0x6)
+      PF_R (0x4)
+      PF_W (0x2)
+    ]
+    Alignment: 4096
+  }
+  ProgramHeader {
+    Type: PT_LOAD (0x1)
+    Offset: 0x2020
+    VirtualAddress: 0x42000020
+    PhysicalAddress: 0x42000020
+    FileSize: 4612
+    MemSize: 4648
+    Flags [ (0x4)
+      PF_R (0x4)
+    ]
+    Alignment: 4096
+  }
+  ProgramHeader {
+    Type: PT_LOAD (0x1)
+    Offset: 0x3248
+    VirtualAddress: 0x42001248
+    PhysicalAddress: 0x42001248
+    FileSize: 10534
+    MemSize: 10534
+    Flags [ (0x5)
+      PF_R (0x4)
+      PF_X (0x1)
+    ]
+    Alignment: 4096
+  }
+  ProgramHeader {
+    Type: PT_LOAD (0x1)
+    Offset: 0x5D54
+    VirtualAddress: 0x40800D54
+    PhysicalAddress: 0x40800D54
+    FileSize: 0
+    MemSize: 448700
+    Flags [ (0x4)
+      PF_R (0x4)
+    ]
+    Alignment: 4096
+  }
+  ProgramHeader {
+    Type: PT_GNU_STACK (0x6474E551)
+    Offset: 0x0
+    VirtualAddress: 0x0
+    PhysicalAddress: 0x0
+    FileSize: 0
+    MemSize: 0
+    Flags [ (0x6)
+      PF_R (0x4)
+      PF_W (0x2)
+    ]
+    Alignment: 0
+  }
+  ProgramHeader {
+    Type: PT_RISCV_ATTRIBUTES (0x70000003)
+    Offset: 0x5E01
+    VirtualAddress: 0x0
+    PhysicalAddress: 0x0
+    FileSize: 78
+    MemSize: 78
+    Flags [ (0x4)
+      PF_R (0x4)
+    ]
+    Alignment: 1
+  }
+]

@@ -1,0 +1,1677 @@
+{
+  "schema_version": 1,
+  "archives": [
+    {
+      "id": "rtic-monotonic",
+      "path": "results/rtic-qualification-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/rtic-qualification-2026-10-23/SHA256SUMS",
+      "inputs": {
+        "path": "results/rtic-qualification-2026-10-23/INPUTS.sha256",
+        "freeze_commit": "33975191f16cec1c28e5f1f87c9255fefdfd5c57"
+      },
+      "limitations": [
+        "One failed v1 attempt after all seven expected application markers and a second ROM startup; the remaining two planned attempts were not run. Original failure, reports and all121 frozen inputs are unchanged.",
+        "The second reset-reason line is absent; startup watchdog inheritance is a source lead, not an established cause. No universal RTIC incompatibility or whole-platform/performance result is inferred."
+      ],
+      "manifest_base": "repository"
+    },
+    {
+      "id": "idf-load-qualification",
+      "path": "results/idf-load-qualification-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/idf-load-qualification-2026-10-23/SHA256SUMS",
+      "inputs": {
+        "path": "results/idf-load-qualification-2026-10-23/INPUTS.sha256",
+        "freeze_commit": "b23d17ac28391e79d6f7d4e6547b8a258339a45f"
+      },
+      "limitations": [
+        "Two finite-pulse qualification boots, one per frozen profile. These pilots cannot become a runtime-statistics comparison or sustainable-capacity result.",
+        "Original capture artifacts remain unchanged. A separately versioned host float-roundtrip correction is required for strict whole-archive replay of one saved fractional mean; it changes no firmware, raw sample or physical acceptance rule."
+      ],
+      "manifest_base": "repository"
+    },
+    {
+      "id": "idf-accounting-qualification",
+      "path": "results/idf-accounting-qualification-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/idf-accounting-qualification-2026-10-23/SHA256SUMS",
+      "inputs": {
+        "path": "results/idf-accounting-qualification-2026-10-23/INPUTS.sha256",
+        "freeze_commit": "f80cf87d316b6c02143adbe4114ee51764f14802"
+      },
+      "limitations": [
+        "Diagnostic qualification only; no physical CPU busy/idle, exclusive ISR accounting, capacity, global heap/stack peaks, energy or platform selection is established.",
+        "Three warm-reset qualification boots of one image on one board, with coarse method controls rather than a scored load or variability study."
+      ],
+      "manifest_base": "repository"
+    },
+    {
+      "id": "initial",
+      "path": "results/initial-2026-10-22",
+      "state": "finalized",
+      "manifest": "results/initial-2026-10-22/SHA256SUMS",
+      "inputs": null,
+      "limitations": [
+        "Current-byte integrity sealing is retrospective; this collection has no original pre-capture input freeze. Runtime flash clock was not read back.",
+        "Archive identity verification does not establish that a result passed or that a claim is physically true."
+      ],
+      "manifest_base": "repository"
+    },
+    {
+      "id": "clocked-handoff",
+      "path": "results/clocked-handoff-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/clocked-handoff-2026-10-23/SHA256SUMS",
+      "inputs": null,
+      "limitations": [
+        "Historical clock/readback and whole-microsecond application-path study; no pre-capture INPUTS manifest is retained.",
+        "Archive identity verification does not establish that a result passed or that a claim is physically true."
+      ],
+      "manifest_base": "archive"
+    },
+    {
+      "id": "alignment-probe",
+      "path": "results/alignment-probe-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/alignment-probe-2026-10-23/SHA256SUMS",
+      "inputs": null,
+      "limitations": [
+        "Exploratory adaptive placement probe, not a preregistered scheduler comparison.",
+        "Archive identity verification does not establish that a result passed or that a claim is physically true."
+      ],
+      "manifest_base": "archive"
+    },
+    {
+      "id": "ariel-startup",
+      "path": "results/ariel-qualification-2026-10-22",
+      "state": "finalized",
+      "manifest": "results/ariel-qualification-2026-10-22/SHA256SUMS",
+      "inputs": null,
+      "limitations": [
+        "Two unmodified startup examples only; rendered console evidence does not qualify later native or radio behavior.",
+        "Archive identity verification does not establish that a result passed or that a claim is physically true."
+      ],
+      "manifest_base": "archive"
+    },
+    {
+      "id": "queue-pilots",
+      "path": "results/queue-api-qualification-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/queue-api-qualification-2026-10-23/SHA256SUMS",
+      "inputs": null,
+      "limitations": [
+        "Two qualification pilots are excluded from the primary paired characterization.",
+        "Archive identity verification does not establish that a result passed or that a claim is physically true."
+      ],
+      "manifest_base": "repository"
+    },
+    {
+      "id": "idf-queue-study",
+      "path": "results/idf-queue-api-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/idf-queue-api-2026-10-23/SHA256SUMS",
+      "inputs": {
+        "path": "results/idf-queue-api-2026-10-23/INPUTS.sha256",
+        "freeze_commit": "3fc94676ddeb240650738e479b068cc9ed807804"
+      },
+      "limitations": [
+        "One board and fixed ordinary release images; tied quantized medians do not prove independent environmental sampling.",
+        "Archive identity verification does not establish that a result passed or that a claim is physically true."
+      ],
+      "manifest_base": "repository"
+    },
+    {
+      "id": "ariel-native",
+      "path": "results/ariel-native-tests-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/ariel-native-tests-2026-10-23/SHA256SUMS",
+      "inputs": {
+        "path": "results/ariel-native-tests-2026-10-23/INPUTS.sha256",
+        "freeze_commit": "e17c06760277200115e5038b6794d2ce155b0260"
+      },
+      "limitations": [
+        "Expected markers are retained; first observation guard is operator-attested and yield switch counts are not validated.",
+        "Archive identity verification does not establish that a result passed or that a claim is physically true."
+      ],
+      "manifest_base": "repository"
+    },
+    {
+      "id": "zephyr-native",
+      "path": "results/zephyr-native-tests-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/zephyr-native-tests-2026-10-23/SHA256SUMS",
+      "inputs": {
+        "path": "results/zephyr-native-tests-2026-10-23/INPUTS.sha256",
+        "freeze_commit": "f156320a9fa6e27c183f3ed35b512452fc2adb16"
+      },
+      "limitations": [
+        "Zero of three attempts qualify under frozen v1 despite upstream completion banners; input claims are preserved and superseded by the corrected results.",
+        "Archive identity verification does not establish that a result passed or that a claim is physically true."
+      ],
+      "manifest_base": "repository"
+    },
+    {
+      "id": "zephyr-rust-build",
+      "path": "results/zephyr-rust-build-2026-10-23",
+      "state": "finalized",
+      "manifest": "results/zephyr-rust-build-2026-10-23/SHA256SUMS",
+      "inputs": null,
+      "limitations": [
+        "Build-only failures for recorded tuples; no Rust ELF, firmware image or board execution.",
+        "Archive identity verification does not establish that a result passed or that a claim is physically true."
+      ],
+      "manifest_base": "repository"
+    }
+  ],
+  "claims": [
+    {
+      "id": "rtic-c6-builds",
+      "statement": "Both pinned upstream RTIC C6 examples compile unmodified with Rust1.96.0 and the unchanged tracked lockfile.",
+      "level": "build_checked",
+      "outcome": "partial",
+      "scope": "RTIC f1797184, HAL=1.0.0-rc.0, release target riscv32imac-unknown-none-elf; monotonic and sw_and_hw only.",
+      "producer": "upstream Rust build reviewer",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/rtic-qualification-2026-10-23/artifacts/logs/build-monotonic-locked-1.96.0.log",
+          "role": "build_log",
+          "sha256": "1d4a459075bb084f679636df54054e09c302d0ad0d545b52395925946c48d277"
+        },
+        {
+          "path": "results/rtic-qualification-2026-10-23/artifacts/logs/build-sw-and-hw-1.96.0.log",
+          "role": "build_log",
+          "sha256": "fa1cf76a28bf78ad99547b26cc319580b4a2db277b9f7b0e71693f2c49398381"
+        }
+      ],
+      "limitations": [
+        "Compilation does not establish flash readiness, hardware behavior, safety, timing or wider Rust driver support.",
+        "Original packaging failures and separately corrected image metadata remain retained. sw_and_hw has no physical result."
+      ]
+    },
+    {
+      "id": "rtic-monotonic-v1-failed",
+      "statement": "The first scheduled RTIC monotonic attempt fails frozen v1 after a second ROM startup; two later attempts were not run.",
+      "level": "failed",
+      "outcome": "failed",
+      "scope": "One warm-reset attempt of the exact unmodified example plus selected corrected-header bootloader/app images; no method change or replacement.",
+      "producer": "root physical collector",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/rtic-qualification-2026-10-23/runs/01/serial.raw",
+          "role": "raw_capture",
+          "sha256": "3e90c4a6f6d3395218816e8950c8b26ad1ed2fa9ca599cc2ac1e5008fdc2cadb"
+        },
+        {
+          "path": "results/rtic-qualification-2026-10-23/runs/01/observations.jsonl",
+          "role": "raw_capture",
+          "sha256": "fbab37da5bea25ebc6fcd5199c15c3348c831cdaf7f3f7d700d966860d11bb6a"
+        },
+        {
+          "path": "results/rtic-qualification-2026-10-23/runs/01/replay-error.log",
+          "role": "reproduction",
+          "sha256": "f747584aed5a7dab7909b4b0d4cca9319904b7c164ff45da2ec40273f708dd16"
+        }
+      ],
+      "limitations": [
+        "All seven expected markers precede the restart, but successful subsets do not qualify the failed attempt.",
+        "No second reset-reason line was retained, so cause remains unconfirmed. This does not establish universal C6/RTIC incompatibility."
+      ]
+    },
+    {
+      "id": "rtic-monotonic-markers",
+      "statement": "Seven expected RTIC application markers and coarse timer-dependent resumption are observed before the additional startup that fails qualification.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "UART0 output and host-receipt pacing for three cooperative priority-zero futures, diagnostic subsets of the failed v1 attempt only.",
+      "producer": "root physical collector",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/rtic-qualification-2026-10-23/runs/01/serial.raw",
+          "role": "raw_capture",
+          "sha256": "3e90c4a6f6d3395218816e8950c8b26ad1ed2fa9ca599cc2ac1e5008fdc2cadb"
+        },
+        {
+          "path": "results/rtic-qualification-2026-10-23/runs/01/observations.jsonl",
+          "role": "raw_capture",
+          "sha256": "fbab37da5bea25ebc6fcd5199c15c3348c831cdaf7f3f7d700d966860d11bb6a"
+        }
+      ],
+      "limitations": [
+        "This remains a failed qualification, with no completed twelve-second guard or continued-liveness claim.",
+        "No device clock readback/calibration, GPIO interrupt response, positive-priority preemption, CPU/energy efficiency or global memory-peak result."
+      ]
+    },
+    {
+      "id": "idf-load-controls",
+      "statement": "Two frozen IDF finite-load qualification boots retain all 4,032 nominal releases, checked completions, generator misses, queue-full losses and synthetic deadline outcomes.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "One radio-off board, one disabled and one enabled runtime-statistics profile, two generator controls and four 250 ms work pulses per boot; before/after task and allocator indicators accompany the pulses.",
+      "producer": "root physical collector",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/idf-load-qualification-2026-10-23/runs/off-01/serial.raw",
+          "role": "raw_capture",
+          "sha256": "2a1f06bcd087364bf04874f04929c572e4151b2ed478ae4008d357672c9a696b"
+        },
+        {
+          "path": "results/idf-load-qualification-2026-10-23/runs/on-01/serial.raw",
+          "role": "raw_capture",
+          "sha256": "77d30afc1cf8dde502a465ef518ca0c91fc4e3ef1f090f33d2f9d814322b0bbb"
+        }
+      ],
+      "limitations": [
+        "Qualification profiles have no paired estimator or profile-effect comparison. Finite pulse outcomes do not establish sustainable capacity, fairness, starvation freedom, product deadlines or a platform ranking.",
+        "Software timer generation is measured and bounded for these pulses, without external frequency calibration. Generator misses remain explicit rather than being hidden or replaced.",
+        "Enabled counters include ISR spans and boundary intervals; snapshots are outside the offer/drain window. These are not exclusive CPU utilization or global simultaneous heap/stack peaks.",
+        "The harness reserves 48,384 bytes of job records and 8,928 bytes of snapshots in both Rust layouts. Application headroom and hardware integration remain unqualified."
+      ]
+    },
+    {
+      "id": "idf-accounting-controls",
+      "statement": "Three frozen IDF diagnostic boots distinguish a blocked worker from checked busy work and retain before/held/freed indicators for a touched 16 KiB allocation.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "The selected U64 esp_timer task-attribution path and MALLOC_CAP_8BIT allocator observations only; six fixed snapshots per boot with gross collection endpoints and stack-fill indicators.",
+      "producer": "root physical collector",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/idf-accounting-qualification-2026-10-23/runs/01/serial.raw",
+          "role": "raw_capture",
+          "sha256": "578e5fc7bf75e81e5f341463b9c723c849f7d5f0f69d2960d87bb6a93e0f9044"
+        },
+        {
+          "path": "results/idf-accounting-qualification-2026-10-23/runs/02/serial.raw",
+          "role": "raw_capture",
+          "sha256": "110a1290c40b2fc602f49a15217da057155c61ad3f0233fa340167cf2ab110e0"
+        },
+        {
+          "path": "results/idf-accounting-qualification-2026-10-23/runs/03/serial.raw",
+          "role": "raw_capture",
+          "sha256": "b21815625ea3f492d2315c6ae4aafa3f8151b512571122de242478a666c631c3"
+        }
+      ],
+      "limitations": [
+        "Task counters include ISR spans and unflushed current-task intervals. Signed boundary residuals are not idle time; this is not physical CPU busy/idle or exclusive ISR accounting.",
+        "Allocator/stack-fill observations do not establish global simultaneous peaks, pressure/fragmentation behavior, application headroom or a qualified stack-depth bound. Output/join allocation costs follow these snapshots.",
+        "No instrumentation-on/off comparison, sustainable arrival-rate capacity, external frequency calibration, energy measurement or platform ranking is supplied."
+      ]
+    },
+    {
+      "id": "bare-metal-compute",
+      "statement": "The bare-metal calibration image completed checked compute/observer captures.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Initial and clocked bare-metal compute controls on the attached C6, not full CPU/IRQ qualification.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/initial-2026-10-22/runs/01-bare-metal/serial.raw",
+          "role": "raw_capture",
+          "sha256": "d10efb51c11b756393f9a0b3ed5b620efa112485d4a734e8aeebdcbb8392994c"
+        },
+        {
+          "path": "results/clocked-handoff-2026-10-23/runs/01-bare-metal/serial.raw",
+          "role": "raw_capture",
+          "sha256": "2d7a9cae39fbce278f9587aa2e44ed928e2d0313d4148a3db334dba5db0c8a07"
+        },
+        {
+          "path": "results/initial-2026-10-22/errata.json",
+          "role": "review",
+          "sha256": "7ce2af6acbbdf84adf9c7efe7c0594b84a425ab8a2f08cdb90aac54aca8a8e6d"
+        }
+      ],
+      "limitations": [
+        "Initial runtime flash frequency was unverified; integer computation does not establish CPU utilization, interrupt behavior or an OS ranking."
+      ]
+    },
+    {
+      "id": "bare-metal-clock-readback",
+      "statement": "Clocked bare-metal captures contain before/after CPU and flash register snapshots.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Configuration readback for the selected radio-off images at the retained endpoints.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/clocked-handoff-2026-10-23/runs/01-bare-metal/serial.raw",
+          "role": "raw_capture",
+          "sha256": "2d7a9cae39fbce278f9587aa2e44ed928e2d0313d4148a3db334dba5db0c8a07"
+        },
+        {
+          "path": "results/clocked-handoff-2026-10-23/README.md",
+          "role": "review",
+          "sha256": "12f6fdb7f7c24f976bd451a742f178e6817537c687f84d4ae0f56b7cb940d72b"
+        }
+      ],
+      "limitations": [
+        "Configuration readback assumes documented clock sources and is not electrical calibration, arbitrary sleep continuity or watchdog recovery."
+      ]
+    },
+    {
+      "id": "placement-probe",
+      "statement": "The alignment probe observes 308 versus 282–283 microsecond medians with matching workload instruction bytes.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Two ordinary release placements on one C6; the broad compiler option changes more than one location.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/alignment-probe-2026-10-23/README.md",
+          "role": "review",
+          "sha256": "4a3e56f7481b47111703b963ee82630171db3a9962ee9f96772cf3ae172067f2"
+        },
+        {
+          "path": "results/alignment-probe-2026-10-23/summary.json",
+          "role": "reproduction",
+          "sha256": "6cd33fa2b87ee9d36c33cb81c050a9e3dd81b13c5a053399bd450e675a1d7c9e"
+        },
+        {
+          "path": "results/alignment-probe-2026-10-23/runs/01-bare-metal/serial.raw",
+          "role": "raw_capture",
+          "sha256": "242b50cb21b8fcfc8fc9d42c411a64c88fed2b29ff6e7a6072eacf1705ac1491"
+        }
+      ],
+      "limitations": [
+        "This does not isolate a cache-miss mechanism, exact fetch penalty, usable memory or persistent-storage correctness."
+      ]
+    },
+    {
+      "id": "embassy-compute",
+      "statement": "The Embassy/esp-rtos image completed checked compute and observer controls.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Selected Rust async stack using the shared compute workload.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/initial-2026-10-22/runs/02-embassy/serial.raw",
+          "role": "raw_capture",
+          "sha256": "512e322f8e823b5b4b45fb3dc034ea743faf85d655f9f18c890eb0adb4fa56b0"
+        },
+        {
+          "path": "results/clocked-handoff-2026-10-23/runs/02-embassy/serial.raw",
+          "role": "raw_capture",
+          "sha256": "d648fefe7020624039577de1bbdb6789d5071c19c1cf05a43828beb7639672bc"
+        }
+      ],
+      "limitations": [
+        "This combined stack is not an independently qualified esp-rtos native-thread API and does not establish IRQ/radio/power behavior."
+      ]
+    },
+    {
+      "id": "embassy-checked-rtt",
+      "statement": "Clocked Embassy captures contain checked capacity-one request/reply exchanges.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Two async tasks in one cooperative executor/OS thread, with whole-microsecond timing.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/clocked-handoff-2026-10-23/runs/02-embassy/serial.raw",
+          "role": "raw_capture",
+          "sha256": "d648fefe7020624039577de1bbdb6789d5071c19c1cf05a43828beb7639672bc"
+        },
+        {
+          "path": "results/clocked-handoff-2026-10-23/README.md",
+          "role": "review",
+          "sha256": "12f6fdb7f7c24f976bd451a742f178e6817537c687f84d4ae0f56b7cb940d72b"
+        }
+      ],
+      "limitations": [
+        "The task model and priorities differ from IDF; these are complete selected application paths, not equal-priority or isolated kernel-switch comparisons."
+      ]
+    },
+    {
+      "id": "idf-std-checked-rtt",
+      "statement": "Clocked IDF captures contain checked Rust std-channel round trips.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Rust std threads on IDF/FreeRTOS with observed main/worker priorities 1/5.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/clocked-handoff-2026-10-23/runs/03-esp-idf-freertos/serial.raw",
+          "role": "raw_capture",
+          "sha256": "3942d947e1d4bb5f5b21de46e499c5178e927498f72848c783300b9bdf8bd6d1"
+        },
+        {
+          "path": "results/clocked-handoff-2026-10-23/README.md",
+          "role": "review",
+          "sha256": "12f6fdb7f7c24f976bd451a742f178e6817537c687f84d4ae0f56b7cb940d72b"
+        }
+      ],
+      "limitations": [
+        "Whole-microsecond timing and the full Rust/pthread/channel path do not isolate native queue cost or establish sustainable capacity."
+      ]
+    },
+    {
+      "id": "idf-matched-api-analysis",
+      "statement": "Independent raw-statistics review reproduces the matched IDF queue study summaries and twelve -687-tick paired median differences.",
+      "level": "independently_reproduced",
+      "outcome": "partial",
+      "scope": "Offline arithmetic/replay of the same 24 recorded boots and fixed images; this is not an independent physical rerun.",
+      "producer": "original study analysis author",
+      "reproduced_by": "separate raw-statistics reviewer",
+      "evidence": [
+        {
+          "path": "results/idf-queue-api-2026-10-23/runs/s1-b01-01-std/serial.raw",
+          "role": "raw_capture",
+          "sha256": "33f8077fb379380284ca145a57a857046cb63a0acacfe05e0869c3ed367969cc"
+        },
+        {
+          "path": "results/idf-queue-api-2026-10-23/runs/s1-b01-02-native/serial.raw",
+          "role": "raw_capture",
+          "sha256": "398e1410934ff049467a907eb7171d2b214a3cc5c195e89c8f3331ec06218cf4"
+        },
+        {
+          "path": "results/idf-queue-api-2026-10-23/summary.json",
+          "role": "reproduction",
+          "sha256": "d0821ad333bd78cc7a7825cc8d00407ec967450faec31825ff4b6e4142f1225f"
+        },
+        {
+          "path": "docs/reviews/queue-api-results.md",
+          "role": "review",
+          "sha256": "7e1cbc754b38989cdf1c34849252c1972715399631abc2438b42b619e95275d2"
+        }
+      ],
+      "limitations": [
+        "Whole instrumented API paths and ordinary code placement differ; tied quantized medians do not establish IID conditions, WCET, lower CPU/energy use or an OS ranking."
+      ]
+    },
+    {
+      "id": "idf-timer-continuity",
+      "statement": "The two qualification pilots retain successful raw-timer, blocked/WFI and queue correctness checks.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Bounded radio-off SYSTIMER UNIT0 continuity and reviewed probe/state checks.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/queue-api-qualification-2026-10-23/runs/01-std/serial.raw",
+          "role": "raw_capture",
+          "sha256": "7abad6affcf5bb4bd256041ba8fb063e485471726946cd610d2769cf7fa6c54e"
+        },
+        {
+          "path": "results/queue-api-qualification-2026-10-23/runs/02-native/serial.raw",
+          "role": "raw_capture",
+          "sha256": "b5ddf84899ab4b62dd7726063e9bd384745aae5b965d17b27d5ed4dab32ba77a"
+        }
+      ],
+      "limitations": [
+        "The references share the crystal; this is not independent frequency calibration, physical sleep residency, power use or connected/sleep reliability."
+      ]
+    },
+    {
+      "id": "ariel-startup-output",
+      "statement": "Both unmodified Ariel async/thread hello images printed their expected UART output.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Startup/autostart/logging only for the selected Rust 1.99.1 development input.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/ariel-qualification-2026-10-22/hello-world/monitor.log",
+          "role": "raw_capture",
+          "sha256": "a18189028561666bc874a72f96ee1e29a393b1c21bc99bc91521301b7092c83e"
+        },
+        {
+          "path": "results/ariel-qualification-2026-10-22/hello-world-threading/monitor.log",
+          "role": "raw_capture",
+          "sha256": "7e6810356b32697e495bca25696bd9a524683e1aab4c5ce05d2b68a697380035"
+        }
+      ],
+      "limitations": [
+        "Rendered monitor transcripts are not a byte-exact device protocol, and hello output does not qualify other drivers, shutdown or benchmark semantics."
+      ]
+    },
+    {
+      "id": "ariel-native-output",
+      "statement": "All twelve scheduled Ariel native tests retain their expected UART output.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Three yield, three flag, three dynamic-priority and three lock-ordering controls.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/01-bench-sched-yield/console.log",
+          "role": "raw_capture",
+          "sha256": "8142b67ff7e9379c2a1ef48696f3c086a31047842bff159e74fa4f7c80b7986f"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/02-bench-sched-flags/console.log",
+          "role": "raw_capture",
+          "sha256": "254ab51e69f69675fd08b818e2d78dfbaf9cd69731d33449f98cb8eddbaa2436"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/03-threading-dynamic-prios/console.log",
+          "role": "raw_capture",
+          "sha256": "afb0d69431b6120c4a19fee1b765c9cce28807deb4fdef0f9219dc9dad548cb4"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/04-threading-lock/console.log",
+          "role": "raw_capture",
+          "sha256": "c50a12f0951101fc7cf8fb36454e0f090e94c74e33b5e76b826c134b3e87f1ad"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/05-bench-sched-yield/console.log",
+          "role": "raw_capture",
+          "sha256": "3d6c876a3cfcdfe7478e0e085c7ff418d4df1948834265d57bc07bbbfc7364d1"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/06-bench-sched-flags/console.log",
+          "role": "raw_capture",
+          "sha256": "b9c96e7f71ebcc641b00407ae30004fbe3a207e302599dbc21b58662936ada2e"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/07-threading-dynamic-prios/console.log",
+          "role": "raw_capture",
+          "sha256": "cb3930aceb18d5dc1b5da77f128ddaef83ec425030fe13c6d88837e9fbebe717"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/08-threading-lock/console.log",
+          "role": "raw_capture",
+          "sha256": "b84026eb1272ffa2045c288b0767b0b0266b6cfae894795ecbf8c01f0feba4bd"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/09-bench-sched-yield/console.log",
+          "role": "raw_capture",
+          "sha256": "ff706ecd97f6492aba6c441cf56a4011c149649e12ad5b0dd93c95ad1c4cb1b4"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/10-bench-sched-flags/console.log",
+          "role": "raw_capture",
+          "sha256": "a3997236249e894fd80db7c5bc7de8c46f859ebcb642924d12b851b04df6a019"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/11-threading-dynamic-prios/console.log",
+          "role": "raw_capture",
+          "sha256": "d81f695c22842a73e447c9b7338727271e4fd2cc5bfaeff6572d79ec6ac6ca7b"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/12-threading-lock/console.log",
+          "role": "raw_capture",
+          "sha256": "ee936dbb733e0052c2636ae3e4faecc874072a4d6088df62ec9f71face73913a"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/evidence-audit.json",
+          "role": "review",
+          "sha256": "19590d9ad9288d46c18d76f9d3f224bd8c91758040462090ee17e95ca4f002f2"
+        }
+      ],
+      "limitations": [
+        "The first guard has only operator attestation; all markers together are not twelve independently established full-method qualifications."
+      ]
+    },
+    {
+      "id": "ariel-priority-lock-assertions",
+      "statement": "The six Ariel priority/lock controls reach success after their source assertions.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Specific priority-change/execution-order and lock-acquisition paths in these test images.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/03-threading-dynamic-prios/console.log",
+          "role": "raw_capture",
+          "sha256": "afb0d69431b6120c4a19fee1b765c9cce28807deb4fdef0f9219dc9dad548cb4"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/04-threading-lock/console.log",
+          "role": "raw_capture",
+          "sha256": "c50a12f0951101fc7cf8fb36454e0f090e94c74e33b5e76b826c134b3e87f1ad"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/07-threading-dynamic-prios/console.log",
+          "role": "raw_capture",
+          "sha256": "cb3930aceb18d5dc1b5da77f128ddaef83ec425030fe13c6d88837e9fbebe717"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/08-threading-lock/console.log",
+          "role": "raw_capture",
+          "sha256": "b84026eb1272ffa2045c288b0767b0b0266b6cfae894795ecbf8c01f0feba4bd"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/11-threading-dynamic-prios/console.log",
+          "role": "raw_capture",
+          "sha256": "d81f695c22842a73e447c9b7338727271e4fd2cc5bfaeff6572d79ec6ac6ca7b"
+        },
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/12-threading-lock/console.log",
+          "role": "raw_capture",
+          "sha256": "ee936dbb733e0052c2636ae3e4faecc874072a4d6088df62ec9f71face73913a"
+        }
+      ],
+      "limitations": [
+        "These particular assertion paths do not establish exhaustive scheduler correctness, arbitrary lock behavior, fairness or loaded deadlines."
+      ]
+    },
+    {
+      "id": "ariel-first-observation-guard",
+      "statement": "The first Ariel native run reports a five-second post-marker observation lower bound.",
+      "level": "operator_reported",
+      "outcome": "partial",
+      "scope": "Operator-recorded guard for attempt 1 only; the original wait receipt is absent.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/ariel-native-tests-2026-10-23/runs/01-bench-sched-yield/run.json",
+          "role": "operator_record",
+          "sha256": "e90c962187cf6c3b1289c3b473186fd26e80326548f6cef0aa60b96b049331a7"
+        }
+      ],
+      "limitations": [
+        "This cannot be independently reconstructed from retained artifacts; the limitation does not prove that the guard failed."
+      ]
+    },
+    {
+      "id": "ariel-yield-estimate",
+      "statement": "The yield helper reports a floored batch mean and divides that value by two for its switch estimate.",
+      "level": "source_supported",
+      "outcome": "partial",
+      "scope": "Source semantics of the upstream aggregate output, not a measurement of peer progress or actual switch count.",
+      "producer": "upstream-source audit reporter",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/ariel-native-tests-2026-10-23/artifacts/ariel-source.tar.gz",
+          "role": "source",
+          "sha256": "532ad51cfc1aad0f607a317b0880468a7544f72cf779751237574a9bd0e618c8"
+        },
+        {
+          "path": "docs/reviews/native-suite-qualification.md",
+          "role": "review",
+          "sha256": "cd6b95969eb4ab16383bd1a009bf53dbeb8af1fd9b72ba947db6b2a5808df409"
+        }
+      ],
+      "limitations": [
+        "There is no peer-progress counter or per-iteration acknowledgment; the printed 77 value is not a validated single-switch latency."
+      ]
+    },
+    {
+      "id": "zephyr-native-build",
+      "statement": "The unmodified Zephyr 4.4.0 native latency suite built for the C6 HP core.",
+      "level": "build_checked",
+      "outcome": "partial",
+      "scope": "Recorded SDK 1.0.1/GCC 14.3.0 default profile and Simple Boot image.",
+      "producer": "native-suite build operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/zephyr-native-tests-2026-10-23/artifacts/build.log",
+          "role": "build_log",
+          "sha256": "5d8478596df8b6678917e384559a481926472914999f3212e070713114293094"
+        }
+      ],
+      "limitations": [
+        "A compiled image is not an admitted board benchmark or a Rust build/ABI pass."
+      ]
+    },
+    {
+      "id": "zephyr-native-output",
+      "statement": "All three Zephyr native consoles contain the suite completion banner and 47 numeric rows.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "UART output and execution-path observation only, from a profile that fails the frozen native admission rule.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/zephyr-native-tests-2026-10-23/runs/01/console.log",
+          "role": "raw_capture",
+          "sha256": "294d700e9ef65ab74ad26adbeb516809265df8ee3046dbe9d469e1a28357862f"
+        },
+        {
+          "path": "results/zephyr-native-tests-2026-10-23/runs/02/console.log",
+          "role": "raw_capture",
+          "sha256": "ee06e6ba5925e2adf8d33174238df497ab3f2a0090c607686b1217b991fa1235"
+        },
+        {
+          "path": "results/zephyr-native-tests-2026-10-23/runs/03/console.log",
+          "role": "raw_capture",
+          "sha256": "1839a5af0320cf584725cda62db697b7d21906ca19e0517e5af09955761639ec"
+        }
+      ],
+      "limitations": [
+        "The required frequency header is absent and each boot has a ROM SHA warning; these outputs are not admitted timing results or proof of every operation."
+      ]
+    },
+    {
+      "id": "zephyr-native-admission",
+      "statement": "Zero of three Zephyr native attempts qualifies under frozen v1.",
+      "level": "failed",
+      "outcome": "failed",
+      "scope": "The expected frequency line is compiled out; all retained ROM logs also report an image-SHA comparison failure.",
+      "producer": "repository hardware/analysis operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/zephyr-native-tests-2026-10-23/summary.json",
+          "role": "reproduction",
+          "sha256": "3164a64c1eadf3d5e695b00a4177b013b457b33d28f00380155e2fffd362475b"
+        },
+        {
+          "path": "results/zephyr-native-tests-2026-10-23/runs/01/console.log",
+          "role": "raw_capture",
+          "sha256": "294d700e9ef65ab74ad26adbeb516809265df8ee3046dbe9d469e1a28357862f"
+        },
+        {
+          "path": "docs/research/zephyr-native-audit.md",
+          "role": "review",
+          "sha256": "73255e8a7045a0ff2c59e9fe214346df8ae0d13d689969dc86b2d383d9f65dc0"
+        }
+      ],
+      "limitations": [
+        "This exposes our contract/image-method issues; it does not establish universal C6 kernel failure. No post-hoc requirement change or replacement capture is admitted."
+      ]
+    },
+    {
+      "id": "zephyr-rust-build-gate",
+      "statement": "The selected unmodified Rust hello failed all three bounded build stages and produced no Rust image.",
+      "level": "failed",
+      "outcome": "failed",
+      "scope": "Zephyr 4.4.0 / pinned Rust module / Rust 1.96.0: workspace rejection, 27 E0080 layout errors, then nine E0425 missing getters.",
+      "producer": "Rust build-probe operator",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/zephyr-rust-build-2026-10-23/artifacts/rust-hello-build.log",
+          "role": "build_log",
+          "sha256": "0ca91a08b5003da2a76ddfc7cf7f63196bcb42d4a6891a59ffefa005dce68ee1"
+        },
+        {
+          "path": "results/zephyr-rust-build-2026-10-23/artifacts/rust-hello-isolated-build.log",
+          "role": "build_log",
+          "sha256": "94330bcb13f191fe4f4c4284f7158c589f1f45d94894b3960f1fb6373243deab"
+        },
+        {
+          "path": "results/zephyr-rust-build-2026-10-23/artifacts/rust-hello-clang21-build.log",
+          "role": "build_log",
+          "sha256": "67fa03e7049096f578bd066cc824c543c4f5c1c29275966b860fdfb0f52d42ee"
+        }
+      ],
+      "limitations": [
+        "These are failures of the attempted tuples, not a proof that every C6 Rust configuration is unsupported; no Rust image was flashed."
+      ]
+    },
+    {
+      "id": "collector-admission-replay",
+      "statement": "Independent collector review reproduces fault rejection and unchanged original archive replay outputs.",
+      "level": "independently_reproduced",
+      "outcome": "partial",
+      "scope": "Host-only capture-reader/replay/study behavior for tested fault formats; 61 recorded JSON-protocol transcripts, not a new board experiment.",
+      "producer": "collector implementation author",
+      "reproduced_by": "separate collector-admission reviewer",
+      "evidence": [
+        {
+          "path": "results/idf-accounting-qualification-2026-10-23/artifacts/source/benchctl/boot_text.rs",
+          "role": "source",
+          "sha256": "ca6312c946f7b1355beeb2b426c581d57ab12b1d79f9998f161bdbcca018b4b2"
+        },
+        {
+          "path": "docs/reviews/collector-boot-guard.md",
+          "role": "reproduction",
+          "sha256": "9b6715e201a970b26891cd3daab387e8f6ba618f51a03538be76a149b92c49c8"
+        },
+        {
+          "path": "docs/reviews/collector-boot-guard-independent.md",
+          "role": "review",
+          "sha256": "998573edcfcdae547c7819a11865ed50febd15d98bcbb7c757691034e158cacb"
+        }
+      ],
+      "limitations": [
+        "This does not authenticate banners, detect every custom diagnostic or observe events outside retained/capture bytes; stricter later replay did not run during old captures.",
+        "Source support is the byte-identical retained original guard snapshot, not a claim that its historical review covered later RTIC changes. The RTIC adapter and expanded fatal formats have their own review and controls."
+      ]
+    },
+    {
+      "id": "latest-lab-restoration",
+      "statement": "The full pre-RTIC flash image was restored, separately digest-verified and reset after the failed attempt.",
+      "level": "observed",
+      "outcome": "partial",
+      "scope": "Laboratory restoration of 8,388,608 bytes to the separately verified existing private backup, before the original application runs again.",
+      "producer": "root physical collector",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "results/rtic-qualification-2026-10-23/artifacts/restore.log",
+          "role": "raw_capture",
+          "sha256": "29358daa090ebacb7f49cdbdd9c592404aaa9d3f47fcc13acfe9209166f0bee6"
+        },
+        {
+          "path": "results/rtic-qualification-2026-10-23/artifacts/restore-verify.log",
+          "role": "raw_capture",
+          "sha256": "234d9d014075f80067632557c419a06df0769be3830c494266468825b1fb2c31"
+        }
+      ],
+      "limitations": [
+        "Subsequent application boot can change NVS again; lab restoration is not deployed update/rollback, crash recovery or persistent-state migration."
+      ]
+    },
+    {
+      "id": "cpu-utilization-unmeasured",
+      "statement": "Exclusive task/ISR CPU time and physical idle/sleep residency are not measured.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "Historical scored elapsed-path images disable runtime statistics. New diagnostic attribution controls still do not establish exclusive task/ISR time or physical idle residency.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "capacity-unmeasured",
+      "statement": "Sustainable capacity, backlog over sustained load, fairness, starvation freedom and product deadline guarantees are not established.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "The closed-loop request/reply study and subsequent finite 250 ms offered-load qualification pulses do not establish sustainable operation or product requirements; finite generator, queue-loss and synthetic-deadline outcomes are recorded separately.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "runtime-memory-unmeasured",
+      "statement": "Runtime stack/heap peaks, fragmentation and application headroom are not established.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "Configured reservations, the 48,000-byte queue sample buffer, and new bounded allocator/stack-fill diagnostic observations are not qualified runtime global peaks or application headroom.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "external-timing-unmeasured",
+      "statement": "External edge-to-ISR/application timing and loaded interrupt/deadline behavior are not established.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "Internal timer samples and upstream software IRQ-offload paths do not qualify an external stimulus chain.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "cold-generalization-unmeasured",
+      "statement": "Cold-start behavior and board/environment variation are not established.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "Short warm-reset observations on one attached board do not sample these conditions.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "matched-application-unmeasured",
+      "statement": "A matched useful end-to-end application comparison across candidate stacks is not established.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "Common compute controls and same-kernel API characterization are narrower contracts.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "mixed-load-unmeasured",
+      "statement": "Sustained mixed workloads, peripheral contention and useful-load recovery are not established.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "Short radio-off scalar tests do not establish long-duration behavior.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "offload-energy-unmeasured",
+      "statement": "Hardware-offload utilization, radio coexistence and energy per delivered operation are not measured.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "DMA, accelerators, LP-core work and power rails/peers need their own qualified fixtures.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "recovery-update-unmeasured",
+      "statement": "Deployed crash recovery, interrupted writes/updates, rollback and migration are not established.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "The lab flash-backup/restore mechanism is a separate tested path.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "maintenance-unmeasured",
+      "statement": "Comparable integration/upgrade effort, patch burden and required protection qualification are not established.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "Recorded setup failures and warm-cache build durations are not a measured maintenance-effort comparison.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    },
+    {
+      "id": "architecture-unselected",
+      "statement": "No platform or custom-kernel requirement is selected by the current evidence.",
+      "level": "unmeasured",
+      "outcome": "not_run",
+      "scope": "A required unmet behavior and tested smaller remedies are prerequisites to that decision.",
+      "producer": "repository coverage audit",
+      "reproduced_by": null,
+      "evidence": [
+        {
+          "path": "docs/research/utilization-audit.md",
+          "role": "review",
+          "sha256": "d650d0a9887db63e6a30169e419153f129c5733d4b81aec93b010f45c408bfe9"
+        },
+        {
+          "path": "docs/research/research-readiness.md",
+          "role": "review",
+          "sha256": "58103a32c15c5c2d333f375434e986d10dfc5d882da64ce2fb3bb61f4b4b451f"
+        }
+      ],
+      "limitations": [
+        "No favorable numeric score or hardware support inference is assigned to missing evidence."
+      ]
+    }
+  ],
+  "platforms": [
+    {
+      "id": "bare-metal",
+      "label": "Bare-metal Rust calibration baseline (not an OS)",
+      "reference": "docs/os/custom-rust.md"
+    },
+    {
+      "id": "esp-idf-freertos",
+      "label": "ESP-IDF / FreeRTOS with Rust std",
+      "reference": "docs/os/esp-idf-freertos.md"
+    },
+    {
+      "id": "embassy-esp-rtos",
+      "label": "Embassy on esp-rtos",
+      "reference": "docs/os/embassy.md"
+    },
+    {
+      "id": "esp-rtos-native",
+      "label": "esp-rtos native application-thread route",
+      "reference": "docs/os/esp-rtos.md"
+    },
+    {
+      "id": "ariel-os",
+      "label": "Ariel OS",
+      "reference": "docs/os/ariel-os.md"
+    },
+    {
+      "id": "zephyr",
+      "label": "Zephyr",
+      "reference": "docs/os/zephyr.md"
+    },
+    {
+      "id": "rtic",
+      "label": "RTIC",
+      "reference": "docs/os/rtic.md"
+    },
+    {
+      "id": "nuttx",
+      "label": "Apache NuttX",
+      "reference": "docs/os/nuttx.md"
+    },
+    {
+      "id": "riot",
+      "label": "RIOT",
+      "reference": "docs/os/riot.md"
+    },
+    {
+      "id": "rt-thread",
+      "label": "RT-Thread",
+      "reference": "docs/os/rt-thread.md"
+    },
+    {
+      "id": "arduino-esp32",
+      "label": "Arduino-ESP32 above IDF",
+      "reference": "docs/os/idf-runtimes.md"
+    },
+    {
+      "id": "micropython",
+      "label": "MicroPython above IDF",
+      "reference": "docs/os/idf-runtimes.md"
+    },
+    {
+      "id": "circuitpython",
+      "label": "CircuitPython Espressif port",
+      "reference": "docs/os/idf-runtimes.md"
+    },
+    {
+      "id": "moddable-xs",
+      "label": "Moddable SDK / XS",
+      "reference": "docs/os/idf-runtimes.md"
+    },
+    {
+      "id": "mongoose-os",
+      "label": "Mongoose OS",
+      "reference": "docs/os/mongoose-os.md"
+    },
+    {
+      "id": "contiki-ng",
+      "label": "Contiki-NG hosted C6 port",
+      "reference": "docs/os/contiki-ng.md"
+    },
+    {
+      "id": "mos-rust",
+      "label": "MOS-Rust",
+      "reference": "docs/os/mos-rust.md"
+    },
+    {
+      "id": "project-trobbio",
+      "label": "project trobbio",
+      "reference": "docs/os/research-kernels.md"
+    },
+    {
+      "id": "thistleos",
+      "label": "ThistleOS",
+      "reference": "docs/os/research-kernels.md"
+    },
+    {
+      "id": "openc6-bios",
+      "label": "OpenC6 BIOS",
+      "reference": "docs/os/research-kernels.md"
+    },
+    {
+      "id": "atomvm",
+      "label": "AtomVM",
+      "reference": "docs/os/other-runtimes.md"
+    },
+    {
+      "id": "toit-jaguar",
+      "label": "Toit / Jaguar",
+      "reference": "docs/os/other-runtimes.md"
+    },
+    {
+      "id": "nodemcu-lua",
+      "label": "NodeMCU Lua ESP32 branch",
+      "reference": "docs/os/other-runtimes.md"
+    },
+    {
+      "id": "tinygo",
+      "label": "TinyGo native runtime",
+      "reference": "docs/os/other-runtimes.md"
+    },
+    {
+      "id": "wamr",
+      "label": "WAMR above IDF",
+      "reference": "docs/os/other-runtimes.md"
+    },
+    {
+      "id": "embedded-swift",
+      "label": "Embedded Swift above IDF",
+      "reference": "docs/os/other-runtimes.md"
+    }
+  ],
+  "subsystems": [
+    {
+      "id": "hp-cpu-interrupts",
+      "label": "HP CPU and interrupts"
+    },
+    {
+      "id": "lp-core-sram",
+      "label": "LP core and LP SRAM"
+    },
+    {
+      "id": "clocks-timers-watchdogs",
+      "label": "Clocks, timers and watchdogs"
+    },
+    {
+      "id": "gpio-routing",
+      "label": "GPIO and pin routing"
+    },
+    {
+      "id": "uart-lp-uart",
+      "label": "UART and LP UART"
+    },
+    {
+      "id": "spi-dma",
+      "label": "SPI and DMA"
+    },
+    {
+      "id": "i2c-lp-i2c",
+      "label": "I2C and LP I2C"
+    },
+    {
+      "id": "i2s",
+      "label": "I2S"
+    },
+    {
+      "id": "pwm",
+      "label": "LED PWM and motor PWM"
+    },
+    {
+      "id": "rmt-pcnt-etm",
+      "label": "RMT, pulse counter and ETM"
+    },
+    {
+      "id": "parallel-io-dma",
+      "label": "Parallel I/O and DMA"
+    },
+    {
+      "id": "twai-can",
+      "label": "TWAI CAN controllers"
+    },
+    {
+      "id": "sdio-slave",
+      "label": "SDIO slave"
+    },
+    {
+      "id": "adc-temperature",
+      "label": "ADC and temperature sensor"
+    },
+    {
+      "id": "usb-serial-jtag",
+      "label": "USB Serial/JTAG and debug"
+    },
+    {
+      "id": "flash-cache-persistence",
+      "label": "Flash, cache and persistence"
+    },
+    {
+      "id": "crypto-rng",
+      "label": "Crypto and RNG"
+    },
+    {
+      "id": "protection-boot-security",
+      "label": "Memory protection and boot security"
+    },
+    {
+      "id": "wifi-espnow",
+      "label": "Wi-Fi and ESP-NOW"
+    },
+    {
+      "id": "ble",
+      "label": "BLE"
+    },
+    {
+      "id": "ieee802154",
+      "label": "Raw IEEE 802.15.4"
+    },
+    {
+      "id": "thread-zigbee",
+      "label": "Thread and Zigbee"
+    },
+    {
+      "id": "matter-protocols",
+      "label": "Matter and application protocols"
+    },
+    {
+      "id": "radio-coexistence",
+      "label": "Radio coexistence"
+    },
+    {
+      "id": "sleep-power",
+      "label": "Sleep and power domains"
+    },
+    {
+      "id": "cpu-accounting",
+      "label": "Objective: task/ISR accounting and physical idle residency"
+    },
+    {
+      "id": "capacity-headroom",
+      "label": "Objective: sustainable capacity, backlog, fairness and deadlines"
+    },
+    {
+      "id": "runtime-memory",
+      "label": "Objective: stack/heap peaks, fragmentation and application headroom"
+    },
+    {
+      "id": "external-irq-deadlines",
+      "label": "Objective: externally referenced interrupt/application response"
+    },
+    {
+      "id": "cold-start-generalization",
+      "label": "Objective: cold start and board/environment variation"
+    },
+    {
+      "id": "matched-applications",
+      "label": "Objective: matched end-to-end application across candidate stacks"
+    },
+    {
+      "id": "loaded-mixed-workloads",
+      "label": "Objective: sustained mixed workloads and contention"
+    },
+    {
+      "id": "recovery-updates",
+      "label": "Objective: crash recovery, interrupted writes, update/rollback and migration"
+    },
+    {
+      "id": "maintenance-effort",
+      "label": "Objective: comparable integration/upgrade effort and patch burden"
+    },
+    {
+      "id": "architectural-decision",
+      "label": "Objective: unmet requirement and comparison with smaller remedies"
+    }
+  ],
+  "coverage_defaults": {
+    "driver": "unverified",
+    "rust_api": "unverified",
+    "pins": "unverified",
+    "fixture": "unverified",
+    "outcome": "not_run"
+  },
+  "coverage": [
+    {
+      "platform": "esp-idf-freertos",
+      "subsystem": "capacity-headroom",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Finite fixed-rate pulse response with explicit generator misses, queue capacity/losses, drain completions and a synthetic 2 ms deadline; no sustainable-capacity, fairness or starvation qualification.",
+      "claims": [
+        "idf-load-controls"
+      ]
+    },
+    {
+      "platform": "esp-idf-freertos",
+      "subsystem": "cpu-accounting",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Blocked/busy attribution controls and whole-phase task-attribution deltas around finite load; physical idle and exclusive ISR time remain unmeasured.",
+      "claims": [
+        "idf-accounting-controls",
+        "idf-load-controls"
+      ]
+    },
+    {
+      "platform": "esp-idf-freertos",
+      "subsystem": "runtime-memory",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Current/free/largest/lifetime-minimum heap and stack-fill indicators around a known live allocation and finite load pulses; no global peak, fragmentation-pressure or stack-depth qualification.",
+      "claims": [
+        "idf-accounting-controls",
+        "idf-load-controls"
+      ]
+    },
+    {
+      "platform": "bare-metal",
+      "subsystem": "hp-cpu-interrupts",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Checked integer compute control only; IRQ response, register-preservation stress and CPU utilization remain unqualified.",
+      "claims": [
+        "bare-metal-compute"
+      ]
+    },
+    {
+      "platform": "bare-metal",
+      "subsystem": "clocks-timers-watchdogs",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Selected before/after clock snapshots only; timer accuracy, sleep and watchdog recovery are not qualified.",
+      "claims": [
+        "bare-metal-clock-readback"
+      ]
+    },
+    {
+      "platform": "bare-metal",
+      "subsystem": "uart-lp-uart",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "known",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Known UART0 GPIO16/17 startup/logging route only; no RX/load/overflow/LP-UART qualification.",
+      "claims": [
+        "bare-metal-compute"
+      ]
+    },
+    {
+      "platform": "bare-metal",
+      "subsystem": "flash-cache-persistence",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Read/execute placement probe only; no cache-mechanism isolation or persistence/write-interruption qualification.",
+      "claims": [
+        "placement-probe"
+      ]
+    },
+    {
+      "platform": "embassy-esp-rtos",
+      "subsystem": "hp-cpu-interrupts",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Compute and selected async channel paths only; no IRQ/stress/full CPU qualification.",
+      "claims": [
+        "embassy-compute",
+        "embassy-checked-rtt"
+      ]
+    },
+    {
+      "platform": "embassy-esp-rtos",
+      "subsystem": "clocks-timers-watchdogs",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Clocked sample endpoints only; not external accuracy, sleep continuity or watchdog recovery.",
+      "claims": [
+        "embassy-checked-rtt"
+      ]
+    },
+    {
+      "platform": "embassy-esp-rtos",
+      "subsystem": "uart-lp-uart",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "known",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "UART0 GPIO16/17 output observed; RX/load/recovery and LP UART remain untested.",
+      "claims": [
+        "embassy-compute"
+      ]
+    },
+    {
+      "platform": "esp-idf-freertos",
+      "subsystem": "hp-cpu-interrupts",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Checked std/native queue application paths only; no isolated switch, external IRQ or CPU utilization qualification.",
+      "claims": [
+        "idf-std-checked-rtt",
+        "idf-matched-api-analysis"
+      ]
+    },
+    {
+      "platform": "esp-idf-freertos",
+      "subsystem": "clocks-timers-watchdogs",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Bounded raw-counter/blocked-WFI continuity and clock snapshots only; not independent accuracy, power or radio/sleep reliability.",
+      "claims": [
+        "idf-timer-continuity"
+      ]
+    },
+    {
+      "platform": "esp-idf-freertos",
+      "subsystem": "uart-lp-uart",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "known",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "UART0 GPIO16/17 logging route only; no general serial receive/load/LP-UART benchmark.",
+      "claims": [
+        "idf-std-checked-rtt"
+      ]
+    },
+    {
+      "platform": "ariel-os",
+      "subsystem": "hp-cpu-interrupts",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Expected native-test output and specific assertion paths only; first guard operator-attested and actual yield switch count unverified.",
+      "claims": [
+        "ariel-native-output",
+        "ariel-priority-lock-assertions"
+      ]
+    },
+    {
+      "platform": "ariel-os",
+      "subsystem": "uart-lp-uart",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "known",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "UART0 GPIO16/17 startup/logging only for selected Rust input; not full UART/LP-UART qualification.",
+      "claims": [
+        "ariel-startup-output",
+        "ariel-native-output"
+      ]
+    },
+    {
+      "platform": "zephyr",
+      "subsystem": "hp-cpu-interrupts",
+      "driver": "upstream",
+      "rust_api": "build_failed",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Native C suite emits output but 0/3 attempts qualify; Rust sample cannot build in the selected tuple. No admitted native timing or Rust CPU/IRQ result.",
+      "claims": [
+        "zephyr-native-build",
+        "zephyr-native-output",
+        "zephyr-native-admission",
+        "zephyr-rust-build-gate"
+      ]
+    },
+    {
+      "platform": "zephyr",
+      "subsystem": "uart-lp-uart",
+      "driver": "upstream",
+      "rust_api": "build_failed",
+      "pins": "known",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Native C UART0 GPIO16/17 output observed. Rust hello fails before execution, so no Rust UART route is qualified; RX/load/LP UART untested.",
+      "claims": [
+        "zephyr-native-output",
+        "zephyr-rust-build-gate"
+      ]
+    },
+    {
+      "platform": "rtic",
+      "subsystem": "uart-lp-uart",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "known",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "UART0 GPIO16/17 marker output before the failed restart/guard; no serial receive, flow control, overflow recovery or LP UART qualification.",
+      "claims": [
+        "rtic-c6-builds",
+        "rtic-monotonic-markers",
+        "rtic-monotonic-v1-failed"
+      ]
+    },
+    {
+      "platform": "rtic",
+      "subsystem": "clocks-timers-watchdogs",
+      "driver": "upstream",
+      "rust_api": "available",
+      "pins": "not_required",
+      "fixture": "available",
+      "outcome": "partial",
+      "scope": "Source timer-dependent resumption and coarse host-arrival pacing before a failed restart/guard; no clock accuracy/readback or established reset/watchdog cause.",
+      "claims": [
+        "rtic-c6-builds",
+        "rtic-monotonic-markers",
+        "rtic-monotonic-v1-failed"
+      ]
+    }
+  ]
+}

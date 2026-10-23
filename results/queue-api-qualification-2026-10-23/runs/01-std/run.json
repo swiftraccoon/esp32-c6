@@ -1,0 +1,217 @@
+{
+  "backend": "rust-std-sync-channel",
+  "benchmarks": {
+    "message-roundtrip": {
+      "max_ticks": 1280,
+      "mean_ticks": 1006.54,
+      "min_ticks": 1005,
+      "p50_ticks": 1006,
+      "p95_ticks": 1006,
+      "p99_ticks": 1006,
+      "sample_count": 1000
+    },
+    "timer-overhead": {
+      "max_ticks": 36,
+      "mean_ticks": 14.821,
+      "min_ticks": 14,
+      "p50_ticks": 15,
+      "p95_ticks": 15,
+      "p99_ticks": 15,
+      "sample_count": 1000
+    }
+  },
+  "collector_executable_sha256": "1b5e71a6648086369ba8f4af53e7e1622a08d990fab24448a46126abcfd4277a",
+  "collector_version": "0.1.0",
+  "config_after": {
+    "clocks": {
+      "cpu_mhz": 160,
+      "flash_divider": 1,
+      "flash_mhz": 80,
+      "flash_source_mhz": 80,
+      "registers": {
+        "pcr_cpu_freq_conf": 0,
+        "pcr_mspi_clk_conf": 1280,
+        "pcr_sysclk_conf": 671154688,
+        "spi0_clock": 2147483648
+      },
+      "source": "register-readback"
+    },
+    "timer": {
+      "enabled": true,
+      "pcr_systimer_conf": 1,
+      "pcr_systimer_func_clk_conf": 4194304,
+      "source": "xtal",
+      "systimer_conf": 4143972354,
+      "unit0_enabled": true,
+      "unit0_stalls_cpu": true
+    }
+  },
+  "failure": null,
+  "firmware_sha256": "0282b814660461f7c88d3eb64c7d701e620e418d53be7d53b5eb96834a82d32b",
+  "hello": {
+    "backend": "rust-std-sync-channel",
+    "boot_nonce": 3765618504637826238,
+    "config_before": {
+      "clocks": {
+        "cpu_mhz": 160,
+        "flash_divider": 1,
+        "flash_mhz": 80,
+        "flash_source_mhz": 80,
+        "registers": {
+          "pcr_cpu_freq_conf": 0,
+          "pcr_mspi_clk_conf": 1280,
+          "pcr_sysclk_conf": 671154688,
+          "spi0_clock": 2147483648
+        },
+        "source": "register-readback"
+      },
+      "timer": {
+        "enabled": true,
+        "pcr_systimer_conf": 1,
+        "pcr_systimer_func_clk_conf": 4194304,
+        "source": "xtal",
+        "systimer_conf": 4143972354,
+        "unit0_enabled": true,
+        "unit0_stalls_cpu": true
+      }
+    },
+    "main_priority": 1,
+    "main_stack_bytes": 32768,
+    "message_bytes": 4,
+    "observer_count": 1000,
+    "platform": "esp-idf-freertos",
+    "protocol": 3,
+    "queue_capacity": 1,
+    "rtos_tick_hz": 100,
+    "sample_buffer_bytes": 48000,
+    "sample_count": 1000,
+    "sample_storage": "preallocated-heap",
+    "tick_hz": 16000000,
+    "tick_width_bits": 52,
+    "warmup_iterations": 8,
+    "worker_priority": 5,
+    "worker_stack_bytes": 8192
+  },
+  "host_rustc_at_capture": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "independent_boot_id": "qualification-std",
+  "limitations": [
+    "Warm reset request only; nonce freshness does not establish independent statistical trials",
+    "52-bit onboard SYSTIMER raw ticks at nominal 16 MHz; no external frequency calibration",
+    "1000 observations per benchmark within each boot; nearest-rank percentiles",
+    "Gross request/reply and observer ticks retained; no observer subtraction",
+    "Blocked sleep and SDK WFI-call continuity checked against kernel ticks; no external timing reference",
+    "Before/after register equality cannot exclude transient intermediate changes",
+    "Device protocol cannot authenticate firmware; preserve flash evidence separately",
+    "host_rustc_at_capture observes PATH, not the compiler used to build this executable"
+  ],
+  "platform": "esp-idf-freertos",
+  "previous_nonces": [],
+  "provenance": {
+    "backend": "rust-std-sync-channel",
+    "build_command": "env RUSTC_BOOTSTRAP=1 LIBCLANG_PATH=/opt/homebrew/opt/llvm/lib PATH=workspace-local-ldproxy:$PATH cargo +1.96.0 build --release --locked --bin queue-api --features queue-api",
+    "configuration": {
+      "automatic_light_sleep": false,
+      "codegen_units": 1,
+      "cpu_mhz": 160,
+      "dynamic_frequency_scaling": false,
+      "flash_mhz": 80,
+      "flash_mode": "dio",
+      "freertos_tick_hz": 100,
+      "logging": "protocol emitted after measurement and cleanup",
+      "lto": "thin",
+      "main_priority": 1,
+      "main_stack_bytes": 32768,
+      "message_bytes": 4,
+      "observer_count": 1000,
+      "opt_level": 3,
+      "panic": "abort",
+      "protocol": 3,
+      "queue_capacity": 1,
+      "radios": "not initialized",
+      "reply_mask": 2779077210,
+      "sample_buffer_bytes": 48000,
+      "sample_count": 1000,
+      "sample_storage": "preallocated-heap",
+      "startup_settle_ms": 2000,
+      "tick_hz": 16000000,
+      "tick_width_bits": 52,
+      "timer": "HP SYSTIMER UNIT0 raw counter via private SDK function",
+      "warmup_iterations": 8,
+      "worker_priority": 5,
+      "worker_stack_bytes": 8192
+    },
+    "firmware_sha256": "0282b814660461f7c88d3eb64c7d701e620e418d53be7d53b5eb96834a82d32b",
+    "flash_image_sha256": "2f9e219084813df8597a3574251e57f16f373d9cdac24f59f9ce33757c87b10f",
+    "hardware": {
+      "board_model": null,
+      "chip_revision": "0.2",
+      "flash_bytes": 8388608,
+      "soc": "esp32c6",
+      "uart_bridge": "CP2102N",
+      "uart_pins": {
+        "rx": 17,
+        "tx": 16
+      }
+    },
+    "platform": "esp-idf-freertos",
+    "schema_version": 3,
+    "scope": "Whole Rust API request/reply paths on the same IDF kernel; phase instrumentation included; no isolated context switch or independent electrical timing claim",
+    "software": {
+      "cargo_lock_sha256": "72d9f6a550922507b682a7ebc40623da22e62cdf12c138249a09de40ef5adace",
+      "esp_idf": "v5.5.6",
+      "esp_idf_commit": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
+      "esp_idf_sys": "0.37.2",
+      "espflash": "4.6.0",
+      "esptool": "5.1.0",
+      "git_commit": "93646f5e7e439fe2ea913048bbc7e9ac5a7ef2cd",
+      "rust": "1.96.0",
+      "rust_commit": "ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96",
+      "sdkconfig_sha256": "5ee0be1128539831db16b63d7008985e16849b216bd4a278076e294a51fe3758",
+      "source_snapshot": "results/queue-api-qualification-2026-10-23/artifacts/source.tar.gz",
+      "source_snapshot_sha256": "ff977a4b7ab205ccd55a5d644aca54e9e228b10ff0d451630addbf46ef2070f1",
+      "target": "riscv32imac-esp-espidf"
+    }
+  },
+  "qualification": {
+    "backend": "rust-std-sync-channel",
+    "backsteps": 0,
+    "blocked_checks": 1008,
+    "blocked_end_tick": 32666669,
+    "blocked_start_tick": 32217568,
+    "blocked_wait_method": "std-thread-sleep",
+    "boot_nonce": 3765618504637826238,
+    "cleanup_pass": true,
+    "debugger_attached": false,
+    "empty_receive_pass": true,
+    "full_send_pass": true,
+    "legacy_after_us": 2041667,
+    "legacy_before_us": 2013593,
+    "monotonic_first_tick": 32197617,
+    "monotonic_last_tick": 32217388,
+    "monotonic_reads": 1000,
+    "protocol": 3,
+    "queue_empty_checks": 0,
+    "readiness_checks": 1008,
+    "wfi_calls": 3,
+    "wfi_end_tick": 33146642,
+    "wfi_rtos_tick_end": 207,
+    "wfi_rtos_tick_start": 204,
+    "wfi_start_tick": 32667040,
+    "wfi_verified": true
+  },
+  "reset_kind": "RTS warm-reset request; DTR deasserted",
+  "run_order_index": 1,
+  "schema_version": 3,
+  "serial": {
+    "baud": 115200,
+    "data_bits": 8,
+    "parity": "none",
+    "stop_bits": 1
+  },
+  "status": "pass",
+  "tick_scale_seconds": {
+    "denominator": 16000000,
+    "numerator": 1
+  },
+  "timestamp_unix_ms": 1792733000746
+}

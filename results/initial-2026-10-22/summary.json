@@ -1,0 +1,50 @@
+[
+  {
+    "platform": "bare-metal",
+    "measured_boots": 5,
+    "compute_samples": 320,
+    "calibration_samples": 320,
+    "compute_mean_ns": 282675,
+    "per_boot_p50_ns": [
+      283000,
+      283000,
+      283000,
+      283000,
+      283000
+    ],
+    "largest_compute_ns": 291000,
+    "status": "pass"
+  },
+  {
+    "platform": "embassy",
+    "measured_boots": 5,
+    "compute_samples": 320,
+    "calibration_samples": 320,
+    "compute_mean_ns": 282668.75,
+    "per_boot_p50_ns": [
+      282000,
+      283000,
+      283000,
+      283000,
+      283000
+    ],
+    "largest_compute_ns": 293000,
+    "status": "pass"
+  },
+  {
+    "platform": "esp-idf-freertos",
+    "measured_boots": 5,
+    "compute_samples": 320,
+    "calibration_samples": 320,
+    "compute_mean_ns": 283037.5,
+    "per_boot_p50_ns": [
+      283000,
+      283000,
+      283000,
+      283000,
+      283000
+    ],
+    "largest_compute_ns": 289000,
+    "status": "pass"
+  }
+]

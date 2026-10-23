@@ -1,0 +1,48 @@
+{
+  "purpose": "Independent offline mutations of a COPY of actual failed attempt. Synthesized favorable prefix/guard is a counterexample input only, never an observation. Originals unchanged.",
+  "collector_sha256": "f06cb6e82e1e01e86dba08a5172b5e4cc0b3ebd588f3cd6fd2395cbfbdbc84dd",
+  "original_artifact_hashes": {
+    "run.json": "e92d3add391a839651731188a49a472302dadc2caf98cd36233085c28b8d3d17",
+    "serial.raw": "3e90c4a6f6d3395218816e8950c8b26ad1ed2fa9ca599cc2ac1e5008fdc2cadb",
+    "observations.jsonl": "fbab37da5bea25ebc6fcd5199c15c3348c831cdaf7f3f7d700d966860d11bb6a",
+    "firmware.elf": "12dc8bd4f079b9acdfda34db652e422cafddd9869c4b92493274cb56b47645a9",
+    "provenance.json": "db2b97ab3db6950fa842acb045c3d8b50f559ed679e29858a0e20544bc04dfc5"
+  },
+  "cases": [
+    {
+      "case": "original-failed-graph",
+      "expected_accepted": true,
+      "exit": 0,
+      "stdout": "{\n  \"failed_captures_retained\": 1,\n  \"limits\": \"Reproduces supported protocol outputs and the RTIC raw/receipt adapter only; other native console suites, physical accuracy and unrecorded events remain outside this replay.\",\n  \"status\": \"replays_consistent\",\n  \"study_summaries\": 0,\n  \"successful_console_captures\": 0,\n  \"successful_protocol_transcripts\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "case": "attempted-pass-with-fabricated-objects",
+      "expected_accepted": false,
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Error: additional ROM startup in the same attempt"
+    },
+    {
+      "case": "failed-experiment-retag",
+      "expected_accepted": false,
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Error: RTIC archive must preserve schema-4 qualification-only admission"
+    },
+    {
+      "case": "failed-console-null-omitted",
+      "expected_accepted": false,
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Error: failed RTIC report retains favorable fields or lacks failure"
+    },
+    {
+      "case": "favorable-counterfeit-prefix-remains-failed",
+      "expected_accepted": true,
+      "exit": 0,
+      "stdout": "{\n  \"failed_captures_retained\": 1,\n  \"limits\": \"Reproduces supported protocol outputs and the RTIC raw/receipt adapter only; other native console suites, physical accuracy and unrecorded events remain outside this replay.\",\n  \"status\": \"replays_consistent\",\n  \"study_summaries\": 0,\n  \"successful_console_captures\": 0,\n  \"successful_protocol_transcripts\": 0\n}",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "benchmarks": {
+    "message-roundtrip": {
+      "max_ticks": 426,
+      "mean_ticks": 318.964,
+      "min_ticks": 318,
+      "p50_ticks": 319,
+      "p95_ticks": 319,
+      "p99_ticks": 319,
+      "sample_count": 1000
+    },
+    "timer-overhead": {
+      "max_ticks": 16,
+      "mean_ticks": 14.801,
+      "min_ticks": 14,
+      "p50_ticks": 15,
+      "p95_ticks": 15,
+      "p99_ticks": 15,
+      "sample_count": 1000
+    }
+  },
+  "config_after": {
+    "clocks": {
+      "cpu_mhz": 160,
+      "flash_divider": 1,
+      "flash_mhz": 80,
+      "flash_source_mhz": 80,
+      "registers": {
+        "pcr_cpu_freq_conf": 0,
+        "pcr_mspi_clk_conf": 1280,
+        "pcr_sysclk_conf": 671154688,
+        "spi0_clock": 2147483648
+      },
+      "source": "register-readback"
+    },
+    "timer": {
+      "enabled": true,
+      "pcr_systimer_conf": 1,
+      "pcr_systimer_func_clk_conf": 4194304,
+      "source": "xtal",
+      "systimer_conf": 4143972354,
+      "unit0_enabled": true,
+      "unit0_stalls_cpu": true
+    }
+  },
+  "hello": {
+    "backend": "freertos-queue",
+    "boot_nonce": 4231128120526203274,
+    "config_before": {
+      "clocks": {
+        "cpu_mhz": 160,
+        "flash_divider": 1,
+        "flash_mhz": 80,
+        "flash_source_mhz": 80,
+        "registers": {
+          "pcr_cpu_freq_conf": 0,
+          "pcr_mspi_clk_conf": 1280,
+          "pcr_sysclk_conf": 671154688,
+          "spi0_clock": 2147483648
+        },
+        "source": "register-readback"
+      },
+      "timer": {
+        "enabled": true,
+        "pcr_systimer_conf": 1,
+        "pcr_systimer_func_clk_conf": 4194304,
+        "source": "xtal",
+        "systimer_conf": 4143972354,
+        "unit0_enabled": true,
+        "unit0_stalls_cpu": true
+      }
+    },
+    "main_priority": 1,
+    "main_stack_bytes": 32768,
+    "message_bytes": 4,
+    "observer_count": 1000,
+    "platform": "esp-idf-freertos",
+    "protocol": 3,
+    "queue_capacity": 1,
+    "rtos_tick_hz": 100,
+    "sample_buffer_bytes": 48000,
+    "sample_count": 1000,
+    "sample_storage": "preallocated-heap",
+    "tick_hz": 16000000,
+    "tick_width_bits": 52,
+    "warmup_iterations": 8,
+    "worker_priority": 5,
+    "worker_stack_bytes": 8192
+  },
+  "qualification": {
+    "backend": "freertos-queue",
+    "backsteps": 0,
+    "blocked_checks": 1008,
+    "blocked_end_tick": 32666635,
+    "blocked_start_tick": 32211027,
+    "blocked_wait_method": "std-thread-sleep",
+    "boot_nonce": 4231128120526203274,
+    "cleanup_pass": true,
+    "debugger_attached": false,
+    "empty_receive_pass": true,
+    "full_send_pass": true,
+    "legacy_after_us": 2041666,
+    "legacy_before_us": 2013184,
+    "monotonic_first_tick": 32190999,
+    "monotonic_last_tick": 32210825,
+    "monotonic_reads": 1000,
+    "protocol": 3,
+    "queue_empty_checks": 1008,
+    "readiness_checks": 1008,
+    "wfi_calls": 3,
+    "wfi_end_tick": 33146614,
+    "wfi_rtos_tick_end": 207,
+    "wfi_rtos_tick_start": 204,
+    "wfi_start_tick": 32667031,
+    "wfi_verified": true
+  },
+  "tick_scale_seconds": {
+    "denominator": 16000000,
+    "numerator": 1
+  }
+}

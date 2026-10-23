@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "platform": "bare-metal",
+  "hardware": {
+    "soc": "esp32c6",
+    "chip_revision": "0.2",
+    "flash_bytes": 8388608,
+    "board_model": null,
+    "uart_bridge": "CP2102N",
+    "uart_pins": {
+      "tx": 16,
+      "rx": 17
+    }
+  },
+  "software": {
+    "rust": "1.96.0",
+    "rust_commit": "ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96",
+    "llvm": "22.1.2",
+    "target": "riscv32imac-unknown-none-elf",
+    "esp_hal": "1.2.0",
+    "esp_rtos": null,
+    "embassy_executor": null,
+    "embassy_time": null,
+    "esp_bootloader_esp_idf": "0.6.0",
+    "espflash": "4.6.0",
+    "esptool": "5.1.0",
+    "source_snapshot": "results/clocked-handoff-2026-10-23/artifacts/esp-hal-source.tar.gz",
+    "source_snapshot_sha256": "5d46a17fae89ca31c79802c55aa2610fd2affeee24af35f28c59ba9a8e3504c6",
+    "workload_source_sha256": "27447ee945989a682ee778646f488e7c986d8831a38515e1057eaa143992ab9e",
+    "cargo_lock_sha256": "fe83fea7296603dd9a461ed872fcecab02b277754a18060b0ac0e8cbc48ed89f",
+    "git_commit": "8f4294b349a6e493b4dfe0d1c01b08afe4c81626"
+  },
+  "configuration": {
+    "cpu_mhz": 160,
+    "flash_mode": "dio",
+    "flash_mhz": 80,
+    "lto": "thin",
+    "opt_level": 3,
+    "codegen_units": 1,
+    "panic": "abort",
+    "radios": "not initialized",
+    "logging": "protocol emitted after all samples",
+    "startup_settle_ms": 2000,
+    "warmup_iterations": 8,
+    "clock_source": "esp_hal::time::Instant",
+    "timer_resolution_ns": 1000,
+    "flash_mhz_evidence": "Requested image setting; actual CPU/MSPI/SPI0 registers independently decoded from hello.clocks and complete.clocks_after",
+    "benchmarks": {
+      "compute": 64,
+      "timer-overhead": 64
+    },
+    "protocol": 2
+  },
+  "scope": "Clock-controlled compute and timer observations; scheduler platforms additionally measure full Rust request/reply path; no isolated context-switch, IRQ, power or radio result",
+  "build_command": "cargo build --locked --release --bin bare-metal",
+  "build_directory": "firmware/esp-hal"
+}

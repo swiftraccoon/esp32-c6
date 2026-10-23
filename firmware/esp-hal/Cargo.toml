@@ -1,0 +1,45 @@
+[package]
+name = "c6-runtime-bench"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "ESP32-C6 bare-metal and Embassy benchmark adapters"
+keywords = ["benchmark", "embedded", "esp32c6", "no-std"]
+categories = ["embedded", "no-std"]
+publish = false
+
+[workspace]
+
+[features]
+default = []
+embassy = ["dep:embassy-executor", "dep:embassy-sync", "dep:embassy-time", "dep:esp-rtos"]
+
+[dependencies]
+bench-core = { path = "../../crates/bench-core" }
+embassy-executor = { version = "=0.10.0", optional = true }
+embassy-sync = { version = "=0.8.0", optional = true }
+embassy-time = { version = "=0.5.1", optional = true }
+esp-bootloader-esp-idf = { version = "=0.6.0", features = ["esp32c6"] }
+esp-hal = { version = "=1.2.0", features = ["esp32c6", "unstable"] }
+esp-rtos = { version = "=0.4.0", features = ["embassy", "esp32c6"], optional = true }
+
+[[bin]]
+name = "bare-metal"
+path = "src/bin/bare_metal.rs"
+test = false
+bench = false
+
+[[bin]]
+name = "embassy"
+path = "src/bin/embassy.rs"
+required-features = ["embassy"]
+test = false
+bench = false
+
+[profile.release]
+codegen-units = 1
+debug = 2
+incremental = false
+lto = "thin"
+opt-level = 3
+panic = "abort"

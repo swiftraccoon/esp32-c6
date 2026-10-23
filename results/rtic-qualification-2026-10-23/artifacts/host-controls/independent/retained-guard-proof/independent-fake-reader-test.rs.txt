@@ -1,0 +1,73 @@
+#[cfg(test)]
+mod independent_pending_guard_probe {
+    use super::*;
+    use std::cell::Cell;
+    use std::rc::Rc;
+
+    struct Reader {
+        chunks: Vec<Vec<u8>>,
+        reads: Rc<Cell<usize>>,
+    }
+    impl Read for Reader {
+        fn read(&mut self, output: &mut [u8]) -> io::Result<usize> {
+            let index = self.reads.get();
+            self.reads.set(index + 1);
+            let Some(chunk) = self.chunks.get(index) else {
+                return Ok(0);
+            };
+            output[..chunk.len()].copy_from_slice(chunk);
+            Ok(chunk.len())
+        }
+    }
+
+    #[test]
+    fn independent_loop_top_guard_leaves_pending_panic_unread() {
+        let reads = Rc::new(Cell::new(0));
+        let reader = Reader {
+            chunks: vec![
+                b"ESP-ROM:esp32c6-20220919\ninit\nhello from foo\nhello from bar\nhello from baz\n"
+                    .to_vec(),
+                b"bye from foo\n".to_vec(),
+                b"bye from bar\n".to_vec(),
+                b"bye from baz\n".to_vec(),
+                b"PANIC\n".to_vec(),
+            ],
+            reads: reads.clone(),
+        };
+        let mut clock = [
+            1,
+            100_000_000,
+            200_000_000,
+            2_100_000_000,
+            2_200_000_000,
+            3_100_000_000,
+            3_200_000_000,
+            4_100_000_000,
+            9_100_000_000,
+        ]
+        .into_iter();
+        let mut fallback = 9_100_000_000_u64;
+        let mut raw = Vec::new();
+        let mut receipts = Vec::new();
+        let result = capture_stream(reader, &mut raw, &mut receipts, || {
+            Ok(clock.next().unwrap_or_else(|| {
+                fallback += 1;
+                fallback
+            }))
+        });
+        println!(
+            "capture_is_ok={} reader_calls={} pending_panic_unread={} replay_is_ok={}",
+            result.is_ok(),
+            reads.get(),
+            reads.get() == 4,
+            validate_bytes(&raw, &receipts).is_ok()
+        );
+        assert!(
+            result.is_ok(),
+            "pre-correction counterexample changed: {result:?}"
+        );
+        assert_eq!(reads.get(), 4);
+        assert!(validate_bytes(&raw, &receipts).is_ok());
+        println!("{}", String::from_utf8(receipts).unwrap());
+    }
+}

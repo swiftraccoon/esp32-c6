@@ -1,0 +1,6 @@
+/.embuild/
+/.tools/
+/target/
+/sdkconfig
+/sdkconfig.old
+/artifacts/*.log

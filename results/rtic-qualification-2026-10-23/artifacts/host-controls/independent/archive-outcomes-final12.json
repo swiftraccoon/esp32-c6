@@ -1,0 +1,246 @@
+{
+  "purpose": "Final12s host-only synthetic graphs using actual compiled ELF; no physical captures.",
+  "collector_sha256": "f06cb6e82e1e01e86dba08a5172b5e4cc0b3ebd588f3cd6fd2395cbfbdbc84dd",
+  "cases": [
+    {
+      "case": "untouched",
+      "expected_accepted": true,
+      "exit": 0,
+      "matched_expectation": true,
+      "stdout": "{\n  \"failed_captures_retained\": 0,\n  \"limits\": \"Reproduces supported protocol outputs and the RTIC raw/receipt adapter only; other native console suites, physical accuracy and unrecorded events remain outside this replay.\",\n  \"status\": \"replays_consistent\",\n  \"study_summaries\": 0,\n  \"successful_console_captures\": 1,\n  \"successful_protocol_transcripts\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "case": "missing-null-summary",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive cannot contain benchmark or comparative scores"
+    },
+    {
+      "case": "populated-summary",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive cannot contain benchmark or comparative scores"
+    },
+    {
+      "case": "missing-null-benchmarks",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive cannot contain benchmark or comparative scores"
+    },
+    {
+      "case": "populated-benchmarks",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive cannot contain benchmark or comparative scores"
+    },
+    {
+      "case": "missing-null-comparative_score",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive cannot contain benchmark or comparative scores"
+    },
+    {
+      "case": "populated-comparative_score",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive cannot contain benchmark or comparative scores"
+    },
+    {
+      "case": "missing-failure-null",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC passing report lacks derived fields or contains failure"
+    },
+    {
+      "case": "false-qualification",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC capture report differs from replay: qualification"
+    },
+    {
+      "case": "guard-summary-one-ns",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC capture report differs from replay: console"
+    },
+    {
+      "case": "comparison-purpose",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive must preserve schema-4 qualification-only admission"
+    },
+    {
+      "case": "missing-admission",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: invalid type: null, expected struct Admission"
+    },
+    {
+      "case": "retag-experiment",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive must preserve schema-4 qualification-only admission"
+    },
+    {
+      "case": "retag-platform",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive must preserve schema-4 qualification-only admission"
+    },
+    {
+      "case": "retag-both",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive must preserve schema-4 qualification-only admission"
+    },
+    {
+      "case": "delete-observations",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: No such file or directory (os error 2)"
+    },
+    {
+      "case": "provenance-byte-whitespace",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: capture inputs changed after admission"
+    },
+    {
+      "case": "firmware-byte-mutation",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: capture inputs changed after admission"
+    },
+    {
+      "case": "missing-replay",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: No such file or directory (os error 2)"
+    },
+    {
+      "case": "no-final-poll-with-rehashed-input",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC guard needs an actual final timeout poll"
+    },
+    {
+      "case": "short-final-poll-with-rehashed-input",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC final timeout poll preceded full guard interval"
+    },
+    {
+      "case": "admin-stall-does-not-inflate-summary",
+      "expected_accepted": true,
+      "exit": 0,
+      "matched_expectation": true,
+      "stdout": "{\n  \"failed_captures_retained\": 0,\n  \"limits\": \"Reproduces supported protocol outputs and the RTIC raw/receipt adapter only; other native console suites, physical accuracy and unrecorded events remain outside this replay.\",\n  \"status\": \"replays_consistent\",\n  \"study_summaries\": 0,\n  \"successful_console_captures\": 1,\n  \"successful_protocol_transcripts\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "case": "failed-remains-failed",
+      "expected_accepted": true,
+      "exit": 0,
+      "matched_expectation": true,
+      "stdout": "{\n  \"failed_captures_retained\": 1,\n  \"limits\": \"Reproduces supported protocol outputs and the RTIC raw/receipt adapter only; other native console suites, physical accuracy and unrecorded events remain outside this replay.\",\n  \"status\": \"replays_consistent\",\n  \"study_summaries\": 0,\n  \"successful_console_captures\": 0,\n  \"successful_protocol_transcripts\": 0\n}",
+      "stderr": ""
+    },
+    {
+      "case": "failed-retag-experiment",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive must preserve schema-4 qualification-only admission"
+    },
+    {
+      "case": "failed-retag-platform",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive must preserve schema-4 qualification-only admission"
+    },
+    {
+      "case": "failed-retag-both",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: RTIC archive must preserve schema-4 qualification-only admission"
+    },
+    {
+      "case": "failed-delete-observations",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: No such file or directory (os error 2)"
+    },
+    {
+      "case": "failed-retain-positive-console",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: failed RTIC report retains favorable fields or lacks failure"
+    },
+    {
+      "case": "failed-missing-console-null",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: failed RTIC report retains favorable fields or lacks failure"
+    },
+    {
+      "case": "failed-empty-failure",
+      "expected_accepted": false,
+      "exit": 1,
+      "matched_expectation": true,
+      "stdout": "",
+      "stderr": "Error: failed RTIC report retains favorable fields or lacks failure"
+    }
+  ]
+}

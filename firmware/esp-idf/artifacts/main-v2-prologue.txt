@@ -1,0 +1,31 @@
+
+target/riscv32imac-esp-espidf/release/esp-idf-baseline:     file format elf32-littleriscv
+
+
+Disassembly of section .flash.text:
+
+42006942 <_RNvCsoV3ZDxOJsx_16esp_idf_baseline4main>:
+42006942:	7111                	addi	sp,sp,-256
+42006944:	df86                	sw	ra,252(sp)
+42006946:	dda2                	sw	s0,248(sp)
+42006948:	dba6                	sw	s1,244(sp)
+4200694a:	d9ca                	sw	s2,240(sp)
+4200694c:	d7ce                	sw	s3,236(sp)
+4200694e:	d5d2                	sw	s4,232(sp)
+42006950:	d3d6                	sw	s5,228(sp)
+42006952:	d1da                	sw	s6,224(sp)
+42006954:	cfde                	sw	s7,220(sp)
+42006956:	cde2                	sw	s8,216(sp)
+42006958:	cbe6                	sw	s9,212(sp)
+4200695a:	c9ea                	sw	s10,208(sp)
+4200695c:	c7ee                	sw	s11,204(sp)
+4200695e:	6511                	lui	a0,0x4
+42006960:	6e050513          	addi	a0,a0,1760 # 46e0 <CSR_UINTSTATUS+0x3a2f>
+42006964:	40a10133          	sub	sp,sp,a0
+42006968:	6511                	lui	a0,0x4
+4200696a:	69850513          	addi	a0,a0,1688 # 4698 <CSR_UINTSTATUS+0x39e7>
+4200696e:	00a10bb3          	add	s7,sp,a0
+42006972:	1008                	addi	a0,sp,32
+42006974:	42010593          	addi	a1,sp,1056
+42006978:	fe052c23          	sw	zero,-8(a0)
+4200697c:	fe052e23          	sw	zero,-4(a0)

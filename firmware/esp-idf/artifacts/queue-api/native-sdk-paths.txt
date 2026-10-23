@@ -1,0 +1,567 @@
+
+.cache/queue-api/native.elf:	file format elf32-littleriscv
+
+Disassembly of section .iram0.text:
+
+408018ca <esp_timer_impl_get_counter_reg>:
+408018ca: 4080e537     	lui	a0, 0x4080e
+408018ce: e2450513     	addi	a0, a0, -0x1dc
+408018d2: 4581         	li	a1, 0x0
+408018d4: ff7ff317     	auipc	t1, 0xff7ff
+408018d8: af830067     	jr	-0x508(t1) <systimer_hal_get_counter_value>
+
+40802c4a <esp_cpu_wait_for_intr>:
+40802c4a: 1141         	addi	sp, sp, -0x10
+40802c4c: c606         	sw	ra, 0xc(sp)
+40802c4e: 404070ef     	jal	0x4080a052 <rv_utils_dbgr_is_attached>
+40802c52: c901         	beqz	a0, 0x40802c62 <esp_cpu_wait_for_intr+0x18>
+40802c54: 600967b7     	lui	a5, 0x60096
+40802c58: 11478793     	addi	a5, a5, 0x114
+40802c5c: 439c         	lw	a5, 0x0(a5)
+40802c5e: 8ba1         	andi	a5, a5, 0x8
+40802c60: c399         	beqz	a5, 0x40802c66 <esp_cpu_wait_for_intr+0x1c>
+40802c62: 10500073     	wfi
+40802c66: 40b2         	lw	ra, 0xc(sp)
+40802c68: 0141         	addi	sp, sp, 0x10
+40802c6a: 8082         	ret
+
+40804f64 <xQueueGenericCreate>:
+40804f64: 1141         	addi	sp, sp, -0x10
+40804f66: c606         	sw	ra, 0xc(sp)
+40804f68: c422         	sw	s0, 0x8(sp)
+40804f6a: c226         	sw	s1, 0x4(sp)
+40804f6c: c04a         	sw	s2, 0x0(sp)
+40804f6e: c939         	beqz	a0, 0x40804fc4 <xQueueGenericCreate+0x60>
+40804f70: 02b537b3     	mulhu	a5, a0, a1
+40804f74: 84aa         	mv	s1, a0
+40804f76: 892e         	mv	s2, a1
+40804f78: e7b1         	bnez	a5, 0x40804fc4 <xQueueGenericCreate+0x60>
+40804f7a: 02b50533     	mul	a0, a0, a1
+40804f7e: fab00793     	li	a5, -0x55
+40804f82: 04a7e163     	bltu	a5, a0, 0x40804fc4 <xQueueGenericCreate+0x60>
+40804f86: 05450513     	addi	a0, a0, 0x54
+40804f8a: 5f9000ef     	jal	0x40805d82 <pvPortMalloc>
+40804f8e: 842a         	mv	s0, a0
+40804f90: c105         	beqz	a0, 0x40804fb0 <xQueueGenericCreate+0x4c>
+40804f92: 04050323     	sb	zero, 0x46(a0)
+40804f96: 87aa         	mv	a5, a0
+40804f98: 02091363     	bnez	s2, 0x40804fbe <xQueueGenericCreate+0x5a>
+40804f9c: c01c         	sw	a5, 0x0(s0)
+40804f9e: dc44         	sw	s1, 0x3c(s0)
+40804fa0: 05242023     	sw	s2, 0x40(s0)
+40804fa4: 4585         	li	a1, 0x1
+40804fa6: 8522         	mv	a0, s0
+40804fa8: ef3ff0ef     	jal	0x40804e9a <xQueueGenericReset>
+40804fac: 04042423     	sw	zero, 0x48(s0)
+40804fb0: 40b2         	lw	ra, 0xc(sp)
+40804fb2: 8522         	mv	a0, s0
+40804fb4: 4422         	lw	s0, 0x8(sp)
+40804fb6: 4492         	lw	s1, 0x4(sp)
+40804fb8: 4902         	lw	s2, 0x0(sp)
+40804fba: 0141         	addi	sp, sp, 0x10
+40804fbc: 8082         	ret
+40804fbe: 05450793     	addi	a5, a0, 0x54
+40804fc2: bfe9         	j	0x40804f9c <xQueueGenericCreate+0x38>
+40804fc4: 420596b7     	lui	a3, 0x42059
+40804fc8: 4205d637     	lui	a2, 0x4205d
+40804fcc: 42059537     	lui	a0, 0x42059
+40804fd0: ee068693     	addi	a3, a3, -0x120
+40804fd4: 7d060613     	addi	a2, a2, 0x7d0
+40804fd8: e1250513     	addi	a0, a0, -0x1ee
+40804fdc: 23d00593     	li	a1, 0x23d
+40804fe0: 0cf040ef     	jal	0x408098ae <__assert_func>
+
+40805116 <xQueueGenericSend>:
+40805116: 7139         	addi	sp, sp, -0x40
+40805118: de06         	sw	ra, 0x3c(sp)
+4080511a: c632         	sw	a2, 0xc(sp)
+4080511c: dc22         	sw	s0, 0x38(sp)
+4080511e: 14050d63     	beqz	a0, 0x40805278 <xQueueGenericSend+0x162>
+40805122: d84a         	sw	s2, 0x30(sp)
+40805124: d64e         	sw	s3, 0x2c(sp)
+40805126: 842a         	mv	s0, a0
+40805128: 89ae         	mv	s3, a1
+4080512a: 8936         	mv	s2, a3
+4080512c: 16058a63     	beqz	a1, 0x408052a0 <xQueueGenericSend+0x18a>
+40805130: 4789         	li	a5, 0x2
+40805132: 18f90c63     	beq	s2, a5, 0x408052ca <xQueueGenericSend+0x1b4>
+40805136: 7db010ef     	jal	0x40807110 <xTaskGetSchedulerState>
+4080513a: 1a050e63     	beqz	a0, 0x408052f6 <xQueueGenericSend+0x1e0>
+4080513e: da26         	sw	s1, 0x34(sp)
+40805140: 26f000ef     	jal	0x40805bae <vPortEnterCritical>
+40805144: 5c18         	lw	a4, 0x38(s0)
+40805146: 5c5c         	lw	a5, 0x3c(s0)
+40805148: 0af76663     	bltu	a4, a5, 0x408051f4 <xQueueGenericSend+0xde>
+4080514c: 4789         	li	a5, 0x2
+4080514e: 0ef90063     	beq	s2, a5, 0x4080522e <xQueueGenericSend+0x118>
+40805152: d452         	sw	s4, 0x28(sp)
+40805154: 4701         	li	a4, 0x0
+40805156: 54fd         	li	s1, -0x1
+40805158: 01040a13     	addi	s4, s0, 0x10
+4080515c: a839         	j	0x4080517a <xQueueGenericSend+0x64>
+4080515e: 28d000ef     	jal	0x40805bea <vPortExitCritical>
+40805162: 8522         	mv	a0, s0
+40805164: c71ff0ef     	jal	0x40804dd4 <prvUnlockQueue>
+40805168: 08d010ef     	jal	0x408069f4 <xTaskResumeAll>
+4080516c: 243000ef     	jal	0x40805bae <vPortEnterCritical>
+40805170: 5c14         	lw	a3, 0x38(s0)
+40805172: 5c5c         	lw	a5, 0x3c(s0)
+40805174: 4705         	li	a4, 0x1
+40805176: 06f6ee63     	bltu	a3, a5, 0x408051f2 <xQueueGenericSend+0xdc>
+4080517a: 47b2         	lw	a5, 0xc(sp)
+4080517c: 0c078363     	beqz	a5, 0x40805242 <xQueueGenericSend+0x12c>
+40805180: c35d         	beqz	a4, 0x40805226 <xQueueGenericSend+0x110>
+40805182: 269000ef     	jal	0x40805bea <vPortExitCritical>
+40805186: 05f010ef     	jal	0x408069e4 <vTaskSuspendAll>
+4080518a: 225000ef     	jal	0x40805bae <vPortEnterCritical>
+4080518e: 04444783     	lbu	a5, 0x44(s0)
+40805192: 07e2         	slli	a5, a5, 0x18
+40805194: 87e1         	srai	a5, a5, 0x18
+40805196: 00979463     	bne	a5, s1, 0x4080519e <xQueueGenericSend+0x88>
+4080519a: 04040223     	sb	zero, 0x44(s0)
+4080519e: 04544783     	lbu	a5, 0x45(s0)
+408051a2: 07e2         	slli	a5, a5, 0x18
+408051a4: 87e1         	srai	a5, a5, 0x18
+408051a6: 00979463     	bne	a5, s1, 0x408051ae <xQueueGenericSend+0x98>
+408051aa: 040402a3     	sb	zero, 0x45(s0)
+408051ae: 23d000ef     	jal	0x40805bea <vPortExitCritical>
+408051b2: 006c         	addi	a1, sp, 0xc
+408051b4: 0828         	addi	a0, sp, 0x18
+408051b6: 649010ef     	jal	0x40806ffe <xTaskCheckForTimeOut>
+408051ba: ed59         	bnez	a0, 0x40805258 <xQueueGenericSend+0x142>
+408051bc: 1f3000ef     	jal	0x40805bae <vPortEnterCritical>
+408051c0: 5c18         	lw	a4, 0x38(s0)
+408051c2: 5c5c         	lw	a5, 0x3c(s0)
+408051c4: f8f71de3     	bne	a4, a5, 0x4080515e <xQueueGenericSend+0x48>
+408051c8: 223000ef     	jal	0x40805bea <vPortExitCritical>
+408051cc: 45b2         	lw	a1, 0xc(sp)
+408051ce: 8552         	mv	a0, s4
+408051d0: 4cf010ef     	jal	0x40806e9e <vTaskPlaceOnEventList>
+408051d4: 8522         	mv	a0, s0
+408051d6: bffff0ef     	jal	0x40804dd4 <prvUnlockQueue>
+408051da: 01b010ef     	jal	0x408069f4 <xTaskResumeAll>
+408051de: f559         	bnez	a0, 0x4080516c <xQueueGenericSend+0x56>
+408051e0: 267000ef     	jal	0x40805c46 <vPortYield>
+408051e4: 1cb000ef     	jal	0x40805bae <vPortEnterCritical>
+408051e8: 5c14         	lw	a3, 0x38(s0)
+408051ea: 5c5c         	lw	a5, 0x3c(s0)
+408051ec: 4705         	li	a4, 0x1
+408051ee: f8f6f6e3     	bgeu	a3, a5, 0x4080517a <xQueueGenericSend+0x64>
+408051f2: 5a22         	lw	s4, 0x28(sp)
+408051f4: 85ce         	mv	a1, s3
+408051f6: 864a         	mv	a2, s2
+408051f8: 8522         	mv	a0, s0
+408051fa: 5c04         	lw	s1, 0x38(s0)
+408051fc: a43ff0ef     	jal	0x40804c3e <prvCopyDataToQueue>
+40805200: 443c         	lw	a5, 0x48(s0)
+40805202: c3ad         	beqz	a5, 0x40805264 <xQueueGenericSend+0x14e>
+40805204: 4789         	li	a5, 0x2
+40805206: 02f90c63     	beq	s2, a5, 0x4080523e <xQueueGenericSend+0x128>
+4080520a: 8522         	mv	a0, s0
+4080520c: ad3ff0ef     	jal	0x40804cde <prvNotifyQueueSetContainer>
+40805210: e12d         	bnez	a0, 0x40805272 <xQueueGenericSend+0x15c>
+40805212: 1d9000ef     	jal	0x40805bea <vPortExitCritical>
+40805216: 50f2         	lw	ra, 0x3c(sp)
+40805218: 5462         	lw	s0, 0x38(sp)
+4080521a: 54d2         	lw	s1, 0x34(sp)
+4080521c: 5942         	lw	s2, 0x30(sp)
+4080521e: 59b2         	lw	s3, 0x2c(sp)
+40805220: 4505         	li	a0, 0x1
+40805222: 6121         	addi	sp, sp, 0x40
+40805224: 8082         	ret
+40805226: 0828         	addi	a0, sp, 0x18
+40805228: 5c1010ef     	jal	0x40806fe8 <vTaskInternalSetTimeOutState>
+4080522c: bf99         	j	0x40805182 <xQueueGenericSend+0x6c>
+4080522e: 864a         	mv	a2, s2
+40805230: 85ce         	mv	a1, s3
+40805232: 8522         	mv	a0, s0
+40805234: 5c04         	lw	s1, 0x38(s0)
+40805236: a09ff0ef     	jal	0x40804c3e <prvCopyDataToQueue>
+4080523a: 443c         	lw	a5, 0x48(s0)
+4080523c: c785         	beqz	a5, 0x40805264 <xQueueGenericSend+0x14e>
+4080523e: f8f1         	bnez	s1, 0x40805212 <xQueueGenericSend+0xfc>
+40805240: b7e9         	j	0x4080520a <xQueueGenericSend+0xf4>
+40805242: 1a9000ef     	jal	0x40805bea <vPortExitCritical>
+40805246: 5462         	lw	s0, 0x38(sp)
+40805248: 50f2         	lw	ra, 0x3c(sp)
+4080524a: 5a22         	lw	s4, 0x28(sp)
+4080524c: 54d2         	lw	s1, 0x34(sp)
+4080524e: 5942         	lw	s2, 0x30(sp)
+40805250: 59b2         	lw	s3, 0x2c(sp)
+40805252: 4501         	li	a0, 0x0
+40805254: 6121         	addi	sp, sp, 0x40
+40805256: 8082         	ret
+40805258: 8522         	mv	a0, s0
+4080525a: b7bff0ef     	jal	0x40804dd4 <prvUnlockQueue>
+4080525e: 796010ef     	jal	0x408069f4 <xTaskResumeAll>
+40805262: b7d5         	j	0x40805246 <xQueueGenericSend+0x130>
+40805264: 505c         	lw	a5, 0x24(s0)
+40805266: d7cd         	beqz	a5, 0x40805210 <xQueueGenericSend+0xfa>
+40805268: 02440513     	addi	a0, s0, 0x24
+4080526c: 47b010ef     	jal	0x40806ee6 <xTaskRemoveFromEventList>
+40805270: d14d         	beqz	a0, 0x40805212 <xQueueGenericSend+0xfc>
+40805272: 1d5000ef     	jal	0x40805c46 <vPortYield>
+40805276: bf71         	j	0x40805212 <xQueueGenericSend+0xfc>
+40805278: 420596b7     	lui	a3, 0x42059
+4080527c: 4205d637     	lui	a2, 0x4205d
+40805280: 42059537     	lui	a0, 0x42059
+40805284: e8868693     	addi	a3, a3, -0x178
+40805288: 72860613     	addi	a2, a2, 0x728
+4080528c: e1250513     	addi	a0, a0, -0x1ee
+40805290: 3a800593     	li	a1, 0x3a8
+40805294: da26         	sw	s1, 0x34(sp)
+40805296: d84a         	sw	s2, 0x30(sp)
+40805298: d64e         	sw	s3, 0x2c(sp)
+4080529a: d452         	sw	s4, 0x28(sp)
+4080529c: 612040ef     	jal	0x408098ae <__assert_func>
+408052a0: 413c         	lw	a5, 0x40(a0)
+408052a2: e80787e3     	beqz	a5, 0x40805130 <xQueueGenericSend+0x1a>
+408052a6: 420596b7     	lui	a3, 0x42059
+408052aa: 4205d637     	lui	a2, 0x4205d
+408052ae: 42059537     	lui	a0, 0x42059
+408052b2: f0068693     	addi	a3, a3, -0x100
+408052b6: 72860613     	addi	a2, a2, 0x728
+408052ba: e1250513     	addi	a0, a0, -0x1ee
+408052be: 3a900593     	li	a1, 0x3a9
+408052c2: da26         	sw	s1, 0x34(sp)
+408052c4: d452         	sw	s4, 0x28(sp)
+408052c6: 5e8040ef     	jal	0x408098ae <__assert_func>
+408052ca: 5c58         	lw	a4, 0x3c(s0)
+408052cc: 4785         	li	a5, 0x1
+408052ce: e6f704e3     	beq	a4, a5, 0x40805136 <xQueueGenericSend+0x20>
+408052d2: 420596b7     	lui	a3, 0x42059
+408052d6: 4205d637     	lui	a2, 0x4205d
+408052da: 42059537     	lui	a0, 0x42059
+408052de: f5868693     	addi	a3, a3, -0xa8
+408052e2: 72860613     	addi	a2, a2, 0x728
+408052e6: e1250513     	addi	a0, a0, -0x1ee
+408052ea: 3aa00593     	li	a1, 0x3aa
+408052ee: da26         	sw	s1, 0x34(sp)
+408052f0: d452         	sw	s4, 0x28(sp)
+408052f2: 5bc040ef     	jal	0x408098ae <__assert_func>
+408052f6: 47b2         	lw	a5, 0xc(sp)
+408052f8: e40783e3     	beqz	a5, 0x4080513e <xQueueGenericSend+0x28>
+408052fc: 420596b7     	lui	a3, 0x42059
+40805300: 4205d637     	lui	a2, 0x4205d
+40805304: 42059537     	lui	a0, 0x42059
+40805308: fa868693     	addi	a3, a3, -0x58
+4080530c: 72860613     	addi	a2, a2, 0x728
+40805310: e1250513     	addi	a0, a0, -0x1ee
+40805314: 3ad00593     	li	a1, 0x3ad
+40805318: da26         	sw	s1, 0x34(sp)
+4080531a: d452         	sw	s4, 0x28(sp)
+4080531c: 592040ef     	jal	0x408098ae <__assert_func>
+
+40805590 <xQueueReceive>:
+40805590: 7139         	addi	sp, sp, -0x40
+40805592: de06         	sw	ra, 0x3c(sp)
+40805594: dc22         	sw	s0, 0x38(sp)
+40805596: d84a         	sw	s2, 0x30(sp)
+40805598: d64e         	sw	s3, 0x2c(sp)
+4080559a: c632         	sw	a2, 0xc(sp)
+4080559c: 10050363     	beqz	a0, 0x408056a2 <xQueueReceive+0x112>
+408055a0: 842a         	mv	s0, a0
+408055a2: 89ae         	mv	s3, a1
+408055a4: 12058063     	beqz	a1, 0x408056c4 <xQueueReceive+0x134>
+408055a8: 369010ef     	jal	0x40807110 <xTaskGetSchedulerState>
+408055ac: 14050063     	beqz	a0, 0x408056ec <xQueueReceive+0x15c>
+408055b0: 5fe000ef     	jal	0x40805bae <vPortEnterCritical>
+408055b4: 03842903     	lw	s2, 0x38(s0)
+408055b8: 0a091d63     	bnez	s2, 0x40805672 <xQueueReceive+0xe2>
+408055bc: 47b2         	lw	a5, 0xc(sp)
+408055be: da26         	sw	s1, 0x34(sp)
+408055c0: cbb5         	beqz	a5, 0x40805634 <xQueueReceive+0xa4>
+408055c2: 0828         	addi	a0, sp, 0x18
+408055c4: 225010ef     	jal	0x40806fe8 <vTaskInternalSetTimeOutState>
+408055c8: 54fd         	li	s1, -0x1
+408055ca: 620000ef     	jal	0x40805bea <vPortExitCritical>
+408055ce: 416010ef     	jal	0x408069e4 <vTaskSuspendAll>
+408055d2: 5dc000ef     	jal	0x40805bae <vPortEnterCritical>
+408055d6: 04444783     	lbu	a5, 0x44(s0)
+408055da: 07e2         	slli	a5, a5, 0x18
+408055dc: 87e1         	srai	a5, a5, 0x18
+408055de: 00979463     	bne	a5, s1, 0x408055e6 <xQueueReceive+0x56>
+408055e2: 04040223     	sb	zero, 0x44(s0)
+408055e6: 04544783     	lbu	a5, 0x45(s0)
+408055ea: 07e2         	slli	a5, a5, 0x18
+408055ec: 87e1         	srai	a5, a5, 0x18
+408055ee: 00979463     	bne	a5, s1, 0x408055f6 <xQueueReceive+0x66>
+408055f2: 040402a3     	sb	zero, 0x45(s0)
+408055f6: 5f4000ef     	jal	0x40805bea <vPortExitCritical>
+408055fa: 006c         	addi	a1, sp, 0xc
+408055fc: 0828         	addi	a0, sp, 0x18
+408055fe: 201010ef     	jal	0x40806ffe <xTaskCheckForTimeOut>
+40805602: e139         	bnez	a0, 0x40805648 <xQueueReceive+0xb8>
+40805604: 5aa000ef     	jal	0x40805bae <vPortEnterCritical>
+40805608: 5c1c         	lw	a5, 0x38(s0)
+4080560a: eba9         	bnez	a5, 0x4080565c <xQueueReceive+0xcc>
+4080560c: 5de000ef     	jal	0x40805bea <vPortExitCritical>
+40805610: 45b2         	lw	a1, 0xc(sp)
+40805612: 02440513     	addi	a0, s0, 0x24
+40805616: 089010ef     	jal	0x40806e9e <vTaskPlaceOnEventList>
+4080561a: 8522         	mv	a0, s0
+4080561c: fb8ff0ef     	jal	0x40804dd4 <prvUnlockQueue>
+40805620: 3d4010ef     	jal	0x408069f4 <xTaskResumeAll>
+40805624: c139         	beqz	a0, 0x4080566a <xQueueReceive+0xda>
+40805626: 2361         	jal	0x40805bae <vPortEnterCritical>
+40805628: 03842903     	lw	s2, 0x38(s0)
+4080562c: 04091263     	bnez	s2, 0x40805670 <xQueueReceive+0xe0>
+40805630: 47b2         	lw	a5, 0xc(sp)
+40805632: ffc1         	bnez	a5, 0x408055ca <xQueueReceive+0x3a>
+40805634: 5b6000ef     	jal	0x40805bea <vPortExitCritical>
+40805638: 50f2         	lw	ra, 0x3c(sp)
+4080563a: 5462         	lw	s0, 0x38(sp)
+4080563c: 54d2         	lw	s1, 0x34(sp)
+4080563e: 5942         	lw	s2, 0x30(sp)
+40805640: 59b2         	lw	s3, 0x2c(sp)
+40805642: 4501         	li	a0, 0x0
+40805644: 6121         	addi	sp, sp, 0x40
+40805646: 8082         	ret
+40805648: 8522         	mv	a0, s0
+4080564a: f8aff0ef     	jal	0x40804dd4 <prvUnlockQueue>
+4080564e: 3a6010ef     	jal	0x408069f4 <xTaskResumeAll>
+40805652: 2bb1         	jal	0x40805bae <vPortEnterCritical>
+40805654: 5c1c         	lw	a5, 0x38(s0)
+40805656: dff9         	beqz	a5, 0x40805634 <xQueueReceive+0xa4>
+40805658: 2b49         	jal	0x40805bea <vPortExitCritical>
+4080565a: b7f1         	j	0x40805626 <xQueueReceive+0x96>
+4080565c: 2379         	jal	0x40805bea <vPortExitCritical>
+4080565e: 8522         	mv	a0, s0
+40805660: f74ff0ef     	jal	0x40804dd4 <prvUnlockQueue>
+40805664: 390010ef     	jal	0x408069f4 <xTaskResumeAll>
+40805668: bf7d         	j	0x40805626 <xQueueReceive+0x96>
+4080566a: 5dc000ef     	jal	0x40805c46 <vPortYield>
+4080566e: bf65         	j	0x40805626 <xQueueReceive+0x96>
+40805670: 54d2         	lw	s1, 0x34(sp)
+40805672: 4030         	lw	a2, 0x40(s0)
+40805674: ca11         	beqz	a2, 0x40805688 <xQueueReceive+0xf8>
+40805676: 444c         	lw	a1, 0xc(s0)
+40805678: 441c         	lw	a5, 0x8(s0)
+4080567a: 95b2         	add	a1, a1, a2
+4080567c: c44c         	sw	a1, 0xc(s0)
+4080567e: 08f5fb63     	bgeu	a1, a5, 0x40805714 <xQueueReceive+0x184>
+40805682: 854e         	mv	a0, s3
+40805684: 524040ef     	jal	0x40809ba8 <memcpy>
+40805688: 197d         	addi	s2, s2, -0x1
+4080568a: 03242c23     	sw	s2, 0x38(s0)
+4080568e: 481c         	lw	a5, 0x10(s0)
+40805690: e7c9         	bnez	a5, 0x4080571a <xQueueReceive+0x18a>
+40805692: 2ba1         	jal	0x40805bea <vPortExitCritical>
+40805694: 50f2         	lw	ra, 0x3c(sp)
+40805696: 5462         	lw	s0, 0x38(sp)
+40805698: 5942         	lw	s2, 0x30(sp)
+4080569a: 59b2         	lw	s3, 0x2c(sp)
+4080569c: 4505         	li	a0, 0x1
+4080569e: 6121         	addi	sp, sp, 0x40
+408056a0: 8082         	ret
+408056a2: 420596b7     	lui	a3, 0x42059
+408056a6: 4205d637     	lui	a2, 0x4205d
+408056aa: 42059537     	lui	a0, 0x42059
+408056ae: 08468693     	addi	a3, a3, 0x84
+408056b2: 6e860613     	addi	a2, a2, 0x6e8
+408056b6: e1250513     	addi	a0, a0, -0x1ee
+408056ba: 5fb00593     	li	a1, 0x5fb
+408056be: da26         	sw	s1, 0x34(sp)
+408056c0: 1ee040ef     	jal	0x408098ae <__assert_func>
+408056c4: 413c         	lw	a5, 0x40(a0)
+408056c6: ee0781e3     	beqz	a5, 0x408055a8 <xQueueReceive+0x18>
+408056ca: 420596b7     	lui	a3, 0x42059
+408056ce: 4205d637     	lui	a2, 0x4205d
+408056d2: 42059537     	lui	a0, 0x42059
+408056d6: 09068693     	addi	a3, a3, 0x90
+408056da: 6e860613     	addi	a2, a2, 0x6e8
+408056de: e1250513     	addi	a0, a0, -0x1ee
+408056e2: 5ff00593     	li	a1, 0x5ff
+408056e6: da26         	sw	s1, 0x34(sp)
+408056e8: 1c6040ef     	jal	0x408098ae <__assert_func>
+408056ec: 47b2         	lw	a5, 0xc(sp)
+408056ee: ec0781e3     	beqz	a5, 0x408055b0 <xQueueReceive+0x20>
+408056f2: 420596b7     	lui	a3, 0x42059
+408056f6: 4205d637     	lui	a2, 0x4205d
+408056fa: 42059537     	lui	a0, 0x42059
+408056fe: fa868693     	addi	a3, a3, -0x58
+40805702: 6e860613     	addi	a2, a2, 0x6e8
+40805706: e1250513     	addi	a0, a0, -0x1ee
+4080570a: 60400593     	li	a1, 0x604
+4080570e: da26         	sw	s1, 0x34(sp)
+40805710: 19e040ef     	jal	0x408098ae <__assert_func>
+40805714: 400c         	lw	a1, 0x0(s0)
+40805716: c44c         	sw	a1, 0xc(s0)
+40805718: b7ad         	j	0x40805682 <xQueueReceive+0xf2>
+4080571a: 01040513     	addi	a0, s0, 0x10
+4080571e: 7c8010ef     	jal	0x40806ee6 <xTaskRemoveFromEventList>
+40805722: d925         	beqz	a0, 0x40805692 <xQueueReceive+0x102>
+40805724: 230d         	jal	0x40805c46 <vPortYield>
+40805726: b7b5         	j	0x40805692 <xQueueReceive+0x102>
+
+40805a42 <uxQueueMessagesWaiting>:
+40805a42: 1141         	addi	sp, sp, -0x10
+40805a44: c606         	sw	ra, 0xc(sp)
+40805a46: c422         	sw	s0, 0x8(sp)
+40805a48: c911         	beqz	a0, 0x40805a5c <uxQueueMessagesWaiting+0x1a>
+40805a4a: 842a         	mv	s0, a0
+40805a4c: 228d         	jal	0x40805bae <vPortEnterCritical>
+40805a4e: 5c00         	lw	s0, 0x38(s0)
+40805a50: 2a69         	jal	0x40805bea <vPortExitCritical>
+40805a52: 40b2         	lw	ra, 0xc(sp)
+40805a54: 8522         	mv	a0, s0
+40805a56: 4422         	lw	s0, 0x8(sp)
+40805a58: 0141         	addi	sp, sp, 0x10
+40805a5a: 8082         	ret
+40805a5c: 420596b7     	lui	a3, 0x42059
+40805a60: 4205d637     	lui	a2, 0x4205d
+40805a64: 6585         	lui	a1, 0x1
+40805a66: 42059537     	lui	a0, 0x42059
+40805a6a: 16468693     	addi	a3, a3, 0x164
+40805a6e: 6a460613     	addi	a2, a2, 0x6a4
+40805a72: 90658593     	addi	a1, a1, -0x6fa
+40805a76: e1250513     	addi	a0, a0, -0x1ee
+40805a7a: 635030ef     	jal	0x408098ae <__assert_func>
+
+40805a7e <vQueueDelete>:
+40805a7e: c511         	beqz	a0, 0x40805a8a <vQueueDelete+0xc>
+40805a80: 04654783     	lbu	a5, 0x46(a0)
+40805a84: c391         	beqz	a5, 0x40805a88 <vQueueDelete+0xa>
+40805a86: 8082         	ret
+40805a88: a611         	j	0x40805d8c <vPortFree>
+40805a8a: 420596b7     	lui	a3, 0x42059
+40805a8e: 4205d637     	lui	a2, 0x4205d
+40805a92: 6585         	lui	a1, 0x1
+40805a94: 42059537     	lui	a0, 0x42059
+40805a98: 1141         	addi	sp, sp, -0x10
+40805a9a: e8868693     	addi	a3, a3, -0x178
+40805a9e: 69460613     	addi	a2, a2, 0x694
+40805aa2: 93358593     	addi	a1, a1, -0x6cd
+40805aa6: e1250513     	addi	a0, a0, -0x1ee
+40805aaa: c606         	sw	ra, 0xc(sp)
+40805aac: 603030ef     	jal	0x408098ae <__assert_func>
+
+40809ba8 <memcpy>:
+40809ba8: 478d         	li	a5, 0x3
+40809baa: 00c506b3     	add	a3, a0, a2
+40809bae: 0ac7fa63     	bgeu	a5, a2, 0x40809c62 <memcpy+0xba>
+40809bb2: 00357713     	andi	a4, a0, 0x3
+40809bb6: 87aa         	mv	a5, a0
+40809bb8: e351         	bnez	a4, 0x40809c3c <memcpy+0x94>
+40809bba: ffc6f713     	andi	a4, a3, -0x4
+40809bbe: 40f70833     	sub	a6, a4, a5
+40809bc2: 02000613     	li	a2, 0x20
+40809bc6: 01064e63     	blt	a2, a6, 0x40809be2 <memcpy+0x3a>
+40809bca: 00e7f963     	bgeu	a5, a4, 0x40809bdc <memcpy+0x34>
+40809bce: 4190         	lw	a2, 0x0(a1)
+40809bd0: 0591         	addi	a1, a1, 0x4
+40809bd2: 0791         	addi	a5, a5, 0x4
+40809bd4: fec7ae23     	sw	a2, -0x4(a5)
+40809bd8: fee7ebe3     	bltu	a5, a4, 0x40809bce <memcpy+0x26>
+40809bdc: 08d7e663     	bltu	a5, a3, 0x40809c68 <memcpy+0xc0>
+40809be0: 8082         	ret
+40809be2: 0005a803     	lw	a6, 0x0(a1)
+40809be6: 0045a883     	lw	a7, 0x4(a1)
+40809bea: 0085a303     	lw	t1, 0x8(a1)
+40809bee: 00c5ae03     	lw	t3, 0xc(a1)
+40809bf2: 0105ae83     	lw	t4, 0x10(a1)
+40809bf6: 0145af03     	lw	t5, 0x14(a1)
+40809bfa: 0185af83     	lw	t6, 0x18(a1)
+40809bfe: 01c5a283     	lw	t0, 0x1c(a1)
+40809c02: 0205a383     	lw	t2, 0x20(a1)
+40809c06: 02478793     	addi	a5, a5, 0x24
+40809c0a: 02458593     	addi	a1, a1, 0x24
+40809c0e: fd07ae23     	sw	a6, -0x24(a5)
+40809c12: ff17a023     	sw	a7, -0x20(a5)
+40809c16: fe67a223     	sw	t1, -0x1c(a5)
+40809c1a: ffc7a423     	sw	t3, -0x18(a5)
+40809c1e: ffd7a623     	sw	t4, -0x14(a5)
+40809c22: ffe7a823     	sw	t5, -0x10(a5)
+40809c26: fff7aa23     	sw	t6, -0xc(a5)
+40809c2a: fe57ac23     	sw	t0, -0x8(a5)
+40809c2e: fe77ae23     	sw	t2, -0x4(a5)
+40809c32: 40f70833     	sub	a6, a4, a5
+40809c36: fb0646e3     	blt	a2, a6, 0x40809be2 <memcpy+0x3a>
+40809c3a: bf41         	j	0x40809bca <memcpy+0x22>
+40809c3c: 0005c603     	lbu	a2, 0x0(a1)
+40809c40: 0785         	addi	a5, a5, 0x1
+40809c42: 0037f713     	andi	a4, a5, 0x3
+40809c46: fec78fa3     	sb	a2, -0x1(a5)
+40809c4a: 0585         	addi	a1, a1, 0x1
+40809c4c: d73d         	beqz	a4, 0x40809bba <memcpy+0x12>
+40809c4e: 0005c603     	lbu	a2, 0x0(a1)
+40809c52: 0785         	addi	a5, a5, 0x1
+40809c54: 0037f713     	andi	a4, a5, 0x3
+40809c58: fec78fa3     	sb	a2, -0x1(a5)
+40809c5c: 0585         	addi	a1, a1, 0x1
+40809c5e: ff79         	bnez	a4, 0x40809c3c <memcpy+0x94>
+40809c60: bfa9         	j	0x40809bba <memcpy+0x12>
+40809c62: 87aa         	mv	a5, a0
+40809c64: f6d57ee3     	bgeu	a0, a3, 0x40809be0 <memcpy+0x38>
+40809c68: 0005c703     	lbu	a4, 0x0(a1)
+40809c6c: 0785         	addi	a5, a5, 0x1
+40809c6e: 0585         	addi	a1, a1, 0x1
+40809c70: fee78fa3     	sb	a4, -0x1(a5)
+40809c74: fef69ae3     	bne	a3, a5, 0x40809c68 <memcpy+0xc0>
+40809c78: 8082         	ret
+
+40809c7c <memmove>:
+40809c7c: 02a5ff63     	bgeu	a1, a0, 0x40809cba <memmove+0x3e>
+40809c80: 00c58733     	add	a4, a1, a2
+40809c84: 02e57b63     	bgeu	a0, a4, 0x40809cba <memmove+0x3e>
+40809c88: 468d         	li	a3, 0x3
+40809c8a: 00c507b3     	add	a5, a0, a2
+40809c8e: 00c6fa63     	bgeu	a3, a2, 0x40809ca2 <memmove+0x26>
+40809c92: ffc72583     	lw	a1, -0x4(a4)
+40809c96: 1771         	addi	a4, a4, -0x4
+40809c98: 17f1         	addi	a5, a5, -0x4
+40809c9a: 1671         	addi	a2, a2, -0x4
+40809c9c: c38c         	sw	a1, 0x0(a5)
+40809c9e: fec6eae3     	bltu	a3, a2, 0x40809c92 <memmove+0x16>
+40809ca2: 40c785b3     	sub	a1, a5, a2
+40809ca6: ce59         	beqz	a2, 0x40809d44 <memmove+0xc8>
+40809ca8: fff74683     	lbu	a3, -0x1(a4)
+40809cac: 17fd         	addi	a5, a5, -0x1
+40809cae: 177d         	addi	a4, a4, -0x1
+40809cb0: 00d78023     	sb	a3, 0x0(a5)
+40809cb4: fef59ae3     	bne	a1, a5, 0x40809ca8 <memmove+0x2c>
+40809cb8: 8082         	ret
+40809cba: 470d         	li	a4, 0x3
+40809cbc: 87aa         	mv	a5, a0
+40809cbe: 06c77763     	bgeu	a4, a2, 0x40809d2c <memmove+0xb0>
+40809cc2: 477d         	li	a4, 0x1f
+40809cc4: 04c77b63     	bgeu	a4, a2, 0x40809d1a <memmove+0x9e>
+40809cc8: 4194         	lw	a3, 0x0(a1)
+40809cca: 0045a803     	lw	a6, 0x4(a1)
+40809cce: 0085a883     	lw	a7, 0x8(a1)
+40809cd2: 00c5a303     	lw	t1, 0xc(a1)
+40809cd6: 0105ae03     	lw	t3, 0x10(a1)
+40809cda: 0145ae83     	lw	t4, 0x14(a1)
+40809cde: 0185af03     	lw	t5, 0x18(a1)
+40809ce2: 01c5af83     	lw	t6, 0x1c(a1)
+40809ce6: 02058593     	addi	a1, a1, 0x20
+40809cea: 02078793     	addi	a5, a5, 0x20
+40809cee: 1601         	addi	a2, a2, -0x20
+40809cf0: fed7a023     	sw	a3, -0x20(a5)
+40809cf4: ff07a223     	sw	a6, -0x1c(a5)
+40809cf8: ff17a423     	sw	a7, -0x18(a5)
+40809cfc: fe67a623     	sw	t1, -0x14(a5)
+40809d00: ffc7a823     	sw	t3, -0x10(a5)
+40809d04: ffd7aa23     	sw	t4, -0xc(a5)
+40809d08: ffe7ac23     	sw	t5, -0x8(a5)
+40809d0c: fff7ae23     	sw	t6, -0x4(a5)
+40809d10: fac76ce3     	bltu	a4, a2, 0x40809cc8 <memmove+0x4c>
+40809d14: 470d         	li	a4, 0x3
+40809d16: 00c77b63     	bgeu	a4, a2, 0x40809d2c <memmove+0xb0>
+40809d1a: 470d         	li	a4, 0x3
+40809d1c: 4194         	lw	a3, 0x0(a1)
+40809d1e: 0591         	addi	a1, a1, 0x4
+40809d20: 0791         	addi	a5, a5, 0x4
+40809d22: 1671         	addi	a2, a2, -0x4
+40809d24: fed7ae23     	sw	a3, -0x4(a5)
+40809d28: fec76ae3     	bltu	a4, a2, 0x40809d1c <memmove+0xa0>
+40809d2c: 00c786b3     	add	a3, a5, a2
+40809d30: ca19         	beqz	a2, 0x40809d46 <memmove+0xca>
+40809d32: 0005c703     	lbu	a4, 0x0(a1)
+40809d36: 0785         	addi	a5, a5, 0x1
+40809d38: 0585         	addi	a1, a1, 0x1
+40809d3a: fee78fa3     	sb	a4, -0x1(a5)
+40809d3e: fed79ae3     	bne	a5, a3, 0x40809d32 <memmove+0xb6>
+40809d42: 8082         	ret
+40809d44: 8082         	ret
+40809d46: 8082         	ret

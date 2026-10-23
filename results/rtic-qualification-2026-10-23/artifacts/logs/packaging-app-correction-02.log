@@ -1,0 +1,6 @@
+   Compiling rtic-image-correction v0.1.0 (/Users/builduser/Git/esp32-c6/.cache/rtic-qualification-2026-10-23/packaging-helper)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.36s
+     Running `target/debug/rtic-image-correction app ../artifacts/monotonic-default.bin ../upstream/examples/esp32c6/target/riscv32imac-unknown-none-elf/release/examples/monotonic ../artifacts/monotonic-corrected.bin`
+input_sha256=40ebb5ef5308ac54ba47e8cad5909b2654d955fa63f8b30d287f0caac278913d
+output_sha256=b10d6dfdc9f84f0e02f3007e198fe38ea3ae02ca47a3222e515073cfc9cbfb29
+bytes=18000

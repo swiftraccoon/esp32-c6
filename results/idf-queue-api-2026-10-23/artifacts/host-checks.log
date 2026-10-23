@@ -1,0 +1,61 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.11s
+     Running unittests src/lib.rs (target/debug/deps/bench_core-08257e480ecdf9cf)
+
+running 2 tests
+test tests::one_round_is_invertible_across_boundary_states ... ok
+test tests::matches_independently_calculated_vectors ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/benchctl-179eff18cdc89fd0)
+
+running 33 tests
+test protocol::tests::nearest_rank_percentiles_have_explicit_small_sample_behavior ... ok
+test protocol::tests::nearest_rank_at_64_samples_keeps_the_tail_and_outlier ... ok
+test protocol::tests::wrong_checksum_never_becomes_a_result ... ok
+test protocol::tests::rejects_incomplete_duplicate_and_rebooted_runs ... ok
+test protocol::tests::enforces_timer_units_but_preserves_zero_overhead ... ok
+test protocol::tests::requires_both_complete_sample_sets ... ok
+test protocol::tests::v1_completion_metadata_keeps_its_original_parsed_output ... ok
+test protocol::tests::rejects_a_record_after_completion_and_revokes_summary ... ok
+test protocol::tests::v2_declaration_is_exact_for_the_selected_platform ... ok
+test protocol::tests::v2_requires_bounded_message_metadata_only_for_schedulers ... ok
+test protocol::tests::v2_rejects_false_or_unsupported_clock_claims ... ok
+test queue_study::tests::permutation_stream_is_reproducible ... ok
+test queue_study::tests::contrast_median_handles_signed_even_and_empty_samples ... ok
+test queue_study::tests::schedule_tampering_is_rejected_before_any_capture_is_read ... ok
+test queue_study::tests::seeded_schedule_balances_each_session_and_never_traverses ... ok
+test tests::preserves_boot_noise_but_rejects_corrupt_json ... ok
+test tests::archived_transcript_validates_every_record_before_reporting ... ok
+test tests::rejects_unbounded_archived_lines ... ok
+test tests::archived_line_limit_is_the_same_with_and_without_newline ... ok
+test protocol::tests::v2_rejects_message_corruption_ordering_protocol_mismatch_and_reboot ... ok
+test protocol::tests::v2_supports_complete_bare_and_scheduler_boots_without_inventing_results ... ok
+test protocol::tests::v2_requires_stable_clock_registers_and_truthful_completion_counts ... ok
+test queue_protocol::tests::both_backends_keep_raw_ticks_nearest_rank_and_complete_evidence ... ok
+test queue_protocol::tests::archived_framing_rejects_malformed_overlong_and_partial_json ... ok
+test queue_protocol::tests::nonce_freshness_is_explicit_and_any_rejection_revokes_results ... ok
+test queue_protocol::tests::completion_rejects_bad_counts_or_failed_cleanup ... ok
+test queue_protocol::tests::rejects_timer_configuration_lies_and_changed_readback ... ok
+test queue_protocol::tests::rejects_sequence_checksum_phase_and_timestamp_errors ... ok
+test queue_protocol::tests::rejects_missing_duplicate_out_of_order_and_trailing_records ... ok
+test queue_protocol::tests::rejects_inconsistent_headers_unknown_fields_and_wrong_backend ... ok
+test queue_protocol::tests::qualification_requires_proved_counts_progress_scale_and_wfi ... ok
+test queue_study::tests::study_replays_all_boots_and_reports_only_the_prespecified_contrast ... ok
+test queue_study::tests::failed_or_invalid_attempts_never_produce_a_success_subset_interval ... ok
+
+test result: ok. 33 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.07s
+
+   Doc-tests bench_core
+
+running 2 tests
+test crates/bench-core/src/lib.rs - workload (line 76) ... ok
+test crates/bench-core/src/lib.rs - (line 21) ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+all doctests ran in 0.43s; merged doctests compilation took 0.43s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.09s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.11s
+   Generated /Users/builduser/Git/esp32-c6/target/doc/bench_core/index.html and 1 other file
+    Finished `release` profile [optimized] target(s) in 0.05s

@@ -1,0 +1,241 @@
+laze: project root: /Users/builduser/Git/esp32-c6/.cache/ariel-os relpath: examples/hello-world project_file: laze-project.yml
+laze: building all for espressif-esp32-c6-devkitc-1
+laze: reading cache: No such file or directory (os error 2)
+laze: parsing 83 files took 18.085083ms
+laze: stat'ing 83 files took 223.541µs
+configuring hello-world for espressif-esp32-c6-devkitc-1
+configured 1 builds (took 1.292375ms).
+laze: writing cache took 1.253208ms.
+ninja: Jobserver mode detected: -j --jobserver-auth=fifo:/tmp/__rust_jobslot_fifo_8984c5ae444b287209f9a6b6614e0f8f
+[0/1] CARGO build/bin/espressif-esp32-c6-devkitc-1/cargo/riscv32imac-unknown-none-elf/release/hello-world
+    Updating git repository `https://github.com/ariel-os/embassy`
+    Updating git repository `https://github.com/ariel-os/embassy`
+    Updating git repository `https://github.com/ariel-os/embassy`
+    Updating git repository `https://github.com/ariel-os/embassy`
+    Updating git repository `https://github.com/ariel-os/embassy`
+    Updating git repository `https://github.com/ariel-os/embassy`
+    Updating git repository `https://github.com/ariel-os/embassy`
+    Updating git repository `https://github.com/ariel-os/esp-hal`
+    Updating crates.io index
+    Updating git repository `https://github.com/ariel-os/nrf-sdc`
+    Updating git repository `https://github.com/kdimonych/cyw43-firmware-rust/`
+    Updating git submodule `https://github.com/embassy-rs/embassy.git`
+    Updating git repository `https://codeberg.org/AudaciousAxiom/stm32-lcd-driver.git`
+    Updating git repository `https://gitlab.com/etonomy/riot-module-examples`
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+ Downloading crates ...
+  Downloaded coap-message v0.3.7
+  Downloaded coap-message-implementations v0.1.7
+  Downloaded const-sha1 v0.3.0
+  Downloaded coap-request v0.2.0-alpha.2
+  Downloaded bitfield-macros v0.19.4
+  Downloaded bare-metal v0.2.5
+  Downloaded defmt-or-log-macros v0.1.2
+  Downloaded data-encoding-macro v0.1.18
+  Downloaded custom_derive v0.1.7
+  Downloaded docsplay v0.1.3
+  Downloaded hash32 v0.2.1
+  Downloaded featurecomb v0.2.0
+  Downloaded embedded-io-adapters v0.7.0
+  Downloaded cbor-macro v0.1.0
+  Downloaded docsplay-macros v0.1.2
+  Downloaded liboscore-msgbackend v0.2.7
+  Downloaded embedded-nal-async v0.9.0
+  Downloaded embedded-storage-async v0.4.1
+  Downloaded managed v0.8.0
+  Downloaded futures-io v0.3.31
+  Downloaded cboritem v0.1.3
+  Downloaded hash32-derive v0.1.1
+  Downloaded embassy-net-driver-channel v0.4.0
+  Downloaded bitfield v0.19.4
+  Downloaded form_urlencoded v1.2.1
+  Downloaded featurecomb-schema v0.1.0
+  Downloaded extra-embedded-io-adapters v0.1.0
+  Downloaded embedded-storage v0.3.1
+  Downloaded hexlit v0.5.5
+  Downloaded embassy-net-driver v0.2.0
+  Downloaded windowed-infinity v0.2.0
+  Downloaded usbd-hid-descriptors v0.10.0
+  Downloaded liboscore-cryptobackend v0.2.7
+  Downloaded lakers-crypto-rustcrypto v0.8.0
+  Downloaded lakers v0.8.0
+  Downloaded cipher v0.3.0
+  Downloaded embedded-nal v0.9.0
+  Downloaded embassy-usb-driver v0.2.2
+  Downloaded embassy-net-wiznet v0.3.0
+  Downloaded defmt v0.3.100
+  Downloaded indoc v2.0.6
+  Downloaded btuuid v0.1.0
+  Downloaded bitfield v0.14.0
+  Downloaded bitfield v0.13.2
+  Downloaded aead v0.4.3
+  Downloaded glob v0.3.2
+  Downloaded futures-channel v0.3.31
+  Downloaded data-encoding v2.9.0
+  Downloaded ld-memory v0.3.2
+  Downloaded enumset v1.1.6
+  Downloaded fugit v0.3.7
+  Downloaded delegate v0.13.3
+  Downloaded ctr v0.8.0
+  Downloaded conv v0.3.3
+  Downloaded crc-catalog v2.4.0
+  Downloaded minicbor-adapters v0.0.8
+  Downloaded convert_case v0.8.0
+  Downloaded coap-message-utils v0.3.12
+  Downloaded esp-synopsys-usb-otg v0.4.2
+  Downloaded ieee802154 v0.6.1
+  Downloaded enumset_derive v0.11.0
+  Downloaded defmt-or-log v0.2.2
+  Downloaded embassy-usb-synopsys-otg v0.3.3
+  Downloaded coap-handler-implementations v0.6.2
+  Downloaded data-encoding-macro-internal v0.1.16
+  Downloaded coap-numbers v0.2.11
+  Downloaded coap-handler v0.2.1
+  Downloaded byte v0.2.7
+  Downloaded separator v0.4.1
+  Downloaded cbor-diag v0.1.12
+  Downloaded rawpointer v0.2.1
+  Downloaded const-str v1.1.0
+  Downloaded peg-runtime v0.8.5
+  Downloaded build-rs v0.3.3
+  Downloaded bs58 v0.5.1
+  Downloaded portable_atomic_enum v0.3.1
+  Downloaded icu_properties v2.0.0
+  Downloaded embedded-nal-coap v0.1.0-alpha.6
+  Downloaded const_panic v0.2.15
+  Downloaded half v2.6.0
+  Downloaded futures v0.3.31
+  Downloaded trouble-host-macros v0.4.0
+  Downloaded embassy-usb v0.6.0
+  Downloaded tee-embedded-io v0.1.0
+  Downloaded icu_normalizer_data v2.0.0
+  Downloaded percent-encoding v2.3.1
+  Downloaded icu_normalizer v2.0.0
+  Downloaded bytemuck v1.24.0
+  Downloaded yoke-derive v0.8.0
+  Downloaded usbd-hid-macros v0.10.0
+  Downloaded icu_locale_core v2.0.0
+  Downloaded proc-macro-crate v3.4.0
+  Downloaded bt-hci v0.8.1
+  Downloaded icu_collections v2.0.0
+  Downloaded icu_provider v2.0.0
+  Downloaded cc v1.2.30
+  Downloaded cbor-edn v0.0.11
+  Downloaded pretty-hex v0.4.1
+  Downloaded cortex-m v0.7.7
+  Downloaded icu_properties_data v2.0.0
+  Downloaded serde_spanned v1.0.4
+  Downloaded potential_utf v0.1.2
+  Downloaded idna v1.0.3
+  Downloaded volatile-register v0.2.2
+  Downloaded ral-registers v0.1.3
+  Downloaded lakers-shared v0.8.0
+  Downloaded rustversion v1.0.20
+  Downloaded yoke v0.8.0
+  Downloaded pin-project-lite v0.2.16
+  Downloaded cbindgen v0.29.2
+  Downloaded usbd-hid v0.10.0
+  Downloaded linkme-impl v0.3.33
+  Downloaded esp32c2 v0.29.2
+  Downloaded zerovec-derive v0.11.1
+  Downloaded lock_api v0.4.12
+  Downloaded tinystr v0.8.1
+  Downloaded rustc_version v0.2.3
+  Downloaded portable_atomic_enum_macros v0.2.1
+  Downloaded peg-macros v0.8.5
+  Downloaded num-rational v0.4.2
+  Downloaded toml_datetime v1.0.0+spec-1.1.0
+  Downloaded linked_list_allocator v0.10.5
+  Downloaded ccm v0.4.3
+  Downloaded toml_datetime v0.7.0
+  Downloaded somni-parser v0.2.2
+  Downloaded slab v0.4.11
+  Downloaded quote v1.0.43
+  Downloaded minicbor-derive v0.18.3
+  Downloaded memsolve v0.3.1
+  Downloaded linkme v0.3.33
+  Downloaded libloading v0.8.7
+  Downloaded usb-device v0.3.2
+  Downloaded toml_writer v1.0.6+spec-1.1.0
+  Downloaded litemap v0.8.0
+  Downloaded peg v0.8.5
+  Downloaded optfield v0.4.0
+  Downloaded somni-expr v0.2.0
+  Downloaded smallvec v1.15.0
+  Downloaded spinning_top v0.2.5
+  Downloaded tempfile v3.20.0
+  Downloaded toml_parser v1.0.9+spec-1.1.0
+  Downloaded esp32c3 v0.32.2
+  Downloaded ryu v1.0.20
+  Downloaded minicbor v2.1.3
+  Downloaded matrixmultiply v0.3.11
+  Downloaded writeable v0.6.1
+  Downloaded toml v1.0.6+spec-1.1.0
+  Downloaded proc-macro2 v1.0.103
+  Downloaded esp32 v0.40.2
+  Downloaded zerotrie v0.2.2
+  Downloaded prettyplease v0.2.32
+  Downloaded esp32s2 v0.31.2
+  Downloaded toml_edit v0.23.4
+  Downloaded liboscore v0.2.7
+  Downloaded url v2.5.4
+  Downloaded toml v0.9.5
+  Downloaded esp32h2 v0.19.2
+  Downloaded typewit v1.11.0
+  Downloaded esp32s3 v0.35.2
+  Downloaded unicode-segmentation v1.12.0
+  Downloaded zerovec v0.11.2
+  Downloaded esp32c61 v0.3.2
+  Downloaded sprs v0.11.4
+  Downloaded trouble-host v0.6.0
+  Downloaded jiff v0.2.18
+  Downloaded esp32c6 v0.23.2
+  Downloaded esp32c5 v0.2.2
+  Downloaded serde_json v1.0.140
+  Downloaded winnow v0.7.14
+  Downloaded microlp v0.6.0
+  Downloaded portable-atomic v1.13.0
+  Downloaded esp-wifi-sys-esp32h2 v0.2.0
+  Downloaded pure-rust-locales v0.8.2
+  Downloaded ndarray v0.17.2
+  Downloaded zerocopy v0.8.25
+  Downloaded syn v2.0.114
+  Downloaded smoltcp v0.13.1
+  Downloaded rustix v1.0.7
+  Downloaded libc v0.2.172
+  Downloaded esp-wifi-sys-esp32s2 v0.2.0
+  Downloaded esp-wifi-sys-esp32s3 v0.2.0
+  Downloaded esp-wifi-sys-esp32c2 v0.2.0
+  Downloaded esp-wifi-sys-esp32 v0.2.0
+  Downloaded esp-wifi-sys-esp32c3 v0.2.0
+  Downloaded esp-wifi-sys-esp32c6 v0.2.0
+    Blocking waiting for file lock on package cache
+error: rustc 1.96.0 is not supported by the following packages:
+  ariel-os@0.6.0 requires rustc 1.98
+  ariel-os-alloc@0.6.0 requires rustc 1.98
+  ariel-os-boards@0.0.0 requires rustc 1.98
+  ariel-os-boards@0.0.0 requires rustc 1.98
+  ariel-os-boards@0.0.0 requires rustc 1.98
+  ariel-os-buildinfo@0.6.0 requires rustc 1.98
+  ariel-os-buildutils@0.6.0 requires rustc 1.98
+  ariel-os-debug@0.6.0 requires rustc 1.98
+  ariel-os-embassy@0.6.0 requires rustc 1.98
+  ariel-os-embassy-common@0.6.0 requires rustc 1.98
+  ariel-os-esp@0.6.0 requires rustc 1.98
+  ariel-os-hal@0.6.0 requires rustc 1.98
+  ariel-os-identity@0.6.0 requires rustc 1.98
+  ariel-os-log@0.6.0 requires rustc 1.98
+  ariel-os-macros@0.6.0 requires rustc 1.98
+  ariel-os-power@0.6.0 requires rustc 1.98
+  ariel-os-rt@0.6.0 requires rustc 1.98
+  ariel-os-rt@0.6.0 requires rustc 1.98
+  ariel-os-rt@0.6.0 requires rustc 1.98
+  ariel-os-runqueue@0.6.0 requires rustc 1.98
+  ariel-os-threads@0.6.0 requires rustc 1.98
+  ariel-os-utils@0.6.0 requires rustc 1.98
+
+FAILED: [code=101] build/bin/espressif-esp32-c6-devkitc-1/cargo/riscv32imac-unknown-none-elf/release/hello-world 
+test "" = "1" && exit 0; cd examples/hello-world &&  OPENOCD_ARGS="" SCRIPTS=../../scripts CONFIG_BOARD=espressif-esp32-c6-devkitc-1 CARGO_BUILD_TARGET=riscv32imac-unknown-none-elf CARGO_TARGET_RISCV32IMAC_UNKNOWN_NONE_ELF_RUNNER="espflash flash --monitor" CARGO_TARGET_RISCV32IMAC_UNKNOWN_NONE_ELF_RUSTFLAGS="--cfg context=\"espressif-esp32-c6-devkitc-1\" --cfg context=\"esp32-c6-wroom-1\" --cfg context=\"esp32c6\" --cfg context=\"esp\" --cfg context=\"ariel-os\" --cfg context=\"default\" -Clink-arg=-Tlinkall.x --cfg stable -Cembed-bitcode=yes -Clto=fat -Ccodegen-units=1 --cfg capability=\"hw/device-identity\" -Clink-arg=-Tdefmt.x -C force-frame-pointers --cfg context=\"riscv\" -Clink-arg=-Tisr_stack.x -Clink-arg=-Tlinkme-region-alias.x -Clink-arg=-Tlinkme.x" CARGO_TARGET_DIR=../../build/bin/espressif-esp32-c6-devkitc-1/cargo CONFIG_EXECUTOR_STACKSIZE=8192 CONFIG_ISR_STACKSIZE=4096 CHIP_NVM_SIZE_BYTES= CHIP_NVM_START_ADDRESS= CHIP_NVM_PAGE_SIZE_BYTES= CHIP_EXTRA_SECTIONS= CHIP_RAM_START_ADDRESS= CHIP_RAM_SIZE_BYTES= CHIP_LD_INCLUDES= CHIP_MEMORY_SECTION_RESERVE_BYTES= DEFMT_LOG=info,  cargo   build --profile=release --features=ariel-os/panic-printing,ariel-os/defmt,ariel-os/esp-println,ariel-os/logging-over-usb,ariel-os/single-core,ariel-os/executor-thread,ariel-os/idle-threads 
+ninja: build stopped: subcommand failed.
+laze: error: ninja exited with code 101

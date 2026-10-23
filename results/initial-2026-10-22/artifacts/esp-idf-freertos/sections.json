@@ -1,0 +1,86 @@
+{
+  "allocated_section_bytes_by_kind": {
+    "Data": 6824,
+    "ReadOnlyData": 55332,
+    "Text": 301460,
+    "UninitializedData": 265906,
+    "Unknown": 228
+  },
+  "allocated_sections": [
+    {
+      "address": 1342193640,
+      "kind": "UninitializedData",
+      "name": ".rtc_reserved",
+      "size_bytes": 24
+    },
+    {
+      "address": 1082130432,
+      "kind": "Text",
+      "name": ".iram0.text",
+      "size_bytes": 45622
+    },
+    {
+      "address": 1082176054,
+      "kind": "UninitializedData",
+      "name": ".iram0.text_end",
+      "size_bytes": 2
+    },
+    {
+      "address": 1082176056,
+      "kind": "UninitializedData",
+      "name": ".iram0.data",
+      "size_bytes": 8
+    },
+    {
+      "address": 1082176064,
+      "kind": "Data",
+      "name": ".dram0.data",
+      "size_bytes": 6824
+    },
+    {
+      "address": 1082182888,
+      "kind": "UninitializedData",
+      "name": ".noinit",
+      "size_bytes": 0
+    },
+    {
+      "address": 1082182896,
+      "kind": "UninitializedData",
+      "name": ".dram0.bss",
+      "size_bytes": 3728
+    },
+    {
+      "address": 1107296288,
+      "kind": "Text",
+      "name": ".flash.text",
+      "size_bytes": 255838
+    },
+    {
+      "address": 1107296288,
+      "kind": "UninitializedData",
+      "name": ".flash_rodata_dummy",
+      "size_bytes": 262144
+    },
+    {
+      "address": 1107558432,
+      "kind": "ReadOnlyData",
+      "name": ".flash.appdesc",
+      "size_bytes": 256
+    },
+    {
+      "address": 1107558688,
+      "kind": "ReadOnlyData",
+      "name": ".flash.rodata",
+      "size_bytes": 55076
+    },
+    {
+      "address": 1107613764,
+      "kind": "Unknown",
+      "name": ".flash.init_array",
+      "size_bytes": 228
+    }
+  ],
+  "elf_file_bytes": 8129240,
+  "elf_sha256": "793f3cf07d2e23b3623fbe6657d077d078c539f960fe2db97bea3dea055fe1a9",
+  "limitations": "ELF file bytes include non-flashed data; sections are not peak RAM or complete flash-image footprint."
+}

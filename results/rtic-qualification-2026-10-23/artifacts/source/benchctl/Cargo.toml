@@ -1,0 +1,17 @@
+[package]
+name = "benchctl"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.96"
+description = "Capture and validate the ESP32 C6 evaluation protocol"
+publish = false
+
+[dependencies]
+anyhow = "1.0"
+bench-core = { path = "../../crates/bench-core" }
+clap = { version = "4.5", features = ["derive"] }
+object = { version = "=0.40.0", default-features = false, features = ["read", "std"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "=1.0.154", features = ["float_roundtrip"] }
+serialport = "=4.10.1"
+sha2 = "0.10"

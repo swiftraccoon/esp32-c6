@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "experiment": "idf-load-qualification-v1",
+  "purpose": "qualification",
+  "source_commit": "093153160316e01f0dea364ef999f3be15ddc9d2",
+  "rust": "1.96.0",
+  "target": "riscv32imac-esp-espidf",
+  "edition": 2024,
+  "sdk": {
+    "version": "5.5.6",
+    "commit": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
+    "rust_sys": "0.37.2"
+  },
+  "release": {
+    "opt_level": 3,
+    "lto": "thin",
+    "codegen_units": 1,
+    "panic": "abort",
+    "debug": 2
+  },
+  "notification": {
+    "entries": 2,
+    "index": 1
+  },
+  "queue_capacity": 8,
+  "record_count": 2016,
+  "record_payload_bytes": 48384,
+  "snapshot_count": 12,
+  "snapshot_payload_bytes": 8928,
+  "app_descriptor_version": "160ff3d-dirty",
+  "source_tree_clean_at_build": false,
+  "packaging": "esptool 5.1.0 elf2image --chip esp32c6 --flash-mode dio --flash-freq 80m --flash-size 8MB --elf-sha256-offset 0xb0",
+  "collector_sha256": "f3211f0b3762cb1ba96ef81b6110a74eefc542076abcf55ae5f3720610db8cbe",
+  "limitations": [
+    "Exact sources were built before their matching implementation commit; retained snapshots bind the dirty-at-build descriptor without a clean-build claim.",
+    "This profile still records timestamps and common diagnostic snapshots; statistics-disabled is not an uninstrumented baseline.",
+    "Finite-pulse qualification is not comparative effect estimation, sustainable capacity, global memory peaks, physical CPU utilization or platform selection."
+  ],
+  "profile": "runtime-stats-enabled",
+  "features": [
+    "load-runtime-stats"
+  ],
+  "runtime_stats_enabled": true,
+  "counter_bits": 64,
+  "counter_clock": "esp_timer_get_time",
+  "elf_sha256": "e4379b0405e9bb4fb1f521058a7145724946f28c16e0f1ccd0e1a3a9c25d2fcd",
+  "image_sha256": "93270129dff914c4dcf30e4ecc69f5ec6e19c111e3b362cbf107e8e78b38153f",
+  "application_image_bytes": 450624,
+  "bootloader_sha256": "0abdda233c49d403b0b4079bb9a44d1033ed24967b111aac4fd7b1c76242271d",
+  "partition_table_sha256": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820",
+  "sdk_config": "artifacts/on/sdk/sdkconfig",
+  "bindings": "artifacts/on/sdk/bindings.rs"
+}

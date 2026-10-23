@@ -1,0 +1,6 @@
+
+A fatal error occurred: Segment loaded at 0x42001248 lands in same 64 KB flash mapping as segment loaded at 0x42000020. Can't generate binary. Suggest changing linker script or ELF to merge sections.
+esptool v5.1.0
+Creating ESP32C6 image...
+Merged 4 ELF sections.
+Successfully created ESP32C6 image.

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "experiment": "idf-native-queue-v1",
+  "frozen_utc": "2026-10-23 05:28:46 UTC",
+  "source_commit": "93646f5e7e439fe2ea913048bbc7e9ac5a7ef2cd",
+  "schedule_sha256": "07543b3ddcea1ede44c8f9e7c676308fe8a86cc13aeffebb6a18bd13eba4b5df",
+  "schedule_seed_decimal": "11647397086240600225",
+  "schedule_algorithm": "splitmix64-fisher-yates-balanced-v1",
+  "collector_sha256": "1b5e71a6648086369ba8f4af53e7e1622a08d990fab24448a46126abcfd4277a",
+  "images": {
+    "rust-std-sync-channel": {
+      "elf_sha256": "0282b814660461f7c88d3eb64c7d701e620e418d53be7d53b5eb96834a82d32b",
+      "flash_image_sha256": "2f9e219084813df8597a3574251e57f16f373d9cdac24f59f9ce33757c87b10f",
+      "provenance_sha256": "9202c188940355b7cd95594022560bf584649aa45b2c143425a34f334008c1c8"
+    },
+    "freertos-queue": {
+      "elf_sha256": "fd6501102658572f12850512116401eaf57f6c330becd288ed8c825117e6fac8",
+      "flash_image_sha256": "43f266fcbfa352c750972ab665d7199cd418dc63d9b6e2f7bb987022367ceacc",
+      "provenance_sha256": "2e5d22f0032486d521b96272efe969584847fd3685b8a1a666bb0d9c60260695"
+    }
+  },
+  "design": {
+    "scheduled_blocks": 12,
+    "collection_sessions": 3,
+    "blocks_per_session": 4,
+    "boots_per_block": 2,
+    "balanced_order_per_session": "two std/native and two native/std blocks, shuffled before collection",
+    "message_events_per_boot": 1000,
+    "observer_events_per_boot": 1000,
+    "warmups": 8,
+    "settle_ms": 2000,
+    "host_timeout_seconds": 180,
+    "application_failures_consume_block": true,
+    "fixture_repeat_limit_per_block": 1,
+    "automatic_replacement": false,
+    "session_spacing": "No minimum elapsed separation; session labels are collection grouping, not proof of independence",
+    "placement_policy": "ordinary release builds; map/disassembly retained; whole API path including phase marker"
+  },
+  "qualification": {
+    "excluded_collection": "results/queue-api-qualification-2026-10-23",
+    "both_backends_passed": true,
+    "independent_readonly_review": true,
+    "original_flash_restored_and_verified_after_qualification": true
+  },
+  "scope": "Same-board same-IDF API characterization; no isolated kernel switch, worst-case bound, independent oscillator calibration or OS ranking"
+}

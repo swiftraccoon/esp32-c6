@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment": "idf-accounting-qualification-v1",
+  "purpose": "qualification",
+  "contract_commit": "c931379e2042b04cdb59c93e57441cc1182f5f19",
+  "boots": [
+    {
+      "boot_id": "accounting-01",
+      "run_order": 1
+    },
+    {
+      "boot_id": "accounting-02",
+      "run_order": 2
+    },
+    {
+      "boot_id": "accounting-03",
+      "run_order": 3
+    }
+  ],
+  "continuation": "Proceed to the next scheduled boot only after the preceding attempt qualifies. Stop on unexpected rejection and retain it; no replacement attempts under this contract.",
+  "estimator": null
+}

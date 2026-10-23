@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "experiment": "rtic-monotonic-qualification-v1",
+  "purpose": "qualification",
+  "calculation_origin": "Direct raw-byte line segmentation and first read receipt covering each newline; integer interval arithmetic independent of capture summary (all qualification/summary/score fields are null).",
+  "source_commit": "8008dbf0283403980fa237981a82fec63d3f391a",
+  "upstream_commit": "f1797184d6168e54c345b17019c237eea70b9ed4",
+  "input_freeze_commit": "33975191f16cec1c28e5f1f87c9255fefdfd5c57",
+  "ledger_binding_commit": "096f8a6c754be101b62eabdb269dfa548978aa1b",
+  "schedule_counts": {
+    "scheduled": 3,
+    "executed": 1,
+    "failed": 1,
+    "qualification_passes": 0,
+    "not_run_under_stop_rule": 2,
+    "replacement_attempts": 0
+  },
+  "attempts": [
+    {
+      "boot_id": "rtic-monotonic-01",
+      "status": "failed",
+      "failure": "additional ROM startup in the same attempt",
+      "directory": "runs/01"
+    },
+    {
+      "boot_id": "rtic-monotonic-02",
+      "status": "not_run",
+      "reason": "stop after first unexpected rejection"
+    },
+    {
+      "boot_id": "rtic-monotonic-03",
+      "status": "not_run",
+      "reason": "stop after first unexpected rejection"
+    }
+  ],
+  "artifact_sha256": {
+    "serial_raw": "3e90c4a6f6d3395218816e8950c8b26ad1ed2fa9ca599cc2ac1e5008fdc2cadb",
+    "observations_jsonl": "fbab37da5bea25ebc6fcd5199c15c3348c831cdaf7f3f7d700d966860d11bb6a",
+    "original_run_json": "e92d3add391a839651731188a49a472302dadc2caf98cd36233085c28b8d3d17",
+    "original_provenance_json": "db2b97ab3db6950fa842acb045c3d8b50f559ed679e29858a0e20544bc04dfc5",
+    "elf": "12dc8bd4f079b9acdfda34db652e422cafddd9869c4b92493274cb56b47645a9",
+    "app_image": "b10d6dfdc9f84f0e02f3007e198fe38ea3ae02ca47a3222e515073cfc9cbfb29",
+    "bootloader": "b1d7d018cc62f3fb30b901d5bacf95f58ab879f70ebec50d231f092e976c9318",
+    "partition_table": "420931e3f5af072d899b5357c043fd9f283bf165fc9df6113b6d43d82b48a06d",
+    "collector": "f06cb6e82e1e01e86dba08a5172b5e4cc0b3ebd588f3cd6fd2395cbfbdbc84dd",
+    "frozen_inputs_manifest": "f73525b39c617ad1214df1ff967485a4fedf0d5d51cff7572b2e85d2166c4631"
+  },
+  "frozen_input_verification": {
+    "entries": 121,
+    "all_match": true
+  },
+  "receipt_integrity": {
+    "raw_bytes": 1495,
+    "receipt_bytes": 5296,
+    "events": 105,
+    "event_counts": {
+      "start": 1,
+      "read": 27,
+      "poll": 76,
+      "end": 1
+    },
+    "strictly_increasing_event_times": true,
+    "contiguous_monotonic_raw_coverage": true,
+    "all_received_bytes_retained": true
+  },
+  "marker_receipts": [
+    {
+      "text": "init",
+      "raw_start_inclusive": 1379,
+      "raw_end_exclusive": 1384,
+      "host_receipt_ns": 134494875,
+      "newline_terminated": true
+    },
+    {
+      "text": "hello from bar",
+      "raw_start_inclusive": 1384,
+      "raw_end_exclusive": 1399,
+      "host_receipt_ns": 134494875,
+      "newline_terminated": true
+    },
+    {
+      "text": "hello from baz",
+      "raw_start_inclusive": 1399,
+      "raw_end_exclusive": 1414,
+      "host_receipt_ns": 134494875,
+      "newline_terminated": true
+    },
+    {
+      "text": "hello from foo",
+      "raw_start_inclusive": 1414,
+      "raw_end_exclusive": 1429,
+      "host_receipt_ns": 134494875,
+      "newline_terminated": true
+    },
+    {
+      "text": "bye from foo",
+      "raw_start_inclusive": 1429,
+      "raw_end_exclusive": 1442,
+      "host_receipt_ns": 2135456042,
+      "newline_terminated": true
+    },
+    {
+      "text": "bye from bar",
+      "raw_start_inclusive": 1442,
+      "raw_end_exclusive": 1455,
+      "host_receipt_ns": 3132862667,
+      "newline_terminated": true
+    },
+    {
+      "text": "bye from baz",
+      "raw_start_inclusive": 1455,
+      "raw_end_exclusive": 1468,
+      "host_receipt_ns": 4134165750,
+      "newline_terminated": true
+    }
+  ],
+  "coarse_delay_diagnostics": [
+    {
+      "task": "foo",
+      "source_delay_seconds": 2,
+      "host_own_hello_to_bye_ns": 2000961167,
+      "lower_budget_ns": 1500000000,
+      "upper_budget_ns": 3500000000,
+      "within_coarse_budget": true,
+      "scope": "diagnostic only on failed attempt"
+    },
+    {
+      "task": "bar",
+      "source_delay_seconds": 3,
+      "host_own_hello_to_bye_ns": 2998367792,
+      "lower_budget_ns": 2500000000,
+      "upper_budget_ns": 4500000000,
+      "within_coarse_budget": true,
+      "scope": "diagnostic only on failed attempt"
+    },
+    {
+      "task": "baz",
+      "source_delay_seconds": 4,
+      "host_own_hello_to_bye_ns": 3999670875,
+      "lower_budget_ns": 3500000000,
+      "upper_budget_ns": 5500000000,
+      "within_coarse_budget": true,
+      "scope": "diagnostic only on failed attempt"
+    }
+  ],
+  "failure_observation": {
+    "rom_startup_count": 2,
+    "rom_receipts": [
+      {
+        "text": "ESP-ROM:esp32c6-20220919",
+        "raw_start_inclusive": 0,
+        "raw_end_exclusive": 26,
+        "host_receipt_ns": 9264834,
+        "newline_terminated": true
+      },
+      {
+        "text": "ESP-ROM:esp32c6-20220919",
+        "raw_start_inclusive": 1468,
+        "raw_end_exclusive": 1494,
+        "host_receipt_ns": 8119346209,
+        "newline_terminated": true
+      }
+    ],
+    "initial_reset_text": "rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)",
+    "second_reset_reason": null,
+    "trailing_partial_text": {
+      "text": "B",
+      "raw_start_inclusive": 1494,
+      "raw_end_exclusive": 1495,
+      "host_receipt_ns": 8119346209,
+      "newline_terminated": false
+    },
+    "terminal_event": {
+      "event": "end",
+      "at_ns": 8119515500,
+      "raw_end": 1495,
+      "reason": "rejected"
+    },
+    "second_rom_receipt_ns": 8119346209,
+    "second_rom_minus_final_marker_ns": 3985180459,
+    "rejected_terminal_minus_second_rom_ns": 169291,
+    "cause": "unconfirmed; startup watchdog is a source-supported lead, not a retained reset-reason observation"
+  },
+  "guard_diagnostics": {
+    "required_post_marker_guard_ns": 12000000000,
+    "host_ceiling_ns": 45000000000,
+    "final_marker_receipt_ns": 4134165750,
+    "required_guard_endpoint_ns": 16134165750,
+    "last_completed_poll": {
+      "event": "poll",
+      "at_ns": 8102498875,
+      "raw_end": 1468
+    },
+    "last_poll_minus_final_marker_ns": 3968333125,
+    "full_guard_completed": false,
+    "second_rom_within_historical_five_second_proposal": true
+  },
+  "retained_report_fields": {
+    "status": "failed",
+    "failure": "additional ROM startup in the same attempt",
+    "summary": null,
+    "console": null,
+    "qualification": null,
+    "benchmarks": null,
+    "comparative_score": null
+  },
+  "cross_candidate_estimator": null,
+  "limitations": [
+    "Host monotonic receive times are relative to the collector RTS-release request, not independently captured device/reset timestamps.",
+    "Initial marker lines share one read receipt; identical receipt times do not imply simultaneous device execution.",
+    "Expected markers/coarse pacing are diagnostic subsets of a failed attempt and cannot promote it into qualification.",
+    "No second reset-reason line was retained; timing does not identify reset cause.",
+    "No runtime CPU/flash clock register readback, calibrated timing, physical power/energy/utilization or global memory-peak result.",
+    "The preliminary five-second guard would also have encountered this second ROM startup; this observation does not attribute detection uniquely to the longer guard."
+  ],
+  "restoration_receipt": {
+    "status": "completed_and_separately_verified",
+    "bytes": 8388608,
+    "observed_complete_utc": "2026-10-23T16:59:16Z",
+    "backup_sha256": "863dc7b17018aea2a530ee27da5bedd675298f9a70e5f04c32f4a0cc3c43f9c4",
+    "reset_after_verification": "hard reset via RTS",
+    "receipt_sha256": "d8d842632f4f5577d0fc7b8272d95330e76041a2bf911a8ca51ad8193343930b",
+    "write_log_sha256": "29358daa090ebacb7f49cdbdd9c592404aaa9d3f47fcc13acfe9209166f0bee6",
+    "separate_verification_log_sha256": "234d9d014075f80067632557c419a06df0769be3830c494266468825b1fb2c31",
+    "scope": "Root operator receipt and retained digest verification; timestamp is observed completion, not an independently measured reset edge; not deployed recovery or post-boot NVS constancy."
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "experiment": "idf-native-queue-v1",
+  "algorithm": "splitmix64-fisher-yates-balanced-v1",
+  "seed": 11647397086240600225,
+  "blocks": [
+    {
+      "block": 1,
+      "session": 1,
+      "runs": [
+        {
+          "run_order": 1,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s1-b01-01-std"
+        },
+        {
+          "run_order": 2,
+          "backend": "freertos-queue",
+          "directory": "runs/s1-b01-02-native"
+        }
+      ]
+    },
+    {
+      "block": 2,
+      "session": 1,
+      "runs": [
+        {
+          "run_order": 3,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s1-b02-01-std"
+        },
+        {
+          "run_order": 4,
+          "backend": "freertos-queue",
+          "directory": "runs/s1-b02-02-native"
+        }
+      ]
+    },
+    {
+      "block": 3,
+      "session": 1,
+      "runs": [
+        {
+          "run_order": 5,
+          "backend": "freertos-queue",
+          "directory": "runs/s1-b03-01-native"
+        },
+        {
+          "run_order": 6,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s1-b03-02-std"
+        }
+      ]
+    },
+    {
+      "block": 4,
+      "session": 1,
+      "runs": [
+        {
+          "run_order": 7,
+          "backend": "freertos-queue",
+          "directory": "runs/s1-b04-01-native"
+        },
+        {
+          "run_order": 8,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s1-b04-02-std"
+        }
+      ]
+    },
+    {
+      "block": 5,
+      "session": 2,
+      "runs": [
+        {
+          "run_order": 9,
+          "backend": "freertos-queue",
+          "directory": "runs/s2-b05-01-native"
+        },
+        {
+          "run_order": 10,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s2-b05-02-std"
+        }
+      ]
+    },
+    {
+      "block": 6,
+      "session": 2,
+      "runs": [
+        {
+          "run_order": 11,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s2-b06-01-std"
+        },
+        {
+          "run_order": 12,
+          "backend": "freertos-queue",
+          "directory": "runs/s2-b06-02-native"
+        }
+      ]
+    },
+    {
+      "block": 7,
+      "session": 2,
+      "runs": [
+        {
+          "run_order": 13,
+          "backend": "freertos-queue",
+          "directory": "runs/s2-b07-01-native"
+        },
+        {
+          "run_order": 14,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s2-b07-02-std"
+        }
+      ]
+    },
+    {
+      "block": 8,
+      "session": 2,
+      "runs": [
+        {
+          "run_order": 15,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s2-b08-01-std"
+        },
+        {
+          "run_order": 16,
+          "backend": "freertos-queue",
+          "directory": "runs/s2-b08-02-native"
+        }
+      ]
+    },
+    {
+      "block": 9,
+      "session": 3,
+      "runs": [
+        {
+          "run_order": 17,
+          "backend": "freertos-queue",
+          "directory": "runs/s3-b09-01-native"
+        },
+        {
+          "run_order": 18,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s3-b09-02-std"
+        }
+      ]
+    },
+    {
+      "block": 10,
+      "session": 3,
+      "runs": [
+        {
+          "run_order": 19,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s3-b10-01-std"
+        },
+        {
+          "run_order": 20,
+          "backend": "freertos-queue",
+          "directory": "runs/s3-b10-02-native"
+        }
+      ]
+    },
+    {
+      "block": 11,
+      "session": 3,
+      "runs": [
+        {
+          "run_order": 21,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s3-b11-01-std"
+        },
+        {
+          "run_order": 22,
+          "backend": "freertos-queue",
+          "directory": "runs/s3-b11-02-native"
+        }
+      ]
+    },
+    {
+      "block": 12,
+      "session": 3,
+      "runs": [
+        {
+          "run_order": 23,
+          "backend": "freertos-queue",
+          "directory": "runs/s3-b12-01-native"
+        },
+        {
+          "run_order": 24,
+          "backend": "rust-std-sync-channel",
+          "directory": "runs/s3-b12-02-std"
+        }
+      ]
+    }
+  ]
+}

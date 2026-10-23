@@ -1,0 +1,115 @@
+{
+  "benchmarks": {
+    "compute": {
+      "max_ns": 289000,
+      "mean_ns": 283062.5,
+      "min_ns": 282000,
+      "p50_ns": 283000,
+      "p95_ns": 283000,
+      "p99_ns": 289000,
+      "sample_count": 64
+    },
+    "timer-overhead": {
+      "max_ns": 2000,
+      "mean_ns": 1046.875,
+      "min_ns": 1000,
+      "p50_ns": 1000,
+      "p95_ns": 1000,
+      "p99_ns": 2000,
+      "sample_count": 64
+    }
+  },
+  "collector_executable_sha256": "2b623407dd5f9298a502c934b829f977dfb3337b50c9baf853b586c345c41def",
+  "collector_version": "0.1.0",
+  "failure": null,
+  "firmware_sha256": "793f3cf07d2e23b3623fbe6657d077d078c539f960fe2db97bea3dea055fe1a9",
+  "hello": {
+    "cpu_mhz": 160,
+    "platform": "esp-idf-freertos",
+    "protocol": 1,
+    "rounds": 4096,
+    "sample_count": 64,
+    "seed": 305419896,
+    "timer_resolution_ns": 1000,
+    "warmup_iterations": 8,
+    "workload": "integer-mix-v1"
+  },
+  "host_rustc_at_capture": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "independent_boot_id": "esp-idf-freertos-02",
+  "limitations": [
+    "Warm reset only; no externally referenced boot timing",
+    "Internal microsecond timer; no external IRQ or power instrument",
+    "64 samples per benchmark in each boot; nearest-rank percentiles",
+    "Compute includes timer observer overhead; no subtraction",
+    "host_rustc_at_capture observes PATH at collection time, not the compiler used to build this executable"
+  ],
+  "platform": "esp-idf-freertos",
+  "provenance": {
+    "build_command": "cargo build --locked --release with scoped build-std environment recorded in docs/builds/esp-idf.md",
+    "build_directory": "firmware/esp-idf",
+    "configuration": {
+      "automatic_sleep": false,
+      "clock_source": "esp_timer_get_time",
+      "codegen_units": 1,
+      "cpu_mhz": 160,
+      "dynamic_frequency_scaling": false,
+      "flash_mhz": 40,
+      "flash_mode": "dio",
+      "freertos_tick_hz": 100,
+      "logging": "protocol emitted after all samples",
+      "lto": "thin",
+      "main_task_stack_bytes": 16384,
+      "opt_level": 3,
+      "panic": "abort",
+      "radios": "not initialized",
+      "sample_count_per_benchmark": 64,
+      "secondary_console": "none",
+      "startup_settle_ms": 2000,
+      "timer_resolution_ns": 1000,
+      "warmup_iterations": 8
+    },
+    "hardware": {
+      "board_model": null,
+      "chip_revision": "0.2",
+      "flash_bytes": 8388608,
+      "soc": "esp32c6",
+      "uart_bridge": "CP2102N",
+      "uart_pins": {
+        "rx": 17,
+        "tx": 16
+      }
+    },
+    "platform": "esp-idf-freertos",
+    "schema_version": 1,
+    "scope": "Compute and timer observer pilot; no scheduling, IRQ, power or radio result",
+    "software": {
+      "cargo_lock_sha256": "72d9f6a550922507b682a7ebc40623da22e62cdf12c138249a09de40ef5adace",
+      "esp_idf": "v5.5.6",
+      "esp_idf_commit": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
+      "esp_idf_sys": "0.37.2",
+      "espflash": "4.6.0",
+      "esptool": "5.1.0",
+      "freertos": "10.5.1",
+      "git_commit": null,
+      "llvm": "22.1.2",
+      "rust": "1.96.0",
+      "rust_commit": "ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96",
+      "sdkconfig_sha256": "8a832482dd631eb325cf5f897bf5fa4420cb2e743284d82c55e9fd0c7725b061",
+      "source_snapshot": "results/initial-2026-10-22/artifacts/esp-idf-source.tar.gz",
+      "source_snapshot_sha256": "fe93690fb9420ee4aa299e9691df740de4efca0fdba9a6d6dde79bae9dfa0440",
+      "target": "riscv32imac-esp-espidf",
+      "workload_source_sha256": "27447ee945989a682ee778646f488e7c986d8831a38515e1057eaa143992ab9e"
+    }
+  },
+  "reset_kind": "RTS warm-reset request; DTR deasserted",
+  "run_order_index": 4,
+  "schema_version": 1,
+  "serial": {
+    "baud": 115200,
+    "data_bits": 8,
+    "parity": "none",
+    "stop_bits": 1
+  },
+  "status": "pass",
+  "timestamp_unix_ms": 1792725536379
+}

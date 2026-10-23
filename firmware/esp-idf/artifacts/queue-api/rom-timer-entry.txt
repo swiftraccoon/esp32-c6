@@ -1,0 +1,7 @@
+
+.embuild/espressif/tools/esp-rom-elfs/20260528/esp32c6_rev0_rom.elf:	file format elf32-littleriscv
+
+Disassembly of section .fixed.text:
+
+400003cc <__call_systimer_hal_get_counter_value>:
+400003cc: 4982006f     	j	0x40020864 <systimer_hal_get_counter_value>

@@ -1,0 +1,1 @@
+"hal_espressif":"/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif":"${ZEPHYR_HAL_ESPRESSIF_CMAKE_DIR}"

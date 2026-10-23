@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "bytes": 8388608,
+  "sha256": "863dc7b17018aea2a530ee27da5bedd675298f9a70e5f04c32f4a0cc3c43f9c4",
+  "private_path": "backups/pre-load-2026-10-23/flash-backup.bin",
+  "method": "Copy of retained complete image, independently verified against all current device flash before replacement; no fresh full read is claimed.",
+  "device_verification": "passed",
+  "after_verification": "no-reset; remains in bootloader",
+  "log": "artifacts/backup-verify.log"
+}

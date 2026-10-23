@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "experiment": "ariel-native-tests-v1",
+  "scheduled_attempts": 12,
+  "attempted": 12,
+  "passing": 12,
+  "retries": 0,
+  "apps": {
+    "bench-sched-yield": {
+      "boots": 3,
+      "passing": 3,
+      "mean_ticks_per_iteration": [
+        155,
+        155,
+        155
+      ],
+      "upstream_derived_ticks_per_context_switch": [
+        77,
+        77,
+        77
+      ]
+    },
+    "bench-sched-flags": {
+      "boots": 3,
+      "passing": 3,
+      "mean_ticks_per_iteration": [
+        215,
+        215,
+        215
+      ]
+    },
+    "threading-dynamic-prios": {
+      "boots": 3,
+      "passing": 3,
+      "mean_ticks_per_iteration": []
+    },
+    "threading-lock": {
+      "boots": 3,
+      "passing": 3,
+      "mean_ticks_per_iteration": []
+    }
+  },
+  "scope": "Native aggregate means and assertion-marker qualification; no individual-event distributions or cross-OS ranking"
+}

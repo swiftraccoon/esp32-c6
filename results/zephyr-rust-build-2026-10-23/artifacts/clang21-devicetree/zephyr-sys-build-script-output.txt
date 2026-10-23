@@ -1,0 +1,855 @@
+Clang version: ClangVersion { parsed: Some((21, 1)), full: "Homebrew clang version 21.1.8" }
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/soc/espressif
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/picolibc/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/common/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/posix/c_lib_ext/getopt
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/soc/espressif/common/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/soc/espressif/esp32c6/.
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/include/bt
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../common/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../port/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../port/include/boot
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bootloader_support/bootloader_flash/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bootloader_support/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bootloader_support/private_include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/controller/esp32c6
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/include/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/npl/zephyr/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/npl/zephyr/include/nimble
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/bt/porting/transport/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/deprecated
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/gpio/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/spi/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/driver/uart/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/private_include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/efuse/esp32c6/private_include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_coex/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_common/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_driver_gpio/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_event/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ana_conv/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ana_conv/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_clock/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_clock/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_dma/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_dma/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpio/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpio/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpspi/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_gpspi/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2c/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2c/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2s/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_i2s/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ieee802154/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ieee802154/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ledc/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_ledc/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mcpwm/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mcpwm/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mspi/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_mspi/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pcnt/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pcnt/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pmu/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_pmu/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_rtc_timer/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_rtc_timer/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_sd/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_sd/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_security/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_security/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_systimer/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_systimer/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_timg/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_timg/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_twai/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_twai/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_uart/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_uart/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_usb/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_usb/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_wdt/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hal_wdt/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/dma
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/etm/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/esp_private
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/hal
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/soc
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/include/soc/esp32c6
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/ldo/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/modem/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/mspi/mspi_intr/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/mspi/mspi_timing_tuning/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/esp32c6
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/esp32c6/private_include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/port/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_hw_support/power_supply/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_mm/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_netif/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_phy/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_phy/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_phy/include/esp_private
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_pm/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6/include/esp32c6
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6/ld
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/include/esp_private
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/port/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/port/include/private
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_system/port/include/private/esp_private
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_timer/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_timer/private_include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_wifi/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_wifi/include/local
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/hal/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/hal/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/hal/platform_port/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/heap/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ieee802154/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ieee802154/private_include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/include/esp_private
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/riscv/include/xtensa
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/esp32c6/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/esp32c6/ld
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/soc/esp32c6/register
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/spi_flash/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/spi_flash/include/esp_private
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/lp_core/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/lp_core/lp_core/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/lp_core/shared/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/ulp/ulp_common/include
+Entry: -I/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/modules/hal/espressif/zephyr/esp32c6/../../components/esp_rom/esp32c6
+Entry: -DKERNEL
+Entry: -D__ZEPHYR__=1
+Entry: -D__LINUX_ERRNO_EXTENSIONS__
+Entry: -DPICOLIBC_LONG_LONG_PRINTF_SCANF
+Entry: -D_POSIX_THREAD_SAFE_FUNCTIONS=200809L
+Entry: -DESP_PLATFORM
+Entry: -DSOC_MMU_PAGE_SIZE=0x10000
+Entry: -D__DECLARE_RCC_ATOMIC_ENV
+Entry: -D__DECLARE_RCC_RC_ATOMIC_ENV
+Entry: -DCONFIG_ESP_CONSOLE_USB_SERIAL_JTAG_ENABLED=1
+Entry: -DCONFIG_APP_BUILD_USE_FLASH_SECTIONS
+Entry: -Dasm=__asm__
+Entry: -Dtypeof=__typeof__
+Entry: -DESP_PLATFORM
+Entry: -DK_HEAP_MEM_POOL_SIZE=4096
+cargo:rerun-if-env-changed=TARGET
+cargo:rerun-if-env-changed=BINDGEN_EXTRA_CLANG_ARGS_riscv32i-unknown-none-elf
+cargo:rerun-if-env-changed=BINDGEN_EXTRA_CLANG_ARGS_riscv32i_unknown_none_elf
+cargo:rerun-if-env-changed=BINDGEN_EXTRA_CLANG_ARGS
+cargo:rerun-if-changed=/tmp/builduser/esp32-c6-zephyr-rust-dd73-97hQMW/zephyr-sys/wrapper.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/autoconf.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel_includes.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_null.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/limits.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain/llvm.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain/gcc.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain/common.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/section_tags.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/atomic.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/atomic_types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_internal.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_loops.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_listify.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_internal_is_eq.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_internal_util_inc.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_internal_util_dec.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_internal_util_x2.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/__assert.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/string.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/time_units.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/atomic_c.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscalls/atomic_c.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing_syscall.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/__assert.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/dlist.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/slist.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/list_gen.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/sflist.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/__assert.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/list_gen.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/obj_core.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/slist.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel_structs.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/atomic.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/dlist.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/sys_heap.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/mem_stats.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/structs.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/structs.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/stats.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/obj_core.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/rb.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel_version.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/printk.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/inttypes.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdio.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/cpu.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/arch_interface.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/cpu.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/irq_offload.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/arch_inlines.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/arch_inlines.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel_structs.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/csr.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/arch.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/thread.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/exception.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/exception.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/irq.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/irq.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/cpu.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sw_isr_table.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/device.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/devicetree_generated.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/irq_multilevel.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/__assert.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/io-channels.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/clocks.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/gpio.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/spi.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/dma.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/pwms.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/fixed-partitions.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/ordinals.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/pinctrl.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/can.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/reset.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/mbox.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/port-endpoint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/display.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/hwspinlock.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/map.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/wuc.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/mapped-partition.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/partitions.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/mapped-partition.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree/fixed-partitions.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/init.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/pm/state.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/errno.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/errno_private.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/errno.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/device_mmio.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/mm.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/internal/mm.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/inttypes.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/__assert.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/mem_manage.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/inttypes.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/sys_io.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/iterable_sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/__assert.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscalls/device.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing_syscall.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/iterable_sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/sys_io.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/sys_io.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/common/sys_io.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/sys_io.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/common/sys_bitops.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/sys_io.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/common/ffs.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/irq.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sw_isr_table.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/devicetree.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/csr.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/error.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/riscv/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/exception.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscalls/error.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing_syscall.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/rb.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys_clock.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/clock.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/dlist.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/time_units.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscalls/clock.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing_syscall.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/spinlock.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/errno.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/cpu.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/atomic.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/__assert.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/time_units.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/fatal.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/cpu.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/exception.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/fatal_types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/irq.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/thread_stack.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/cpu.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/app_memory/mem_domain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/dlist.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/thread.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/stats.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/arch_interface.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/kobject.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/iterable_sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/internal/kobject_internal.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/kobj-types-enum.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscalls/kobject.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing_syscall.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/thread.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/errno.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/limits.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing_macros.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/mem_stats.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/iterable_sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/ring_buffer.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/errno.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/heap_constants.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracking.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel_structs.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscalls/kernel.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel/thread_stack.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/drivers/gpio.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/errno.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/__assert.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/slist.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/device.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/dt-bindings/gpio/gpio.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscalls/gpio.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing_syscall.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/logging/log.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/logging/log_instance.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/iterable_sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/logging/log_core.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/logging/log_msg.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/logging/log_instance.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/mpsc_packet.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/string.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/cbprintf.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/string.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/cbprintf_internal.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/errno.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/__assert.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/arch/cpu.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/cbprintf_cxx.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/cbprintf_enums.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/atomic.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/iterable_sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/string.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscalls/log_msg.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing_syscall.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/logging/log_instance.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/iterable_sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/atomic.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/bluetooth.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/string.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/gap.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/assigned_numbers.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/byteorder.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/addr.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/string.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/printk.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/crypto.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/hci_types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/addr.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/classic/classic.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdbool.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/string.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/net_buf.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/kernel.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/iterable_sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/addr.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/bluetooth/hci_types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/net_buf.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/slist.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/sys/util_macro.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/toolchain.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/drivers/flash.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/errno.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/types.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stddef.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_ptrdiff_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_size_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_wchar_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_max_align_t.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stddef_offsetof.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/sys/types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/sys/_types.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/lib/libc/minimal/include/stdint.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/device.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscalls/flash.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/tracing/tracing_syscall.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/stdarg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_header_macro.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___gnuc_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_list.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_arg.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg___va_copy.h
+cargo:rerun-if-changed=/opt/homebrew/Cellar/llvm@21/21.1.8_1/lib/clang/21/include/__stdarg_va_copy.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/build-rust-hello-clang21/zephyr/include/generated/zephyr/syscall_list.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/syscall.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/linker/sections.h
+cargo:rerun-if-changed=/Users/builduser/Git/esp32-c6/.cache/zephyr-qualification/workspace/zephyr/include/zephyr/irq.h

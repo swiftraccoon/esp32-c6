@@ -1,0 +1,80 @@
+{
+  "admission": {
+    "elf_sha256": "12dc8bd4f079b9acdfda34db652e422cafddd9869c4b92493274cb56b47645a9",
+    "method": null,
+    "provenance_sha256": "db2b97ab3db6950fa842acb045c3d8b50f559ed679e29858a0e20544bc04dfc5",
+    "purpose": "qualification"
+  },
+  "benchmarks": null,
+  "collector_executable_sha256": "f06cb6e82e1e01e86dba08a5172b5e4cc0b3ebd588f3cd6fd2395cbfbdbc84dd",
+  "collector_version": "0.1.0",
+  "comparative_score": null,
+  "console": null,
+  "experiment": "rtic-monotonic-qualification-v1",
+  "failure": "additional ROM startup in the same attempt",
+  "firmware_sha256": "12dc8bd4f079b9acdfda34db652e422cafddd9869c4b92493274cb56b47645a9",
+  "host_rustc_at_capture": "rustc 1.96.0 (ac68faa20 2026-05-25)\nbinary: rustc\ncommit-hash: ac68faa20c58cbccd01ee7208bf3b6e93a7d7f96\ncommit-date: 2026-05-25\nhost: aarch64-apple-darwin\nrelease: 1.96.0\nLLVM version: 22.1.2\n",
+  "independent_boot_id": "rtic-monotonic-01",
+  "limitations": [
+    "Qualification only; no JSON benchmark protocol or comparative score",
+    "Host receipt pacing does not establish device clock accuracy or interrupt latency",
+    "A twelve-second quiet console guard does not prove continuing liveness",
+    "Warm-reset metadata does not authenticate hardware or establish independent trials",
+    "host_rustc_at_capture observes PATH, not the compiler that built this executable"
+  ],
+  "observations_sha256": "fbab37da5bea25ebc6fcd5199c15c3348c831cdaf7f3f7d700d966860d11bb6a",
+  "platform": "rtic",
+  "provenance": {
+    "app_image": {
+      "path": "artifacts/monotonic-final.bin",
+      "sha256": "b10d6dfdc9f84f0e02f3007e198fe38ea3ae02ca47a3222e515073cfc9cbfb29"
+    },
+    "bootloader": {
+      "origin": "espflash4.6.0 default C6 resource; retained original and narrow header/digest correction; exact IDF source build commit unavailable in resource manifest",
+      "path": "artifacts/bootloader-final.bin",
+      "sha256": "b1d7d018cc62f3fb30b901d5bacf95f58ab879f70ebec50d231f092e976c9318"
+    },
+    "build": "release, locked, riscv-esp32c6-backend; upstream profile/configuration, forced frame pointers",
+    "collector": {
+      "build_source": "Built before committing this exact source at 8008dbf0283403980fa237981a82fec63d3f391a; retained source snapshots match that commit. No clean-at-build claim.",
+      "path": "artifacts/benchctl",
+      "sha256": "f06cb6e82e1e01e86dba08a5172b5e4cc0b3ebd588f3cd6fd2395cbfbdbc84dd",
+      "source_commit": "8008dbf0283403980fa237981a82fec63d3f391a"
+    },
+    "elf": {
+      "path": "artifacts/monotonic.elf",
+      "sha256": "12dc8bd4f079b9acdfda34db652e422cafddd9869c4b92493274cb56b47645a9"
+    },
+    "evaluation_source_commit": "8008dbf0283403980fa237981a82fec63d3f391a",
+    "limitations": [
+      "No runtime CPU/flash clock readback or external clock calibration.",
+      "HAL init is absent; startup watchdog policy depends on the selected prebuilt bootloader.",
+      "Host receive pacing and bounded quiet observation are not device timing, preemption, liveness or efficiency measurements."
+    ],
+    "partition_table": {
+      "path": "artifacts/partition-table.bin",
+      "sha256": "420931e3f5af072d899b5357c043fd9f283bf165fc9df6113b6d43d82b48a06d"
+    },
+    "rust": "1.96.0",
+    "schema_version": 1,
+    "scope": "Unmodified upstream RTIC monotonic example with separately corrected image metadata; no physical pass established by preparation.",
+    "target": "riscv32imac-unknown-none-elf",
+    "upstream_commit": "f1797184d6168e54c345b17019c237eea70b9ed4",
+    "upstream_source_clean": true,
+    "upstream_tracked_lock_unchanged": true
+  },
+  "qualification": null,
+  "reset_kind": "RTS warm-reset request; DTR deasserted",
+  "run_order_index": 1,
+  "schema_version": 4,
+  "serial": {
+    "baud": 115200,
+    "data_bits": 8,
+    "parity": "none",
+    "stop_bits": 1
+  },
+  "serial_sha256": "3e90c4a6f6d3395218816e8950c8b26ad1ed2fa9ca599cc2ac1e5008fdc2cadb",
+  "status": "failed",
+  "summary": null,
+  "timestamp_unix_ms": 1792774489487
+}

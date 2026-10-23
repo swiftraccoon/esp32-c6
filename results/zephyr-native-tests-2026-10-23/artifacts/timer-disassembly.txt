@@ -1,0 +1,47 @@
+
+.cache/zephyr-qualification/artifacts/zephyr.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .iram0.text:
+
+40802ba4 <arch_timing_counter_get>:
+40802ba4:	01804317          	auipc	t1,0x1804
+40802ba8:	7a230067          	jr	1954(t1) # 42007346 <sys_clock_cycle_get_64>
+
+Disassembly of section .loader.text:
+
+Disassembly of section .text:
+
+.cache/zephyr-qualification/artifacts/zephyr.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .iram0.text:
+
+Disassembly of section .loader.text:
+
+Disassembly of section .text:
+
+42007346 <sys_clock_cycle_get_64>:
+42007346:	408107b7          	lui	a5,0x40810
+4200734a:	f547a783          	lw	a5,-172(a5) # 4080ff54 <systimer_hal>
+4200734e:	c399                	beqz	a5,42007354 <sys_clock_cycle_get_64+0xe>
+42007350:	dc5ff06f          	j	42007114 <get_systimer_alarm>
+42007354:	4501                	li	a0,0
+42007356:	4581                	li	a1,0
+42007358:	8082                	ret
+
+.cache/zephyr-qualification/artifacts/zephyr.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .iram0.text:
+
+Disassembly of section .loader.text:
+
+Disassembly of section .text:
+
+42007114 <get_systimer_alarm>:
+42007114:	40810537          	lui	a0,0x40810
+42007118:	4585                	li	a1,1
+4200711a:	f5450513          	addi	a0,a0,-172 # 4080ff54 <systimer_hal>
+4200711e:	fdff9317          	auipc	t1,0xfdff9
+42007122:	2ae30067          	jr	686(t1) # 400003cc <systimer_hal_get_counter_value>

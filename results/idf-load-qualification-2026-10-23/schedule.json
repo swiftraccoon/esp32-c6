@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "experiment": "idf-load-qualification-v1",
+  "purpose": "qualification",
+  "contract_commit": "093153160316e01f0dea364ef999f3be15ddc9d2",
+  "boots": [
+    {
+      "boot_id": "load-off-01",
+      "run_order": 1,
+      "profile": "runtime-stats-disabled",
+      "mode": "off"
+    },
+    {
+      "boot_id": "load-on-01",
+      "run_order": 2,
+      "profile": "runtime-stats-enabled",
+      "mode": "on"
+    }
+  ],
+  "capture_timeout_seconds": 120,
+  "continuation": "Proceed to enabled only if the preceding qualification passes. Stop on a control/contract rejection; preserve it. Work-phase loss, deadline failure and generator-limited outcomes are valid observations, not replacements.",
+  "comparative_estimator": null
+}

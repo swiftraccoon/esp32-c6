@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "scope": "Unmodified upstream RTIC monotonic example with separately corrected image metadata; no physical pass established by preparation.",
+  "upstream_commit": "f1797184d6168e54c345b17019c237eea70b9ed4",
+  "upstream_source_clean": true,
+  "upstream_tracked_lock_unchanged": true,
+  "rust": "1.96.0",
+  "target": "riscv32imac-unknown-none-elf",
+  "build": "release, locked, riscv-esp32c6-backend; upstream profile/configuration, forced frame pointers",
+  "elf": {
+    "path": "artifacts/monotonic.elf",
+    "sha256": "12dc8bd4f079b9acdfda34db652e422cafddd9869c4b92493274cb56b47645a9"
+  },
+  "app_image": {
+    "path": "artifacts/monotonic-final.bin",
+    "sha256": "b10d6dfdc9f84f0e02f3007e198fe38ea3ae02ca47a3222e515073cfc9cbfb29"
+  },
+  "bootloader": {
+    "path": "artifacts/bootloader-final.bin",
+    "sha256": "b1d7d018cc62f3fb30b901d5bacf95f58ab879f70ebec50d231f092e976c9318",
+    "origin": "espflash4.6.0 default C6 resource; retained original and narrow header/digest correction; exact IDF source build commit unavailable in resource manifest"
+  },
+  "partition_table": {
+    "path": "artifacts/partition-table.bin",
+    "sha256": "420931e3f5af072d899b5357c043fd9f283bf165fc9df6113b6d43d82b48a06d"
+  },
+  "collector": {
+    "path": "artifacts/benchctl",
+    "sha256": "f06cb6e82e1e01e86dba08a5172b5e4cc0b3ebd588f3cd6fd2395cbfbdbc84dd",
+    "build_source": "Built before committing this exact source at 8008dbf0283403980fa237981a82fec63d3f391a; retained source snapshots match that commit. No clean-at-build claim.",
+    "source_commit": "8008dbf0283403980fa237981a82fec63d3f391a"
+  },
+  "limitations": [
+    "No runtime CPU/flash clock readback or external clock calibration.",
+    "HAL init is absent; startup watchdog policy depends on the selected prebuilt bootloader.",
+    "Host receive pacing and bounded quiet observation are not device timing, preemption, liveness or efficiency measurements."
+  ],
+  "evaluation_source_commit": "8008dbf0283403980fa237981a82fec63d3f391a"
+}

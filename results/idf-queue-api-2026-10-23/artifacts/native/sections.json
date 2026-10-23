@@ -1,0 +1,92 @@
+{
+  "allocated_section_bytes_by_kind": {
+    "Data": 6848,
+    "ReadOnlyData": 60536,
+    "Text": 332306,
+    "UninitializedData": 331448,
+    "Unknown": 228
+  },
+  "allocated_sections": [
+    {
+      "address": 1342193640,
+      "kind": "UninitializedData",
+      "name": ".rtc_reserved",
+      "size_bytes": 24
+    },
+    {
+      "address": 1082130432,
+      "kind": "Text",
+      "name": ".iram0.text",
+      "size_bytes": 47408
+    },
+    {
+      "address": 1082177840,
+      "kind": "UninitializedData",
+      "name": ".iram0.text_end",
+      "size_bytes": 0
+    },
+    {
+      "address": 1082177840,
+      "kind": "UninitializedData",
+      "name": ".iram0.data",
+      "size_bytes": 0
+    },
+    {
+      "address": 1082177840,
+      "kind": "Data",
+      "name": ".dram0.data",
+      "size_bytes": 6848
+    },
+    {
+      "address": 1082184688,
+      "kind": "UninitializedData",
+      "name": ".noinit",
+      "size_bytes": 0
+    },
+    {
+      "address": 1082184688,
+      "kind": "UninitializedData",
+      "name": ".dram0.bss",
+      "size_bytes": 3736
+    },
+    {
+      "address": 1107296288,
+      "kind": "Text",
+      "name": ".flash.text",
+      "size_bytes": 284898
+    },
+    {
+      "address": 1107296288,
+      "kind": "UninitializedData",
+      "name": ".flash_rodata_dummy",
+      "size_bytes": 327680
+    },
+    {
+      "address": 1107623968,
+      "kind": "ReadOnlyData",
+      "name": ".flash.appdesc",
+      "size_bytes": 256
+    },
+    {
+      "address": 1107624224,
+      "kind": "ReadOnlyData",
+      "name": ".flash.rodata",
+      "size_bytes": 60280
+    },
+    {
+      "address": 1107684504,
+      "kind": "Unknown",
+      "name": ".flash.init_array",
+      "size_bytes": 228
+    },
+    {
+      "address": 1082188424,
+      "kind": "UninitializedData",
+      "name": ".dram0.heap_start",
+      "size_bytes": 8
+    }
+  ],
+  "elf_file_bytes": 8878380,
+  "elf_sha256": "fd6501102658572f12850512116401eaf57f6c330becd288ed8c825117e6fac8",
+  "limitations": "ELF file bytes include non-flashed data; sections are not peak RAM or complete flash-image footprint."
+}

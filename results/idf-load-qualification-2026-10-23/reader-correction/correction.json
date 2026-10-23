@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "scope": "Subsequent host reader correction only; no firmware or original artifact replacement.",
+  "correction_commit": "87c9343140de649aaf5dd205275763d31dc7dfc9",
+  "dependency": "serde_json =1.0.154; enable float_roundtrip; lockfile unchanged",
+  "corrected_reader": {
+    "path": "benchctl",
+    "sha256": "4171af48b87cebfd8ec408be9f4fe6f96a4ba0fe49061a21bc7068d18911968f"
+  },
+  "original_physical_collector": {
+    "path": "../artifacts/benchctl",
+    "sha256": "f3211f0b3762cb1ba96ef81b6110a74eefc542076abcf55ae5f3720610db8cbe"
+  },
+  "original_full_archive_check": {
+    "command": "results/idf-load-qualification-2026-10-23/artifacts/benchctl replay-archives --root .",
+    "exit_code": 1,
+    "log": "original-reader-failure.log",
+    "cause": "Saved off phase5 send-entry-to-completion mean parses one ULP below fresh 2132498/773 under the default reader."
+  },
+  "corrected_full_archive_check": {
+    "command": "target/release/benchctl replay-archives --root .",
+    "exit_code": 0,
+    "output": "corrected-reader-replay.json"
+  },
+  "validation": {
+    "rust": "1.96.0",
+    "unit_tests_passed": 98,
+    "doctests_passed": 2,
+    "commands_passed": [
+      "cargo fmt --all --check",
+      "cargo test --locked --workspace",
+      "cargo clippy --locked --workspace --all-targets -- -D warnings",
+      "cargo doc --locked --workspace --no-deps",
+      "cargo build --locked --release -p benchctl"
+    ],
+    "historical_method_check": "historical-method-check.json",
+    "limitations": "Local host checks only; not hosted CI, independent physical reruns or additional device measurements."
+  },
+  "evidence_policy": "All 69 frozen inputs, raw samples, original capture reports and standalone replay outputs remain byte-identical. Exact equality and one-ULP rejection remain enforced."
+}

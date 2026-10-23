@@ -1,0 +1,6 @@
+f67ae3c07d0d32685ee05b6add063f37e799a7bd14af86cb3998da237709c57f  .embuild/espressif/dist/clang-esp-19.1.2_20250312-aarch64-apple-darwin.tar.xz
+c6fdda745f9ce69bca048e91955c7d043ba905d6388a62e0ff52b681ac17183c  .embuild/espressif/dist/cmake-3.30.2-macos-universal.tar.gz
+caa463d3cbef2430a5a35847c1d9f2f152403b17a802050927ff60c8da54fe46  .embuild/espressif/dist/esp-rom-elfs-20260528.tar.gz
+e3a4dfea043e2bce8cd00b3a0b260a59249fa61ca5931bf02f18a3d43c18deb4  .embuild/espressif/dist/esp32ulp-elf-2.38_20240113-macos-arm64.tar.gz
+89a287444b5b3e98f88a945afa50ce937b8ffd1dcc59c555ad9b1baf855298c9  .embuild/espressif/dist/ninja-mac-v1.12.1.zip
+caa7103e014c61939eea4656cd4effdc34930da0b76cd59ad1adb7bfaeef923c  .embuild/espressif/dist/riscv32-esp-elf-14.2.0_20260121-aarch64-apple-darwin.tar.xz

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "analysis_revision": 2,
+  "status": "failed",
+  "original_run_report_unchanged": true,
+  "console_sha256": "1839a5af0320cf584725cda62db697b7d21906ca19e0517e5af09955761639ec",
+  "visible_metric_rows": 47,
+  "exact_expected_order": true,
+  "all_notes_empty": true,
+  "frequency_headers": 0,
+  "rom_sha_comparison_failure": 1,
+  "upstream_completion_banners": 1,
+  "failure_reasons": [
+    "Required frequency header absent; compiled out in the frozen configuration",
+    "ROM reports SHA-256 comparison failed, then boots anyway"
+  ],
+  "initial_inspection_metric_rows": 24,
+  "interpretation": "Observed console output only; no post-hoc acceptance-rule change or replacement capture"
+}

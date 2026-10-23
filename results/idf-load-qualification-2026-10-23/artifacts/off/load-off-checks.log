@@ -1,0 +1,13 @@
+    Checking konst_macro_rules v0.2.19
+    Checking bench-core v0.1.0 (/Users/builduser/Git/esp32-c6/crates/bench-core)
+    Checking libc v0.2.191
+    Checking serde_core v1.0.229
+   Compiling esp-idf-baseline v0.1.0 (/Users/builduser/Git/esp32-c6/firmware/esp-idf)
+    Checking konst v0.2.20
+    Checking const_format v0.2.36
+    Checking esp-idf-sys v0.37.2
+    Checking serde v1.0.229
+    Finished `release` profile [optimized + debuginfo] target(s) in 4.96s
+ Documenting esp-idf-baseline v0.1.0 (/Users/builduser/Git/esp32-c6/firmware/esp-idf)
+    Finished `release` profile [optimized + debuginfo] target(s) in 2.98s
+   Generated /Users/builduser/Git/esp32-c6/firmware/esp-idf/.cache/load-off-target/riscv32imac-esp-espidf/doc/load_probe/index.html

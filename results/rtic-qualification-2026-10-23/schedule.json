@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "experiment": "rtic-monotonic-qualification-v1",
+  "purpose": "qualification",
+  "source_revision": "f1797184d6168e54c345b17019c237eea70b9ed4",
+  "attempts": [
+    {
+      "boot_id": "rtic-monotonic-01",
+      "run_order": 1,
+      "directory": "runs/01"
+    },
+    {
+      "boot_id": "rtic-monotonic-02",
+      "run_order": 2,
+      "directory": "runs/02"
+    },
+    {
+      "boot_id": "rtic-monotonic-03",
+      "run_order": 3,
+      "directory": "runs/03"
+    }
+  ],
+  "continuation": "Stop after the first unexpected rejection; retain it and leave later attempts not run. Restore and separately verify the pre-session full flash.",
+  "host_ceiling_ns": 45000000000,
+  "post_marker_guard_ns": 12000000000,
+  "comparative_estimator": null,
+  "contract_commit": "8008dbf0283403980fa237981a82fec63d3f391a"
+}

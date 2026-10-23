@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "experiment": "alignment-probe-2026-10-23",
+  "platform": "bare-metal",
+  "protocol": 2,
+  "design": {
+    "kind": "exploratory adaptive reflash reversal",
+    "sequence": [
+      "aligned",
+      "original",
+      "aligned",
+      "original",
+      "aligned"
+    ],
+    "initial_observation": "The first aligned boot returned a 283 microsecond compute median; subsequent alternating original/aligned reflashes were then chosen to investigate reproducibility.",
+    "preregistered": false,
+    "randomized": false,
+    "physical_boards": 1,
+    "reset_request": "RTS-requested reset without an externally controlled power cycle; ROM logs report POWERON"
+  },
+  "counts": {
+    "passing_boots": 5,
+    "failed_boots": 0,
+    "compute_samples": 320,
+    "timer_overhead_samples": 320
+  },
+  "clocks": {
+    "cpu_mhz": 160,
+    "flash_divider": 1,
+    "flash_mhz": 80,
+    "flash_source_mhz": 80,
+    "registers": {
+      "pcr_cpu_freq_conf": 0,
+      "pcr_mspi_clk_conf": 1280,
+      "pcr_sysclk_conf": 671154688,
+      "spi0_clock": 2147483648
+    },
+    "source": "register-readback"
+  },
+  "integrity": {
+    "offline_raw_replays_passed": 5,
+    "independent_raw_record_equivalence_passed": 5,
+    "independent_order_count_checksum_unit_and_clock_checks_passed": 5,
+    "independent_benchmark_summary_recomputations_passed": 10,
+    "per_run_elf_and_provenance_identity_checks_passed": 5,
+    "collector_executable_sha256": "6f1a1a38c5079492f957a12ea76193f6b3ce7a8fe5d9dbbbb81c1331b327ac55"
+  },
+  "workload": {
+    "id": "integer-mix-v1",
+    "seed": 305419896,
+    "rounds": 4096,
+    "warmup_iterations": 8,
+    "timer_resolution_ns": 1000,
+    "body_bytes": 54,
+    "body_instructions": 18,
+    "body_sha256": "b917090559ff1edf22ad5ac21975f1a998e5594b9ad23db9344d5c71c2b3af49",
+    "source_sha256": "27447ee945989a682ee778646f488e7c986d8831a38515e1057eaa143992ab9e"
+  },
+  "variants": {
+    "aligned": {
+      "passing_boots": 3,
+      "run_order_indices": [
+        1,
+        3,
+        5
+      ],
+      "firmware_sha256": "19184daf8b628b690655fa0ea23453fd5519f630e58450141a7280395d33f741",
+      "extra_rustflags": "-C llvm-args=-align-all-functions=2",
+      "compute_samples": 192,
+      "timer_overhead_samples": 192,
+      "compute": {
+        "boot_mean_ns_range": {
+          "min": 282625.0,
+          "max": 282640.625
+        },
+        "arithmetic_mean_of_boot_means_ns": 282630.2083333333,
+        "boot_p50_ns_range": {
+          "min": 282000,
+          "max": 283000
+        },
+        "boot_p95_ns_range": {
+          "min": 283000,
+          "max": 283000
+        },
+        "boot_p99_ns_range": {
+          "min": 291000,
+          "max": 291000
+        },
+        "observed_min_ns": 282000,
+        "observed_max_ns": 291000
+      },
+      "timer_overhead": {
+        "boot_p50_ns_range": {
+          "min": 1000,
+          "max": 1000
+        },
+        "boot_p95_ns_range": {
+          "min": 1000,
+          "max": 1000
+        },
+        "observed_min_ns": 0,
+        "observed_max_ns": 10000
+      }
+    },
+    "original": {
+      "passing_boots": 2,
+      "run_order_indices": [
+        2,
+        4
+      ],
+      "firmware_sha256": "be14bac3563b52d5e043485c9f798a4e23d6ed8702b72c9a3028c1cf46f58d0b",
+      "extra_rustflags": null,
+      "compute_samples": 128,
+      "timer_overhead_samples": 128,
+      "compute": {
+        "boot_mean_ns_range": {
+          "min": 308328.125,
+          "max": 308328.125
+        },
+        "arithmetic_mean_of_boot_means_ns": 308328.125,
+        "boot_p50_ns_range": {
+          "min": 308000,
+          "max": 308000
+        },
+        "boot_p95_ns_range": {
+          "min": 309000,
+          "max": 309000
+        },
+        "boot_p99_ns_range": {
+          "min": 319000,
+          "max": 319000
+        },
+        "observed_min_ns": 308000,
+        "observed_max_ns": 319000
+      },
+      "timer_overhead": {
+        "boot_p50_ns_range": {
+          "min": 1000,
+          "max": 1000
+        },
+        "boot_p95_ns_range": {
+          "min": 1000,
+          "max": 1000
+        },
+        "observed_min_ns": 0,
+        "observed_max_ns": 8000
+      }
+    }
+  },
+  "runs": [
+    {
+      "order": 1,
+      "variant": "aligned",
+      "path": "runs/01-bare-metal",
+      "independent_boot_id": "alignment-bare-metal-01",
+      "firmware_sha256": "19184daf8b628b690655fa0ea23453fd5519f630e58450141a7280395d33f741",
+      "status": "pass",
+      "benchmarks": {
+        "compute": {
+          "max_ns": 291000,
+          "mean_ns": 282640.625,
+          "min_ns": 282000,
+          "p50_ns": 283000,
+          "p95_ns": 283000,
+          "p99_ns": 291000,
+          "sample_count": 64
+        },
+        "timer-overhead": {
+          "max_ns": 10000,
+          "mean_ns": 906.25,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 10000,
+          "sample_count": 64
+        }
+      }
+    },
+    {
+      "order": 2,
+      "variant": "original",
+      "path": "runs/02-original",
+      "independent_boot_id": "alignment-original-02",
+      "firmware_sha256": "be14bac3563b52d5e043485c9f798a4e23d6ed8702b72c9a3028c1cf46f58d0b",
+      "status": "pass",
+      "benchmarks": {
+        "compute": {
+          "max_ns": 319000,
+          "mean_ns": 308328.125,
+          "min_ns": 308000,
+          "p50_ns": 308000,
+          "p95_ns": 309000,
+          "p99_ns": 319000,
+          "sample_count": 64
+        },
+        "timer-overhead": {
+          "max_ns": 7000,
+          "mean_ns": 859.375,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 7000,
+          "sample_count": 64
+        }
+      }
+    },
+    {
+      "order": 3,
+      "variant": "aligned",
+      "path": "runs/03-aligned",
+      "independent_boot_id": "alignment-aligned-03",
+      "firmware_sha256": "19184daf8b628b690655fa0ea23453fd5519f630e58450141a7280395d33f741",
+      "status": "pass",
+      "benchmarks": {
+        "compute": {
+          "max_ns": 291000,
+          "mean_ns": 282625.0,
+          "min_ns": 282000,
+          "p50_ns": 282000,
+          "p95_ns": 283000,
+          "p99_ns": 291000,
+          "sample_count": 64
+        },
+        "timer-overhead": {
+          "max_ns": 9000,
+          "mean_ns": 875.0,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 9000,
+          "sample_count": 64
+        }
+      }
+    },
+    {
+      "order": 4,
+      "variant": "original",
+      "path": "runs/04-original",
+      "independent_boot_id": "alignment-original-04",
+      "firmware_sha256": "be14bac3563b52d5e043485c9f798a4e23d6ed8702b72c9a3028c1cf46f58d0b",
+      "status": "pass",
+      "benchmarks": {
+        "compute": {
+          "max_ns": 319000,
+          "mean_ns": 308328.125,
+          "min_ns": 308000,
+          "p50_ns": 308000,
+          "p95_ns": 309000,
+          "p99_ns": 319000,
+          "sample_count": 64
+        },
+        "timer-overhead": {
+          "max_ns": 8000,
+          "mean_ns": 875.0,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 8000,
+          "sample_count": 64
+        }
+      }
+    },
+    {
+      "order": 5,
+      "variant": "aligned",
+      "path": "runs/05-aligned",
+      "independent_boot_id": "alignment-aligned-05",
+      "firmware_sha256": "19184daf8b628b690655fa0ea23453fd5519f630e58450141a7280395d33f741",
+      "status": "pass",
+      "benchmarks": {
+        "compute": {
+          "max_ns": 291000,
+          "mean_ns": 282625.0,
+          "min_ns": 282000,
+          "p50_ns": 282000,
+          "p95_ns": 283000,
+          "p99_ns": 291000,
+          "sample_count": 64
+        },
+        "timer-overhead": {
+          "max_ns": 9000,
+          "mean_ns": 875.0,
+          "min_ns": 0,
+          "p50_ns": 1000,
+          "p95_ns": 1000,
+          "p99_ns": 9000,
+          "sample_count": 64
+        }
+      }
+    }
+  ],
+  "interpretation": {
+    "result": "The 282–283 microsecond aligned medians and 308 microsecond original medians reproduced across alternating reflashes with identical observed clocks.",
+    "scope": "Supports a compiler function-placement effect in these two binaries; the flag affects functions broadly and does not isolate a loop or prove an exact one-cycle fetch penalty.",
+    "statistics": "Nearest-rank per-boot percentiles; 64 samples make p99 the observed maximum. Fractional means do not increase the 1000 ns timer resolution. Samples within one boot are not independent board trials.",
+    "outlier_policy": "All raw observations retained; no exclusions and no timer-overhead subtraction.",
+    "main_dataset": "Separate from clocked-handoff-2026-10-23; main original binary and observations remain unchanged."
+  },
+  "restoration": {
+    "original_full_flash_bytes": 8388608,
+    "verified": true,
+    "reset_after_restoration": true,
+    "evidence": "../clocked-handoff-2026-10-23/device-state.json"
+  }
+}

@@ -1,0 +1,6 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on build directory
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.48s
+     Running `target/debug/rtic-image-correction app ../artifacts/monotonic-default.bin ../upstream/examples/esp32c6/target/riscv32imac-unknown-none-elf/release/examples/monotonic ../artifacts/monotonic-corrected.bin`
+Error: ELF section is unmapped: .trap

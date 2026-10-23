@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "purpose": "Independent host-only counterexample, no physical device. Copied actual pre-correction console module plus an appended fake-reader test; repository source was not edited.",
+  "pre_fix_module_sha256": "6870fed121f34392a5318de7f8ac72af4ca2cfe51fb9c00c25794c0cdd7b9901",
+  "copied_actual_boot_guard_sha256": "6817d32c22d716c607acc06368d862f55543e5f56fbb1f824b62772d898d9d81",
+  "independent_test_sha256": "561ee8542241ba98d66fca377d347d242d54ee85f4b33dbfe677dc911a0b902c",
+  "command": [
+    "cargo",
+    "+1.96.0",
+    "test",
+    "--offline",
+    "--locked",
+    "--manifest-path",
+    ".cache/rtic-independent-guard-probe/Cargo.toml",
+    "independent_loop_top_guard_leaves_pending_panic_unread",
+    "--",
+    "--nocapture"
+  ],
+  "exit": 0,
+  "clock_calls_ns": [
+    1,
+    100000000,
+    200000000,
+    2100000000,
+    2200000000,
+    3100000000,
+    3200000000,
+    4100000000,
+    9100000000
+  ],
+  "reader_chunks": [
+    "ESP-ROM:esp32c6-20220919\\ninit\\nhello from foo\\nhello from bar\\nhello from baz\\n",
+    "bye from foo\\n",
+    "bye from bar\\n",
+    "bye from baz\\n",
+    "PANIC\\n"
+  ],
+  "observed_result": {
+    "capture_is_ok": true,
+    "reader_calls": 4,
+    "pending_panic_unread": true,
+    "replay_is_ok": true
+  },
+  "scope": "Uncommitted preflight implementation defect, discovered before any board writes. Test records the old bad behavior; it is not a maintained passing correctness test.",
+  "fixed_rerun": {
+    "command": [
+      "cargo",
+      "+1.96.0",
+      "test",
+      "--offline",
+      "--locked",
+      "--manifest-path",
+      ".cache/rtic-independent-guard-fixed-probe/Cargo.toml",
+      "independent_loop_top_jump_reads_and_rejects_pending_panic",
+      "--",
+      "--nocapture"
+    ],
+    "exit": 0,
+    "source_identity": "0a423e0f402375ec0bf6d1ddf127aa5c9965fc9ce021028e92cadb228852d25d  tools/benchctl/src/rtic_console.rs (preflight fixed snapshot)",
+    "test_sha256": "976061f30d6ae1c9e8302d8be899e29d61c7307b0372835ad1b01e22ad74c301",
+    "capture_is_ok": false,
+    "reader_calls": 5,
+    "pending_panic_unread": false,
+    "replay_is_ok": false
+  },
+  "initial_preflight_guard_seconds": 5,
+  "final_prefreeze_guard_seconds": 12,
+  "final12_rerun": {
+    "command": [
+      "cargo",
+      "+1.96.0",
+      "test",
+      "--offline",
+      "--locked",
+      "--manifest-path",
+      ".cache/rtic-independent-guard-final12-probe/Cargo.toml",
+      "independent_loop_top_jump_reads_and_rejects_pending_panic",
+      "--",
+      "--nocapture"
+    ],
+    "exit": 0,
+    "actual_source_identity": "8cf959d99d99306895f6347270029a8acc5768cabcdd579b31842bab43248ec3  tools/benchctl/src/rtic_console.rs",
+    "test_sha256": "bf73a426aa61b21ec3dbfb2de2ae096fe419e92913939372322087f866b3d22f",
+    "clock_calls_ns": [
+      1,
+      100000000,
+      200000000,
+      2100000000,
+      2200000000,
+      3100000000,
+      3200000000,
+      4100000000,
+      16100000000
+    ],
+    "capture_is_ok": false,
+    "reader_calls": 5,
+    "pending_panic_unread": false,
+    "replay_is_ok": false,
+    "collector_under_review_sha256": "f06cb6e82e1e01e86dba08a5172b5e4cc0b3ebd588f3cd6fd2395cbfbdbc84dd"
+  }
+}

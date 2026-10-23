@@ -1,0 +1,2 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.12s
+     Running unittests src/main.rs (.cache/rtic-independent-guard-final12-probe/target/debug/deps/benchctl-d00b6c2bc156ae21)

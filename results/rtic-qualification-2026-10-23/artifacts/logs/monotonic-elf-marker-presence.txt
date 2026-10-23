@@ -1,0 +1,53 @@
+hello from bar
+Stack overflow detected
+bye from bar
+hello from baz
+bye from baz
+hello from foo
+bye from foo
+init
+init
+init
+Exception
+init
+init
+Exception
+Exception
+Exception
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init
+init

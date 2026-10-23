@@ -1,0 +1,23 @@
+# Preserve original device bytes, including mixed CRLF and LF framing.
+results/**/serial.raw binary
+# Timed read receipts are byte-bound evidence, with their original line endings.
+results/**/observations.jsonl -text
+# Monitor and transfer logs retain CR framing and progress bytes exactly.
+results/**/monitor.log binary
+results/**/console.log binary
+results/**/flash.log binary
+results/**/first-flash.log binary
+results/**/flash-order-*.log binary
+results/**/restore*.log binary
+# Generated build evidence retains upstream whitespace and exact bytes.
+results/**/artifacts/*.log binary
+results/**/artifacts/**/*.log binary
+# Host inspection stdout/stderr retain exact newlines and diagnostic bytes.
+results/**/artifacts/host-controls/**/*-stdout.txt binary
+results/**/artifacts/host-controls/**/*-stderr.txt binary
+results/**/artifacts/*.ninja binary
+results/**/artifacts/*.map binary
+results/**/artifacts/CMakeCache.txt binary
+results/**/artifacts/**/CMakeCache.txt binary
+results/**/artifacts/**/*.ninja binary
+results/**/artifacts/*.ini binary

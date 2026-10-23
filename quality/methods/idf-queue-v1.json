@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "id": "idf-queue-v1",
+  "decision_question": "Does the selected native queue API change this checked instrumented request/reply path on the same IDF kernel?",
+  "qualification_timing": "Retrospective offline controls over existing qualification pilots; this new gate did not run during historical captures and authorizes only future exact-artifact comparisons.",
+  "timing_contracts": [
+    {
+      "metric": "message-roundtrip",
+      "begin": "Raw counter immediately before initiator request send after readiness checks",
+      "end": "Raw counter after checked reply receive; higher-priority worker phase bookkeeping can contribute",
+      "units_and_clock": "Gross HP SYSTIMER UNIT0 ticks, nominal16MHz from40MHz crystal; no independent frequency calibration",
+      "aggregation": "1000 per-event observations per boot; nearest-rank boot quantiles, no independent-event inference",
+      "observer_policy": "No subtraction; separate counter-pair observer retained",
+      "correctness": "Capacity1 u32 sequence-XOR reply, ordered indices, declared phase and blocked-state checks, cleanup",
+      "source": {
+        "path": "firmware/esp-idf/src/bin/queue-api.rs",
+        "sha256": "49ad38d4fdb142001133d481fbeb4e3095a1eb3321bca716594a421d4246d57d"
+      }
+    },
+    {
+      "metric": "timer-overhead",
+      "begin": "First raw counter read",
+      "end": "Second consecutive raw counter read",
+      "units_and_clock": "Gross HP SYSTIMER UNIT0 nominal16MHz ticks",
+      "aggregation": "1000 ordered counter-pair observations, retained separately",
+      "observer_policy": "Observed gross; never subtracted from message path",
+      "correctness": "No backsteps, raw52-bit width/range, configuration readback and bounded sleep/WFI checks",
+      "source": {
+        "path": "firmware/esp-idf/src/bin/queue-api.rs",
+        "sha256": "49ad38d4fdb142001133d481fbeb4e3095a1eb3321bca716594a421d4246d57d"
+      }
+    }
+  ],
+  "variants": [
+    {
+      "id": "std",
+      "wire": "queue",
+      "selector": "rust-std-sync-channel",
+      "elf": {
+        "path": "results/queue-api-qualification-2026-10-23/artifacts/std/firmware.elf",
+        "sha256": "0282b814660461f7c88d3eb64c7d701e620e418d53be7d53b5eb96834a82d32b"
+      },
+      "provenance": {
+        "path": "results/queue-api-qualification-2026-10-23/artifacts/std/provenance.json",
+        "sha256": "5ec4f80f1fa100bba7b3f0926f127568e2fd6f80f3e45fa6cf1044fb78da051d"
+      },
+      "configuration": [
+        {
+          "path": "results/queue-api-qualification-2026-10-23/artifacts/sdk/sdkconfig",
+          "sha256": "5ee0be1128539831db16b63d7008985e16849b216bd4a278076e294a51fe3758"
+        }
+      ],
+      "positive_raw": {
+        "path": "results/queue-api-qualification-2026-10-23/runs/01-std/serial.raw",
+        "sha256": "7abad6affcf5bb4bd256041ba8fb063e485471726946cd610d2769cf7fa6c54e"
+      },
+      "positive_report": {
+        "path": "results/queue-api-qualification-2026-10-23/runs/01-std/run.json",
+        "sha256": "8699a2d82891bd475c48e946292b8af79b4db45eed80a95ae9acb4c6de96a6d1"
+      },
+      "required_elf_text": [
+        "message-roundtrip",
+        "timer-overhead"
+      ],
+      "required_output_text": [
+        "\"event\":\"hello\"",
+        "\"event\":\"qualification\"",
+        "\"event\":\"complete\""
+      ]
+    },
+    {
+      "id": "native",
+      "wire": "queue",
+      "selector": "freertos-queue",
+      "elf": {
+        "path": "results/queue-api-qualification-2026-10-23/artifacts/native/firmware.elf",
+        "sha256": "fd6501102658572f12850512116401eaf57f6c330becd288ed8c825117e6fac8"
+      },
+      "provenance": {
+        "path": "results/queue-api-qualification-2026-10-23/artifacts/native/provenance.json",
+        "sha256": "709456f835772e0803de4340195907f6d64827ad163804cbcd708e87eeb06568"
+      },
+      "configuration": [
+        {
+          "path": "results/queue-api-qualification-2026-10-23/artifacts/sdk/sdkconfig",
+          "sha256": "5ee0be1128539831db16b63d7008985e16849b216bd4a278076e294a51fe3758"
+        }
+      ],
+      "positive_raw": {
+        "path": "results/queue-api-qualification-2026-10-23/runs/02-native/serial.raw",
+        "sha256": "b5ddf84899ab4b62dd7726063e9bd384745aae5b965d17b27d5ed4dab32ba77a"
+      },
+      "positive_report": {
+        "path": "results/queue-api-qualification-2026-10-23/runs/02-native/run.json",
+        "sha256": "b4bdd4acdbbf8994849c52d8d473ea5a251078aa2615734f68a05e03541a752e"
+      },
+      "required_elf_text": [
+        "message-roundtrip",
+        "timer-overhead"
+      ],
+      "required_output_text": [
+        "\"event\":\"hello\"",
+        "\"event\":\"qualification\"",
+        "\"event\":\"complete\""
+      ]
+    }
+  ],
+  "review": {
+    "producer": "firmware and collector implementation agents",
+    "reviewer": "independent source and adversarial review agents",
+    "semantics": {
+      "path": "docs/reviews/queue-experiment-integration.md",
+      "sha256": "86afaa36a6147cb68d46be70a662148efc848e28fade91222e0f37d2510912f1"
+    },
+    "adversarial_reproduction": {
+      "path": "docs/reviews/collector-boot-guard-independent.md",
+      "sha256": "998573edcfcdae547c7819a11865ed50febd15d98bcbb7c757691034e158cacb"
+    }
+  },
+  "limitations": [
+    "These are retrospective retained pilots and offline controls, not a new physical run.",
+    "Review attribution and hashed documents do not establish semantic correctness, identity authenticity or human independence.",
+    "Supplied ELF/provenance and printed tokens do not cryptographically attest flashed firmware; retain flash verification.",
+    "Whole instrumented API paths with ordinary release placement, priorities1/5, radios not initialized; not kernel-switch cost, load capacity or power.",
+    "A changed ELF, provenance, configuration or endpoint map requires a new method revision and qualification evidence."
+  ]
+}

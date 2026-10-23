@@ -1,0 +1,34 @@
+.DS_Store
+target/
+build/
+.venv/
+.env
+.env.*
+backups/
+private/
+**/flash-backup*.bin
+.tools/
+.cache/
+.embuild/
+sdkconfig
+sdkconfig.old
+
+# Generated firmware, native libraries, and debug bundles.
+*.elf
+*.bin
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.dSYM/
+
+# Extensionless result executables; keep tools/benchctl source visible.
+results/**/artifacts/benchctl
+results/**/reader-correction/benchctl
+results/**/packaging-helper/rtic-image-correction
+
+# Historical source export contains an external local-build symlink.
+results/zephyr-rust-build-2026-10-23/artifacts/rust-module-source.tar.gz
