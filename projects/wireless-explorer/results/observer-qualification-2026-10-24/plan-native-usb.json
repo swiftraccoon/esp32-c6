@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "wireless-native-usb-plan-v1",
+  "purpose": "Qualify Mac native USB commands and passive capture using image03 after UART repetition; not an iPhone or transport-performance result.",
+  "source_commit": "6237dc4b16fe87f7c5db89f39d40800e9a787558",
+  "source_inputs": "source-inputs-02.sha256",
+  "merged_image_sha256": "7e76d200daa1d327353bff37174e8ec6f4d231a66dc37acf97a781c2a87397be",
+  "collector_sha256": "f69cfe6aaf681ea029dba05c40472f0e6bab569ee8e31015270167d899e07b17",
+  "connection": "Both DevKitC-1 USB ports connected to the Mac; CP2102N retained for recovery, native Serial/JTAG used for these exchanges.",
+  "steps": [
+    "Select the newly enumerated Espressif native USB interface; keep its concrete path and USB serial private.",
+    "Collect info and ping into new private directories. Require info to name native_usb and the ping to echo its request nonce; replay both exchanges.",
+    "If control succeeds, collect observer-2026-10-24-06 using the same 20-window schedule as UART session04: Wi-Fi1/6/8/11, BLE, IEEE11/15/20/25/26, 1500ms, two cycles.",
+    "Require strict collector replay and independent derivation. Assess post-IEEE reception separately from successful empty-window completion.",
+    "If the short repeat succeeds, collect observer-2026-10-24-07 with both full-channel passes: Wi-Fi1-13, BLE, IEEE11-26, 1000ms, two cycles.",
+    "Retain failed attempts unchanged; reset or change the implementation only between attempts, never to rescue an incomplete session.",
+    "Do not infer phone-only power, iPhone app access, precise throughput differences or lossless RF capture from Mac observations.",
+    "Restore and verify the fresh original flash backup before ending hardware work."
+  ]
+}

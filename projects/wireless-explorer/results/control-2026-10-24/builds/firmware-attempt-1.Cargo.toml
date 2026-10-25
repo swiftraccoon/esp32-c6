@@ -1,0 +1,31 @@
+[package]
+name = "wireless-explorer-firmware"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.96"
+publish = false
+description = "ESP32-C6-DevKitC-1-N8 dual serial control and passive Wi-Fi discovery"
+
+[workspace]
+
+[dependencies]
+esp-idf-sys = "=0.37.2"
+esp-idf-hal = "=0.46.2"
+esp-idf-svc = "=0.52.1"
+wireless-protocol = { path = "../crates/wireless-protocol" }
+
+[build-dependencies]
+embuild = "=0.33.5"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+debug = 2
+
+[package.metadata.esp-idf-sys]
+esp_idf_version = "tag:v5.5.6"
+esp_idf_tools_install_dir = "workspace"
+mcu = "esp32c6"
+

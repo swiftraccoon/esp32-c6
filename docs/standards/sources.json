@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "rust-style",
+      "repository": "https://github.com/rust-lang/rust.git",
+      "commit": "0ef4e1154335de75d5c333bf61e192ec99758fb3",
+      "requested_ref": "0ef4e1154335de75d5c333bf61e192ec99758fb3",
+      "files": {
+        "src/doc/style-guide/src/cargo.md": "cdb5c4010ccaad7e1c2599b11a0764a7132383ff3cda47b8cbb0e49459ba07ba",
+        "src/doc/style-guide/src/expressions.md": "2777292a47906dac38ea67d5aecbb4e6fb7368ca299dae9413f8c55863d287a2",
+        "src/doc/style-guide/src/types.md": "9862fd758e364c31dceb3e96392f305c8f8384ffbd5f006099d67fab3b5f30f5",
+        "src/doc/style-guide/src/advice.md": "7ad729d9d75eb48a72c6066cde4447138f3b7a6786979a2e504804724dba43a4",
+        "src/doc/style-guide/src/README.md": "387967fffd06320a1f4004c46740125baab3d5c0986340890f89e0f833a54566",
+        "src/doc/style-guide/src/statements.md": "3a183212f7ba75ddda447cc5de106673d068dd1415b9ad8cba71a6a5d112681d",
+        "src/doc/style-guide/src/nightly.md": "e82d3b08dc80468e93f13de44466b59d0bc2f843f734ed82a8f3249170476763",
+        "src/doc/style-guide/src/items.md": "57cbd21d469fa742349399bf27cf500c4cb9831ffc7ba43a1a164d7cd437bc04",
+        "src/doc/style-guide/src/SUMMARY.md": "9a1cc19ecec6e94b6c95293bd10f1c0bbfbdaaffaa4581f322af617ea8d49774",
+        "src/doc/style-guide/src/principles.md": "01c469c253c383a0fff47d234405204cd69cd4f51d5fa8d50ff903533e3ef80a",
+        "src/doc/style-guide/src/editions.md": "8ab37dc141036aebd478f541194cad92a86846953ec7212521b2a8e1942ed2ed",
+        "src/doc/style-guide/book.toml": "64d18b909f35a38ec28a08733020b401900ad4a334dd766557b54e3ece9b656d",
+        "LICENSE-MIT": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1",
+        "COPYRIGHT": "172020dbfd5b53a226dfde77616190a48dcff519b0bc0e6deb91a8450782c4af",
+        "LICENSE-APACHE": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+      }
+    },
+    {
+      "id": "rust-api",
+      "repository": "https://github.com/rust-lang/api-guidelines.git",
+      "commit": "19f0f62ecd0f56a0b7adaa332c352bc2476506ea",
+      "requested_ref": "19f0f62ecd0f56a0b7adaa332c352bc2476506ea",
+      "files": {
+        "book.toml": "04e4d667c2b0062cb4072380e77c055b89f6fe36886da0da50aab5d59753ca53",
+        "LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+        "LICENSE-MIT": "29662666b44dff84977b46e05642cdef910bc3a93a17b5fd86e632bafa59cf21",
+        "src/necessities.md": "b471e4dcfb48fd9cee26075e97dfcb61ccfb1c2c4b89d21531a03d0da6760fe8",
+        "src/type-safety.md": "d2bfa67228eb1252e1f1e515e036766f3996c2e874dd7ba5ad1b4d8a566f51f5",
+        "src/naming.md": "36b3fcb3705867fc96cb6346a86d0ad3ef9ad97fe5a2741d1afc68063001c63a",
+        "src/about.md": "e46227c4909b81d97a992d5c5a26d0591a84b780e71c9bff523bd24c8b0c4ddf",
+        "src/predictability.md": "11e74c2710f3e9a62670e7e48d339404cbad3340e6cc10f7631ea57362ba61bf",
+        "src/documentation.md": "6ba5c33eef97d07710abd09098d02a6a6d200ee3173b96dad27bf47139742105",
+        "src/checklist.md": "6e8afb1f55d7f079b9c48f48925ca80d52de78ea27beb8d0e5fadf91123f23b2",
+        "src/interoperability.md": "e795059bf83624252ee979c1e9672eb42600e0b7ea40a80026a975a2c0fb5d0d",
+        "src/flexibility.md": "5565a393442c9dcaf73161584233060f4cb52f8de1b2c1abad5ccc95f61aed7d",
+        "src/dependability.md": "e0e1c29e6b31ef0e13a2da17b7afa41f0f3fbf5aadae7ad51d39b9ae3caaddea",
+        "src/future-proofing.md": "467184d9e5f3e0f949db6ca6a5f4232574e342ec76648e46424f39c8c23f3ad7",
+        "src/external-links.md": "5abb45809a28cb61ac91ddf92fd2fec72b6d2aa31a7f3155fd7c773cb36abe7d",
+        "src/SUMMARY.md": "b3ad877e7824208a8c1c3b45762d75b8c89953ee34c224ba5c8ae5c2b0d43648",
+        "src/debuggability.md": "f6eb09d8246fe6aafc3c0e7b0003c5876455e78d7806d9b43905f1b4080d52fc",
+        "src/macros.md": "02b743de7c7a714b04096fcbe214145ea81edf9261367063ecb618146e79df4c"
+      }
+    },
+    {
+      "id": "google-rust",
+      "repository": "https://github.com/google/styleguide.git",
+      "commit": "3cf4f72013826804b7442896ce84d3777cf89ae0",
+      "requested_ref": "3cf4f72013826804b7442896ce84d3777cf89ae0",
+      "files": {
+        "rustguide.md": "cc91202959fdbd3449792410910f1ed49e8894077cdded362b7b4a4a8053dadb",
+        "LICENSE": "e6bc9e9c474700b708f568bac9e5a8a9bcb2b1dad53442f5ba449fcb848b8e76"
+      }
+    }
+  ]
+}

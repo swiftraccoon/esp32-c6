@@ -1,0 +1,1 @@
+ping-only-valid: expected=true observed=false; Error: unknown field `coverage`, expected one of `schema_version`, `kind`, `captures` at line 1 column 134

@@ -1,23 +1,40 @@
 # Preserve original device bytes, including mixed CRLF and LF framing.
-results/**/serial.raw binary
+**/results/**/serial.raw binary
 # Timed read receipts are byte-bound evidence, with their original line endings.
-results/**/observations.jsonl -text
+**/results/**/observations.jsonl -text
 # Monitor and transfer logs retain CR framing and progress bytes exactly.
-results/**/monitor.log binary
-results/**/console.log binary
-results/**/flash.log binary
-results/**/first-flash.log binary
-results/**/flash-order-*.log binary
-results/**/restore*.log binary
+**/results/**/monitor.log binary
+**/results/**/console.log binary
+**/results/**/flash.log binary
+**/results/**/first-flash.log binary
+**/results/**/flash-order-*.log binary
+**/results/**/restore*.log binary
 # Generated build evidence retains upstream whitespace and exact bytes.
-results/**/artifacts/*.log binary
-results/**/artifacts/**/*.log binary
+**/results/**/artifacts/*.log binary
+**/results/**/artifacts/**/*.log binary
 # Host inspection stdout/stderr retain exact newlines and diagnostic bytes.
-results/**/artifacts/host-controls/**/*-stdout.txt binary
-results/**/artifacts/host-controls/**/*-stderr.txt binary
-results/**/artifacts/*.ninja binary
-results/**/artifacts/*.map binary
-results/**/artifacts/CMakeCache.txt binary
-results/**/artifacts/**/CMakeCache.txt binary
-results/**/artifacts/**/*.ninja binary
-results/**/artifacts/*.ini binary
+**/results/**/artifacts/host-controls/**/*-stdout.txt binary
+**/results/**/artifacts/host-controls/**/*-stderr.txt binary
+**/results/**/artifacts/*.ninja binary
+**/results/**/artifacts/*.map binary
+**/results/**/artifacts/CMakeCache.txt binary
+**/results/**/artifacts/**/CMakeCache.txt binary
+**/results/**/artifacts/**/*.ninja binary
+**/results/**/artifacts/*.ini binary
+# New projects preserve their own raw exchanges and build/review diagnostics.
+projects/**/results/**/*.raw binary
+projects/**/results/**/*.frame -text
+projects/**/results/**/*.log binary
+projects/**/results/**/builds/*.toml binary
+projects/**/results/**/builds/*.defaults binary
+# These inputs were hashed before collection with a final blank line. Preserve
+# those bytes; only that whitespace diagnostic is waived, not source validation.
+projects/wireless-explorer/Cargo.toml whitespace=-blank-at-eof
+projects/wireless-explorer/rust-toolchain.toml whitespace=-blank-at-eof
+projects/wireless-explorer/clients/wxctl/Cargo.toml whitespace=-blank-at-eof
+projects/wireless-explorer/crates/wireless-protocol/Cargo.toml whitespace=-blank-at-eof
+projects/wireless-explorer/firmware/Cargo.toml whitespace=-blank-at-eof
+projects/wireless-explorer/firmware/.cargo/config.toml whitespace=-blank-at-eof
+projects/wireless-explorer/firmware/sdkconfig.defaults whitespace=-blank-at-eof
+# Preserve the pinned upstream chapter's final blank line verbatim.
+docs/standards/rust-api/src/predictability.md whitespace=-blank-at-eof

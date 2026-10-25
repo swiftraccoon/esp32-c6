@@ -1,0 +1,58 @@
+{
+  "kind": "wireless-control-development-probe-v1",
+  "date": "2026-10-24",
+  "scope": "Operator-collected UART command exchanges and ambient passive Wi-Fi counts; no comparative or controlled-peer qualification",
+  "source_base_commit": "4ac6113",
+  "source_identity": "source-inputs-git-fix.sha256 records the final project source bytes before corrected captures; no pre-collection Git freeze is claimed",
+  "board": {
+    "part_number": "ESP32-C6-DevKitC-1-N8",
+    "part_number_basis": "user identification",
+    "pcb_revision": "unknown",
+    "chip_revision": "0.2",
+    "flash_bytes": 8388608,
+    "crystal_mhz": 40,
+    "power": "Mac USB through CP2102N port",
+    "serial_port": "/dev/cu.SERIAL_PORT",
+    "usb_vid_pid": "10c4:ea60",
+    "native_usb": "not connected to Mac; not tested",
+    "phone_model_and_ios": "unknown; no phone connected",
+    "peer": "ambient APs; no controlled AP or packet oracle"
+  },
+  "final_inputs": {
+    "rust": "1.96.0",
+    "target": "riscv32imac-esp-espidf",
+    "esp_idf_tag": "v5.5.6",
+    "esp_idf_commit": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
+    "esp_rs_commit": "a209052f378be61dd0f2d566b7fbe0f9593b0cd5",
+    "embuild": "0.33.7",
+    "libclang": "Homebrew 21.1.8",
+    "ldproxy": "0.3.4",
+    "image_builder": "espflash 4.6.0",
+    "flash_tool": "esptool.py 4.12.0",
+    "sdkconfig_sha256": "a925d6be6f6122daf8c6062b35461afacb6bb3765bf448d9e00577f69d2f6cc0",
+    "firmware_elf_sha256": "c062e3fa2d5065116c29abdbb5699a444526bc79adb39bddf6173d7f69e83b16",
+    "merged_image_sha256": "69b7595a3cb2d1783a28651674870629660a2c6115a75f8b06c85f21308b50b3",
+    "collector_sha256": "699a70122ba377a7c5019d0913e9ccd90ee30838ed84bed408bef8e74c26097b",
+    "artifact_retention": "ELFs, images and collector executables remain in ignored local storage; this source/text archive does not contain them"
+  },
+  "first_image": {
+    "inputs": "builds/first-image.Cargo.toml and builds/first-image.Cargo.lock",
+    "firmware_elf_sha256": "c8e3ce4b8c1e3bcf8acf60a55c9e4eff8a52acb702a9bb5311091e13c579cfbb",
+    "merged_image_sha256": "1644c8e3772f88a479847cafe9a8dee77a662289b3f025c8824e248e31613ee2",
+    "captures": ["info-01", "info-02", "ping-01", "scan-01"]
+  },
+  "final_image_captures": ["info-03", "ping-02", "scan-02", "scan-03", "info-04"],
+  "failed_attempts": [
+    { "directory": "info-01", "outcome": "response deadline expired; no received command bytes; original opening behavior before explicit RTS release" },
+    { "directory": "scan-01", "outcome": "device Wi-Fi error 257; published wrapper omitted the SDK Wi-Fi task stack-size field" }
+  ],
+  "restoration": {
+    "initial_snapshot_sha256": "863dc7b17018aea2a530ee27da5bedd675298f9a70e5f04c32f4a0cc3c43f9c4",
+    "initial_verification": "failed after original firmware reboot; 1992 bytes differed within original NVS partition",
+    "changed_offsets_inclusive_hex": ["0xc020", "0xcfdd"],
+    "verified_quiescent_snapshot_sha256": "bc1f2d438df400c6353daf549daf784c546d60c46f80ec8b9293b32445a26f1a",
+    "private_directory": "backups/wireless-explorer/pre-control-2026-10-24",
+    "outcome": "full 8388608 bytes restored and verify_flash digest matched while held in bootloader; then hard reset released",
+    "limit": "original application may change NVS again after boot; no post-boot byte-identity claim"
+  }
+}

@@ -1,0 +1,2 @@
+# A local SDK cache may be a symlink or a directory; neither is a source input.
+.embuild

@@ -4,12 +4,15 @@ build/
 .venv/
 .env
 .env.*
+AGENTS.override.md
 backups/
 private/
+*.pcap
+*.pcapng
 **/flash-backup*.bin
 .tools/
 .cache/
-.embuild/
+.embuild
 sdkconfig
 sdkconfig.old
 
@@ -25,10 +28,10 @@ sdkconfig.old
 *.exe
 *.dSYM/
 
-# Extensionless result executables; keep tools/benchctl source visible.
-results/**/artifacts/benchctl
-results/**/reader-correction/benchctl
-results/**/packaging-helper/rtic-image-correction
+# Extensionless historical result executables; keep collector source visible.
+**/results/**/artifacts/benchctl
+**/results/**/reader-correction/benchctl
+**/results/**/packaging-helper/rtic-image-correction
 
 # Historical source export contains an external local-build symlink.
-results/zephyr-rust-build-2026-10-23/artifacts/rust-module-source.tar.gz
+**/results/zephyr-rust-build-2026-10-23/artifacts/rust-module-source.tar.gz

@@ -16,13 +16,18 @@ jobs:
       - name: Check out source and experiment records
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
-          fetch-depth: 1
+          fetch-depth: 0
           persist-credentials: false
       - name: Install host build prerequisites
         run: |
           sudo apt-get update
           sudo apt-get install --yes --no-install-recommends pkg-config libudev-dev
           rustup toolchain install 1.96.0 --profile minimal --component rustfmt --component clippy
+      - name: Block personal data in staged files and fetched history
+        run: |
+          cargo +1.96.0 build --release --locked -p workspace-tools --bin privacy-guard
+          target/release/privacy-guard check --public-only
+          target/release/privacy-guard history --public-only
       - name: Check Rust formatting
         run: cargo +1.96.0 fmt --all -- --check
       - name: Exercise positive and adversarial tests
@@ -31,10 +36,33 @@ jobs:
         run: |
           cargo +1.96.0 clippy --workspace --locked --all-targets -- -D warnings
           cargo +1.96.0 doc --workspace --locked --no-deps
-      - name: Build the read-only checks
-        run: cargo +1.96.0 build --release --locked -p benchctl
+      - name: Build workspace utilities
+        run: cargo +1.96.0 build --release --locked -p workspace-tools
+      - name: Check vendored style sources without network access
+        run: target/release/style-sources check
+      - name: Check OS evaluation host tools
+        working-directory: projects/os-evaluation
+        run: |
+          cargo +1.96.0 fmt --all -- --check
+          cargo +1.96.0 test --workspace --locked
+          cargo +1.96.0 clippy --workspace --locked --all-targets -- -D warnings
+          cargo +1.96.0 doc --workspace --locked --no-deps
+          cargo +1.96.0 build --release --locked -p benchctl
+      - name: Check wireless control and retained functional probes
+        working-directory: projects/wireless-explorer
+        run: |
+          cargo +1.96.0 fmt --all -- --check
+          cargo +1.96.0 test --workspace --locked
+          cargo +1.96.0 clippy --workspace --locked --all-targets -- -D warnings
+          cargo +1.96.0 doc --workspace --locked --no-deps
+          cargo +1.96.0 build --release --locked -p wxctl
+          rustc +1.96.0 --test --edition=2024 firmware/src/buffer.rs -o target/buffer-tests
+          target/buffer-tests
+          target/release/wxctl verify-probes --ledger results/evidence.json
+          if target/release/wxctl replay --capture results/control-2026-10-24/info-01; then exit 1; fi
+          if target/release/wxctl replay --capture results/control-2026-10-24/scan-01; then exit 1; fi
       - name: Verify public lineage, historical declarations and retained raw replays
-        run: target/release/benchctl verify-public-snapshot --root . --ledger quality/evidence.json --manifest quality/publication.json
+        run: projects/os-evaluation/target/release/benchctl verify-public-snapshot --root . --ledger projects/os-evaluation/quality/evidence.json --manifest quality/publication.json
       # Omitted binaries and replaced Git ancestry prevent exact-artifact method,
       # original-freeze and comparative-study qualification in this public copy.
       # Complete-bundle commands and adversarial unit fixtures remain intact.

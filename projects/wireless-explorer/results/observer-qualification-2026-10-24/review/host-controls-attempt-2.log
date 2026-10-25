@@ -1,0 +1,26 @@
+   Compiling observer-review-probe v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/wireless-explorer/review/observer/host-probe-final)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.17s
+     Running unittests src/lib.rs (.cache/wireless-explorer/review/observer/host-probe/target/debug/deps/observer_review_probe-103360d0643e0b06)
+
+running 12 tests
+test observation::tests::plan_rejects_bad_channels_and_duplicates_before_serial_access ... ok
+test observation::review::independent_parser_and_framing_negative_controls ... ok
+test observation::review::independent_byte_fragmentation_and_setup_timestamp_positive_controls ... ok
+test observation::review::independent_transition_counter_length_and_timestamp_controls ... ok
+test observation::tests::full_packets_fragments_caps_and_loss_conservation ... ok
+test observation::tests::stream_negative_controls ... ok
+test observation::tests::archive_roundtrip_rejects_modified_outputs_and_failure_markers ... ok
+test observation::review::multi_window_clock_overlap_control ... ok
+test observation::review::startup_and_inventory_boundaries ... ok
+test observation::review::independent_archive_tamper_symlink_and_failure_controls ... ok
+test observation::tests::archive_rejects_hidden_suffixes_missing_startup_and_extra_files ... ok
+test observation::review::oversized_metadata_with_hidden_suffix_must_reject ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+   Doc-tests observer_review_probe
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

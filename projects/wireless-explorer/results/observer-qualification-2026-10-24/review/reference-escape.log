@@ -1,0 +1,11 @@
+error: lifetime may not live long enough
+ --> .cache/wireless-explorer/review/observer/reference-escape.rs:6:41
+  |
+6 |     let escaped = queue.pop_with(|slot| slot);
+  |                                   ----- ^^^^ returning this value requires that `'1` must outlive `'2`
+  |                                   |   |
+  |                                   |   return type of closure is &'2 u32
+  |                                   has type `&'1 u32`
+
+error: aborting due to 1 previous error
+

@@ -1,22 +1,24 @@
 # Coding standard
 
-Reviewed 2026-10-22, before implementation. This records the user's selected
-Rust baseline and its application to ESP32-C6 evaluation. It governs code we
+This standard defines the Rust baseline for the ESP32-C6 workspace. It governs code we
 author: firmware, OS adapters, benchmark workloads, shared libraries, build
 helpers, and host tools. Upstream OS and vendor code retains its own conventions;
 keep our additions identifiable and avoid unrelated restyling.
 
 ## Adopted sources and authority
 
-| Source | Adopted revision | Authority |
-| --- | --- | --- |
-| [Rust Style Guide](https://doc.rust-lang.org/nightly/style-guide/) | [rust-lang/rust `0ef4e1154335de75d5c333bf61e192ec99758fb3`, style-guide sources](https://github.com/rust-lang/rust/tree/0ef4e1154335de75d5c333bf61e192ec99758fb3/src/doc/style-guide) | Source and manifest conventions. |
-| [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/) | [rust-lang/api-guidelines `19f0f62ecd0f56a0b7adaa332c352bc2476506ea`](https://github.com/rust-lang/api-guidelines/tree/19f0f62ecd0f56a0b7adaa332c352bc2476506ea/src) | Every applicable entry in the checklist, identified by its `C-*` identifier. |
-| [Google Rust Style Guide](https://google.github.io/styleguide/rustguide.html) | [google/styleguide `3cf4f72013826804b7442896ce84d3777cf89ae0`](https://github.com/google/styleguide/blob/3cf4f72013826804b7442896ce84d3777cf89ae0/rustguide.md) | Supplemental implementation and design guidance; repository interpretation because the user's authority cell was unspecified. |
+| Local source | Authority |
+| --- | --- |
+| [Rust Style Guide](standards/rust-style/src/doc/style-guide/src/README.md) | Source and manifest conventions. |
+| [Rust API Guidelines](standards/rust-api/src/SUMMARY.md) | Every applicable checklist entry, identified by its `C-*` identifier. |
+| [Google Rust Style Guide](standards/google-rust/rustguide.md) | Supplemental implementation and design guidance. |
 
-The commit links are normative; the live links are convenient reading copies.
-Updating a toolchain does not update these guide revisions. Record a deliberate
-source-adoption change when changing the baseline.
+The [source lock](standards/sources.json) records the normative commits and exact
+file hashes. Read the checked-in copies offline; upstream URLs, attribution and
+licenses are in the [local reference index](standards/README.md). Updating a
+toolchain does not update the baseline. Use the explicit
+[updater](standards/README.md#update-from-upstream), review changed rules and
+reconcile applicability records before committing a source-adoption change.
 
 Precedence is: the user's instructions, the two explicit authority assignments
 above in their respective domains, then compatible Google guidance. The Google
@@ -48,12 +50,12 @@ Prefer a small direct adapter to a general framework without a concrete need.
 ## Formatting and tooling
 
 Follow the pinned official chapters for
-[source layout](https://github.com/rust-lang/rust/blob/0ef4e1154335de75d5c333bf61e192ec99758fb3/src/doc/style-guide/src/README.md),
-[items and imports](https://github.com/rust-lang/rust/blob/0ef4e1154335de75d5c333bf61e192ec99758fb3/src/doc/style-guide/src/items.md),
-[statements](https://github.com/rust-lang/rust/blob/0ef4e1154335de75d5c333bf61e192ec99758fb3/src/doc/style-guide/src/statements.md),
-[expressions](https://github.com/rust-lang/rust/blob/0ef4e1154335de75d5c333bf61e192ec99758fb3/src/doc/style-guide/src/expressions.md),
-[types](https://github.com/rust-lang/rust/blob/0ef4e1154335de75d5c333bf61e192ec99758fb3/src/doc/style-guide/src/types.md),
-and [Cargo manifests](https://github.com/rust-lang/rust/blob/0ef4e1154335de75d5c333bf61e192ec99758fb3/src/doc/style-guide/src/cargo.md).
+[source layout](standards/rust-style/src/doc/style-guide/src/README.md),
+[items and imports](standards/rust-style/src/doc/style-guide/src/items.md),
+[statements](standards/rust-style/src/doc/style-guide/src/statements.md),
+[expressions](standards/rust-style/src/doc/style-guide/src/expressions.md),
+[types](standards/rust-style/src/doc/style-guide/src/types.md),
+and [Cargo manifests](standards/rust-style/src/doc/style-guide/src/cargo.md).
 Use `rustfmt` as the mechanical formatter and review the parts it does not cover,
 including manifests and documentation. Do not add nightly-only formatting options
 solely to match a supplemental preference.
@@ -61,7 +63,7 @@ solely to match a supplemental preference.
 Before the first code build, select and record a compiler version, Rust edition,
 formatting edition, target triple, components, and SDK/toolchain requirements.
 Pin tool versions for reproducible runs. The pinned
-[style-edition chapter](https://github.com/rust-lang/rust/blob/0ef4e1154335de75d5c333bf61e192ec99758fb3/src/doc/style-guide/src/editions.md)
+[style-edition chapter](standards/rust-style/src/doc/style-guide/src/editions.md)
 contains historical release-status wording; its description is not today's
 compiler-support matrix. The language edition, style edition, and minimum
 supported Rust version (MSRV) are separate decisions. Do not invent an MSRV
@@ -81,7 +83,7 @@ license constraints without changing upstream license terms.
 ## Commit messages and checkpoints
 
 Use Conventional Commits 1.0.0 under the
-[commit standard](commit-standard.md), adopted at the user's request. Commit
+[commit standard](commit-standard.md). Commit
 meaningful completed work as it progresses, including the relevant documentation,
 lockfiles, review evidence and measurements. That standard distinguishes upstream
 syntax from repository choices and keeps release/version/tag/push actions scoped
@@ -196,8 +198,8 @@ Record build profile, optimization, LTO, clock/power settings, memory placement,
 enabled OS services, task/executor configuration, and workload hash. If runtimes
 require different compilers or implementations, disclose the difference and
 avoid attributing the entire effect to the scheduler. Preserve raw samples and
-outliers, and use the shared [benchmark plan](benchmark-plan.md) to define
-aggregation and comparisons.
+outliers. OS evaluation uses its [benchmark plan](../projects/os-evaluation/docs/benchmark-plan.md)
+to define aggregation and comparisons; other projects record their own methods.
 
 ## Verification and review evidence
 
@@ -215,9 +217,12 @@ without checking the pinned toolchain and generated/vendor code. Do not add
 tests that simply repeat implementation details; choose checks capable of
 finding a meaningful failure.
 
-A code review record should identify changed components and execution contexts,
-the affected `C-*` decisions, unsafe/FFI or blocking changes, commands and results,
-unrun checks, and any exception. An exception records the rule/source, reason,
+Maintain one current API/safety record per component. It identifies execution
+contexts, applicable `C-*` decisions, unsafe/FFI and blocking contracts, meaningful
+regression checks, and exceptions. Update that record when the contract changes;
+record routine commands/results and unrun checks in the commit or CI record.
+Carry lasting findings from one-off investigations into the current contract,
+test or project plan, then retire redundant process notes. An exception records the rule/source, reason,
 smallest affected scope, alternatives considered, consequence, and a revisit
 trigger. Routine, justified applicability decisions do not add a user approval
 step. A change to the user's language preference or assigned authorities does
@@ -239,6 +244,6 @@ The entire pinned guide was reviewed. Supplemental mapping:
 | Pre-`main` restriction | Allow required, explicit firmware startup. |
 
 Relevant pinned sections:
-[API context](https://github.com/google/styleguide/blob/3cf4f72013826804b7442896ce84d3777cf89ae0/rustguide.md#user-content-api-design-context),
-[unsafe](https://github.com/google/styleguide/blob/3cf4f72013826804b7442896ce84d3777cf89ae0/rustguide.md#user-content-unsafe),
-[initialization](https://github.com/google/styleguide/blob/3cf4f72013826804b7442896ce84d3777cf89ae0/rustguide.md#user-content-global-initialization).
+[API context](standards/google-rust/rustguide.md#api-design-context),
+[unsafe](standards/google-rust/rustguide.md#unsafe),
+[initialization](standards/google-rust/rustguide.md#global-initialization).

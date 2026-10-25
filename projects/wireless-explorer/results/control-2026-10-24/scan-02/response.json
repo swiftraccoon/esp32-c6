@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": 1615555096,
+  "reply": {
+    "wifi_scan": {
+      "total_found": 9,
+      "summarized": 9,
+      "unreported": 0,
+      "channels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "out_of_range": 0
+    }
+  }
+}

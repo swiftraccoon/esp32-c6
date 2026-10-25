@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "kind": "wireless-observer-coverage-v1",
+  "status": "sealed_functional_record",
+  "board": "ESP32-C6-DevKitC-1-N8",
+  "date": "2026-10-24",
+  "scope": "Ambient SDK-visible receive windows on Mac UART and native USB; no comparative performance result.",
+  "public_reproduction": "Source, host controls and aggregate identities only. Private raw captures are required to reproduce RF observations. This ledger is separate from the historical control-probe schema and is reviewed rather than consumed by verify-probes.",
+  "source_freeze": "6237dc4b16fe87f7c5db89f39d40800e9a787558",
+  "source_manifest": "source-inputs-02.sha256",
+  "uart_plan_freeze": "920b03f7cfcaf42b7086d83fe718dca34cad7567",
+  "native_plan_freeze": "4425ccbd685cdfcc6973ef87f6d9f9b9c551aec2",
+  "firmware_elf_sha256": "0eb8ff583860dd4a12c2017b62914751350be9e931f5c90f84fc6ec59fa33bc2",
+  "merged_image_sha256": "7e76d200daa1d327353bff37174e8ec6f4d231a66dc37acf97a781c2a87397be",
+  "collector_sha256": "f69cfe6aaf681ea029dba05c40472f0e6bab569ee8e31015270167d899e07b17",
+  "restoration": {
+    "original_backup_bytes": 8388608,
+    "backup_sha256": "bc1f2d438df400c6353daf549daf784c546d60c46f80ec8b9293b32445a26f1a",
+    "backup_read_then_verify": "passed_without_application_reset_between",
+    "observer_flash_then_verify": "passed",
+    "original_restore_then_verify": "passed",
+    "final_action": "hard_reset_after_digest_verification",
+    "final_firmware": "original_full_backup"
+  },
+  "sessions": [
+    {
+      "id": "observer-2026-10-24-04",
+      "transport": "uart",
+      "schedule": "short",
+      "strict_replay": "passed",
+      "independent_raw_derivation": "passed",
+      "frozen_schedule_match": "passed",
+      "second_pass_wifi": "reports_in_every_window",
+      "radios": [
+        {
+          "radio": "ble",
+          "windows": 2,
+          "sdk_reports": 62,
+          "logged": 62,
+          "recorder_dropped": 0,
+          "truncated": 0,
+          "invalid_reports": 0
+        },
+        {
+          "radio": "ieee802154",
+          "windows": 10,
+          "sdk_reports": 1,
+          "logged": 1,
+          "recorder_dropped": 0,
+          "truncated": 0,
+          "invalid_reports": 0
+        },
+        {
+          "radio": "wifi",
+          "windows": 8,
+          "sdk_reports": 551,
+          "logged": 304,
+          "recorder_dropped": 247,
+          "truncated": 0,
+          "invalid_reports": 0
+        }
+      ]
+    },
+    {
+      "id": "observer-2026-10-24-05",
+      "transport": "uart",
+      "schedule": "full",
+      "strict_replay": "passed",
+      "independent_raw_derivation": "passed",
+      "frozen_schedule_match": "passed",
+      "second_pass_wifi": "reports_in_every_window",
+      "radios": [
+        {
+          "radio": "ble",
+          "windows": 2,
+          "sdk_reports": 47,
+          "logged": 47,
+          "recorder_dropped": 0,
+          "truncated": 0,
+          "invalid_reports": 0
+        },
+        {
+          "radio": "ieee802154",
+          "windows": 32,
+          "sdk_reports": 2,
+          "logged": 2,
+          "recorder_dropped": 0,
+          "truncated": 0,
+          "invalid_reports": 0
+        },
+        {
+          "radio": "wifi",
+          "windows": 26,
+          "sdk_reports": 1102,
+          "logged": 581,
+          "recorder_dropped": 521,
+          "truncated": 0,
+          "invalid_reports": 0
+        }
+      ]
+    },
+    {
+      "id": "observer-2026-10-24-06-retry-01",
+      "transport": "native_usb",
+      "schedule": "short",
+      "strict_replay": "passed",
+      "independent_raw_derivation": "passed",
+      "frozen_schedule_match": "passed",
+      "second_pass_wifi": "reports_in_every_window",
+      "radios": [
+        {
+          "radio": "ble",
+          "windows": 2,
+          "sdk_reports": 72,
+          "logged": 72,
+          "recorder_dropped": 0,
+          "truncated": 0,
+          "invalid_reports": 0
+        },
+        {
+          "radio": "ieee802154",
+          "windows": 10,
+          "sdk_reports": 1,
+          "logged": 1,
+          "recorder_dropped": 0,
+          "truncated": 0,
+          "invalid_reports": 0
+        },
+        {
+          "radio": "wifi",
+          "windows": 8,
+          "sdk_reports": 571,
+          "logged": 569,
+          "recorder_dropped": 2,
+          "truncated": 0,
+          "invalid_reports": 0
+        }
+      ]
+    },
+    {
+      "id": "observer-2026-10-24-07",
+      "transport": "native_usb",
+      "schedule": "full",
+      "strict_replay": "passed",
+      "independent_raw_derivation": "passed",
+      "frozen_schedule_match": "passed",
+      "second_pass_wifi": "reports_in_every_window",
+      "radios": [
+        {
+          "radio": "ble",
+          "windows": 2,
+          "sdk_reports": 36,
+          "logged": 36,
+          "recorder_dropped": 0,
+          "truncated": 0,
+          "invalid_reports": 0
+        },
+        {
+          "radio": "ieee802154",
+          "windows": 32,
+          "sdk_reports": 1,
+          "logged": 1,
+          "recorder_dropped": 0,
+          "truncated": 0,
+          "invalid_reports": 0
+        },
+        {
+          "radio": "wifi",
+          "windows": 26,
+          "sdk_reports": 506,
+          "logged": 506,
+          "recorder_dropped": 0,
+          "truncated": 0,
+          "invalid_reports": 0
+        }
+      ]
+    }
+  ],
+  "native_controls": {
+    "info": "passed: native_usb, firmware revision 2",
+    "ping": "passed: request nonce echoed",
+    "replay": "passed",
+    "independent_request_reply_checks": "passed"
+  },
+  "retained_failures": [
+    {
+      "id": "observer-2026-10-24-06",
+      "transport": "native_usb",
+      "outcome": "failed_before_first_request",
+      "startup_bytes": 259,
+      "error_category": "Broken pipe",
+      "strict_replay": "rejected",
+      "investigation": "Startup indicates USB-triggered reset; native interface remained enumerated. No firmware/collector change before retry.",
+      "retry": "observer-2026-10-24-06-retry-01"
+    }
+  ],
+  "coverage": [
+    {
+      "domain": "wifi_promiscuous",
+      "status": "observed",
+      "scope": "Ambient raw SDK reports with metadata, sequential 2.4 GHz windows; recorder drops retained."
+    },
+    {
+      "domain": "ble_passive_advertising",
+      "status": "observed",
+      "scope": "Legacy 1M advertising reports with payload and metadata; no arbitrary connection sniffing."
+    },
+    {
+      "domain": "ieee802154_mac",
+      "status": "observed",
+      "scope": "Sparse ambient MAC reports; known-peer fidelity and decoding unqualified."
+    },
+    {
+      "domain": "repeated_radio_transitions",
+      "status": "observed",
+      "scope": "All second-pass Wi-Fi windows nonzero across four image03 sessions; no causal comparison to image02."
+    },
+    {
+      "domain": "mac_native_usb",
+      "status": "observed_with_startup_failure",
+      "scope": "Info, ping, 20-window and 60-window captures; both USB ports attached to Mac."
+    }
+  ],
+  "unqualified": [
+    "lossless_rf_capture",
+    "controlled_peer_payload_fidelity",
+    "wifi_he_reception",
+    "ble_coded_or_secondary_phy",
+    "ble_extended_fragment_reconstruction",
+    "independent_rf_silence",
+    "automatic_usb_reconnect",
+    "iphone_only_power",
+    "iphone_usb_commands_and_data",
+    "calibrated_timestamps",
+    "long_run_stability",
+    "coexistence_performance",
+    "energy"
+  ],
+  "evidence": [
+    "image-03-results.md",
+    "native-usb-review.md",
+    "capture-adversarial-review.md",
+    "review/README.md"
+  ]
+}

@@ -1,0 +1,14 @@
+[workspace]
+
+[package]
+name = "observer-review-probe"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+anyhow = "=1.0.103"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
+serialport = "=4.10.1"
+wireless-protocol = { path = "/Users/builduser/Git/esp32-c6/projects/wireless-explorer/crates/wireless-protocol" }

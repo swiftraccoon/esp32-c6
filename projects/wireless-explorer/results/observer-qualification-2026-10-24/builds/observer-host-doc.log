@@ -1,0 +1,5 @@
+    Checking wireless-protocol v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/crates/wireless-protocol)
+ Documenting wireless-protocol v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/crates/wireless-protocol)
+ Documenting wxctl v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/clients/wxctl)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.81s
+   Generated /Users/builduser/Git/esp32-c6/projects/wireless-explorer/target/doc/wireless_protocol/index.html and 1 other file

@@ -1,0 +1,13 @@
+
+running 8 tests
+test buffer::tests::bounded_fifo_and_counter_wrap ... ok
+test invalid_capacities_reject ... ok
+test one_slot_holds_reader_and_rejects_nested_operations ... ok
+test panics_release_gates_without_publishing_or_removing ... ok
+test reader_blocks_reuse_until_closure_returns ... ok
+test unpublished_writer_cannot_be_observed_and_writer_contention_returns ... ok
+test buffer::tests::producer_consumer_publication_and_contention ... ok
+test four_producers_three_consumers_no_torn_duplicate_or_missing_publications ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

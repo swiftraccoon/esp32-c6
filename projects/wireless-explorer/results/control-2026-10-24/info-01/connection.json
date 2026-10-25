@@ -1,0 +1,8 @@
+{
+  "baud": 115200,
+  "client_version": "0.1.0",
+  "kind": "wireless-explorer-functional-probe-v1",
+  "port": "/dev/cu.SERIAL_PORT",
+  "reset_requested": false,
+  "timeout_seconds": 15
+}

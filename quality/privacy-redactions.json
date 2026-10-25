@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "scope": "Sanitized public derivatives of wireless build/review logs and connection metadata; original bytes remain ignored and private.",
+  "replacements": [
+    "Personal home prefix replaced by /Users/builduser",
+    "Concrete serial endpoint replaced by /dev/cu.SERIAL_PORT",
+    "Archive descriptions and derivative checksums reconciled"
+  ],
+  "files": [
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-build-01.log",
+      "original_public_sha256": "cde956fed6f12e838ab3a7473042b82fc62ab92771811a8dc1a8b09ef3c979fb",
+      "sanitized_sha256": "e9a4d110ca786e87a038094c52c946a85f21cd9dad67a6d749dce41aaae56aa5"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-build-02.log",
+      "original_public_sha256": "d275043987209c8702344e9bf1bd08db73e501785d1a5972aae812981f2bba55",
+      "sanitized_sha256": "89095764420d520032c681baf65e6e52537d79197a75a296bccd6c4337db420a"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-build-03.log",
+      "original_public_sha256": "d6fd1a430d4ebb62c2b5856c7ced9dcf87d4f395703c83e009892630c485fa97",
+      "sanitized_sha256": "4bd62341ad98bdce95ee71d088dc3a499bd5ae7996494a87a5f57177d214710d"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-build-04.log",
+      "original_public_sha256": "aaa12b6754a83f1970b93064f40d280fb1689725879df3af0e1d576e42eb1636",
+      "sanitized_sha256": "b8256f30f3a5c4ab487d84f8d3367c8aa5338c32771f659b86b4e193b43fd9e8"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-build-05.log",
+      "original_public_sha256": "5c3077b39eac304348f881eaaf3c4d84ae22df68ae6d814ba98d0f6ab9a48661",
+      "sanitized_sha256": "a441c23164ef4aaa21036e835e44531c2a10079904e1690bb7e400385b5e5bad"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-build-06.log",
+      "original_public_sha256": "36515bece28ac50d696469e3f2500c5fdbc0138feaf8784c7a627d109b7f0716",
+      "sanitized_sha256": "40e3f01fc9d72227f2fbd70e61a6b903ee4406ded1ad663dbc51443aa46196cd"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-clippy-01.log",
+      "original_public_sha256": "7fa54c741103e6cb7c203eb8d65194f47577e95ed357d8ecd1febbb6a44ebe25",
+      "sanitized_sha256": "1982ce2407472a9bf0972caceaa6c80144fafa9c13afe72e58789c43f2332a07"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-clippy-02.log",
+      "original_public_sha256": "d7765e7e2feb469b093a4b727a1d669e944a5867622a31c6277bb553134af7b9",
+      "sanitized_sha256": "0be74a799d3bc8bb4915318a7903a861855837a4007712de29b2229b0f4b5ef7"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-clippy-03.log",
+      "original_public_sha256": "933e134068e82bf719e6e421d79d877ee190533b89006d1367fda3df39797860",
+      "sanitized_sha256": "bbd09b3cd74edd35b5c35256d24e854ca9c87c0f76b445c69a055462eef996d2"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-doc-01.log",
+      "original_public_sha256": "da6b9405d13b037d133e8d489dc9dde8db31ddc80dadc3c681664156e57e402f",
+      "sanitized_sha256": "54d26b516a84dfada7a2f556eaa135a0f15d7885031f0514875f4f6275503c71"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-host-build.log",
+      "original_public_sha256": "d1c985cf5703994f3abcdafe1e96106dfbcb05a9d79a82cdd29616009c1f5609",
+      "sanitized_sha256": "0e871890fc680f95ed5e3e0cfece94bf46c65543411f01ef29b5b197f7d32b33"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-host-clippy.log",
+      "original_public_sha256": "773fd4bbd57f41c9c24ec569f236acb1a90eb2407b8b8a4e45576b7f8d26acbb",
+      "sanitized_sha256": "d393ebd2e61516527541be05c3b187dc59124d055324086949a615a1a17f6997"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-host-doc.log",
+      "original_public_sha256": "04e8a8550f31893f64ee3f27729e5b96f95931283ad7d6a93206eb2da420f63d",
+      "sanitized_sha256": "ca6bffa2fa362fd1d3983a55ac08d63462e82e5099889d30a4ec20241aca4dde"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-host-tests.log",
+      "original_public_sha256": "b6ce3eaa2ea83f0c341985f6b72ea5f09e49d87fee9b5ee7c9505bc1f1d32781",
+      "sanitized_sha256": "7913048cec50ad7a444517da411e2a018e06a09f6e2c9bfed11563859015a2bf"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/README.md",
+      "original_public_sha256": "90f2330742a5b835a72dc148c364515db6c14b1745c5eeb75c8ca6b6fd0f0b9e",
+      "sanitized_sha256": "cf0f425c008401411b0861bf4571d7bc3391d88f48c0633bcfc06f8827b3ad89"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/SHA256SUMS",
+      "original_public_sha256": "a0e093ab9ddc03ebec93bb9e5b84ddcff6d2bb1641d0c658c0b0b2e7af491ac7",
+      "sanitized_sha256": "6752cb19c1bd0c4f7b60ff91712523b1f757aee336960069b68f73d357091b0d"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/buffer-controls.rs",
+      "original_public_sha256": "c5236ed8dd0800245eecb44fdc6e4a85a636fd56355f225a857564e1da19febc",
+      "sanitized_sha256": "780db98e6ce3a1d5c21247925c0ed445769bfa989f749be1cc1b0580e27ae8f1"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/host-controls-attempt-1.log",
+      "original_public_sha256": "24dabba64270aa0a3b827023b006e3559ee32220fccae8b9f7f026d822e61fcd",
+      "sanitized_sha256": "b000fdbd99c02b6ba0103ab4f512fb631b4d4c3d017c37ac604e98ea3489083f"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/host-controls-attempt-2.log",
+      "original_public_sha256": "ed3fec9018d90c9bbb5070bbe013fa0ce7ffe23788cebcf9d98eb19928eadac8",
+      "sanitized_sha256": "0ba510daa6ad2f58318db18f10295dcc2094c4fee40752b0c180db9d302b9000"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/host-probe-final/Cargo.toml",
+      "original_public_sha256": "811991d23341c381160cfef8d99d28e75a76a78b38778ff46a6d53726375b3cc",
+      "sanitized_sha256": "0ad55b259d00b5d0b50b5dfc3458f1a62978ae693dafc8cf95515b0768be6c46"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/host-probe-final/src/lib.rs",
+      "original_public_sha256": "7d07fbf2eb67a90280632cdc2d9ea2a082d2377c56bddbd2b3c2e23d7f4831d7",
+      "sanitized_sha256": "d45046bedab4e039387a716ed3bef6066fac98c5337aff6aba840c6cf834e242"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/host-probe/Cargo.toml",
+      "original_public_sha256": "811991d23341c381160cfef8d99d28e75a76a78b38778ff46a6d53726375b3cc",
+      "sanitized_sha256": "0ad55b259d00b5d0b50b5dfc3458f1a62978ae693dafc8cf95515b0768be6c46"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/host-probe/src/lib.rs",
+      "original_public_sha256": "7d07fbf2eb67a90280632cdc2d9ea2a082d2377c56bddbd2b3c2e23d7f4831d7",
+      "sanitized_sha256": "d45046bedab4e039387a716ed3bef6066fac98c5337aff6aba840c6cf834e242"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/host-tests.log",
+      "original_public_sha256": "6e85308517addb1c5e2e9951d6accf14e90359b40fa14fc622b8fbc04e0ea1b5",
+      "sanitized_sha256": "dec75914a7eaf2d0af6505bb6f9ef5939e2d0932386917a6e2c0f056dc5ff18e"
+    },
+    {
+      "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/reference-escape.rs",
+      "original_public_sha256": "7273b97a6a16444908441fc892d0d76e7906aa83c471b209828d4ac5bb14f28f",
+      "sanitized_sha256": "b011adfa2ff3ddcff1d25c85ae50ae6db555d6675e8448ce63c1d0068fa4e432"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/README.md",
+      "original_public_sha256": "5b31a7c6d50ed3e65c00a9241122507e3635f2406786cfbf80a1e653e016e843",
+      "sanitized_sha256": "53712871d3e2b4788cd8cf3292bffb66a291631040010483d6545484cf12a843"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/SHA256SUMS",
+      "original_public_sha256": "354726f1d1e76ab99ded657e4182fb1d951edbe9ff38168ff96cd510d3170bd8",
+      "sanitized_sha256": "0eaa07b981cc97c5aa2b8bc72f9e26ae6fb15a020f71bd089309d4d5f36af140"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/boot-monitor-01.log",
+      "original_public_sha256": "573a1d206a59833b1032e9abc2e82b5a525f843997652b57065ecab23eaf890e",
+      "sanitized_sha256": "e30e32319271b79c462ae7e7755f57590570c7e5101cae2cc562720afa0a5db0"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/builds/firmware-attempt-1.log",
+      "original_public_sha256": "763b447eb522b830497b2c65be1ca5a3c8f8f5e4cbb6d6094d5aa5c6a31b9b5b",
+      "sanitized_sha256": "c8134bb952aca3c1d8684b0256a4c0481c444628d90567a0429a8e302902a0c3"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/builds/firmware-attempt-2.log",
+      "original_public_sha256": "ff1fc94790dfc1e55369efa5b74dcc424c2b9e9c4385e3d357273823e963d2ae",
+      "sanitized_sha256": "e853340ceb4770c0bfca25401cdbfdc0278452f3892bad6310ef59e684bf4fc3"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/builds/firmware-attempt-3.log",
+      "original_public_sha256": "ca7158bb895002ab2e213fd9b846086812d37069639b2e989e238f42657e8e27",
+      "sanitized_sha256": "f2027f2f74387f12e921b27f09efe838e7f72417a14b89b56249450f7599ecb3"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/builds/firmware-clippy.log",
+      "original_public_sha256": "739586e6147b3e435bb2ca8b929889e7d929b6ae548d7f17fb79367fb08b344d",
+      "sanitized_sha256": "db0cd189c574087f5e3f4cc4ab093406d871f013ed96ba0538a77f43918eda3e"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/builds/firmware-doc.log",
+      "original_public_sha256": "1e659baeb9cbe98f3fafc12b43b552f0f03c912664a0e5bee2ed1d3d49f54f0b",
+      "sanitized_sha256": "ade79bba21375f22d65389ee1625209ea39ba2cfd8b2d13dda41022d58997d62"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/builds/firmware-final.log",
+      "original_public_sha256": "c79692cfd6f7f6868c64e726b3dcba13fa282252a9b788d33c03242df9a660b5",
+      "sanitized_sha256": "43e5ae6d96ef43c162ce29340a8cb94354b284f24326b900ceb80d7fc3a61e49"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/builds/firmware-upstream-clippy.log",
+      "original_public_sha256": "5b8644d7e3f50a77de0acf28bb8681769b90ad6478fc8e63126c628d6cd67ef6",
+      "sanitized_sha256": "bab6a31de228e7e7360341cb795b9c302565858a2ea943d35b70aa1116998d26"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/builds/firmware-upstream-doc.log",
+      "original_public_sha256": "055968358e4963fbca5f670ca68c2c4a298d30f0886a1b0ed3488c3d677d5cec",
+      "sanitized_sha256": "80cb7abec0c556b0b7cd31768a31c0923800586560ddb6e8ffb27dfd24031899"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/builds/firmware-upstream-fix.log",
+      "original_public_sha256": "30377c4ef8f809dc141fbcd2e08541940983051553f22518dddb21798c28e089",
+      "sanitized_sha256": "a282cd044530b5caf3f7c6ef6ecb15b132ba0d20b5f47bac74d01367662b6f94"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/info-01/connection.json",
+      "original_public_sha256": "d0d8d0c0292e33b878aa84eb8576b00df77bcb39b2df67620ad20f0809da3870",
+      "sanitized_sha256": "48d5cd6f5f709d439d06247b6631c428c8f016346db617c05965dceb7c0a902b"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/info-02/connection.json",
+      "original_public_sha256": "0d90ba0c1d48020df07bb31ee4355d8927c9634a352a0f51ae45aa16512653f1",
+      "sanitized_sha256": "70645efa06cf6ed1cda034e8f66c5297802a6b4eae7761b288e5c74923000c53"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/info-03/connection.json",
+      "original_public_sha256": "0d90ba0c1d48020df07bb31ee4355d8927c9634a352a0f51ae45aa16512653f1",
+      "sanitized_sha256": "70645efa06cf6ed1cda034e8f66c5297802a6b4eae7761b288e5c74923000c53"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/info-04/connection.json",
+      "original_public_sha256": "0d90ba0c1d48020df07bb31ee4355d8927c9634a352a0f51ae45aa16512653f1",
+      "sanitized_sha256": "70645efa06cf6ed1cda034e8f66c5297802a6b4eae7761b288e5c74923000c53"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/ping-01/connection.json",
+      "original_public_sha256": "0d90ba0c1d48020df07bb31ee4355d8927c9634a352a0f51ae45aa16512653f1",
+      "sanitized_sha256": "70645efa06cf6ed1cda034e8f66c5297802a6b4eae7761b288e5c74923000c53"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/ping-02/connection.json",
+      "original_public_sha256": "0d90ba0c1d48020df07bb31ee4355d8927c9634a352a0f51ae45aa16512653f1",
+      "sanitized_sha256": "70645efa06cf6ed1cda034e8f66c5297802a6b4eae7761b288e5c74923000c53"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/provenance.json",
+      "original_public_sha256": "7b784d49ea75bf33f48eedfd24e910e45db31973438490f248d1c7dd87e92794",
+      "sanitized_sha256": "bec900b86dbaefffb1a27ddb9880a3e1cc3f7748748d9158c7f9dc5a879e5267"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/review/controls.log",
+      "original_public_sha256": "953fcf9996280f2b164897a5621ac0b22ff2bffc977c925f1ee474126d4b2bf1",
+      "sanitized_sha256": "4c633b9cb6cbad6e32cd449edcfd9b107785b0e8936b6b0dbbfd24b96c9803e3"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/review/ledger-controls-after-fix.log",
+      "original_public_sha256": "ac083ad706842d661b44605e8978c2d119a1a03f8137ab6d1b643ae4375b7ab6",
+      "sanitized_sha256": "9eb45f7cfe080cf9cbd35133449cbe38fc8085c3533a10687e093cc001e21519"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/review/ledger-controls-before-fix.log",
+      "original_public_sha256": "38d47f3d9ba8704eb09b244b4a6790a101b262d7389897714a14594f8362a59c",
+      "sanitized_sha256": "ff9ccaba3a681870d85aaec957df4eecfcbdbc1f826408bf5f3253531326e169"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/review/snapshot-controls.log",
+      "original_public_sha256": "edc825c5d5e7742af7b0614aee56d655f450338b88e7142924c9c82e2c2b0f3e",
+      "sanitized_sha256": "b0b2c97f6e0c3cbfb85451f815ceed7ca2f27da2807b96819cb62d393aed6e39"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/scan-01/connection.json",
+      "original_public_sha256": "0d90ba0c1d48020df07bb31ee4355d8927c9634a352a0f51ae45aa16512653f1",
+      "sanitized_sha256": "70645efa06cf6ed1cda034e8f66c5297802a6b4eae7761b288e5c74923000c53"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/scan-02/connection.json",
+      "original_public_sha256": "0d90ba0c1d48020df07bb31ee4355d8927c9634a352a0f51ae45aa16512653f1",
+      "sanitized_sha256": "70645efa06cf6ed1cda034e8f66c5297802a6b4eae7761b288e5c74923000c53"
+    },
+    {
+      "path": "projects/wireless-explorer/results/control-2026-10-24/scan-03/connection.json",
+      "original_public_sha256": "0d90ba0c1d48020df07bb31ee4355d8927c9634a352a0f51ae45aa16512653f1",
+      "sanitized_sha256": "70645efa06cf6ed1cda034e8f66c5297802a6b4eae7761b288e5c74923000c53"
+    }
+  ]
+}

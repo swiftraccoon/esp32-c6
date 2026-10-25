@@ -1,0 +1,60 @@
+     Locking 46 packages to latest Rust 1.96.0 compatible versions
+      Adding anyhow v1.0.103 (available: v1.0.104)
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling serde_core v1.0.229
+   Compiling libc v0.2.191
+   Compiling serde v1.0.229
+   Compiling heapless v0.8.0
+   Compiling byteorder v1.5.0
+   Compiling stable_deref_trait v1.2.1
+   Compiling io-kit-sys v0.4.1
+   Compiling zmij v1.0.23
+   Compiling core-foundation-sys v0.8.7
+   Compiling ryu v1.0.23
+   Compiling cfg-if v1.0.5
+   Compiling serde_json v1.0.154
+   Compiling anyhow v1.0.103
+   Compiling bitflags v1.3.2
+   Compiling bitflags v2.13.2
+   Compiling itoa v1.0.18
+   Compiling scopeguard v1.2.0
+   Compiling memchr v2.8.3
+   Compiling hash32 v0.3.1
+   Compiling syn v3.0.9
+   Compiling mach2 v0.4.3
+   Compiling nix v0.26.4
+   Compiling core-foundation v0.10.1
+   Compiling serialport v4.10.1
+   Compiling serde_derive v1.0.229
+   Compiling serde-json-core v0.6.0
+   Compiling wireless-protocol v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/crates/wireless-protocol)
+   Compiling observer-review-probe v0.0.0 (/Users/builduser/Git/esp32-c6/.cache/wireless-explorer/review/observer/host-probe)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.88s
+     Running unittests src/lib.rs (.cache/wireless-explorer/review/observer/host-probe/target/debug/deps/observer_review_probe-103360d0643e0b06)
+
+running 10 tests
+test observation::tests::plan_rejects_bad_channels_and_duplicates_before_serial_access ... ok
+test observation::review::independent_parser_and_framing_negative_controls ... ok
+test observation::review::independent_byte_fragmentation_and_setup_timestamp_positive_controls ... ok
+test observation::review::independent_transition_counter_length_and_timestamp_controls ... ok
+test observation::tests::full_packets_fragments_caps_and_loss_conservation ... ok
+test observation::tests::stream_negative_controls ... ok
+test observation::review::startup_presence_is_not_currently_part_of_replay_scope ... ok
+test observation::tests::archive_roundtrip_rejects_modified_outputs_and_failure_markers ... ok
+test observation::review::independent_archive_tamper_symlink_and_failure_controls ... ok
+
+thread 'observation::review::oversized_metadata_with_hidden_suffix_must_reject' (991017958) panicked at src/observation/review.rs:192:5:
+admitted capped JSON prefixes with hidden suffixes: ["manifest.json", "window-0000/summary.json", "summary.json"]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test observation::review::oversized_metadata_with_hidden_suffix_must_reject ... FAILED
+
+failures:
+
+failures:
+    observation::review::oversized_metadata_with_hidden_suffix_must_reject
+
+test result: FAILED. 9 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 6.07s
+
+error: test failed, to rerun pass `--lib`

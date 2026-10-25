@@ -1,0 +1,5 @@
+    Checking esp-idf-sys v0.38.1 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+   Compiling wireless-explorer-firmware v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware)
+    Checking esp-idf-hal v0.47.0 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+    Checking esp-idf-svc v0.53.0 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+    Finished `release` profile [optimized + debuginfo] target(s) in 5.77s

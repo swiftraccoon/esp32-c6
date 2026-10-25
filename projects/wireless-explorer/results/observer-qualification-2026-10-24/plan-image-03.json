@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "wireless-observer-plan-v1",
+  "purpose": "Check repeated receive windows after explicit IEEE receive shutdown; ambient functional qualification, not a comparative benchmark.",
+  "source_inputs": "source-inputs-02.sha256",
+  "source_commit": "6237dc4b16fe87f7c5db89f39d40800e9a787558",
+  "firmware_elf_sha256": "0eb8ff583860dd4a12c2017b62914751350be9e931f5c90f84fc6ec59fa33bc2",
+  "merged_image_sha256": "7e76d200daa1d327353bff37174e8ec6f4d231a66dc37acf97a781c2a87397be",
+  "collector_sha256": "f69cfe6aaf681ea029dba05c40472f0e6bab569ee8e31015270167d899e07b17",
+  "transport": "CP2102N UART0, 921600 baud, 8N1",
+  "captures": [
+    {
+      "id": "observer-2026-10-24-04",
+      "purpose": "Repeat session 02 schedule with corrected image 03",
+      "radio": "all",
+      "wifi_channels": [1, 6, 8, 11],
+      "ieee802154_channels": [11, 15, 20, 25, 26],
+      "dwell_ms": 1500,
+      "cycles": 2
+    },
+    {
+      "id": "observer-2026-10-24-05",
+      "purpose": "Check both full-channel passes after the repeated-mode control succeeds",
+      "radio": "all",
+      "wifi_channels": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "ieee802154_channels": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
+      "dwell_ms": 1000,
+      "cycles": 2
+    }
+  ],
+  "decision_rules": [
+    "Preserve and verify a fresh full flash backup before flashing; restore and verify it before ending hardware work.",
+    "Require successful strict replay and independent raw derivation for every completed session.",
+    "A repeat of all-channel Wi-Fi silence after IEEE receive remains a failure of qualification even if protocol replay passes.",
+    "If that anomaly recurs, retain the failed attempt and run a fresh-boot Wi-Fi-only control before changing implementation.",
+    "Nonzero reception after transitions supports only the observed schedule; ambient changes prevent a causal or performance comparison.",
+    "Zero IEEE windows do not establish receiver fidelity; controlled peers, coded/extended BLE and RF silence remain unqualified.",
+    "Keep payloads, device identifiers, serial endpoints and unsanitized diagnostics in ignored private storage. Publish aggregates and explicitly sanitized derivatives only."
+  ]
+}

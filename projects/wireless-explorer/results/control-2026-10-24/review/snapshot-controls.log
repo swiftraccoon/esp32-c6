@@ -1,0 +1,78 @@
+   Compiling libc v0.2.191
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling version_check v0.9.5
+   Compiling unicode-ident v1.0.27
+   Compiling typenum v1.20.1
+   Compiling serde_core v1.0.229
+   Compiling utf8parse v0.2.2
+   Compiling anstyle v1.0.14
+   Compiling colorchoice v1.0.5
+   Compiling zmij v1.0.23
+   Compiling cfg-if v1.0.5
+   Compiling core-foundation-sys v0.8.7
+   Compiling anstyle-query v1.1.5
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling io-kit-sys v0.4.1
+   Compiling serde v1.0.229
+   Compiling clap_lex v1.1.1
+   Compiling anstyle-parse v1.0.0
+   Compiling heck v0.5.0
+   Compiling anyhow v1.0.104
+   Compiling strsim v0.11.1
+   Compiling bitflags v1.3.2
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling bitflags v2.13.2
+   Compiling scopeguard v1.2.0
+   Compiling bench-core v0.1.0 (/Users/builduser/Git/esp32-c6/.cache/wireless-explorer/review/snapshot-workspace/crates/bench-core)
+   Compiling anstream v1.0.0
+   Compiling generic-array v0.14.7
+   Compiling clap_builder v4.6.7
+   Compiling object v0.40.0
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling syn v3.0.9
+   Compiling digest v0.10.7
+   Compiling mach2 v0.4.3
+   Compiling cpufeatures v0.2.17
+   Compiling nix v0.26.4
+   Compiling core-foundation v0.10.1
+   Compiling sha2 v0.10.9
+   Compiling serialport v4.10.1
+   Compiling clap_derive v4.6.7
+   Compiling serde_derive v1.0.229
+   Compiling clap v4.6.7
+   Compiling benchctl v0.1.0 (/Users/builduser/Git/esp32-c6/.cache/wireless-explorer/review/snapshot-workspace/tools/benchctl)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.09s
+     Running unittests src/main.rs (.cache/wireless-explorer/review/snapshot-workspace/target/debug/deps/benchctl-defdcd3acbb5f6f9)
+
+running 10 tests
+test public_snapshot::tests::failed_rtic_remains_failed_and_cannot_gain_favorable_fields ... ok
+test public_snapshot::tests::mapped_symlink_cannot_escape_the_snapshot ... ok
+reviewer historical=results/control/serial.raw, state=added, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: results/control/serial.raw)
+reviewer historical=results/control/observations.jsonl, state=added, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: results/control/observations.jsonl)
+reviewer path=projects/new/results/serial.raw, state=added, admitted=true, error=None
+test public_snapshot::tests::only_exact_declared_omission_links_are_permitted ... ok
+test public_snapshot::tests::source_snapshot_replays_raw_without_complete_artifact_proofs ... ok
+test public_snapshot::tests::new_project_raw_is_added_without_reclassifying_historical_captures ... ok
+test public_snapshot::tests::numeric_report_tampering_fails_after_updating_public_hash ... ok
+reviewer historical=results/control/serial.raw, state=modified, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: results/control/serial.raw)
+reviewer historical=results/control/observations.jsonl, state=modified, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: results/control/observations.jsonl)
+reviewer path=projects/new/results/observations.jsonl, state=added, admitted=true, error=None
+reviewer historical=quality/evidence.json, state=added, admitted=false, error=Some(historical manifest/measurement must remain byte-identical: quality/evidence.json)
+test public_snapshot::tests::reviewer_historical_measurement_and_ledger_protection ... ok
+reviewer path=projects/new/results/serial.raw, state=modified, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: projects/new/results/serial.raw)
+test public_snapshot::tests::modifying_historical_ledger_or_manifest_is_not_a_public_freeze ... ok
+reviewer path=projects/new/results/observations.jsonl, state=modified, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: projects/new/results/observations.jsonl)
+reviewer path=projects-deceptive/new/serial.raw, state=added, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: projects-deceptive/new/serial.raw)
+reviewer path=projects_deceptive/new/observations.jsonl, state=added, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: projects_deceptive/new/observations.jsonl)
+reviewer path=nested/projects/new/serial.raw, state=added, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: nested/projects/new/serial.raw)
+reviewer path=results/projects/new/observations.jsonl, state=added, admitted=false, error=Some(historical protocol raw bytes must remain retained; new project captures must be added: results/projects/new/observations.jsonl)
+test public_snapshot::tests::publication_status_inventory_and_identity_mutations_reject ... ok
+reviewer path=projects/new/../old/serial.raw, state=added, admitted=false, error=Some(publication path must be normalized and repository-relative: projects/new/../old/serial.raw)
+test public_snapshot::tests::reviewer_new_raw_path_and_state_boundary ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 108 filtered out; finished in 4.84s
+

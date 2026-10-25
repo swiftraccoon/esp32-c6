@@ -1,0 +1,24 @@
+valid-ping: expected=true observed=true; 
+blank-lines: expected=true observed=true; 
+summary-tampered: expected=false observed=false; Error: saved response differs from raw capture
+raw-tampered: expected=false observed=false; Error: reply does not match request
+unknown-version: expected=false observed=false; Error: unsupported wire version
+unknown-field: expected=false observed=false; Error: malformed frame
+duplicate-id: expected=false observed=false; Error: malformed frame
+duplicate-response: expected=false observed=false; Error: duplicate response
+boot-then-response: expected=false observed=false; Error: unexpected device output: ESP-ROM:esp32c6
+response-then-panic: expected=false observed=false; Error: unexpected device output: Guru Meditation Error
+truncated: expected=false observed=false; Error: incomplete trailing line
+incomplete-suffix: expected=false observed=false; Error: incomplete trailing line
+oversized-line: expected=false observed=false; Error: frame capacity exceeded
+oversized-capture: expected=false observed=false; Error: /Users/builduser/Git/esp32-c6/.cache/wireless-explorer/review/cases/oversized-capture/serial.raw exceeds size limit
+failed-attempt: expected=false observed=false; Error: capture retains a failed attempt
+multiple-requests: expected=false observed=false; Error: multiple request lines
+request-unknown-version: expected=false observed=false; Error: unsupported wire version
+request-id-overflow: expected=false observed=false; Error: malformed frame
+request-no-lf: expected=false observed=false; Error: request lacks LF
+valid-truncated-survey: expected=true observed=true; 
+scan-unreported-mismatch: expected=false observed=false; Error: reply does not match request
+scan-channel-mismatch: expected=false observed=false; Error: reply does not match request
+scan-cap-exceeded: expected=false observed=false; Error: reply does not match request
+scan-short-bin-array: expected=false observed=false; Error: malformed frame

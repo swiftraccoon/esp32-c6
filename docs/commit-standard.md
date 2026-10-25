@@ -1,6 +1,6 @@
 # Commit standard
 
-Adopted 2026-10-22 at the user's request: **Conventional Commits 1.0.0**,
+This repository uses **Conventional Commits 1.0.0**,
 the current stable specification on the official site at review time.
 The [versioned specification](https://www.conventionalcommits.org/en/v1.0.0/)
 is normative. Its
@@ -50,6 +50,10 @@ The following conventions supplement the specification:
 - Review the staged changes and record relevant verification in the body when
   useful. Distinguish builds, host tests and on-board results. Preserve failed
   trials and their explanations with the corresponding experiment evidence.
+- Run the installed [privacy gate](privacy.md) against staged objects before
+  every commit and reachable history before pushing. Keep private originals
+  outside Git and label sanitized evidence. Never bypass hooks or add blanket
+  exceptions to admit a rejected artifact.
 - Commit messages do not automatically change package versions, create releases
   or tags, or push commits. Perform those actions when they are part of the
   authorized task. Adopting this convention installs no release automation.
@@ -58,10 +62,11 @@ Suggested scopes describe the affected area:
 
 | Scope | Area |
 | --- | --- |
-| `bench` | Shared workload, capture protocol, collector and benchmark behavior |
+| `bench` | OS evaluation workload, capture protocol, collector and benchmark behavior |
 | `runtime` | Firmware adapters, execution contexts and platform integration |
-| `docs` | OS research, reference sheets, standards and repository instructions |
+| `docs` | Project research, shared references, standards and repository instructions |
 | `results` | Preserved trials, provenance, build evidence and result analysis |
+| `workspace` | Shared tooling and project organization |
 
 Use a narrower noun such as `esp-idf` when it makes the change clearer. These
 scopes are suggestions, not a requirement to force every change into one bucket.

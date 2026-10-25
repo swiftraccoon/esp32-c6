@@ -1,0 +1,10 @@
+Chip type:         esp32c6
+Merge:             true
+Skip padding:      true
+Error: espflash::image_too_big (https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/partition-tables.html#built-in-partition-tables)
+
+  × Supplied ELF image of 1712496B is too big, and doesn't fit configured app
+  │ partition of 1536000B
+  help: Reduce the size of the binary or increase the size of the app
+        partition.
+

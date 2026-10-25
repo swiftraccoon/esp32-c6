@@ -1,0 +1,3 @@
+    Checking wireless-protocol v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/crates/wireless-protocol)
+   Compiling wireless-explorer-firmware v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware)
+    Finished `release` profile [optimized + debuginfo] target(s) in 1.11s

@@ -1,0 +1,27 @@
+absolute-path: expected=false observed=false; Error: invalid capture path
+changed-summary: expected=false observed=false; Error: replay a
+
+Caused by:
+    saved response differs from raw capture
+command-mismatch: expected=false observed=false; Error: ledger command differs from capture
+dangling-failure-marker: expected=false observed=false; Error: replay a
+
+Caused by:
+    capture retains a failure marker
+directory-symlink: expected=false observed=false; Error: capture path is not a regular directory
+duplicate-capture: expected=false observed=false; Error: duplicate capture path
+empty: expected=false observed=false; Error: ledger contains no captures
+empty-path: expected=false observed=false; Error: invalid capture path
+failed-attempt: expected=false observed=false; Error: replay a
+
+Caused by:
+    capture retains a failure marker
+input-symlink: expected=false observed=false; Error: capture input is not a regular file
+nonce-mismatch: expected=false observed=false; Error: ledger command differs from capture
+oversized-ledger: expected=false observed=false; Error: /Users/builduser/Git/esp32-c6/.cache/wireless-explorer/review/ledger-cases/oversized-ledger/ledger.json exceeds size limit
+parent-path: expected=false observed=false; Error: invalid capture path
+unknown-capture-field: expected=false observed=false; Error: unknown field `qualified`, expected `directory` or `command` at line 1 column 99
+unknown-kind: expected=false observed=false; Error: unsupported ledger
+unknown-ledger-field: expected=false observed=false; Error: unknown field `qualified`, expected one of `schema_version`, `kind`, `captures` at line 1 column 31
+unknown-version: expected=false observed=false; Error: unsupported ledger
+valid: expected=true observed=true; 

@@ -1,0 +1,25 @@
+duplicate-conflicting-domain: expected=false observed=false; Error: duplicate field `ble` at line 1 column 302
+extra-domain: expected=false observed=false; Error: unknown field `extra`, expected one of `uart_control`, `passive_wifi_survey`, `native_usb`, `iphone_power`, `iphone_usb_data`, `ble`, `ieee802154`, `controlled_peer_exchange`, `coexistence`, `disconnect_recovery`, `energy` at line 1 column 292
+false-ble: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-coexistence: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-controlled_peer_exchange: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-disconnect_recovery: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-energy: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-ieee802154: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-iphone_power: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-iphone_usb_data: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-native_usb: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-passive_wifi_survey: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+false-uart_control: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+missing-domain: expected=false observed=false; Error: missing field `ble` at line 1 column 404
+missing-map: expected=false observed=false; Error: missing field `coverage` at line 1 column 124
+native-info-does-not-promote-uart: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+native-stays-unqualified: expected=true observed=true; 
+omitted-observation: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+ping-only-valid: expected=true observed=true; 
+survey-valid: expected=true observed=true; 
+uart-and-survey-valid: expected=true observed=true; 
+uart-control-valid: expected=true observed=true; 
+uart-info-alone: expected=false observed=false; Error: coverage differs from the supported functional transcript scope
+unknown-state: expected=false observed=false; Error: unknown variant `passed`, expected `observed_transcript` or `not_run` at line 1 column 283
+wrong-status-type: expected=false observed=false; Error: expected value at line 1 column 276

@@ -1,0 +1,16 @@
+[package]
+name = "wxctl"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Serial command client and capture replay for the C6 wireless explorer"
+
+[dependencies]
+anyhow = "=1.0.103"
+clap = { version = "=4.6.1", features = ["derive"] }
+serde = { workspace = true, features = ["std"] }
+serde_json = "=1.0.154"
+serialport = "=4.10.1"
+wireless-protocol.workspace = true
+

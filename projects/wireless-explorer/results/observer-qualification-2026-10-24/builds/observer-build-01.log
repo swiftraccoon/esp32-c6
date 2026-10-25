@@ -1,0 +1,700 @@
+   Compiling esp-idf-sys v0.38.1 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+   Compiling wireless-protocol v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/crates/wireless-protocol)
+   Compiling esp-idf-hal v0.47.0 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+   Compiling esp-idf-svc v0.53.0 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+   Compiling wireless-explorer-firmware v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware)
+error[E0425]: cannot find type `esp_ble_gattc_cb_param_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:451:37
+       |
+   451 | pub struct EventRawData<'a>(pub &'a esp_ble_gattc_cb_param_t);
+       |                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:146683:1
+       |
+146683 | pub union esp_ble_gap_cb_param_t {
+       | -------------------------------- similarly named union `esp_ble_gap_cb_param_t` defined here
+       |
+help: a union with a similar name exists
+       |
+   451 - pub struct EventRawData<'a>(pub &'a esp_ble_gattc_cb_param_t);
+   451 + pub struct EventRawData<'a>(pub &'a esp_ble_gap_cb_param_t);
+       |
+
+error[E0425]: cannot find type `esp_gattc_cb_event_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:669:20
+       |
+   669 |         raw_event: esp_gattc_cb_event_t,
+       |                    ^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:150421:1
+       |
+150421 | pub struct esp_gattc_db_elem_t {
+       | ------------------------------ similarly named struct `esp_gattc_db_elem_t` defined here
+       |
+help: a struct with a similar name exists
+       |
+   669 -         raw_event: esp_gattc_cb_event_t,
+   669 +         raw_event: esp_gattc_db_elem_t,
+       |
+
+error[E0425]: cannot find type `esp_gattc_cb_event_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:675:16
+       |
+   675 | impl<'a> From<(esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)> for GattcEvent<'a> {
+       |                ^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:150421:1
+       |
+150421 | pub struct esp_gattc_db_elem_t {
+       | ------------------------------ similarly named struct `esp_gattc_db_elem_t` defined here
+       |
+help: a struct with a similar name exists
+       |
+   675 - impl<'a> From<(esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)> for GattcEvent<'a> {
+   675 + impl<'a> From<(esp_gattc_db_elem_t, &'a esp_ble_gattc_cb_param_t)> for GattcEvent<'a> {
+       |
+help: you might be missing a type parameter
+       |
+   675 | impl<'a, esp_gattc_cb_event_t> From<(esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)> for GattcEvent<'a> {
+       |        ++++++++++++++++++++++
+
+error[E0425]: cannot find type `esp_ble_gattc_cb_param_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:675:42
+       |
+   675 | impl<'a> From<(esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)> for GattcEvent<'a> {
+       |                                          ^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:146683:1
+       |
+146683 | pub union esp_ble_gap_cb_param_t {
+       | -------------------------------- similarly named union `esp_ble_gap_cb_param_t` defined here
+       |
+help: a union with a similar name exists
+       |
+   675 - impl<'a> From<(esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)> for GattcEvent<'a> {
+   675 + impl<'a> From<(esp_gattc_cb_event_t, &'a esp_ble_gap_cb_param_t)> for GattcEvent<'a> {
+       |
+help: you might be missing a type parameter
+       |
+   675 | impl<'a, esp_ble_gattc_cb_param_t> From<(esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)> for GattcEvent<'a> {
+       |        ++++++++++++++++++++++++++
+
+error[E0425]: cannot find type `esp_gattc_cb_event_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:676:21
+       |
+   676 |     fn from(value: (esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)) -> Self {
+       |                     ^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:150421:1
+       |
+150421 | pub struct esp_gattc_db_elem_t {
+       | ------------------------------ similarly named struct `esp_gattc_db_elem_t` defined here
+       |
+help: a struct with a similar name exists
+       |
+   676 -     fn from(value: (esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)) -> Self {
+   676 +     fn from(value: (esp_gattc_db_elem_t, &'a esp_ble_gattc_cb_param_t)) -> Self {
+       |
+
+error[E0425]: cannot find type `esp_ble_gattc_cb_param_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:676:47
+       |
+   676 |     fn from(value: (esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)) -> Self {
+       |                                               ^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:146683:1
+       |
+146683 | pub union esp_ble_gap_cb_param_t {
+       | -------------------------------- similarly named union `esp_ble_gap_cb_param_t` defined here
+       |
+help: a union with a similar name exists
+       |
+   676 -     fn from(value: (esp_gattc_cb_event_t, &'a esp_ble_gattc_cb_param_t)) -> Self {
+   676 +     fn from(value: (esp_gattc_cb_event_t, &'a esp_ble_gap_cb_param_t)) -> Self {
+       |
+
+error[E0425]: cannot find type `esp_gattc_cb_event_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1903:16
+       |
+  1903 |         event: esp_gattc_cb_event_t,
+       |                ^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:150421:1
+       |
+150421 | pub struct esp_gattc_db_elem_t {
+       | ------------------------------ similarly named struct `esp_gattc_db_elem_t` defined here
+       |
+help: a struct with a similar name exists
+       |
+  1903 -         event: esp_gattc_cb_event_t,
+  1903 +         event: esp_gattc_db_elem_t,
+       |
+
+error[E0425]: cannot find type `esp_ble_gattc_cb_param_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1905:21
+       |
+  1905 |         param: *mut esp_ble_gattc_cb_param_t,
+       |                     ^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:146683:1
+       |
+146683 | pub union esp_ble_gap_cb_param_t {
+       | -------------------------------- similarly named union `esp_ble_gap_cb_param_t` defined here
+       |
+help: a union with a similar name exists
+       |
+  1905 -         param: *mut esp_ble_gattc_cb_param_t,
+  1905 +         param: *mut esp_ble_gap_cb_param_t,
+       |
+
+error[E0425]: cannot find type `esp_ble_gatts_cb_param_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:19:37
+       |
+    19 | pub struct EventRawData<'a>(pub &'a esp_ble_gatts_cb_param_t);
+       |                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:146683:1
+       |
+146683 | pub union esp_ble_gap_cb_param_t {
+       | -------------------------------- similarly named union `esp_ble_gap_cb_param_t` defined here
+       |
+help: a union with a similar name exists
+       |
+    19 - pub struct EventRawData<'a>(pub &'a esp_ble_gatts_cb_param_t);
+    19 + pub struct EventRawData<'a>(pub &'a esp_ble_gap_cb_param_t);
+       |
+
+error[E0425]: cannot find type `esp_gatts_cb_event_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:227:20
+       |
+   227 |         raw_event: esp_gatts_cb_event_t,
+       |                    ^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:144991:1
+       |
+144991 | pub type esp_gap_ble_cb_event_t = ::core::ffi::c_uint;
+       | ------------------------------- similarly named type alias `esp_gap_ble_cb_event_t` defined here
+       |
+help: a type alias with a similar name exists
+       |
+   227 -         raw_event: esp_gatts_cb_event_t,
+   227 +         raw_event: esp_gap_ble_cb_event_t,
+       |
+
+error[E0425]: cannot find type `esp_gatts_cb_event_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:233:16
+       |
+   233 | impl<'a> From<(esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)> for GattsEvent<'a> {
+       |                ^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:144991:1
+       |
+144991 | pub type esp_gap_ble_cb_event_t = ::core::ffi::c_uint;
+       | ------------------------------- similarly named type alias `esp_gap_ble_cb_event_t` defined here
+       |
+help: a type alias with a similar name exists
+       |
+   233 - impl<'a> From<(esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)> for GattsEvent<'a> {
+   233 + impl<'a> From<(esp_gap_ble_cb_event_t, &'a esp_ble_gatts_cb_param_t)> for GattsEvent<'a> {
+       |
+help: you might be missing a type parameter
+       |
+   233 | impl<'a, esp_gatts_cb_event_t> From<(esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)> for GattsEvent<'a> {
+       |        ++++++++++++++++++++++
+
+error[E0425]: cannot find type `esp_ble_gatts_cb_param_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:233:42
+       |
+   233 | impl<'a> From<(esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)> for GattsEvent<'a> {
+       |                                          ^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:146683:1
+       |
+146683 | pub union esp_ble_gap_cb_param_t {
+       | -------------------------------- similarly named union `esp_ble_gap_cb_param_t` defined here
+       |
+help: a union with a similar name exists
+       |
+   233 - impl<'a> From<(esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)> for GattsEvent<'a> {
+   233 + impl<'a> From<(esp_gatts_cb_event_t, &'a esp_ble_gap_cb_param_t)> for GattsEvent<'a> {
+       |
+help: you might be missing a type parameter
+       |
+   233 | impl<'a, esp_ble_gatts_cb_param_t> From<(esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)> for GattsEvent<'a> {
+       |        ++++++++++++++++++++++++++
+
+error[E0425]: cannot find type `esp_gatts_cb_event_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:234:21
+       |
+   234 |     fn from(value: (esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)) -> Self {
+       |                     ^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:144991:1
+       |
+144991 | pub type esp_gap_ble_cb_event_t = ::core::ffi::c_uint;
+       | ------------------------------- similarly named type alias `esp_gap_ble_cb_event_t` defined here
+       |
+help: a type alias with a similar name exists
+       |
+   234 -     fn from(value: (esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)) -> Self {
+   234 +     fn from(value: (esp_gap_ble_cb_event_t, &'a esp_ble_gatts_cb_param_t)) -> Self {
+       |
+
+error[E0425]: cannot find type `esp_ble_gatts_cb_param_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:234:47
+       |
+   234 |     fn from(value: (esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)) -> Self {
+       |                                               ^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:146683:1
+       |
+146683 | pub union esp_ble_gap_cb_param_t {
+       | -------------------------------- similarly named union `esp_ble_gap_cb_param_t` defined here
+       |
+help: a union with a similar name exists
+       |
+   234 -     fn from(value: (esp_gatts_cb_event_t, &'a esp_ble_gatts_cb_param_t)) -> Self {
+   234 +     fn from(value: (esp_gatts_cb_event_t, &'a esp_ble_gap_cb_param_t)) -> Self {
+       |
+
+error[E0425]: cannot find value `ESP_GATT_PREP_WRITE_CANCEL` in this scope
+     --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:272:67
+      |
+  272 |                     canceled: param.exec_write.exec_write_flag == ESP_GATT_PREP_WRITE_CANCEL as u8,
+      |                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+      |
+     ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:13549:1
+      |
+13549 | pub const ESP_GATT_PERM_WRITE_SIGNED: u32 = 128;
+      | ----------------------------------------- similarly named constant `ESP_GATT_PERM_WRITE_SIGNED` defined here
+      |
+help: a constant with a similar name exists
+      |
+  272 -                     canceled: param.exec_write.exec_write_flag == ESP_GATT_PREP_WRITE_CANCEL as u8,
+  272 +                     canceled: param.exec_write.exec_write_flag == ESP_GATT_PERM_WRITE_SIGNED as u8,
+      |
+
+error[E0425]: cannot find type `esp_gatts_cb_event_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:682:16
+       |
+   682 |         event: esp_gatts_cb_event_t,
+       |                ^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:144991:1
+       |
+144991 | pub type esp_gap_ble_cb_event_t = ::core::ffi::c_uint;
+       | ------------------------------- similarly named type alias `esp_gap_ble_cb_event_t` defined here
+       |
+help: a type alias with a similar name exists
+       |
+   682 -         event: esp_gatts_cb_event_t,
+   682 +         event: esp_gap_ble_cb_event_t,
+       |
+
+error[E0425]: cannot find type `esp_ble_gatts_cb_param_t` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:684:21
+       |
+   684 |         param: *mut esp_ble_gatts_cb_param_t,
+       |                     ^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:146683:1
+       |
+146683 | pub union esp_ble_gap_cb_param_t {
+       | -------------------------------- similarly named union `esp_ble_gap_cb_param_t` defined here
+       |
+help: a union with a similar name exists
+       |
+   684 -         param: *mut esp_ble_gatts_cb_param_t,
+   684 +         param: *mut esp_ble_gap_cb_param_t,
+       |
+
+error[E0425]: cannot find function `esp_ble_gattc_register_callback` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:928:23
+       |
+   928 |         esp!(unsafe { esp_ble_gattc_register_callback(Some(Self::event_handler)) })?;
+       |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:149358:5
+       |
+149358 |     pub fn esp_ble_gap_register_callback(callback: esp_gap_ble_cb_t) -> esp_err_t;
+       |     ------------------------------------------------------------------------------ similarly named function `esp_ble_gap_register_callback` defined here
+       |
+help: a function with a similar name exists
+       |
+   928 -         esp!(unsafe { esp_ble_gattc_register_callback(Some(Self::event_handler)) })?;
+   928 +         esp!(unsafe { esp_ble_gap_register_callback(Some(Self::event_handler)) })?;
+       |
+
+error[E0425]: cannot find function `esp_ble_gattc_app_register` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:991:23
+    |
+991 |         esp!(unsafe { esp_ble_gattc_app_register(app_id) })
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_app_unregister` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:999:23
+    |
+999 |         esp!(unsafe { esp_ble_gattc_app_unregister(gattc_if) })
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_enh_open` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1056:23
+     |
+1056 |         esp!(unsafe { esp_ble_gattc_enh_open(gattc_if, &conn_params as *const _ as *mut _) })
+     |                       ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_open` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1067:13
+     |
+1067 |             esp_ble_gattc_open(
+     |             ^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_aux_open` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1084:13
+     |
+1084 |             esp_ble_gattc_aux_open(
+     |             ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_close` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1102:23
+     |
+1102 |         esp!(unsafe { esp_ble_gattc_close(gattc_if, conn_id) })
+     |                       ^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_send_mtu_req` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1111:23
+     |
+1111 |         esp!(unsafe { esp_ble_gattc_send_mtu_req(gattc_if, conn_id) })
+     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_search_service` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1128:13
+     |
+1128 |             esp_ble_gattc_search_service(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_get_service` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1162:13
+     |
+1162 |             esp_ble_gattc_get_service(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_get_all_char` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1203:13
+     |
+1203 |             esp_ble_gattc_get_all_char(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_get_all_descr` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1243:13
+       |
+  1243 |             esp_ble_gattc_get_all_descr(
+       |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:149362:5
+       |
+149362 |     pub fn esp_ble_gap_get_callback() -> esp_gap_ble_cb_t;
+       |     ------------------------------------------------------ similarly named function `esp_ble_gap_get_callback` defined here
+       |
+help: a function with a similar name exists
+       |
+  1243 -             esp_ble_gattc_get_all_descr(
+  1243 +             esp_ble_gap_get_callback(
+       |
+
+error[E0425]: cannot find function `esp_ble_gattc_get_char_by_uuid` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1284:13
+       |
+  1284 |             esp_ble_gattc_get_char_by_uuid(
+       |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:150061:5
+       |
+150061 |     pub fn esp_ble_eatt_set_chan_num(num_chan: u8) -> esp_err_t;
+       |     ------------------------------------------------------------ similarly named function `esp_ble_eatt_set_chan_num` defined here
+       |
+help: a function with a similar name exists
+       |
+  1284 -             esp_ble_gattc_get_char_by_uuid(
+  1284 +             esp_ble_eatt_set_chan_num(
+       |
+
+error[E0425]: cannot find function `esp_ble_gattc_get_descr_by_uuid` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1325:13
+     |
+1325 |             esp_ble_gattc_get_descr_by_uuid(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_get_descr_by_char_handle` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1362:13
+     |
+1362 |             esp_ble_gattc_get_descr_by_char_handle(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_get_include_service` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1397:13
+     |
+1397 |             esp_ble_gattc_get_include_service(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_get_attr_count` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1450:13
+     |
+1450 |             esp_ble_gattc_get_attr_count(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_get_db` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1484:13
+     |
+1484 |             esp_ble_gattc_get_db(
+     |             ^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_read_char` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1512:23
+       |
+  1512 |         esp!(unsafe { esp_ble_gattc_read_char(gattc_if, conn_id, handle, auth_req as _) })
+       |                       ^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:149606:5
+       |
+149606 |     pub fn esp_ble_gap_read_phy(bd_addr: *mut u8) -> esp_err_t;
+       |     ----------------------------------------------------------- similarly named function `esp_ble_gap_read_phy` defined here
+       |
+help: a function with a similar name exists
+       |
+  1512 -         esp!(unsafe { esp_ble_gattc_read_char(gattc_if, conn_id, handle, auth_req as _) })
+  1512 +         esp!(unsafe { esp_ble_gap_read_phy(gattc_if, conn_id, handle, auth_req as _) })
+       |
+
+error[E0425]: cannot find function `esp_ble_gattc_read_by_type` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1535:13
+     |
+1535 |             esp_ble_gattc_read_by_type(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_read_multiple` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1575:13
+     |
+1575 |             esp_ble_gattc_read_multiple(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_read_multiple_variable` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1613:13
+     |
+1613 |             esp_ble_gattc_read_multiple_variable(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_read_char_descr` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1635:23
+     |
+1635 |         esp!(unsafe { esp_ble_gattc_read_char_descr(gattc_if, conn_id, handle, auth_req as _) })
+     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_write_char` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1658:13
+     |
+1658 |             esp_ble_gattc_write_char(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_write_char_descr` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1694:13
+     |
+1694 |             esp_ble_gattc_write_char_descr(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_prepare_write` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1732:13
+     |
+1732 |             esp_ble_gattc_prepare_write(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_prepare_write_char_descr` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1768:13
+     |
+1768 |             esp_ble_gattc_prepare_write_char_descr(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_execute_write` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1795:23
+     |
+1795 |         esp!(unsafe { esp_ble_gattc_execute_write(gattc_if, conn_id, is_execute,) })
+     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_register_for_notify` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1814:13
+     |
+1814 |             esp_ble_gattc_register_for_notify(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_unregister_for_notify` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1838:13
+     |
+1838 |             esp_ble_gattc_unregister_for_notify(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_cache_refresh` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1854:23
+     |
+1854 |         esp!(unsafe { esp_ble_gattc_cache_refresh(remote_bda.raw() as *const _ as *mut _,) })
+     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_cache_assoc` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1879:13
+     |
+1879 |             esp_ble_gattc_cache_assoc(
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_cache_get_addr_list` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1893:23
+     |
+1893 |         esp!(unsafe { esp_ble_gattc_cache_get_addr_list(gattc_if,) })
+     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_cache_clean` in this scope
+    --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1899:23
+     |
+1899 |         esp!(unsafe { esp_ble_gattc_cache_clean(remote_addr.raw() as *const _ as *mut _,) })
+     |                       ^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gattc_register_callback` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/client.rs:1924:23
+       |
+  1924 |         esp!(unsafe { esp_ble_gattc_register_callback(None) }).unwrap();
+       |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:149358:5
+       |
+149358 |     pub fn esp_ble_gap_register_callback(callback: esp_gap_ble_cb_t) -> esp_err_t;
+       |     ------------------------------------------------------------------------------ similarly named function `esp_ble_gap_register_callback` defined here
+       |
+help: a function with a similar name exists
+       |
+  1924 -         esp!(unsafe { esp_ble_gattc_register_callback(None) }).unwrap();
+  1924 +         esp!(unsafe { esp_ble_gap_register_callback(None) }).unwrap();
+       |
+
+error[E0425]: cannot find function `esp_ble_gatts_register_callback` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:448:23
+       |
+   448 |         esp!(unsafe { esp_ble_gatts_register_callback(Some(Self::event_handler)) })?;
+       |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:149358:5
+       |
+149358 |     pub fn esp_ble_gap_register_callback(callback: esp_gap_ble_cb_t) -> esp_err_t;
+       |     ------------------------------------------------------------------------------ similarly named function `esp_ble_gap_register_callback` defined here
+       |
+help: a function with a similar name exists
+       |
+   448 -         esp!(unsafe { esp_ble_gatts_register_callback(Some(Self::event_handler)) })?;
+   448 +         esp!(unsafe { esp_ble_gap_register_callback(Some(Self::event_handler)) })?;
+       |
+
+error[E0425]: cannot find function `esp_ble_gatts_app_register` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:505:23
+    |
+505 |         esp!(unsafe { esp_ble_gatts_app_register(app_id) })
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_app_unregister` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:509:23
+    |
+509 |         esp!(unsafe { esp_ble_gatts_app_unregister(gatts_if) })
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_create_service` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:521:13
+    |
+521 |             esp_ble_gatts_create_service(gatt_if, &service_id as *const _ as *mut _, num_handles)
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_delete_service` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:526:23
+    |
+526 |         esp!(unsafe { esp_ble_gatts_delete_service(service_handle) })
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_start_service` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:530:23
+       |
+   530 |         esp!(unsafe { esp_ble_gatts_start_service(service_handle) })
+       |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:149374:5
+       |
+149374 |     pub fn esp_ble_gap_start_scanning(duration: u32) -> esp_err_t;
+       |     -------------------------------------------------------------- similarly named function `esp_ble_gap_start_scanning` defined here
+       |
+help: a function with a similar name exists
+       |
+   530 -         esp!(unsafe { esp_ble_gatts_start_service(service_handle) })
+   530 +         esp!(unsafe { esp_ble_gap_start_scanning(service_handle) })
+       |
+
+error[E0425]: cannot find function `esp_ble_gatts_stop_service` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:534:23
+    |
+534 |         esp!(unsafe { esp_ble_gatts_stop_service(service_handle) })
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_add_char` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:562:13
+    |
+562 |             esp_ble_gatts_add_char(
+    |             ^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_add_char_descr` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:585:13
+    |
+585 |             esp_ble_gatts_add_char_descr(
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_get_attr_value` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:600:18
+    |
+600 |             esp!(esp_ble_gatts_get_attr_value(
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_set_attr_value` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:621:13
+    |
+621 |             esp_ble_gatts_set_attr_value(attr_handle, data.len() as _, data.as_ptr() as *const _)
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_send_response` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:639:13
+    |
+639 |             esp_ble_gatts_send_response(gatts_if, conn_id, trans_id, status as _, response)
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_send_indicate` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:651:13
+    |
+651 |             esp_ble_gatts_send_indicate(
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_send_indicate` in this scope
+   --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:670:13
+    |
+670 |             esp_ble_gatts_send_indicate(
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^ not found in this scope
+
+error[E0425]: cannot find function `esp_ble_gatts_register_callback` in this scope
+      --> /Users/builduser/.cargo/git/checkouts/esp-idf-f2860d750355a70d/a209052/esp-idf-svc/src/bt/ble/gatt/server.rs:703:23
+       |
+   703 |         esp!(unsafe { esp_ble_gatts_register_callback(None) }).unwrap();
+       |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       |
+      ::: /Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/build/esp-idf-sys-ba2b1f2a51c6c3a5/out/bindings.rs:149358:5
+       |
+149358 |     pub fn esp_ble_gap_register_callback(callback: esp_gap_ble_cb_t) -> esp_err_t;
+       |     ------------------------------------------------------------------------------ similarly named function `esp_ble_gap_register_callback` defined here
+       |
+help: a function with a similar name exists
+       |
+   703 -         esp!(unsafe { esp_ble_gatts_register_callback(None) }).unwrap();
+   703 +         esp!(unsafe { esp_ble_gap_register_callback(None) }).unwrap();
+       |
+
+For more information about this error, try `rustc --explain E0425`.
+error: could not compile `esp-idf-svc` (lib) due to 67 previous errors

@@ -1,0 +1,14 @@
+[workspace]
+members = ["crates/wireless-protocol", "clients/wxctl"]
+exclude = ["firmware"]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.96"
+publish = false
+
+[workspace.dependencies]
+serde = { version = "=1.0.229", default-features = false, features = ["derive"] }
+wireless-protocol = { path = "crates/wireless-protocol" }
+

@@ -1,0 +1,442 @@
+[
+  {
+    "sha256": "be5759f806c233978ce716d036a294b8c3e0f8d3d07343e2eabcd40ed402a935",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "8ef785c6367b43aa4f45ca4ae151f06db92d694116143f547996d7a9731f4bb1",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "9855bd88651e8399c6a0c699901b8194f42b32730e6bbf4e73af324a22de395c",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "ffc9932c18dbdc64eb1269925b3ab43be73b0b927917b5176013dfd413d0c772",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "37900dd90b1a75387061a6e47ce41c4c8b29e63ad50a4613e28454fce898a0b1",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "b21eaff63f4ec33c1e96e84e3bdd04133974b5538b222965820bdd85a8be026e",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "4159fbb7239e5c4a390980efe7fb639923336335149c1990b550c95465107281",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "193b914de9bbe0627c7e5a417edaad542598ed23322c234b0cf4a2fd3646055e",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "a40753bc505d14ae35f4a6eefaf10d6dbc03e40b4d584038597227007ad92560",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "87ebdf272c23baea2b200d6538e44c3d6a378f4659568b23c75cfb817149a228",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "098c7c9b593df17a7510306aab795cf60b01cf5d988001c76c00e6ce209860ef",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "e51109cf04c0bcc4487b39cf95d4deea3be5574f965ff65c19943c83ab64948d",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "d943092413fa0e89d10f1c0fd11875904f6cac56b7cbe62304a982ae377396b9",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "e2cee55539c43e367047838d11e79f448c2eb3139050e78926fbb9a1336b70b4",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "5d9a324dff59b4014dbc799d0833511b9b176313dc49a3b811da25daa0668422",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "5c188038d950cb89b12a1cc52b038dd33ea2667eba207ca2095aead57cb8a476",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "37460ca184cbcb2fe9c4163e5479b9781bc0c5b5a58820aa36b8c5b17929d558",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "05dec573372ca999e282adc7276688a7fa311e88d67bf6b2a673edeb1388368a",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "242b50cb21b8fcfc8fc9d42c411a64c88fed2b29ff6e7a6072eacf1705ac1491",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "197d20aa08b53e9d36356ccdfb1e7133991617f2f34b55e866b5222124ced5b5",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "57dbeffd581702af32be18409c9a62cf3c0d51ec7fde8e00a536c7cdf0e2b797",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "fb67626c1845324484fe27c126d3e101644cf04c77589606025a7e0c95e9fc50",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "e292d0443d8f689c543358bc0f34e8e7ff479d4907e61bf641dddb795e0a384b",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "a32c514c31148334dc079da4e306563ece8a15fd26332a8fe0c74631944728e9",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "52f2d6bfd21d3fb7e2982b2c83e88db1f3d74c8ea0a4079b1042acda33e0ee5e",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "2d7a9cae39fbce278f9587aa2e44ed928e2d0313d4148a3db334dba5db0c8a07",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "d648fefe7020624039577de1bbdb6789d5071c19c1cf05a43828beb7639672bc",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "3942d947e1d4bb5f5b21de46e499c5178e927498f72848c783300b9bdf8bd6d1",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "c997c865c5a98dc7048df9db77b8cdb631f2ae5711ad34fb4008c9308ec2cac6",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "cf214d4f2f924558967477ce6581b9ae87bc1dc3ef2b04a6b00cc563f62936bd",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "e2f62d7d25c2ce8f825e52adc9cb951a90877b459f22863a9171e68f199f8bf9",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "e6fc83fdba206391e4e924afb8285a5673fc01909bd33708d83c7184701c5946",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "4b459648ab63d0d7abbd71cd371661b5e28616c5955ddad95e7de66163c83edd",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "a4f1325e8c7baf2d8c97245d8530d22a75f19a41334a683d3642977d62e1cdcb",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "578e5fc7bf75e81e5f341463b9c723c849f7d5f0f69d2960d87bb6a93e0f9044",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "110a1290c40b2fc602f49a15217da057155c61ad3f0233fa340167cf2ab110e0",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "b21815625ea3f492d2315c6ae4aafa3f8151b512571122de242478a666c631c3",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "2a1f06bcd087364bf04874f04929c572e4151b2ed478ae4008d357672c9a696b",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "77d30afc1cf8dde502a465ef518ca0c91fc4e3ef1f090f33d2f9d814322b0bbb",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "52ef6238e9dab6edb356b39d21bdb630830f0d2ea16fd03a927e7ffb81f4b8ed",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "e586a956e05d328cba03627a36ff0c1cf1f63f6a63bda7925180aed88633add7",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "fdb91bbcfb96bc4b5d2cd765766ea1734665d8ee8413e4ad7e077f320890ec4a",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "33f8077fb379380284ca145a57a857046cb63a0acacfe05e0869c3ed367969cc",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "398e1410934ff049467a907eb7171d2b214a3cc5c195e89c8f3331ec06218cf4",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "2a69db9712723ef7313e178a4ace45c1b81eb1b7aab04b9c487a9ace58dee66b",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "83a738c10d24a1db1d670900c058dd084cb3412a3e813051846479b9f29189a0",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "9748bb09db58e17b57a71b4fcec169c0facf8eaee97fe4f3636bd6477ac982be",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "ecebed54773807b8a34206debce5329106758df6b87e245546458139fa256027",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "e2f0029aa8b91b999974f7fa34a5331af0ae017e7810336430e2cd52946fea2c",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "3a4f091b94c4128cd3957f47156c87a5922087c0cb3bd21f146275f0227c28fc",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "ae6f68dbaa452674dacd2669d0411b897c50be3db1017f55a0484f7a0f280668",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "725c80704a3c3b8fbd222b575444e399ff5bcddb0bfbb98c130e6cc0f312454b",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "8a46e8afa76376a63c5428cb35179de3fae001e465ad22ca0228b5ce28fd2fe5",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "557756295237d3741f2d13ff1660fb4039065107dec55dd6560bb70b4e6757c1",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "19e9326ac9dbcf62487d89371eb0b77215928549f251cfc333ff2ec698a0c374",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "d9a7be7dc4a2660b16585df015c34616348033b5730522f065fd90bf41475629",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "2028a4d18d9a403c2724a1e1ee48195c4cccae37459c6d3f63fbe5e13d88b18f",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "82b221f84bb4ce8be2d8534aa2899df66d8ad0ac349224dd850a5a40ddf2e32c",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "418232f5bfa2d363a6d61777222775d53d676df0c0d990dfbd6fb3f8256c53a3",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "40e1d6b79d9d71b92bc1081304d8708b2f63aeb4cc4863d263572f142c516feb",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "5351bf5a2710d732e053494d104922191bd024c67483023276ce22397d89e403",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "c96ade29bc32d9fc2aa1effa2973063194b5978de255206ba2d9bbf5b9aaf57c",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "4f3dfbfcbcfca21745198558422c51b7a34e8d6f895c07ec17a7ad5978c34f6f",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "6af86734728cc4e198eedee7a21a039b8089555bc6352e0637f231b211dc4a3f",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "a5f4bba2f38b6f2cc8e18f90884757acdffdb6a51dc5071730e24f09c89b3a07",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "7de62076b8b11f4abd9b1bfd96acadb3529e45971e8daa258216f3a5dae9fc53",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "2c426b9f62043d6efa60e7df9546a8aa5bedccd08b46364fdbe78b96efb89a8d",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "50fbae4e65f371ee4c53e54c725213bff1fce01bc552e79011dc3feebf8b6731",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "d10efb51c11b756393f9a0b3ed5b620efa112485d4a734e8aeebdcbb8392994c",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "512e322f8e823b5b4b45fb3dc034ea743faf85d655f9f18c890eb0adb4fa56b0",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "a5804d3a9ad16fb62ca326217343a67b6625df80ea9207a612952d88cd0c2797",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "0c81b8623f387506929ff4deb886ab61233e0d3ea0f82855a0f84ea3daff8940",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "2810f7b14ebe6d1d4c98a211a760d9200c7260118fd4627578759dc7d0770508",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "faec4bac2f099030cf0aa40c30d2b2b56f0e5e4c55d739f82c989ebeb190f089",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "178f62096f5aeeaea630543bb9ac69055922870bfec35acca3e4e3a6a4c1efea",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "4e9f06d29b0ceb9db126fa424c63a63959c90068b322a31978d9cf2f8899f81b",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "e36abb2e411146f17a7c4761186dfefdfc219198bb87900b4c71caf45680668d",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "0a2cc73d4b60f81486afb27213e2237a73750a72136d46966e2246fc1bc47a5d",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "f3e2442883677edb7a2d55e9afdf1df15e279c22f2ab73caf642756b2ed68f89",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "87522a678198aa34c068f0b39d2e0e55982c1eed466cebec8431eada26c2f3e4",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "bba4beb70681bbb4ee052cacdb3a5b48ddd51f4d3f247265c425513d1c621a0b",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "7abad6affcf5bb4bd256041ba8fb063e485471726946cd610d2769cf7fa6c54e",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "b5ddf84899ab4b62dd7726063e9bd384745aae5b965d17b27d5ed4dab32ba77a",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "0fab61b1b35d47634809ff245fd6e1142edfb36de9b9066a5cf14caffe60bdaa",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "3e90c4a6f6d3395218816e8950c8b26ad1ed2fa9ca599cc2ac1e5008fdc2cadb",
+    "rule": "raw-artifact",
+    "reason": "Existing benchmark/control fixture bytes; no ambient packet payloads or device identifiers. Exact content only."
+  },
+  {
+    "sha256": "7be64d96747d6ce18754547886b2a6616f5b30d383547453ce949878084f6ce9",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  },
+  {
+    "sha256": "b84d82fd4889e1ba677fdb3354476a334c8692d4503697b6bafcc6bf7190bff4",
+    "rule": "opaque-artifact",
+    "reason": "Existing historical source/map archive; inspected unpacked content for local personal identifiers. Public upstream attribution is retained."
+  }
+]

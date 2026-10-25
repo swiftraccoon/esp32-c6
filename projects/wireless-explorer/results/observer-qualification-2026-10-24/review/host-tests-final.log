@@ -1,0 +1,35 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.10s
+     Running unittests src/lib.rs (target/debug/deps/wireless_protocol-c54340c0dd560c5e)
+
+running 5 tests
+test tests::challenge_and_count_conservation_reject_plausible_wrong_results ... ok
+test tests::exact_line_boundary_and_crlf ... ok
+test tests::rejects_bad_versions_fields_trailing_data_and_integer_overflow ... ok
+test tests::overflow_discards_valid_looking_suffix_and_recovers ... ok
+test tests::literal_wire_vectors_and_fragmentation ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/wxctl-ea16d73a9723400f)
+
+running 9 tests
+test observation::tests::plan_rejects_bad_channels_and_duplicates_before_serial_access ... ok
+test tests::transcript_controls_reject_fatal_missing_duplicate_and_partial_output ... ok
+test tests::saved_request_requires_one_complete_frame_and_reads_are_bounded ... ok
+test tests::saved_raw_replay_rejects_changed_summary_and_retained_failure ... ok
+test observation::tests::full_packets_fragments_caps_and_loss_conservation ... ok
+test observation::tests::stream_negative_controls ... ok
+test tests::ledger_checks_actual_commands_and_rejects_path_escape_or_duplicates ... ok
+test observation::tests::archive_roundtrip_rejects_modified_outputs_and_failure_markers ... ok
+test observation::tests::archive_rejects_hidden_suffixes_missing_startup_and_extra_files ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+   Doc-tests wireless_protocol
+
+running 1 test
+test crates/wireless-protocol/src/lib.rs - (line 7) ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+all doctests ran in 0.43s; merged doctests compilation took 0.42s

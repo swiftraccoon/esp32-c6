@@ -1,0 +1,118 @@
+
+projects/wireless-explorer/firmware/target/riscv32imac-esp-espidf/release/wireless-explorer-firmware:     file format elf32-littleriscv
+
+
+Disassembly of section .iram0.text:
+
+408002d8 <wireless_explorer_firmware::radios::ieee_rx>:
+408002d8:	1101                	addi	sp,sp,-32
+408002da:	ce06                	sw	ra,28(sp)
+408002dc:	cc22                	sw	s0,24(sp)
+408002de:	ca26                	sw	s1,20(sp)
+408002e0:	c84a                	sw	s2,16(sp)
+408002e2:	c64e                	sw	s3,12(sp)
+408002e4:	c452                	sw	s4,8(sp)
+408002e6:	c256                	sw	s5,4(sp)
+408002e8:	c05a                	sw	s6,0(sp)
+408002ea:	408304b7          	lui	s1,0x40830
+408002ee:	ff848493          	addi	s1,s1,-8 # 4082fff8 <wireless_explorer_firmware::radios::IN_CALLBACK>
+408002f2:	4605                	li	a2,1
+408002f4:	06c4a02f          	amoadd.w.aqrl	zero,a2,(s1)
+408002f8:	0330000f          	fence	rw,rw
+408002fc:	44d4                	lw	a3,12(s1)
+408002fe:	470d                	li	a4,3
+40800300:	0230000f          	fence	r,rw
+40800304:	08e69c63          	bne	a3,a4,4080039c <wireless_explorer_firmware::radios::ieee_rx+0xc4>
+40800308:	00848693          	addi	a3,s1,8
+4080030c:	00c6a9af          	amoadd.w	s3,a2,(a3)
+40800310:	c149                	beqz	a0,40800392 <wireless_explorer_firmware::radios::ieee_rx+0xba>
+40800312:	c1c1                	beqz	a1,40800392 <wireless_explorer_firmware::radios::ieee_rx+0xba>
+40800314:	00054403          	lbu	s0,0(a0)
+40800318:	ffe40b13          	addi	s6,s0,-2
+4080031c:	07d00613          	li	a2,125
+40800320:	07666963          	bltu	a2,s6,40800392 <wireless_explorer_firmware::radios::ieee_rx+0xba>
+40800324:	892a                	mv	s2,a0
+40800326:	842e                	mv	s0,a1
+40800328:	00002097          	auipc	ra,0x2
+4080032c:	ca2080e7          	jalr	-862(ra) # 40801fca <esp_timer_get_time>
+40800330:	00245883          	lhu	a7,2(s0)
+40800334:	00444603          	lbu	a2,4(s0)
+40800338:	00842283          	lw	t0,8(s0)
+4080033c:	445c                	lw	a5,12(s0)
+4080033e:	40824a37          	lui	s4,0x40824
+40800342:	470a0a13          	addi	s4,s4,1136 # 40824470 <wireless_explorer_firmware::radios::PACKETS>
+40800346:	6721                	lui	a4,0x8
+40800348:	18870693          	addi	a3,a4,392 # 8188 <CSR_UINTSTATUS+0x74d7>
+4080034c:	96d2                	add	a3,a3,s4
+4080034e:	9af1                	andi	a3,a3,-4
+40800350:	4405                	li	s0,1
+40800352:	4486a6af          	amoor.w.aq	a3,s0,(a3)
+40800356:	0ff6f693          	zext.b	a3,a3
+4080035a:	e29d                	bnez	a3,40800380 <wireless_explorer_firmware::radios::ieee_rx+0xa8>
+4080035c:	9752                	add	a4,a4,s4
+4080035e:	18072a83          	lw	s5,384(a4)
+40800362:	18472683          	lw	a3,388(a4)
+40800366:	40da86b3          	sub	a3,s5,a3
+4080036a:	4721                	li	a4,8
+4080036c:	0230000f          	fence	r,rw
+40800370:	04e69a63          	bne	a3,a4,408003c4 <wireless_explorer_firmware::radios::ieee_rx+0xec>
+40800374:	0310000f          	fence	rw,w
+40800378:	6521                	lui	a0,0x8
+4080037a:	9552                	add	a0,a0,s4
+4080037c:	18050423          	sb	zero,392(a0) # 8188 <CSR_UINTSTATUS+0x74d7>
+40800380:	01048513          	addi	a0,s1,16
+40800384:	0085202f          	amoadd.w	zero,s0,(a0)
+40800388:	557d                	li	a0,-1
+4080038a:	06a4a02f          	amoadd.w.aqrl	zero,a0,(s1)
+4080038e:	854a                	mv	a0,s2
+40800390:	a811                	j	408003a4 <wireless_explorer_firmware::radios::ieee_rx+0xcc>
+40800392:	01448593          	addi	a1,s1,20
+40800396:	4605                	li	a2,1
+40800398:	00c5a02f          	amoadd.w	zero,a2,(a1)
+4080039c:	55fd                	li	a1,-1
+4080039e:	06b4a02f          	amoadd.w.aqrl	zero,a1,(s1)
+408003a2:	c519                	beqz	a0,408003b0 <wireless_explorer_firmware::radios::ieee_rx+0xd8>
+408003a4:	01943097          	auipc	ra,0x1943
+408003a8:	258080e7          	jalr	600(ra) # 421435fc <esp_ieee802154_receive_handle_done>
+408003ac:	c111                	beqz	a0,408003b0 <wireless_explorer_firmware::radios::ieee_rx+0xd8>
+408003ae:	c0c8                	sw	a0,4(s1)
+408003b0:	40f2                	lw	ra,28(sp)
+408003b2:	4462                	lw	s0,24(sp)
+408003b4:	44d2                	lw	s1,20(sp)
+408003b6:	4942                	lw	s2,16(sp)
+408003b8:	49b2                	lw	s3,12(sp)
+408003ba:	4a22                	lw	s4,8(sp)
+408003bc:	4a92                	lw	s5,4(sp)
+408003be:	4b02                	lw	s6,0(sp)
+408003c0:	6105                	addi	sp,sp,32
+408003c2:	8082                	ret
+408003c4:	00190813          	addi	a6,s2,1
+408003c8:	6421                	lui	s0,0x8
+408003ca:	01da9693          	slli	a3,s5,0x1d
+408003ce:	18040713          	addi	a4,s0,384 # 8180 <CSR_UINTSTATUS+0x74cf>
+408003d2:	02e6b6b3          	mulhu	a3,a3,a4
+408003d6:	4709                	li	a4,2
+408003d8:	96d2                	add	a3,a3,s4
+408003da:	00e68023          	sb	a4,0(a3)
+408003de:	00c680a3          	sb	a2,1(a3)
+408003e2:	0056a423          	sw	t0,8(a3)
+408003e6:	c6dc                	sw	a5,12(a3)
+408003e8:	ce88                	sw	a0,24(a3)
+408003ea:	cecc                	sw	a1,28(a3)
+408003ec:	0336a023          	sw	s3,32(a3)
+408003f0:	03669223          	sh	s6,36(a3)
+408003f4:	03669323          	sh	s6,38(a3)
+408003f8:	0316a423          	sw	a7,40(a3)
+408003fc:	0206a623          	sw	zero,44(a3)
+40800400:	03068513          	addi	a0,a3,48
+40800404:	85c2                	mv	a1,a6
+40800406:	865a                	mv	a2,s6
+40800408:	00018097          	auipc	ra,0x18
+4080040c:	4aa080e7          	jalr	1194(ra) # 408188b2 <memcpy>
+40800410:	0a85                	addi	s5,s5,1
+40800412:	0310000f          	fence	rw,w
+40800416:	9452                	add	s0,s0,s4
+40800418:	19542023          	sw	s5,384(s0)
+4080041c:	0310000f          	fence	rw,w
+40800420:	18040423          	sb	zero,392(s0)
+40800424:	b795                	j	40800388 <wireless_explorer_firmware::radios::ieee_rx+0xb0>

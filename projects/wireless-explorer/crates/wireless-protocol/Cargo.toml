@@ -1,0 +1,13 @@
+[package]
+name = "wireless-protocol"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Bounded command and response framing for the C6 wireless explorer"
+
+[dependencies]
+serde.workspace = true
+serde-json-core = "=0.6.0"
+heapless = { version = "=0.8.0", features = ["serde"] }
+

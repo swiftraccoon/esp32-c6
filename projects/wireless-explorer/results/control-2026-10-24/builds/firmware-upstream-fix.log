@@ -1,0 +1,9 @@
+ Downloading crates ...
+  Downloaded embuild v0.33.7
+   Compiling bindgen v0.72.1
+   Compiling embuild v0.33.7
+   Compiling esp-idf-sys v0.38.1 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+   Compiling esp-idf-hal v0.47.0 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+   Compiling esp-idf-svc v0.53.0 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+   Compiling wireless-explorer-firmware v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware)
+    Finished `release` profile [optimized + debuginfo] target(s) in 1m 08s

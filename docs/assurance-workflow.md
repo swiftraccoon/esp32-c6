@@ -1,174 +1,83 @@
 # Evidence and experiment gates
 
-The full-artifact commands below apply to complete original evidence bundles.
-For this source and textual-result checkout, run
-`target/release/benchctl verify-public-snapshot --root . --manifest quality/publication.json`.
-Its [scope](reviews/public-snapshot.md) excludes unavailable original binaries
-and historical Git ancestry; it does not replace the gates for new experiments.
+These requirements apply across the workspace. Each project owns its methods,
+qualification controls, claims and results. The
+[OS workflow](../projects/os-evaluation/docs/assurance-workflow.md) describes
+the historical benchmark schemas and concrete commands; wireless defines its
+[observation contract](../projects/wireless-explorer/docs/observation.md) and
+[functional evidence](../projects/wireless-explorer/results/README.md).
 
-Adopted **2026-10-23** following the [feedback audit](reviews/2026-10-23-feedback-audit.md).
-These gates apply to new work. They do not retroactively establish that they ran
-before historical captures or turn incomplete objectives into completed tests.
+## Before collection or comparison
 
-## Before comparative collection
+1. Record the decision question, closest prior test and reuse decision. Define
+   inputs, target/configuration, timed endpoints, units/clock, aggregation,
+   observer effects, correctness checks and limits. Trace the selected compiled
+   branches rather than inferring execution from source text.
+2. Preserve exact source, SDK/toolchain, configuration and artifact identities.
+   Qualify the actual capture/derive/save/replay path with passing and deliberately
+   failing controls, including fractional/boundary data where relevant.
+3. Investigate unexpected qualification failures before repeating collection.
+   Preserve failed attempts and their acceptance rules; corrections get their
+   own version and evidence.
+4. Have a separate reviewer construct contrary controls, reproduce outcomes and
+   check agreement among source, configuration, observations and claims. Retain
+   concrete commands/results and unresolved objections.
+5. Freeze the prospective schedule, method and input digests before comparative
+   collection. Record its commit in the project ledger. Preserve the private
+   full-flash backup, transfer verification and restoration boundary separately.
+   Host controls do not flash, authenticate or qualify the board.
 
-1. Record the decision question and closest prior test. Specify every measured
-   metric's start/end, units/clock, aggregation, observer policy, correctness
-   check, configuration and limits. Trace conditional compilation and actual
-   executed branches, including allocation/waiter paths. A source print call
-   alone does not establish output from a selected build.
-2. Build and preserve exact ELF, provenance and configuration identities. Check
-   expected output formats in the actual compiled image and an admitted
-   qualification transcript. A required string's presence is necessary for a
-   literal-output check, not proof of execution or endpoint correctness.
-3. Qualify the method with a passing control and deliberately failing controls.
-   Investigate an unexpected qualification failure before repeating collection.
-   Do not repair a frozen acceptance rule by admitting its failed attempts.
-4. Have a separate reviewer construct contrary tests, reproduce outcomes and
-   check the source/configuration/measurement agreement. Retain concrete tests,
-   commands, results and unresolved objections. A reviewer name or agreement is
-   insufficient. Review artifact identity is machine-checked; independence and
-   scientific interpretation still require actual review.
-5. Commit the prospective schedule, input digest set and method definition;
-   record that freeze commit in the ledger. Preserve board identity, the current
-   private full-image backup, flash-transfer evidence and restoration separately.
-   The host method gate does not flash or authenticate the board.
+## Claims, packaging and privacy
 
-For the supported JSON collectors, capture purpose is mandatory:
+Distinguish source support, builds, observed output, operator reports, reproduced
+results, failures and unmeasured work. State missing coverage explicitly; no
+overall score follows from a partial subsystem check. Keep project results and
+ledgers under their owning project. The
+[OS ledger](../projects/os-evaluation/quality/evidence.json) retains its original scope and bytes.
 
-```sh
-target/release/benchctl capture-queue --purpose qualification \
-  --port /dev/cu.SERIAL_PORT --output .cache/new-pilot \
-  --backend freertos-queue --elf path/to/firmware.elf \
-  --provenance path/to/provenance.json --boot-id pilot-01 --run-order 1
-```
+Use a collecting state while an archive is incomplete. Finalization needs a
+complete checksum manifest over every retained regular file except itself and
+an explicit path convention. Frozen input manifests must match their recorded
+commit; changing a source location does not make current bytes original inputs.
+Preserve failed attempts, raw inputs and versioned interpretation corrections.
 
-This command resets the device; it is an example, not an instruction to run
-against an unprepared board. It produces a schema-4 report marked
-`qualification`. Such pilots are excluded from comparative study analysis.
-Do not label a native console smoke test a supported JSON qualification.
+Apply the [privacy gate](privacy.md) before staging/publication. Raw ambient
+captures, device identifiers, personal paths and full flash images remain in
+ignored private storage. Publish explicitly sanitized derivatives with their own
+identities. Evidence retention never authorizes publishing personal data.
 
-The current method definition is deliberately **retrospective**: it reuses
-the existing IDF queue pilots to run new offline controls for future captures
-of those exact images. It does not claim the gate ran during the old study.
+## Verification
 
-```sh
-target/release/benchctl qualify-method \
-  --method quality/methods/idf-queue-v1.json
-```
+Run target-appropriate formatting, builds, lints, documentation and meaningful
+tests. Stage complete files before checking inventories and links. Recheck
+archive seals and replay saved observations through the actual consumer;
+a failed capture must remain failed. Read-only checks must never repair data,
+rewrite a freeze, reset hardware or manufacture an observation.
 
-This checks both positive controls through the actual protocol validators,
-artifact/report consistency and the full metric-ID set. For each variant it
-requires rejection of a pre-JSON panic, reboot, additional ROM startup, missing
-completion and corrupt checksum, including the expected rejection category.
-It also checks required ELF/output text and pinned source/review/configuration
-files. The output is `controls_passed`, not a hardware or platform verdict.
-
-A comparison capture additionally needs `--purpose comparison --method <path>`.
-It must match the qualified wire/backend, ELF and provenance before serial
-access. The inputs are rechecked before capture. A changed artifact or method
-requires its own reviewed revision and controls.
-
-New queue studies use manifest schema **2**, retaining the existing balanced
-schedule format and image map and adding a frozen definition identity:
-
-```json
-{
-  "schema_version": 2,
-  "experiment": "idf-native-queue-v1",
-  "schedule_sha256": "<actual schedule SHA-256>",
-  "method_definition": {
-    "path": "quality/methods/idf-queue-v1.json",
-    "sha256": "<actual method definition SHA-256>"
-  },
-  "images": "<same std/native image-map structure as the existing study>"
-}
-```
-
-This shows field structure, not a runnable manifest. The analyzer reruns method
-controls and requires schema-4 comparative receipts matching each backend's
-frozen method, ELF and provenance. Removing purpose does not make a new pilot
-historical. Legacy schema-1 studies/schema-3 reports are accepted only with the
-known historical collector identity; their original outputs remain unchanged.
-That compatibility is not retrospective qualification. Editing all metadata
-to impersonate another collector is outside authenticity guarantees.
-
-Native suites without a reviewed adapter remain qualification-only evidence.
-No new Zephyr v2 profile is authorized by the IDF method definition. Its failed
-v1 contract, image warning and endpoint map retain their separate status.
-
-## Claims and coverage
-
-Update [quality/evidence.json](../quality/evidence.json) and the
-[ledger guide](evidence-ledger.md) when evidence changes. Keep source support,
-build success, observed output, operator reports, independently reproduced
-results, failures and unmeasured work distinct. Pin supporting files and state
-scope/limits; do not promote an operator claim merely by changing its label.
-
-All platform/domain pairs expand from explicit unknown/not-run defaults plus
-scoped overrides. Partial CPU/UART observations do not qualify an entire
-subsystem. Runtime utilization, capacity, memory peaks, radio, sleep/energy,
-recovery and maintenance gaps remain visible. No overall score is inferred.
-
-## Packaging and verification before a finalized commit
-
-Exercise the complete derive/serialize/save/read/replay path with fractional
-statistics and boundary cases, alongside transcript controls. Uniform fixtures
-with integer means missed the [load reader defect](reviews/idf-load-replay-correction.md).
-Keep exact integer sums/counts, check saved numeric round trips and require
-rejection of a changed report through the same archive path used for final QA.
-When that path fails, retain the original failure and artifacts, diagnose the
-layer responsible, and version a correction separately from frozen inputs.
-Do not weaken equality or rewrite observations to make a replay pass.
-
-Use a `collecting` archive entry during work. Finalization requires a complete
-`SHA256SUMS` over every retained regular file except itself, with an explicit
-repository-relative or archive-relative path convention. Do not silently omit
-unexpected files or substitute paths when resolving a manifest.
-
-`INPUTS.sha256` is immutable once frozen. Its current bytes must match the
-recorded Git commit, and listed input files must still match those committed
-digests. This binds a previously ignored generated file by its frozen hash;
-it does not require pretending that file was tracked in the original tree.
-Use full Git history. Interpretation corrections preserve original data/reports,
-add a versioned explanation and reconcile the completed archive hashes.
-
-The initial dataset's new packaging is explicitly retrospective. Sealing its
-current bytes does not create a pre-collection freeze or fix its initial clock
-uncertainty.
-
-Stage complete files before the final checks so an untracked local link cannot
-be mistaken for committed evidence:
+From the repository root, verify the available historical OS data and workspace
+source inventory with:
 
 ```sh
-cargo +1.96.0 fmt --all -- --check
-cargo +1.96.0 test --workspace --locked
-cargo +1.96.0 clippy --workspace --locked --all-targets -- -D warnings
-cargo +1.96.0 doc --workspace --locked --no-deps
-cargo +1.96.0 build --release --locked -p benchctl
-target/release/benchctl verify-evidence --root . --ledger quality/evidence.json
-target/release/benchctl replay-archives --root .
-target/release/benchctl qualify-method --method quality/methods/idf-queue-v1.json
-git diff --cached --check
+cargo +1.96.0 build --manifest-path projects/os-evaluation/Cargo.toml --release --locked -p benchctl
+projects/os-evaluation/target/release/benchctl verify-public-snapshot \
+  --root . --ledger projects/os-evaluation/quality/evidence.json --manifest quality/publication.json
 ```
 
-The verifier checks archive discovery/inventory, identities, frozen manifests,
-typed claim support, coverage structure and its documented local Markdown-link
-subset. Replay checks preserve failed-capture status and compare successful
-protocol outputs and study summaries. Commands are read-only: they never repair
-an archive, update a hash, reset a board or manufacture an observation.
+This [limited verifier](../projects/os-evaluation/tools/benchctl/docs/api.md) checks source identities,
+declared historical lineage, local links and retained raw replays. It cannot
+replace omitted executables, original freeze ancestry, full-artifact admission,
+physical measurements or each project's semantic validator.
+[Relocation mappings](organization.md) apply only to public-snapshot verification;
+full method checks still require original inputs.
 
-[CI](../.github/workflows/assurance.yml) runs the source checks with Rust 1.96.0
-on Ubuntu and the explicit public-snapshot check described above. The original
-full-history/artifact commands remain available for complete experiment bundles;
-this checkout cannot run their complete checks. No board is
-needed for these host commands; fresh dependency/tool provisioning uses the
-network. The workflow definition is not evidence a hosted run passed.
-Repository branch protection/required-check settings are not configured by
-adding this file.
+The OS evidence verifier also accepts project ledgers at
+`projects/<project>/quality/<file>.json`, with archives directly under that
+project's `results/`. Its schema and qualification rules remain the
+[OS contract](../projects/os-evaluation/docs/assurance-workflow.md); other project
+schemas require their own validators.
 
-No check establishes semantic correctness, reviewer identity, independent
-oscillator accuracy or absence of unrecorded failures. Report exactly what
-passed, the contrary tests exercised, and what remains unverified. The
-[independent assurance review](reviews/assurance-independent.md) records the
-implemented checks and executed environments without a completeness assurance.
+[CI](../.github/workflows/assurance.yml) checks workspace utilities, OS host tools
+and wireless host tools independently. Hosted CI configuration is not evidence a
+hosted run passed. Record executed commands, outcomes, unrun checks and their
+limits. No check proves semantic correctness, anonymity, clock calibration,
+reviewer independence or absence of unrecorded failures.

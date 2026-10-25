@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "kind": "wireless-functional-probes-v1",
+  "captures": [
+    { "directory": "control-2026-10-24/info-02", "command": "info" },
+    { "directory": "control-2026-10-24/ping-01", "command": { "ping": { "nonce": 123 } } },
+    { "directory": "control-2026-10-24/info-03", "command": "info" },
+    { "directory": "control-2026-10-24/ping-02", "command": { "ping": { "nonce": 123 } } },
+    { "directory": "control-2026-10-24/scan-02", "command": "wifi_scan" },
+    { "directory": "control-2026-10-24/scan-03", "command": "wifi_scan" },
+    { "directory": "control-2026-10-24/info-04", "command": "info" }
+  ],
+  "coverage": {
+    "uart_control": "observed_transcript",
+    "passive_wifi_survey": "observed_transcript",
+    "native_usb": "not_run",
+    "iphone_power": "not_run",
+    "iphone_usb_data": "not_run",
+    "ble": "not_run",
+    "ieee802154": "not_run",
+    "controlled_peer_exchange": "not_run",
+    "coexistence": "not_run",
+    "disconnect_recovery": "not_run",
+    "energy": "not_run"
+  }
+}

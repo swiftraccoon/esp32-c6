@@ -1,0 +1,32 @@
+   Compiling esp-idf-sys v0.38.1 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+   Compiling wireless-explorer-firmware v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/firmware)
+    Checking wireless-protocol v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/crates/wireless-protocol)
+   Compiling esp-idf-hal v0.47.0 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+   Compiling esp-idf-svc v0.53.0 (https://github.com/esp-rs/esp-idf?rev=a209052f378be61dd0f2d566b7fbe0f9593b0cd5#a209052f)
+error: casting to the same type is unnecessary (`u8` -> `u8`)
+   --> src/radios.rs:213:42
+    |
+213 | ...                   primary_phy: adv.primary_phy as u8,
+    |                                    ^^^^^^^^^^^^^^^^^^^^^ help: try: `adv.primary_phy`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.96.0/index.html#unnecessary_cast
+    = note: `-D clippy::unnecessary-cast` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::unnecessary_cast)]`
+
+error: casting to the same type is unnecessary (`u8` -> `u8`)
+   --> src/radios.rs:214:44
+    |
+214 | ...                   secondary_phy: adv.secondly_phy as u8,
+    |                                      ^^^^^^^^^^^^^^^^^^^^^^ help: try: `adv.secondly_phy`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.96.0/index.html#unnecessary_cast
+
+error: casting to the same type is unnecessary (`u8` -> `u8`)
+   --> src/radios.rs:216:42
+    |
+216 | ...                   data_status: adv.data_status as u8,
+    |                                    ^^^^^^^^^^^^^^^^^^^^^ help: try: `adv.data_status`
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.96.0/index.html#unnecessary_cast
+
+error: could not compile `wireless-explorer-firmware` (bin "wireless-explorer-firmware") due to 3 previous errors

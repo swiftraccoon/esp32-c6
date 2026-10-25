@@ -1,0 +1,10 @@
+{
+  "baud": 115200,
+  "client_version": "0.1.0",
+  "control_lines": "DTR and RTS deasserted",
+  "kind": "wireless-explorer-functional-probe-v1",
+  "port": "/dev/cu.SERIAL_PORT",
+  "reset_requested": false,
+  "startup_capture_ms": 1000,
+  "timeout_seconds": 15
+}

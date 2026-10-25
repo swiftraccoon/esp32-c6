@@ -1,0 +1,3 @@
+   Compiling wireless-protocol v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/crates/wireless-protocol)
+   Compiling wxctl v0.1.0 (/Users/builduser/Git/esp32-c6/projects/wireless-explorer/clients/wxctl)
+    Finished `release` profile [optimized] target(s) in 3.05s
