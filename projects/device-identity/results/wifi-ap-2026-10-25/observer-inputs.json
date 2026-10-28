@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "metadata_preflight_passed": true,
+  "source": {
+    "source_count": 3,
+    "profile_uuid_match_count": 1,
+    "selected_is_linuxwifi": true,
+    "running": true,
+    "error": false,
+    "paused": false,
+    "metadata_dlt": 127,
+    "metadata_hopping": false
+  },
+  "configuration_and_interfaces": {
+    "active_configuration_file_count": 10,
+    "all_active_configuration_metadata_unchanged": true,
+    "one_expected_kismet_process": true,
+    "monitor_info_succeeded": true,
+    "selected_interface_is_monitor": true,
+    "monitor_channel": 1,
+    "monitor_frequency_mhz": 2412,
+    "ipv4_default_route_count": 1,
+    "ipv6_default_route_count": 0,
+    "default_route_interface_count": 1,
+    "selected_monitor_carries_no_default_route": true,
+    "default_interfaces_distinct_phy": true,
+    "default_interfaces_managed_wifi": true,
+    "default_interfaces_intel_driver": true,
+    "monitor_realtek_driver": true
+  },
+  "packet_stream_started": false,
+  "source_control_requests_sent": false,
+  "receiver_tuned": false
+}

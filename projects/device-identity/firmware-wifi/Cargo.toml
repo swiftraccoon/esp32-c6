@@ -1,0 +1,35 @@
+[package]
+name = "device-identity-wifi-firmware"
+version = "0.1.0"
+edition = "2024"
+publish = false
+rust-version = "1.96"
+description = "UART-controlled single SoftAP identity witness with a bounded stop deadline"
+default-run = "device-identity-wifi-firmware"
+
+[workspace]
+
+[[bin]]
+name = "device-identity-wifi-restart"
+path = "src/restart_main.rs"
+
+[dependencies]
+esp-idf-hal = { git = "https://github.com/esp-rs/esp-idf", rev = "a209052f378be61dd0f2d566b7fbe0f9593b0cd5" }
+esp-idf-svc = { git = "https://github.com/esp-rs/esp-idf", rev = "a209052f378be61dd0f2d566b7fbe0f9593b0cd5" }
+esp-idf-sys = { git = "https://github.com/esp-rs/esp-idf", rev = "a209052f378be61dd0f2d566b7fbe0f9593b0cd5" }
+wifi-protocol = { path = "../crates/wifi-protocol" }
+
+[build-dependencies]
+embuild = "=0.33.7"
+
+[profile.release]
+codegen-units = 1
+debug = 2
+lto = "thin"
+opt-level = 3
+panic = "abort"
+
+[package.metadata.esp-idf-sys]
+esp_idf_tools_install_dir = "workspace"
+esp_idf_version = "tag:v5.5.6"
+mcu = "esp32c6"

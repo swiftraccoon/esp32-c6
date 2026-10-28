@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "capture_implementation": "Unmodified installed esptool/espefuse 4.12.0, called by a retained one-off research invocation; no firmware download or maintained transport implementation.",
+  "rejected_method_freeze": "cca1ba9b31fe8a03c56fc270880b0811ba6e1cfc",
+  "accepted_method_freeze": "e824c6c111f1ba7f8bdb387f72c506d92d4275d5",
+  "rejected": {
+    "completed_spi_calls": 852,
+    "capture_success": false,
+    "reason": "MOSI-padded UID reads returned zero and failed the overlap check",
+    "host_reset_release_success": true,
+    "port_close_success": true,
+    "utc_start": "2026-10-25T23:55:01.261996+00:00",
+    "utc_end": "2026-10-25T23:56:05.686240+00:00"
+  },
+  "accepted": {
+    "completed_spi_calls": 846,
+    "capture_success": true,
+    "host_reset_release_success": true,
+    "dtr_deasserted": true,
+    "reset_output_warning_free": true,
+    "port_close_success": true,
+    "utc_start": "2026-10-26T00:03:16.225751+00:00",
+    "reset_completed_utc": "2026-10-26T00:04:20.176088+00:00",
+    "utc_end": "2026-10-26T00:04:20.207466+00:00"
+  },
+  "deadlines": {
+    "inner_seconds": 240,
+    "outer_interrupt_seconds": 270,
+    "outer_kill_grace_seconds": 15
+  },
+  "qualification": {
+    "first_method_synthetic_models": 3,
+    "first_method_contrary_controls": 32,
+    "revised_method_synthetic_models": 3,
+    "revised_method_contrary_controls": 32,
+    "physical_saved_replay_contrary_controls": 35,
+    "all_original_cohort_files_unchanged_during_review": 22,
+    "frozen_inputs_verified": 17
+  },
+  "limits": [
+    "The first completed cohort remains failed; no favorable prefix was substituted for a passing whole capture.",
+    "Raw UID/flash words, source input identities containing private device information, concrete port and failed diagnostics stay private.",
+    "Discarded raw key-block data cannot be recomputed from saved booleans; independent review checks source/classification scope and receipts.",
+    "Host reset/release does not independently attest physical application boot, cold power behavior or unchanged main flash.",
+    "The read sequence issued no eFuse, bridge, security-register or flash-array programming commands."
+  ]
+}

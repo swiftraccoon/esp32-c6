@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "kind": "controlled_softap_beacon_presence_witness",
+  "freeze_commit": "39305c0185395037847ed18f60f11d556a751264",
+  "planned_trials": 2,
+  "attempted_trials": 2,
+  "admitted_complete_trials": 2,
+  "reset_separated_boots": true,
+  "cold_power_cycles": false,
+  "distinct_fresh_trial_nonces": true,
+  "observations": [
+    {
+      "trial": 1,
+      "initial_idle_uninitialized": true,
+      "active_driver_matches_synthetic_control": true,
+      "driver_control_differs_from_original": true,
+      "stop_confirmed_inactive": true,
+      "original_driver_mac_restored": true,
+      "driver_remains_initialized_after_stop": true,
+      "automatic_stop_reported": true,
+      "qualified_matching_beacons": 32
+    },
+    {
+      "trial": 2,
+      "initial_idle_uninitialized": true,
+      "active_driver_matches_synthetic_control": true,
+      "driver_control_differs_from_original": true,
+      "stop_confirmed_inactive": true,
+      "original_driver_mac_restored": true,
+      "driver_remains_initialized_after_stop": true,
+      "automatic_stop_reported": true,
+      "qualified_matching_beacons": 32
+    }
+  ],
+  "qualified_matching_beacons_total": 64,
+  "independent_decoder": {
+    "name": "TShark (Wireshark)",
+    "version": "4.6.9",
+    "all_saved_packets_decoded": true,
+    "exact_ssid_ta_bssid_broadcast_matches": 64,
+    "good_fcs_count": 64,
+    "reported_frequency_mhz": 2412,
+    "duplicate_json_keys_preserved": true
+  },
+  "independent_crc32_good_count": 64,
+  "rehashed_semantic_corruptions_rejected": 12,
+  "all_original_trial_files_unchanged": true,
+  "replay_matches_saved_summaries": true,
+  "full_window_coverage": "unmeasured",
+  "RF_silence": "unmeasured",
+  "hot_address_rotation": "unmeasured",
+  "correlation_reduction": "unmeasured",
+  "transmitter_authentication": "unqualified",
+  "raw_values_and_frames": "private"
+}

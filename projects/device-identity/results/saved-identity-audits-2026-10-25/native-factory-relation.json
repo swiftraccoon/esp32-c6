@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "kind": "usb_factory_mac_relation",
+  "whole_usb_capture_replayed": true,
+  "selected_efuse_fields_validated": true,
+  "native_serial_code_units": 17,
+  "matches_factory_mac": true
+}

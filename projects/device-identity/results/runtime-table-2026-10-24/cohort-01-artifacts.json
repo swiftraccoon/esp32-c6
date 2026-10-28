@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "firmware_target": "riscv32imac-esp-espidf",
+  "rust": "1.96.0",
+  "sdk_version": "5.5.6",
+  "sdk_commit": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
+  "rust_wrappers_commit": "a209052f378be61dd0f2d566b7fbe0f9593b0cd5",
+  "libclang": "21.1.8",
+  "ldproxy": "0.3.4",
+  "firmware_elf_sha256": "1d17d0b34b657bae81699091ea3e09a4d4609057c11c09de09e0fe2ea10cd256",
+  "merged_image_sha256": "317d9f59039e8b2758e8d4ab0c7b143d2ecae795619ef0a1de1b07cd8fec796b",
+  "merged_image_bytes": 452944,
+  "full_sdkconfig_sha256": "50d43017dcaf415b0e1044c8e1eb8f1fd57df39c0ca57d799374ca83572fdd6d",
+  "raw_artifacts": "private",
+  "public_sdkconfig": "selected actual settings; complete generated input retained privately",
+  "collector_sha256": "4721ade2a46323d8eee8f86f67029b1f5270f0eaccd1dd25b591f852af27a807",
+  "collector_target": "aarch64-apple-darwin"
+}

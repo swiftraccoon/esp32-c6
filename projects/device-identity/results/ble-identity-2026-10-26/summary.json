@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "state": "finalized_sanitized_derivative",
+  "original_application_baseline": {
+    "hci_advertising_report_events": 73,
+    "expected_public_address_reports": 8,
+    "legacy_connectable_advertisements_with_expected_services": 4,
+    "scan_responses_with_expected_name": 4
+  },
+  "controlled_trial": {
+    "normal_commands": 6,
+    "retained_uart_handle": true,
+    "one_session_nonce": true,
+    "active_addresses_distinct": true,
+    "explicit_checked_stop_after_each_phase": true,
+    "all_operation_statuses_zero": true,
+    "any_auto_stop": false,
+    "any_first_failure": false,
+    "phases": [
+      {
+        "phase": "first",
+        "packet_count": 413,
+        "HCI_advertising_report_events": 122,
+        "unsupported_multi_report_events": 0,
+        "exact_target_report_count": 2,
+        "same_nonce_wrong_address_or_type_count": 0,
+        "same_address_type_wrong_AD_count": 0
+      },
+      {
+        "phase": "second",
+        "packet_count": 564,
+        "HCI_advertising_report_events": 164,
+        "unsupported_multi_report_events": 0,
+        "exact_target_report_count": 1,
+        "same_nonce_wrong_address_or_type_count": 0,
+        "same_address_type_wrong_AD_count": 0
+      }
+    ]
+  },
+  "readback_relations": {
+    "first_prestart_type": "public",
+    "first_active_type": "random",
+    "second_prestart_type": "random",
+    "second_active_type": "random",
+    "second_prestart_equals_first_used": false,
+    "active_addresses_different": true,
+    "second_prestart_equals_second_used": true
+  },
+  "receiver": {
+    "config_pins_unchanged_per_window": 10,
+    "guard_groups_unchanged_per_window": 8,
+    "owned_monitors_reaped": 2,
+    "discovery_commands_issued": 0
+  },
+  "restoration": {
+    "bytes": 8388608,
+    "separate_whole_range_device_md5_match": true,
+    "warning_free_host_reset": true
+  },
+  "raw_rf_crc_qualified": false
+}

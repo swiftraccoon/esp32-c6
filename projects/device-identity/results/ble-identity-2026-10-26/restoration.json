@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "backup_bytes": 8388608,
+  "fresh_backup_separately_verified_before_write": true,
+  "backup_length_and_hash_rechecked": true,
+  "application_write_offset": 65536,
+  "application_bytes": 871824,
+  "application_erase_end_exclusive": 937984,
+  "original_application_slot_end_exclusive": 1114112,
+  "bootloader_and_partition_table_kept_for_probe": true,
+  "full_restore_write_status": 0,
+  "separate_full_range_verify_status": 0,
+  "verified_bytes": 8388608,
+  "raw_header_parameters": "keep for mode, frequency and size",
+  "device_md5_match": true,
+  "host_reset_warning_free": true,
+  "restore_started_utc": "2026-10-26T02:10:47.202220+00:00",
+  "verify_and_release_completed_utc": "2026-10-26T02:11:45.991418+00:00",
+  "independent_application_boot_attestation": false,
+  "postboot_storage_persistence_measured": false
+}

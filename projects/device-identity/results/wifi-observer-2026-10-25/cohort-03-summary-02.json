@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "interface_count": 1,
+  "packet_count": 32,
+  "management_frame_count": 32,
+  "beacon_count": 0,
+  "other_frame_count": 32,
+  "bad_fcs_count": 0,
+  "unsupported_frame_count": 0,
+  "fcs_unqualified_count": 0,
+  "visible_ssid_beacon_count": 0,
+  "hidden_ssid_beacon_count": 0,
+  "channel_ie_beacon_count": 0,
+  "tim_ie_beacon_count": 0,
+  "rsn_ie_beacon_count": 0,
+  "vendor_ie_beacon_count": 0
+}

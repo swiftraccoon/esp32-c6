@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "method_freeze": "0b5d60a0a33e24bf48ea32f1f410d3011eb79a27",
+  "frozen_files": 53,
+  "original_esp_idf_version": "5.4.1",
+  "original_nimble_revision": "a9a4c701981b86c91fdc63fce4cb7bc05c69caac",
+  "openocd_version": "v0.12.0-esp32-20241016",
+  "openocd_binary_sha256": "ac10ccdbedba667810cff7f66d0d0060aac203b9a19fe6ad6838143995fe64b7",
+  "esptool_version": "4.12.0",
+  "tcl_composition_sha256": "222dc28a3dc73682814db525fd4c5a001ebd51adfd8019d92b1eee58e694206c",
+  "host_composition_sha256": "df1c92a09a6f0d0a1fe84ca73caaf4e038afdc1b79a5bf82e4ab073bd8e2d6b1",
+  "qualification": {
+    "actual_jim_controls": 12,
+    "host_pure_controls": 23,
+    "host_mocked_main_controls": 22,
+    "independent_log_controls": 13,
+    "independent_file_controls": 7,
+    "independent_inventory_controls": 12
+  },
+  "retained_failures": [
+    "Pinned OpenOCD accepted numeric shutdown 1 without the required nonzero status; corrected to shutdown error.",
+    "Earlier host admission accepted an elapsed deadline overrun and an unexpected warning appended to a known notice; corrected before collection.",
+    "A preparation lookup selected the wrong binary-digest artifact; corrected before hardware access."
+  ],
+  "limits": [
+    "Active debug reads can affect execution, CSRs, watchdogs and interrupts.",
+    "Two populated and different IRK observations do not qualify entropy, population uniqueness or on-air exposure.",
+    "No pairing, SC public key, private scalar or negotiated link key was captured.",
+    "Final normal reset begins an uncaptured boot; later application health, RF behavior and PHY persistence are unmeasured.",
+    "Exact unit identities, memory contents, original artifact hashes and raw tool output remain private.",
+    "The selected input freeze is not a hermetic capture of every dynamic dependency or host environment input."
+  ],
+  "independent_saved_replay": {
+    "raw_capture_seal_files": 55,
+    "frozen_inputs_verified": 53,
+    "complete_boots_replayed": 2,
+    "matched_warning_free_reset_receipts": 3,
+    "method_git_blob_matches": true,
+    "inputs_unchanged": true
+  }
+}

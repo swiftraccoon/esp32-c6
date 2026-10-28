@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "decoder": "TShark (Wireshark)",
+  "version": "4.6.9",
+  "git_identifier": "2d548b197c75",
+  "binary_sha256": "3e3792a06e2a2b856e92f5e134276745f84e3f5682d4cb3aaf95af4ebd29f566",
+  "mode": "offline all saved packets; no capture or display filter",
+  "command_recipe": [
+    "tshark",
+    "-n",
+    "-r",
+    "PRIVATE/packets.pcapng",
+    "-o",
+    "wlan.check_fcs:TRUE",
+    "-o",
+    "wlan.check_checksum:TRUE",
+    "-T",
+    "json"
+  ],
+  "decoded_output": "private",
+  "runtime_libraries_hermetic": false
+}

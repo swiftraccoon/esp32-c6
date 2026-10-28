@@ -8,7 +8,7 @@ workspace package when another project actually depends on it.
 | --- | --- |
 | [OS evaluation](../projects/os-evaluation/README.md) | Its crates, collector, firmware, docs, results and quality ledger under `projects/os-evaluation/` |
 | [Wireless explorer](../projects/wireless-explorer/README.md) | Its firmware, host protocol/client, docs and functional captures |
-| [Device identity](../projects/device-identity/README.md) | Its identifier inventory and investigation plan |
+| [Device identity](../projects/device-identity/README.md) | Its inventory tools, identifier records, procedures and observations |
 | [Workspace utilities](../tools/workspace-tools/README.md) | Privacy guard and offline style-source updater |
 | Shared references | Root `docs/`: hardware, standards, privacy/assurance policy and cross-project source catalogs |
 | [Publication metadata](../quality/README.md) | Root `quality/`: privacy policy and tracked-file availability/identity inventory |
@@ -45,10 +45,10 @@ the local additions below.
 
 ## Cargo and local resources
 
-The root Cargo workspace contains `workspace-tools`. OS evaluation and wireless
-explorer each own a host workspace, lockfile and compatible toolchain. Firmware
-has independent manifests and target configuration. Enter a firmware directory
-before invoking Cargo so its `.cargo/config.toml` is loaded.
+The root Cargo workspace contains `workspace-tools`. OS evaluation, wireless
+explorer and device identity each own a host workspace, lockfile and compatible
+toolchain. Firmware has independent manifests and target configuration. Enter
+a firmware directory before invoking Cargo so its `.cargo/config.toml` is loaded.
 
 Installed `ldproxy` lives in ignored `.tools/bin/`. The shared, unmodified
 IDF 5.5.6 SDK/tools live in ignored `.cache/espressif/idf-5.5.6/`; each consuming

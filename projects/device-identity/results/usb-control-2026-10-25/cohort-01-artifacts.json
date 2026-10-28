@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "collector_sha256": "b9f02ac15f66a34e2b62a0cbd1b4add25cfa45c1dc3121130509bc96d6a6f0f0",
+  "collector_target": "aarch64-apple-darwin",
+  "rust": "1.96.0",
+  "firmware_changed": false,
+  "observer": "IOUSBDeviceInterface942 default control-pipe IN requests",
+  "native_open_policy": "no device open or seize",
+  "raw_capture": "private"
+}

@@ -1,0 +1,11 @@
+[package]
+name = "runtime-protocol"
+version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+rust-version.workspace = true
+description = "Bounded private runtime identity records for the ESP32-C6"
+
+[dependencies]
+serde = { version = "=1.0.229", default-features = false, features = ["derive"] }
+serde-json-core = "=0.6.0"

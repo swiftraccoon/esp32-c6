@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "kind": "efuse_summary",
+  "observer": "physical_debug",
+  "fields": [
+    {
+      "field": "factory_base_mac",
+      "bits": 48,
+      "readable": true,
+      "writeable": true,
+      "content": "all_zero"
+    },
+    {
+      "field": "mac_extension",
+      "bits": 16,
+      "readable": true,
+      "writeable": true,
+      "content": "all_zero"
+    },
+    {
+      "field": "optional_unique_id",
+      "bits": 128,
+      "readable": true,
+      "writeable": true,
+      "content": "all_zero"
+    }
+  ]
+}

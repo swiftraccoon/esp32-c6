@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "method_freeze": "cb126322fc557ea24a1deee098cba081216e4753",
+  "host_composition_sha256": "368dc4afdec0261cc874c2a7e1ea75390fd9f488cd16ee61342aed2dfc4771ec",
+  "USB_observer_binary_sha256": "3c5fad099baf2b7138fe01f162ff409f79b6cc98852b76a18cc51e4f8cde09d3",
+  "vendor_SDK_archive_revision": "56d116793833e9be86355a63bc9675489f6c2e38",
+  "libusb_version": "1.0.30",
+  "esptool_version": "4.12.0",
+  "qualification": {
+    "host_controls": 50,
+    "independent_timing_recovery_controls": 10,
+    "other_function_ASTs_unchanged": 26,
+    "prior_actual_CLI_path_proofs_reused": true
+  },
+  "independent_actual_replay": {
+    "complete_USB_captures": 3,
+    "whole_replay_and_Fletcher_audits": 6,
+    "frozen_inputs_unchanged": 739,
+    "original_run_files_unchanged": 191,
+    "host_intervals_verified": 5,
+    "exact_original_restore_and_final_reset_reproduced": true
+  },
+  "limits": [
+    "Ten seconds is the prospective selected setting, not a vendor-specified minimum or guaranteed remedy.",
+    "The vendor guidance concerns a Windows VID/PID report; no causal equivalence to this Mac serial case is established.",
+    "Current official Linux/Mac/Windows SDK package downloads returned HTTP 403; newer implementations remain uninspected.",
+    "One timing setting failed; this does not exhaust timing choices or establish a cause.",
+    "Host receipts do not attest electrical timing, bridge MCU reset, power loss, on-bus packets or NVM persistence.",
+    "The selected input freeze is not a hermetic host-environment capture; lower kernel descriptor caching remains unqualified.",
+    "Original configuration and serials were restored; later application health, RF behavior and PHY persistence remain unmeasured."
+  ]
+}

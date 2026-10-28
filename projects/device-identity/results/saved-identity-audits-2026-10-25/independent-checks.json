@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "usb": {
+    "schema_version": 1,
+    "native_serial_factory_relation_independently_matches": true,
+    "cp_fletcher16_modulo_oracle_independently_matches": true,
+    "private_values_printed": false
+  },
+  "nvs": {
+    "schema_version": 1,
+    "source": "pinned SDK NVS parser",
+    "results": [
+      {
+        "snapshot_ordinal": 0,
+        "nvs_slice_matches_original_image": true,
+        "written_head_and_slot_and_type_counts_match": true,
+        "all_nonempty_page_crcs_match": true,
+        "all_written_header_and_variable_payload_crcs_match": true,
+        "written_heads_checked": 6
+      },
+      {
+        "snapshot_ordinal": 1,
+        "nvs_slice_matches_original_image": true,
+        "written_head_and_slot_and_type_counts_match": true,
+        "all_nonempty_page_crcs_match": true,
+        "all_written_header_and_variable_payload_crcs_match": true,
+        "written_heads_checked": 6
+      },
+      {
+        "snapshot_ordinal": 2,
+        "nvs_slice_matches_original_image": true,
+        "written_head_and_slot_and_type_counts_match": true,
+        "all_nonempty_page_crcs_match": true,
+        "all_written_header_and_variable_payload_crcs_match": true,
+        "written_heads_checked": 6
+      }
+    ],
+    "raw_names_values_and_checksums": "private"
+  }
+}

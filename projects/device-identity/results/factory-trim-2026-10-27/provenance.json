@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "method_freeze": "747df234297b1e8fe13a70623fc1a4bdc6cad7eb",
+  "host_composition_sha256": "4fe35ee0b732de922916a41e3a9dcf6a540658eed99ffd6144d9afea9ceead61",
+  "esptool_version": "4.12.0",
+  "SDK_field_table_revision": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
+  "frozen_inputs_verified": 77,
+  "qualification": {
+    "stock_virtual_summary_cases": 3,
+    "final_offline_guard_and_recovery_controls": 31,
+    "stock_version_zero_exit0_omits_all_trim_rows": true,
+    "missing_rows_rejected_without_zero_filling": true,
+    "independent_contrary_review_passed": true
+  },
+  "independent_actual_replay": {
+    "exact_export_and_stock_guard_reproduced": true,
+    "pinned_CSV_layout_and_nonoverlap_reproduced": true,
+    "MAC_byteorder_and_saved_factory_binding_verified": true,
+    "complete_bounded_child_receipts": 7,
+    "final_reset_verified": true,
+    "method_git_blob_matches": true,
+    "original_inputs_and_outputs_unchanged": true
+  },
+  "limits": [
+    "Raw trim values, their combined vector, vector hashes and unit binding remain private; this sanitized archive cannot replay the private raw observation.",
+    "Defined bit count is not entropy or evidence of population uniqueness; calibration accuracy is not qualified.",
+    "Stock construction reads blocks internally beyond the selected formatted fields, and SPI/XMC startup/reset hooks are broader than a pure eFuse read.",
+    "Unset write-protection does not provide a supported rewrite of populated RS-coded BLOCK1/2.",
+    "Host reset receipts do not independently establish application health, later persistence, RF behavior or electrical timing.",
+    "The selected input freeze is not a hermetic capture of every dynamic dependency or host-environment input.",
+    "No bridge configuration write occurred in this collection; full-power-cycle custom-serial activation remains unverified."
+  ]
+}

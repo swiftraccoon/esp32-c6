@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "collector_sha256": "aeb5f278c957703a7d9183f115bd544bdb03dff480da10e197fcb9d4ad8fb432",
+  "collector_target": "aarch64-apple-darwin",
+  "rust": "1.96.0",
+  "firmware_changed": false,
+  "observer": "IOUSBDeviceInterface942 default control-pipe IN requests",
+  "native_open_policy": "no device open or seize",
+  "raw_capture": "private",
+  "request_plan_version": 2,
+  "raw_record_version": 2,
+  "capture_version": 2,
+  "conditional_rom_diagnostic": "one separate capture after matching original-state failure; separate hard-reset cleanup"
+}

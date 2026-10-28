@@ -1,0 +1,31 @@
+{
+  "scope": "Selected hardware metadata only, no key-content output or programming. Host application-release reset completed, not independent boot attestation.",
+  "selected_fields": 17,
+  "factory_fields_match_saved_baseline": true,
+  "user_data_all_256_bits_zero": true,
+  "user_data_write_protected": false,
+  "key_purposes": [
+    "USER",
+    "USER",
+    "USER",
+    "USER",
+    "USER",
+    "USER"
+  ],
+  "key_read_protected": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "secure_boot_enabled": false,
+  "flash_encryption_state": "Disable",
+  "secure_download_enabled": false,
+  "download_mode_disabled": false,
+  "metadata_status": 0,
+  "release_status": 0,
+  "schema_version": 1,
+  "observer": "Attached host, UART ROM download access; selected eFuse metadata."
+}

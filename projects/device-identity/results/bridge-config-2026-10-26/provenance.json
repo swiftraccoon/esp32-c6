@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "method_freezes": [
+    "5ffe3d9c0d4bf7ad54f0024364f7d0e11804f200",
+    "0bb84a3608b06367a02e33d203e93f9554cb76e7",
+    "b684dc250432ddaaa214e55eeada7266f86f5bbb"
+  ],
+  "host_composition_sha256_by_attempt": [
+    "4de00f31a7de9ea4443c669baeaee646f7242a583609d7210b319fa10ade0474",
+    "b00ca0aa00a078c4d27204209fa94dc8ee222c4e26218386f8890ccc9e4a8ac7",
+    "0215f125e690558116ea286e6ed277e299bfe3784640e173cc62527e5ba97b29"
+  ],
+  "frozen_files_by_attempt": [
+    175,
+    260,
+    486
+  ],
+  "USB_observer_binary_sha256": "3c5fad099baf2b7138fe01f162ff409f79b6cc98852b76a18cc51e4f8cde09d3",
+  "vendor_SDK_archive_revision": "56d116793833e9be86355a63bc9675489f6c2e38",
+  "vendor_SDK_source_files_unchanged": 68,
+  "libusb_version": "1.0.30",
+  "esptool_version": "4.12.0",
+  "qualification": {
+    "actual_SMT_parser_controls_with_USB_access_denied": 8,
+    "independent_Rust_replay_Fletcher_controls": 6,
+    "final_host_controls": 48,
+    "final_independent_main_controls_including_historical": 29,
+    "actual_capture_path_controls": 7,
+    "actual_offline_relative_replay_and_audit_commands": 2
+  },
+  "source_origin_limit": "Vendor-authored Linux SDK sources retrieved from a pinned third-party mirror and built unchanged for the Mac; not an official Mac binary release.",
+  "limits": [
+    "All three whole serial-change trials failed; exact candidate configuration readback in the third does not qualify active custom serial exposure.",
+    "SDK reset status does not prove reset effect, bridge MCU restart or power removal.",
+    "Configuration persistence and activation through a full bridge power cycle remain unmeasured.",
+    "The property sample precedes fresh capture; no persistent-cache-divergence claim follows without a same-phase later sample.",
+    "Published board revisions share the traced power/reset nets; actual PCB revision and supply collapse remain uninspected.",
+    "Selected input freezes are not hermetic host-environment captures. Raw configurations, unique values and complete diagnostics remain private.",
+    "Final reset receipts support the host/API sequence, without independent postboot health, RF or later PHY persistence attestation."
+  ],
+  "vendor_SMT_binary_sha256": "e66a9000e9788cc3beacddef313d1dc88caae8cf692cfad4a38b6aa8d32273a9"
+}

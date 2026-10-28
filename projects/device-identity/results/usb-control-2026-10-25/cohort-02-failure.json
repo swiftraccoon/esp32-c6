@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "kind": "retained_failed_usb_control_cohort",
+  "freeze_commit": "22e97126d2ddc271159ff068b690afd6b8cb8428",
+  "planned_captures": 2,
+  "attempted_captures": 1,
+  "admitted_complete_captures": 0,
+  "capture_receipt": {
+    "success": false,
+    "error": {
+      "observation": "transfer"
+    }
+  },
+  "native": {
+    "device_descriptor_status": 0,
+    "language_descriptor_status": -536870163,
+    "language_descriptor_result": "kIOReturnNotResponding",
+    "language_request_length": 4,
+    "serial_observation": "unavailable",
+    "cause": "unqualified"
+  },
+  "bridge_partial": {
+    "validated_transfers": 6,
+    "serial": "present",
+    "serial_code_units": 32,
+    "configuration_bytes": 678,
+    "configuration_version": 1,
+    "update_byte_is_default_ff": true,
+    "checksum": "unqualified",
+    "lock_state": "unknown"
+  },
+  "request_plan_version": 2
+}

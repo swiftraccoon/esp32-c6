@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "recorded_after_collection_utc": "2026-10-25T04:55:40.443281+00:00",
+  "kind": "additional_current_ROM_tool_dependency_hashes",
+  "limit": "These dependency hashes were not frozen before the ROM run; they do not retroactively establish full transitive input identity.",
+  "inputs": {
+    "esptool/targets/esp32c3.py": "0bc66c372babd9d33c883b0f08ba40568ab97fd661b259c1ec79c95093b146aa",
+    "esptool/util.py": "65fc59e4db77d24d42f3536bde1120093571aacaaf8505c529720d6d94266056",
+    "serial/__init__.py": "5dec897fdef45a0eaf63eacda1e01d62e1e75490302584ae0238f75376592344",
+    "serial/serialposix.py": "5d56f98513391e1766a1847a04e2e1202ced4172a152803ba1c823a149a9b6f9",
+    "serial/serialutil.py": "3c84f8c7c319f161a85d6f8db5bedc4f65255714589bdcbeee6f2daf65a17c0a"
+  }
+}

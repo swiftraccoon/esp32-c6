@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "state": "frozen_before_retry",
+  "source_frozen_by_containing_commit": true,
+  "original_artifact_freeze_commit": "d0c3c32",
+  "controller": {
+    "name": "identityctl",
+    "binary_bytes": 2550928,
+    "binary_sha256": "2b0bc456dfe30397801a849b689bc149196a96434b7cdd19235dda6ba932cb04",
+    "rust": "1.96.0",
+    "target": "aarch64-apple-darwin"
+  },
+  "corrected_source": {
+    "path": "projects/device-identity/tools/identityctl/src/wifi_window.rs",
+    "sha256": "f188ba1839b0ab383989024de93242c88d6b4ee97eebec191aed00452201fa6b"
+  },
+  "remote_worker_provenance": {
+    "schema_version": 1,
+    "binary_sha256": "e7b83ec552d2e616e79a670748a952724614f1011096f6b8f56b6f9f552a5e34",
+    "build_inputs_sha256": "19d2994bb46d8bfadafbc9e9dbf74a0af8d3bd6194fa976e379f04ed5b1c2fcb",
+    "rustc_version": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+    "curl_version": "8.17.0"
+  },
+  "remote_worker_unchanged": true,
+  "planned_new_windows": 2,
+  "requested_host_seconds_per_window": 30,
+  "original_failed_attempt_preserved": true,
+  "device_reset_or_serial_open_planned": false
+}

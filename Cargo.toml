@@ -1,6 +1,10 @@
 [workspace]
+exclude = [
+    "projects/device-identity",
+    "projects/os-evaluation",
+    "projects/wireless-explorer",
+]
 members = ["tools/workspace-tools"]
-exclude = ["projects/os-evaluation", "projects/wireless-explorer"]
 resolver = "3"
 
 [workspace.package]

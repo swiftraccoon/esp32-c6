@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "retrospective_saved_usb_and_physical_nvs_metadata",
+  "state": "complete",
+  "analysis_freeze_commit": "4eb96ebfd2cad338cf33e5802b44a4eaa1a21614",
+  "data_previously_explored": true,
+  "complete_rom_usb_captures": 1,
+  "selected_efuse_input_count": 1,
+  "original_full_flash_images": 3,
+  "unchanged_original_files_checked": 14,
+  "first_five_consumer_commands_exit_zero": true,
+  "repeated_five_reports_byte_equal": true,
+  "failed_original_usb_cohorts_retained": 2,
+  "failed_cohort_derivative_rejections": 4,
+  "failed_cohort_derivatives_stdout_empty": true,
+  "independent_original_nvs_heads_checked": 18,
+  "independent_helper_failed_attempts_retained": 1,
+  "device_or_radio_access_by_audit_commands": false,
+  "bridge_lock_state_qualified": false,
+  "credential_absence_qualified": false,
+  "controlled_persistence_cohort": false,
+  "new_postboot_health_or_restore_observation": false
+}

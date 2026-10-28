@@ -1,0 +1,21 @@
+[package]
+name = "identityctl"
+version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+rust-version.workspace = true
+description = "Private ESP32-C6 inventory summaries and controlled runtime identity probes"
+
+[dependencies]
+crc32fast = "=1.5.3"
+md-5 = "=0.10.6"
+clap = { version = "=4.6.1", features = ["derive"] }
+kismet-worker = { path = "../kismet-worker" }
+runtime-protocol = { path = "../../crates/runtime-protocol" }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
+serialport = { version = "=4.10.1", default-features = false }
+sha2 = "=0.10.9"
+usb-observer = { path = "../../crates/usb-observer" }
+wifi-observer = { path = "../../crates/wifi-observer" }
+wifi-protocol = { path = "../../crates/wifi-protocol" }

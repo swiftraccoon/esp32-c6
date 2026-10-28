@@ -14,7 +14,7 @@ esptool 5.1.0.
 | Crystal | 40 MHz |
 | Secure boot | Disabled |
 | Flash encryption | Disabled; SPI boot crypt count `0x0` |
-| Existing firmware | Current pre-Zephyr 8 MB state restored, separately digest-verified and reset on 2026-10-23; later persistence may change again |
+| Existing firmware | Fresh pre-BLE-probe 8 MiB image restored and separately full-range digest-verified; verification and warning-free host reset completed by 2026-10-26 02:11:46 UTC; postboot health/persistence unmeasured |
 | Board model | ESP32-C6-DevKitC-1-N8; reported model, PCB revision unverified |
 | Board PCB revision | Not yet recorded; separate from chip revision 0.2 |
 
@@ -79,6 +79,16 @@ Wireless explorer recorded UART control, passive Wi-Fi surveys and
 on 2026-10-24. Reception after repeated mode changes was observed; controlled
 RF fidelity, RF silence, iPhone operation and advanced PHY coverage remain
 unqualified. The OS study's historical outcomes remain unchanged.
+The later [controlled AP witness](../projects/device-identity/results/wifi-ap-2026-10-25/README.md)
+observed 64 CRC-valid nonce-tagged beacons matching a pre-start driver AP-MAC
+control across two reset-separated boots, using an independent receiver. This
+qualifies presence for that fixed control, without range, full-window, silence,
+hot-rotation or correlation-reduction coverage.
+The [later restart witness](../projects/device-identity/results/wifi-restart-2026-10-25/README.md)
+observed 120 exact CRC-valid target beacons across two A-to-B sessions, each
+retaining one driver/UART and restoring the original driver MAC after each
+checked Stop. The same SSID links phases; transition coverage, RF silence,
+hot changes while running and correlation reduction remain unqualified.
 The hardware baseline is the [C6 datasheet v1.5, sections 4.3 and 6](https://documentation.espressif.com/esp32-c6_datasheet_en.html).
 SDK claims below use the already cached **ESP-IDF 5.5.6**, commit
 [`880a203`](https://github.com/espressif/esp-idf/tree/880a203ae603d08a94d06aa01e0d6761958e5e9e),
@@ -255,3 +265,74 @@ Mac native USB commands and repeated radio receive windows were observed with
 both USB ports connected. A native startup failure remains recorded; phone
 power/data and automatic reconnect remain unqualified. Raw captures, USB
 identifiers, full images and transfer diagnostics stay in ignored private storage.
+
+After the [device identity table probe](../projects/device-identity/results/runtime-table-2026-10-24/README.md),
+the fresh original **8,388,608-byte** image was restored and independently
+digest-verified before reset at **2026-10-25 03:15:53 UTC**. Hard-reset completion
+was observed at **03:15:54 UTC**; subsequent application persistence remains
+unmeasured. The [device-state record](../projects/device-identity/results/runtime-table-2026-10-24/device-state.json)
+retains the scoped boundary. Two SDK table-control sessions passed after a
+retained zero-RX startup attempt. Explicit DTR/RTS deassertion permits UART
+startup on this bridge; opening can start/reset the C6 and must not be assumed
+to preserve prior RAM state. Current USB serial properties stayed unchanged
+during table overrides; fresh descriptor transfers and RF identity changes
+remain unqualified. Raw identities, originals and diagnostics stay private.
+
+After the [controlled AP witness](../projects/device-identity/results/wifi-ap-2026-10-25/README.md),
+the fresh complete **8,388,608-byte** image was restored and a separate device-MD5
+range comparison verified it at **2026-10-25 08:52:37 UTC** before release. The
+[restoration record](../projects/device-identity/results/wifi-ap-2026-10-25/restoration.json)
+separates that full-range digest check from a second full-file readback and from
+host reset-sequence completion. Physical postboot health, later persistence and
+radio activity remain unmeasured. Temporary segmented writes avoided original
+stored-data erase ranges; the complete restore returned all stored data to the
+fresh backup bytes before reset. No eFuse programming or persistent
+bridge-configuration programming occurred.
+
+After the [two-phase AP restart witness](../projects/device-identity/results/wifi-restart-2026-10-25/README.md),
+the fresh complete **8,388,608-byte** image was restored and a separate
+device-MD5 range comparison verified it at **2026-10-25 19:48:14 UTC** before
+host reset release. The [restoration record](../projects/device-identity/results/wifi-restart-2026-10-25/restoration.json)
+retains exact verification/reset times and segmented erase-range evidence.
+All twelve hardware command phases exited zero. This full-range digest
+verification is not a second full-file readback or device attestation; physical
+postboot health, later persistence and radio activity remain unmeasured.
+
+After the [BLE HCI address witness](../projects/device-identity/results/ble-identity-2026-10-26/README.md),
+the fresh complete **8,388,608-byte** image was restored and separately verified
+against the entire device range, preserving raw flash header bytes. Verification
+and warning-free host reset completed by **2026-10-26 02:11:46 UTC**. The
+[restoration record](../projects/device-identity/results/ble-identity-2026-10-26/restoration.json)
+retains that boundary. Both random address/nonce controls have independent HCI
+report witnesses; raw RF CRC, silence, independent application boot and later
+persistence remain unmeasured. No eFuse or persistent bridge programming occurred.
+
+The later [original NimBLE live-state check](../projects/device-identity/results/nimble-live-2026-10-26/README.md)
+read two reset-separated selected RAM snapshots through the native debug
+interface. Both confirmed resume; an independent matched ROM check and
+warning-free normal hard-reset sequence completed by **2026-10-26 19:21:21 UTC**.
+No firmware replacement, flash-array programming, eFuse burn or bridge
+configuration command was issued. Debug access affects execution, watchdogs,
+interrupts and registers; the final reset releases the chip for another boot.
+Its keys, application health, RF behavior and subsequent PHY persistence were
+not captured. The preceding full-flash restoration remains historical.
+
+The later [bridge configuration trials](../projects/device-identity/results/bridge-config-2026-10-26/README.md)
+retain three failed serial-change attempts. The third reads back an exact
+678-byte custom configuration, while the fresh active USB serial remains
+original after the selected Mac SDK reset. Both attempts that programmed the
+bridge restored and independently replayed every original configuration byte
+and both original serials; update-enable remains `FF`. Every attempt completed
+its matched, warning-free normal C6 reset sequence. No restoration remains
+pending. A full bridge power-cycle activation/persistence check was not performed.
+No C6 firmware programming, eFuse burn or bridge lock was requested; application
+health and later PHY persistence remain unmeasured.
+
+The [delayed-reset bridge check](../projects/device-identity/results/bridge-timing-2026-10-27/README.md)
+on **2026-10-27 UTC** retains one further failed serial-change trial. Five
+declared host gaps each exceed ten seconds. The candidate configuration reads
+back exactly, while the serial response remains original. Every original byte
+and both serials were restored and independently replayed; the matched,
+warning-free normal C6 reset completed. No restoration remains pending. This
+setting does not qualify full bridge power-cycle activation, physical reset
+effect, later application health or PHY persistence.

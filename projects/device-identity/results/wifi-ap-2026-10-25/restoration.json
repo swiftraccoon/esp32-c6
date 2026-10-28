@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "fresh_backup_bytes": 8388608,
+  "fresh_backup_separately_verified_before_writes": true,
+  "security_and_partition_erase_gate_passed": true,
+  "original_partition_count": 3,
+  "original_partition_encryption_flags_clear": true,
+  "segmented_deployment": true,
+  "erase_ranges": [
+    {
+      "offset": 0,
+      "image_bytes": 14112,
+      "erase_end": 16384
+    },
+    {
+      "offset": 32768,
+      "image_bytes": 3072,
+      "erase_end": 36864
+    },
+    {
+      "offset": 65536,
+      "image_bytes": 936544,
+      "erase_end": 1003520
+    }
+  ],
+  "full_image_restoration_verified": true,
+  "verification_method": "separate esptool device MD5 range comparison; not a second full-file readback",
+  "restoration_verified_bytes": 8388608,
+  "restoration_verified_utc": "2026-10-25T08:52:37.110925+00:00",
+  "host_reset_sequence_completed": true,
+  "host_reset_sequence_end_utc": "2026-10-25T08:52:37.824346+00:00",
+  "restoration_attempts": 1,
+  "original_flash_digest": "private",
+  "postboot_application_health": "unmeasured",
+  "postboot_persistence": "unmeasured",
+  "postboot_radio_activity": "unmeasured"
+}

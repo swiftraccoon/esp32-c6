@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "esptool": "4.12.0",
+  "entry": "ROM read_mac, no-stub, one connection attempt",
+  "cleanup": "ROM read_mac then hard_reset, separately recorded",
+  "configuration": "explicit empty [esptool] section",
+  "configuration_sha256": "a0ce48545db8c452972a0303e87aa6a76745ef32df44de9ab7ce65e21566845e",
+  "python_executable_sha256": "eef18fb5631f0054c2706a24f7f75fd716c9dc3c9a3b0f261f2f87b6385ae2af",
+  "source_sha256": {
+    "__init__.py": "96513abe8944836630610465e5fab03c4da9a4bc9d27f177413f6547f859430e",
+    "__main__.py": "3e7e2e7a93b3d5e0327a19b89af6687af633dd186d7afe84916b5418aea2a06b",
+    "cmds.py": "d9786dda365985a97504153b5a45bebf55bdf5b8272bf16891ca682b47e2c3af",
+    "loader.py": "6c5f0c4a9d2047adb1c9164aee66208018789a0f6531922204f6b280168c80e8",
+    "reset.py": "410334df7cb09cafc01efa8d32acb1903bbc5ba6f03df3a0b39823c433b0edef",
+    "config.py": "bfeacfaa457a10866d816385622427987a45b480d255ce1f10a41aba64f7ab07",
+    "targets/esp32c6.py": "bdf9a873bfc8efc9b747dd0d6068794bbc83eae3e7439ce1013a53b830e534ee",
+    "targets/esp32.py": "32b5e7f8b3e971705f57bb9cdf54e847eefd96e2168baa6120d3643beb224bb5"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "receiver": {
+    "schema_version": 1,
+    "interface_count": 1,
+    "packet_count": 10,
+    "management_frame_count": 10,
+    "beacon_count": 0,
+    "other_frame_count": 10,
+    "bad_fcs_count": 0,
+    "unsupported_frame_count": 0,
+    "fcs_unqualified_count": 0,
+    "visible_ssid_beacon_count": 0,
+    "hidden_ssid_beacon_count": 0,
+    "channel_ie_beacon_count": 0,
+    "tim_ie_beacon_count": 0,
+    "rsn_ie_beacon_count": 0,
+    "vendor_ie_beacon_count": 0
+  },
+  "requested_host_seconds": 30,
+  "explicit_finish": true,
+  "stream_drop_accounting_available": false,
+  "independent_reference_qualified": false
+}

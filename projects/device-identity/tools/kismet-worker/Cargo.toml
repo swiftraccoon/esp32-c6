@@ -1,0 +1,12 @@
+[package]
+name = "kismet-worker"
+version = "0.1.0"
+edition = "2024"
+publish = false
+rust-version = "1.90"
+description = "Bounded read-only Kismet stream worker with remote credential custody"
+default-run = "kismet-worker"
+
+[workspace]
+
+[dependencies]

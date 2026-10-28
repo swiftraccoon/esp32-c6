@@ -1,0 +1,173 @@
+{
+  "artifacts": [
+    {
+      "bytes": 936112,
+      "label": "ap.bin",
+      "sha256": "e78e1e4e6ceabba0dcb596a5d114cfccefb295f84bbefed6829f03619acebbec"
+    },
+    {
+      "bytes": 354529,
+      "label": "bootloader.map",
+      "sha256": "971b376e81d6581872494893e9acaf4d460089e76da54fecbaec5bde56d1ee12"
+    },
+    {
+      "bytes": 14670496,
+      "label": "firmware.elf",
+      "sha256": "ed0e5a79040558320d1ccf0f74c5bc435ddbadcd871b4e4ef31870d9f3079eb4"
+    },
+    {
+      "bytes": 14112,
+      "label": "generated-bootloader.bin",
+      "sha256": "4fda9b2d05b54c91949f6a4228f15b1ad1049c0946cda6b7b57cc77e3fdafbde"
+    },
+    {
+      "bytes": 3072,
+      "label": "generated-partition-table.bin",
+      "sha256": "73c0b5c3e5fcba3a151cc70c453c93dd5f4798899e7f2f8cca76da1f32ffc501"
+    },
+    {
+      "bytes": 2627,
+      "label": "linked-wifi-phy-archives.json",
+      "sha256": "dc16e74068ee3cb6981bbb72012d9061494883758067f324fbd96fc5cef81472"
+    },
+    {
+      "bytes": 8260398,
+      "label": "sdk-link.map",
+      "sha256": "6d29576b869028b0a8e66f2979b22b9de145e90e24e3da64203ffe1354266e0f"
+    },
+    {
+      "bytes": 71828,
+      "label": "sdkconfig",
+      "sha256": "50d43017dcaf415b0e1044c8e1eb8f1fd57df39c0ca57d799374ca83572fdd6d"
+    }
+  ],
+  "bootloader_and_app_header_checked": {
+    "flash_mode": 2,
+    "flash_size_frequency": 48,
+    "magic": 233
+  },
+  "config_whitelist": {
+    "CONFIG_BOOTLOADER_LOG_LEVEL_NONE": "y",
+    "CONFIG_BT_ENABLED": "n",
+    "CONFIG_ESPTOOLPY_FLASHFREQ_40M": "y",
+    "CONFIG_ESPTOOLPY_FLASHMODE_DIO": "y",
+    "CONFIG_ESPTOOLPY_FLASHSIZE_8MB": "y",
+    "CONFIG_ESP_CONSOLE_NONE": "y",
+    "CONFIG_ESP_CONSOLE_SECONDARY_NONE": "y",
+    "CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ": "160",
+    "CONFIG_ESP_MAIN_TASK_STACK_SIZE": "16384",
+    "CONFIG_ESP_PHY_CALIBRATION_AND_DATA_STORAGE": "n",
+    "CONFIG_ESP_SYSTEM_PANIC_PRINT_REBOOT": "y",
+    "CONFIG_ESP_WIFI_ENABLED": "y",
+    "CONFIG_ESP_WIFI_NVS_ENABLED": "n",
+    "CONFIG_ESP_WIFI_SOFTAP_SUPPORT": "y",
+    "CONFIG_FREERTOS_HZ": "1000",
+    "CONFIG_IEEE802154_ENABLED": "n",
+    "CONFIG_LOG_DEFAULT_LEVEL_NONE": "y",
+    "CONFIG_PARTITION_TABLE_CUSTOM": "y",
+    "CONFIG_PARTITION_TABLE_OFFSET": "0x8000",
+    "CONFIG_PM_ENABLE": "n"
+  },
+  "esp_idf": "5.5.6",
+  "flash_frequency_mhz": 40,
+  "flash_mode": "dio",
+  "flash_size_bytes": 8388608,
+  "image_packager": "espflash 4.6.0 save-image --skip-update-check; no --merge",
+  "image_packager_arguments": [
+    "save-image",
+    "--skip-update-check",
+    "--chip",
+    "esp32c6",
+    "--flash-mode",
+    "dio",
+    "--flash-freq",
+    "40mhz",
+    "--flash-size",
+    "8mb",
+    "--bootloader",
+    "generated-bootloader.bin",
+    "--partition-table",
+    "generated-partition-table.bin",
+    "--partition-table-offset",
+    "0x8000",
+    "--target-app-partition",
+    "factory",
+    "firmware.elf",
+    "ap.bin"
+  ],
+  "map_scope": "sdk-link.map is intermediate SDK link map; final Rust ELF has readelf metadata, no final link map",
+  "offline_image_validation": "esptool.py 4.12.0: both image checksums and appended SHA256 valid",
+  "on_board_qualification": false,
+  "prior_original_flash_digest_included": false,
+  "rust": "1.96.0",
+  "rust_wrappers_commit": "a209052f378be61dd0f2d566b7fbe0f9593b0cd5",
+  "save_image_single_ota_segment_output": "ap.bin; bootloader and table preserved separately from actual build",
+  "schema_version": 1,
+  "scope": "offline packaging only; no hardware operation or fresh backup admission",
+  "sdk_commit": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
+  "sdk_worktree_clean": true,
+  "segments": [
+    {
+      "artifact": "generated-bootloader.bin",
+      "bytes": 14112,
+      "flash_offset": 0,
+      "flash_offset_hex": "0x0",
+      "sha256": "4fda9b2d05b54c91949f6a4228f15b1ad1049c0946cda6b7b57cc77e3fdafbde"
+    },
+    {
+      "artifact": "generated-partition-table.bin",
+      "bytes": 3072,
+      "flash_offset": 32768,
+      "flash_offset_hex": "0x8000",
+      "sha256": "73c0b5c3e5fcba3a151cc70c453c93dd5f4798899e7f2f8cca76da1f32ffc501"
+    },
+    {
+      "artifact": "ap.bin",
+      "bytes": 936112,
+      "flash_offset": 65536,
+      "flash_offset_hex": "0x10000",
+      "sha256": "e78e1e4e6ceabba0dcb596a5d114cfccefb295f84bbefed6829f03619acebbec"
+    }
+  ],
+  "selected_firmware_binary": "device-identity-wifi-restart",
+  "target": "riscv32imac-esp-espidf",
+  "target_app_partition": "factory",
+  "tool_binaries": [
+    {
+      "bytes": 18186832,
+      "label": "espflash",
+      "sha256": "cee90b1e08a9a9b53704153a1e7c6f6f6de41e3ac9b3555fa3afaa0b80e46e0b"
+    },
+    {
+      "bytes": 1793056,
+      "label": "ldproxy",
+      "sha256": "77d81dae30055f67952977d5f81fe1327e907fcd58983e423ce3e7d127c80ec2"
+    },
+    {
+      "bytes": 1708768,
+      "label": "riscv32-esp-elf-gcc",
+      "sha256": "e5c3a93651fc10025147ffce6d6b81bc043824111a1c6feee0a3adea5488d87a"
+    },
+    {
+      "bytes": 1132048,
+      "label": "riscv32-esp-elf-readelf",
+      "sha256": "df3d333b830e5688f03ab725730736230b7d018900ff96b9e74477c35cd3a1cd"
+    },
+    {
+      "bytes": 27030624,
+      "label": "libclang",
+      "sha256": "c8d4f87146b651258448b919efa45db1d2d7c9b1cce6d0cd2b4affb5a9a7e7c1"
+    }
+  ],
+  "tool_versions": {
+    "cargo": "1.96.0",
+    "clang": "21.1.8",
+    "espflash": "4.6.0",
+    "gcc": "esp-14.2.0_20260121 / 14.2.0",
+    "image_validator": "esptool.py 4.12.0",
+    "ldproxy": "binary hash recorded; CLI does not expose version; cached package source is 0.3.4",
+    "rust": "1.96.0",
+    "sdk_python": "3.15.0"
+  },
+  "wire_version": 2
+}

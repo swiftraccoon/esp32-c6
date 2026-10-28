@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "kind": "ap_address_presence_across_checked_stop_and_restart",
+  "freeze_commit": "9d48f0ae48c01097c1f3888cbbc5fb27c7f9bad5",
+  "planned_sessions": 2,
+  "attempted_sessions": 2,
+  "admitted_sessions": 2,
+  "reset_separated_sessions": true,
+  "cold_power_cycles": false,
+  "distinct_fresh_session_nonces": true,
+  "observations": [
+    {
+      "session": 1,
+      "normal_uart_commands": 5,
+      "recorded_uart_open_count": 1,
+      "same_boot_controller_sequence_admitted": true,
+      "initial_idle_uninitialized": true,
+      "active_control_addresses_differ": true,
+      "same_nonce_ssid_both_phases": true,
+      "saved_original_driver_mac_continuous": true,
+      "both_stops_inactive_original_restored": true,
+      "driver_initialized_after_each_stop": true,
+      "sticky_failure_absent": true,
+      "automatic_stop_reported": [
+        true,
+        true
+      ],
+      "matching_beacons_per_phase": [
+        32,
+        30
+      ],
+      "collateral_profile": "unqualified_captures_not_entirely_checked_targets"
+    },
+    {
+      "session": 2,
+      "normal_uart_commands": 5,
+      "recorded_uart_open_count": 1,
+      "same_boot_controller_sequence_admitted": true,
+      "initial_idle_uninitialized": true,
+      "active_control_addresses_differ": true,
+      "same_nonce_ssid_both_phases": true,
+      "saved_original_driver_mac_continuous": true,
+      "both_stops_inactive_original_restored": true,
+      "driver_initialized_after_each_stop": true,
+      "sticky_failure_absent": true,
+      "automatic_stop_reported": [
+        true,
+        true
+      ],
+      "matching_beacons_per_phase": [
+        29,
+        29
+      ],
+      "collateral_profile": "unqualified_captures_not_entirely_checked_targets"
+    }
+  ],
+  "totals": {
+    "records": 128,
+    "beacons": 120,
+    "other_management": 8,
+    "first_matches": 61,
+    "second_matches": 59
+  },
+  "both_complete_replays_byte_equal": true,
+  "collateral_profile_comparison": "unqualified_in_both_sessions; no target subset selected",
+  "independent_boot_attestation": "unqualified",
+  "transition_window": "unmeasured",
+  "RF_silence": "unmeasured",
+  "hot_address_change_while_running": "unmeasured",
+  "correlation_reduction": "unmeasured",
+  "raw_values_payloads_and_field_hashes": "private",
+  "independent_validation": {
+    "all_saved_records_decoded": 128,
+    "included_crc_checks_good": 128,
+    "exact_target_beacon_matches": 120,
+    "other_management_frames": {
+      "probe_request": 5,
+      "probe_response": 3
+    },
+    "tshark_duplicate_json_keys_preserved": true,
+    "both_saved_reports_match_complete_replay": true,
+    "both_collateral_outcomes_unqualified_without_subset_selection": true,
+    "rehashed_full_session_semantic_corruptions_rejected": 24,
+    "full_range_backup_and_restore_md5_records_agree": true,
+    "original_session_files_checked_unchanged": 54
+  }
+}

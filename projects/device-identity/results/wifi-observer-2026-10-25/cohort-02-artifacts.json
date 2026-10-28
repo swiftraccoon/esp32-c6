@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "collector_sha256": "273b3e06e527cf56188105663ac69da4a59a647e95ec400b859422cacf2e5876",
+  "collector_target": "aarch64-apple-darwin",
+  "collector_rust": "1.96.0",
+  "worker_target": "x86_64-unknown-linux-gnu",
+  "worker_sha256": "876bdeddf2110accfa7e9b5286ee9499290ecad1d9693bf74970f497ae4b3bcd",
+  "worker_build_inputs_sha256": "f2c276964676c7de8ea0758b8e5506d49cb4aaacc993eb333c772b6757a8a703",
+  "worker_rust": "1.90.0",
+  "kismet_commit": "a868177ef92dc8ea0b6fb121976eeddba1854d43",
+  "packet_records_per_capture": 32,
+  "planned_captures": 2,
+  "capture_deadline_seconds": 15,
+  "raw_byte_cap": 8388608,
+  "observer": "existing source-scoped Kismet stream over trusted SSH",
+  "receiver_selection": "private",
+  "raw_packets": "private",
+  "runtime_libraries_hermetic": false,
+  "transmitter_or_board_changes": false,
+  "profile_input_revision": 2
+}

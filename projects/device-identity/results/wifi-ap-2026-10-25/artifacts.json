@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "collector_sha256": "b7d3848aa4b50c337097239fe83e0b2caec18d268c5c12e6ec7358084a6c258d",
+  "collector_target": "aarch64-apple-darwin",
+  "collector_rust": "1.96.0",
+  "firmware_target": "riscv32imac-esp-espidf",
+  "firmware_elf_sha256": "e1385e714b96d0492633cc8abaf25795ce18adf9a17f912625b24755e5729c6b",
+  "segments": [
+    {
+      "artifact": "generated-bootloader.bin",
+      "bytes": 14112,
+      "flash_offset": 0,
+      "flash_offset_hex": "0x0",
+      "sha256": "4fda9b2d05b54c91949f6a4228f15b1ad1049c0946cda6b7b57cc77e3fdafbde"
+    },
+    {
+      "artifact": "generated-partition-table.bin",
+      "bytes": 3072,
+      "flash_offset": 32768,
+      "flash_offset_hex": "0x8000",
+      "sha256": "73c0b5c3e5fcba3a151cc70c453c93dd5f4798899e7f2f8cca76da1f32ffc501"
+    },
+    {
+      "artifact": "ap.bin",
+      "bytes": 936544,
+      "flash_offset": 65536,
+      "flash_offset_hex": "0x10000",
+      "sha256": "f2f24440e31537d16ee42f16aa8785acac27aa9f1f7eaf2e55cc3410f1f34c6d"
+    }
+  ],
+  "worker_sha256": "16e83bda1333b5c08b7232acf95e7675b9e2f9d32075a3dfdca7f7211f875b30",
+  "worker_rust": "1.90.0",
+  "planned_trials": 2,
+  "trial_kind": "single pre-start AP override presence witness",
+  "requested_ap_window_millis": 8000,
+  "receiver_packet_quota": 32,
+  "receiver_deadline_seconds": 120,
+  "receiver_ready_wait_seconds": 30,
+  "backup_bytes_required": 8388608,
+  "restoration": "separately verified full fresh image before release",
+  "raw_data": "private",
+  "hardware_orchestration_sha256": "8ee10cead6c5621437dd1ef16d839efe1e6e0d7f3c1305440491aa1a82a98f8a",
+  "deployment_mode": "separate aligned bootloader/partition/application segments; no merge or erase-all",
+  "flash_settings": "keep",
+  "restoration_attempt_limit": 2
+}

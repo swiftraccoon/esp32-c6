@@ -28,3 +28,34 @@ inventory and investigation order in [README.md](README.md), using the
   encryption or passive settings alone cannot establish that a device is never
   identifiable. Keep source claims, software controls and physical evidence
   separately qualified in the maintained inventory and experiment records.
+
+The host workspace pins Rust 1.96.0. Run `cargo +1.96.0 test --workspace --locked`
+and the formatter, Clippy and documentation checks from this project directory.
+The [tool contract](docs/api.md) records API/safety decisions and the
+[inventory method](experiments/read-only-inventory.md) defines capture/reset
+boundaries. Run `identityctl` summaries from the workspace root with private
+input paths; the tool rejects parent traversal and symlinks. Preserve raw inputs
+and failed captures privately. The [result ledger](results/README.md) owns
+coverage; a summary parser pass does not authenticate a capture's origin.
+
+Runtime probe firmware is an independent workspace under `firmware/`; follow
+its README for target/SDK build configuration and the
+[runtime method](experiments/runtime-table.md) for the fixed schedule. Preserve
+and independently verify a fresh full-flash backup before writes; restore and
+verify all 8 MB before ending a board trial. Radio services remain uninitialized
+for this table probe. Admit complete sessions with `identityctl runtime-replay`;
+`runtime-summary` checks only saved table exchanges. `usb-compare` compares host
+property contents, with cached-enumeration and duplicate-device limits.
+
+The independent [AP witness firmware](firmware-wifi/README.md) starts a real
+SoftAP only after its nonce-bound UART command. Follow its
+[method](experiments/wifi-ap.md) for receiver readiness, single-start scope,
+segmented erase-range gates and mandatory fresh full-image restoration. A good
+beacon witness does not qualify silence, full-window capture or rotation.
+
+The second `device-identity-wifi-restart` binary uses the separate version-two
+namespace and [restart method](experiments/wifi-restart.md). Keep one UART handle
+and retained driver for its two ordered phases, require complete A admission
+before B, and preserve the sticky failure latch. Fresh full-flash backup and
+restoration gates still apply; stopped/restarted address presence does not
+qualify hot rotation, silence or correlation reduction.

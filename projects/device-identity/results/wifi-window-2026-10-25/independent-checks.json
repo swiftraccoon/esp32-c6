@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "decoder": {
+    "name": "TShark",
+    "version": "4.6.9",
+    "binary_sha256": "3e3792a06e2a2b856e92f5e134276745f84e3f5682d4cb3aaf95af4ebd29f566"
+  },
+  "results": [
+    {
+      "ordinal": 1,
+      "packet_count": 10,
+      "all_management": true,
+      "all_captured_lengths_complete": true,
+      "all_included_fcs_independently_good": true,
+      "replay_byte_equal": true
+    },
+    {
+      "ordinal": 2,
+      "packet_count": 8,
+      "all_management": true,
+      "all_captured_lengths_complete": true,
+      "all_included_fcs_independently_good": true,
+      "replay_byte_equal": true
+    }
+  ],
+  "mode": "all saved packets; no capture/display filter",
+  "raw_packet_fields": "private"
+}

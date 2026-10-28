@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "mode": "offline retrospective comparison of the complete existing two-trial AP cohort",
+  "consumer": {
+    "name": "identityctl",
+    "command": "wifi-ap-compare-profiles",
+    "binary_sha256": "a67a107bc2049556326acf9609ac3837936e41997724bd8697ea4b08477b03c5",
+    "binary_bytes": 2042464
+  },
+  "orchestration_sha256": "3355f282b5f3893bba9f4cd3b4381c05b550fdf57b6a41a8e46deca6399717f1",
+  "host_toolchain": {
+    "channel": "1.96.0",
+    "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+    "target": "aarch64-apple-darwin",
+    "cargo": "cargo 1.96.0 (30a34c682 2026-05-25)",
+    "libclang": "21.1.8",
+    "native_sdk": "27.0"
+  },
+  "dependency_versions": "Cargo.lock at the analysis freeze",
+  "collection_freeze_commit": "39305c0185395037847ed18f60f11d556a751264",
+  "source_results_commit": "cbe71a7ac9c27481a8579d121c96f7525ccb66f5",
+  "independent_decoder_inputs": "../wifi-ap-2026-10-25/decoder-inputs.json",
+  "runtime_libraries_hermetic": false,
+  "raw_capture_and_private_input_digests": "private",
+  "new_board_or_receiver_access": false,
+  "orchestration_python": {
+    "version": "3.15.0",
+    "binary_sha256": "a7d8a09da6400b33e78b90281f3f81d058804d082689257b9008290ebd8a3b28",
+    "isolated": true,
+    "optimized_assertions": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "domains": [
+    {
+      "domain": "native_usb_serial_jtag",
+      "matched_count": 1,
+      "transfer_count": 4,
+      "serial": "present",
+      "serial_code_units": 17,
+      "bridge": null
+    },
+    {
+      "domain": "cp2102n_bridge",
+      "matched_count": 1,
+      "transfer_count": 6,
+      "serial": "present",
+      "serial_code_units": 32,
+      "bridge": {
+        "configuration_version": 1,
+        "update_byte_is_default_ff": true,
+        "lock_state": "unknown",
+        "checksum": "unqualified"
+      }
+    }
+  ]
+}

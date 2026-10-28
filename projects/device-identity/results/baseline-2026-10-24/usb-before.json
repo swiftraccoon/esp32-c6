@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "source_format": "macos_sp_usb_host_data_type",
+  "observer": "attached_usb_host",
+  "domains": [
+    {
+      "domain": "native_usb_serial_jtag",
+      "device_count": 1,
+      "serial_present_count": 1,
+      "serial_empty_count": 0,
+      "serial_absent_count": 0
+    },
+    {
+      "domain": "cp2102n_bridge",
+      "device_count": 1,
+      "serial_present_count": 1,
+      "serial_empty_count": 0,
+      "serial_absent_count": 0
+    }
+  ]
+}

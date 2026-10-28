@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "result": "rejected",
+  "artifact_freeze_commit": "d0c3c32",
+  "requested_host_seconds": 30,
+  "remote_worker_reported_finished": true,
+  "ssh_exit_code": 0,
+  "host_io_failed": true,
+  "host_cleanup_success": true,
+  "saved_file_count": 9,
+  "successful_summary_present": false,
+  "cause": "post-reap process ownership race could produce a false host I/O failure",
+  "raw_originals_unchanged": true,
+  "replay_still_rejects": true,
+  "receiver_guarded_postflight_unchanged": true,
+  "device_reset_or_serial_open": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "kind": "retained_failed_wifi_stream_cohort",
+  "freeze_commit": "4600d633952b265afb688ff06201e6549637217e",
+  "planned_captures": 2,
+  "attempted_captures": 1,
+  "admitted_complete_captures": 0,
+  "http_status": 200,
+  "stop_reason": "deadline",
+  "deadline_seconds": 15,
+  "requested_packet_records": 32,
+  "retained_complete_epbs": 8,
+  "retained_raw_bytes": 1312,
+  "ssh_exit_code": 1,
+  "worker_exit_signal": 9,
+  "intentional_quota_kill": false,
+  "child_cleanup_completed": true,
+  "completion_receipt_success": false,
+  "standalone_parser": "passed; does not admit failed transport",
+  "partial_packet_counts": {
+    "management": 8,
+    "beacons": 0,
+    "other": 8,
+    "bad_fcs": 0,
+    "unsupported": 0,
+    "unqualified_fcs": 0
+  },
+  "arrival_rate_cause": "unqualified; no RF-silence or lossless-stream claim",
+  "receiver_changed": false,
+  "board_touched": false
+}

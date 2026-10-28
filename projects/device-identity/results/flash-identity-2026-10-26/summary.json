@@ -1,0 +1,93 @@
+{
+  "complete_read_calls": 846,
+  "uid_window_bytes": 16,
+  "uid_overlap_checks_passed": 5,
+  "uid_first_eight_nontrivial": true,
+  "uid_bytes_eight_through_fifteen_all_ff": false,
+  "sfdp_major": 1,
+  "sfdp_minor": 6,
+  "sfdp_parameter_headers": 3,
+  "security_regions": [
+    {
+      "read_bytes": 1024,
+      "first_256_all_ff": true,
+      "all_1024_ff": true,
+      "non_ff_bytes": 0
+    },
+    {
+      "read_bytes": 1024,
+      "first_256_all_ff": true,
+      "all_1024_ff": true,
+      "non_ff_bytes": 0
+    },
+    {
+      "read_bytes": 1024,
+      "first_256_all_ff": true,
+      "all_1024_ff": true,
+      "non_ff_bytes": 0
+    }
+  ],
+  "security_locks": [
+    false,
+    false,
+    false
+  ],
+  "status_unchanged": true,
+  "efuse_blankness": {
+    "factory_mac_matches_baseline": true,
+    "blocks": [
+      {
+        "block": 3,
+        "readable": true,
+        "all_data_bits_zero": true
+      },
+      {
+        "block": 4,
+        "readable": true,
+        "all_data_bits_zero": true
+      },
+      {
+        "block": 5,
+        "readable": true,
+        "all_data_bits_zero": true
+      },
+      {
+        "block": 6,
+        "readable": true,
+        "all_data_bits_zero": true
+      },
+      {
+        "block": 7,
+        "readable": true,
+        "all_data_bits_zero": true
+      },
+      {
+        "block": 8,
+        "readable": true,
+        "all_data_bits_zero": true
+      },
+      {
+        "block": 9,
+        "readable": true,
+        "all_data_bits_zero": true
+      },
+      {
+        "block": 10,
+        "readable": true,
+        "all_data_bits_zero": true
+      }
+    ]
+  },
+  "schema_version": 1,
+  "uid_format": "Observed 16-byte window with non-FF data above byte 7; consistent with the documented 128-bit D format, not the C post-64-bit FF padding. Exact fitted suffix unconfirmed.",
+  "capture_success": true,
+  "host_reset_release_success": true,
+  "port_close_success": true,
+  "retrospective_sfdp_followup": {
+    "bfpt_dword1_bit19_set": true,
+    "agrees_with_published_d_revision_1_2": true,
+    "vendor_table_shared_with_published_c_revision_1_7": true,
+    "additional_documented_per_unit_identifier_found": false,
+    "exact_ordering_suffix_identified": false
+  }
+}

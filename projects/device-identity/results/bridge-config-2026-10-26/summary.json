@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "state": "finalized_sanitized_derivative",
+  "whole_serial_change_trial_passed": false,
+  "retained_failed_attempts": 3,
+  "complete_USB_captures": 5,
+  "successful_transfer_rows": 50,
+  "candidate_SetConfig_commands": 2,
+  "original_SetConfig_commands": 2,
+  "SDK_reset_commands": 4,
+  "final_normal_C6_resets_verified": 3,
+  "third_attempt": {
+    "complete_captures": 3,
+    "successful_transfer_rows": 30,
+    "candidate_configuration_bytes_exact": 678,
+    "candidate_custom_serial_selector": 0,
+    "candidate_string_payload_and_Fletcher_match": true,
+    "candidate_active_USB_serial_still_original": true,
+    "candidate_active_USB_serial_equals_requested": false,
+    "original_configuration_restored_bytes_exact": 678,
+    "original_bridge_serial_restored_exactly": true,
+    "native_serial_equal_in_all_captures": true,
+    "update_enable_byte_always_255": true,
+    "unrelated_settings_and_unused_padding_preserved": true,
+    "matched_warning_free_final_normal_reset": true,
+    "frozen_inputs_reverified": 486
+  },
+  "pending_configuration_restoration": false,
+  "power_cycle_persistence_qualified": false,
+  "active_custom_serial_exposure_qualified": false,
+  "bridge_MCU_reset_or_power_loss_measured": false,
+  "C6_firmware_or_eFuse_programming_requested": false
+}

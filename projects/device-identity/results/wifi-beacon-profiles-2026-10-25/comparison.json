@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "before_target_packet_count": 32,
+  "after_target_packet_count": 32,
+  "expected_ssids_equal": false,
+  "expected_macs_equal": true,
+  "beacon_interval": {
+    "before_distinct_encodings": 1,
+    "after_distinct_encodings": 1,
+    "shared_distinct_encodings": 1,
+    "identical_across_all_beacons": true
+  },
+  "capability_information": {
+    "before_distinct_encodings": 1,
+    "after_distinct_encodings": 1,
+    "shared_distinct_encodings": 1,
+    "identical_across_all_beacons": true
+  },
+  "ordered_non_ssid_ies": {
+    "before_distinct_encodings": 1,
+    "after_distinct_encodings": 1,
+    "shared_distinct_encodings": 1,
+    "identical_across_all_beacons": true
+  },
+  "ordered_vendor_ies": {
+    "before_distinct_encodings": 1,
+    "after_distinct_encodings": 1,
+    "shared_distinct_encodings": 1,
+    "identical_across_all_beacons": true
+  },
+  "elements": [
+    {
+      "element_id": 1,
+      "before_presence_count": 32,
+      "after_presence_count": 32,
+      "encodings": {
+        "before_distinct_encodings": 1,
+        "after_distinct_encodings": 1,
+        "shared_distinct_encodings": 1,
+        "identical_across_all_beacons": true
+      }
+    },
+    {
+      "element_id": 3,
+      "before_presence_count": 32,
+      "after_presence_count": 32,
+      "encodings": {
+        "before_distinct_encodings": 1,
+        "after_distinct_encodings": 1,
+        "shared_distinct_encodings": 1,
+        "identical_across_all_beacons": true
+      }
+    },
+    {
+      "element_id": 5,
+      "before_presence_count": 32,
+      "after_presence_count": 32,
+      "encodings": {
+        "before_distinct_encodings": 1,
+        "after_distinct_encodings": 1,
+        "shared_distinct_encodings": 1,
+        "identical_across_all_beacons": true
+      }
+    },
+    {
+      "element_id": 42,
+      "before_presence_count": 32,
+      "after_presence_count": 32,
+      "encodings": {
+        "before_distinct_encodings": 1,
+        "after_distinct_encodings": 1,
+        "shared_distinct_encodings": 1,
+        "identical_across_all_beacons": true
+      }
+    },
+    {
+      "element_id": 45,
+      "before_presence_count": 32,
+      "after_presence_count": 32,
+      "encodings": {
+        "before_distinct_encodings": 1,
+        "after_distinct_encodings": 1,
+        "shared_distinct_encodings": 1,
+        "identical_across_all_beacons": true
+      }
+    },
+    {
+      "element_id": 50,
+      "before_presence_count": 32,
+      "after_presence_count": 32,
+      "encodings": {
+        "before_distinct_encodings": 1,
+        "after_distinct_encodings": 1,
+        "shared_distinct_encodings": 1,
+        "identical_across_all_beacons": true
+      }
+    },
+    {
+      "element_id": 61,
+      "before_presence_count": 32,
+      "after_presence_count": 32,
+      "encodings": {
+        "before_distinct_encodings": 1,
+        "after_distinct_encodings": 1,
+        "shared_distinct_encodings": 1,
+        "identical_across_all_beacons": true
+      }
+    },
+    {
+      "element_id": 127,
+      "before_presence_count": 32,
+      "after_presence_count": 32,
+      "encodings": {
+        "before_distinct_encodings": 1,
+        "after_distinct_encodings": 1,
+        "shared_distinct_encodings": 1,
+        "identical_across_all_beacons": true
+      }
+    },
+    {
+      "element_id": 221,
+      "before_presence_count": 32,
+      "after_presence_count": 32,
+      "encodings": {
+        "before_distinct_encodings": 1,
+        "after_distinct_encodings": 1,
+        "shared_distinct_encodings": 1,
+        "identical_across_all_beacons": true
+      }
+    }
+  ]
+}

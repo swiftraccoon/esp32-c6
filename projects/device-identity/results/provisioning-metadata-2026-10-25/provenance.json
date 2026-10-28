@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "collection": "targeted-provisioning-metadata",
+  "espefuse_version": "4.12.0",
+  "esptool_release_version": "4.12.0",
+  "selected_fields": [
+    "MAC",
+    "MAC_EXT",
+    "OPTIONAL_UNIQUE_ID",
+    "BLOCK_USR_DATA",
+    "CUSTOM_MAC",
+    "WR_DIS",
+    "RD_DIS",
+    "KEY_PURPOSE_0",
+    "KEY_PURPOSE_1",
+    "KEY_PURPOSE_2",
+    "KEY_PURPOSE_3",
+    "KEY_PURPOSE_4",
+    "KEY_PURPOSE_5",
+    "SECURE_BOOT_EN",
+    "SPI_BOOT_CRYPT_CNT",
+    "ENABLE_SECURITY_DOWNLOAD",
+    "DIS_DOWNLOAD_MODE"
+  ],
+  "virtual_new_metadata_field_count": 14,
+  "virtual_status": 0,
+  "port_owner_check_status": 1,
+  "statuses": {
+    "metadata": 0,
+    "release": 0
+  },
+  "utc": {
+    "metadata": {
+      "start": "2026-10-25T23:21:46.228852+00:00",
+      "end": "2026-10-25T23:21:47.363070+00:00"
+    },
+    "release": {
+      "start": "2026-10-25T23:21:47.363463+00:00",
+      "end": "2026-10-25T23:21:47.923983+00:00"
+    }
+  },
+  "installed_source_identities": [
+    {
+      "package_path": "espefuse/efuse/esp32c6/mem_definition.py",
+      "sha256": "8f53652031453746b36f6234c2fd1f626ca199ff4da48bfc90a80e4fc63518d9"
+    },
+    {
+      "package_path": "espefuse/efuse/esp32c6/fields.py",
+      "sha256": "21cc719f9686864138c12db1fba8e6a495c7a2afacb15d046289c1b6fc3267ec"
+    },
+    {
+      "package_path": "espefuse/efuse/base_operations.py",
+      "sha256": "e918047a10b7d7cebd19b19fe881e58a78c2c9a73b52300058702f470afaa171"
+    },
+    {
+      "package_path": "esptool/__init__.py",
+      "sha256": "96513abe8944836630610465e5fab03c4da9a4bc9d27f177413f6547f859430e"
+    }
+  ],
+  "limits": [
+    "The exact field list and source scope were recorded privately before collection; this is an extension of the existing baseline read, not a new general metadata collector qualification.",
+    "Stock espefuse internally reads all eFuse blocks; selected saved output excludes key contents.",
+    "The esptool release uses broader SPI/XMC startup/reset setup and a host hard-reset sequence; no independent physical application-boot or storage-persistence attestation.",
+    "No eFuse programming, bridge programming or explicit main-array flash write. User-key contents and credentials remain unaudited."
+  ],
+  "independent_review": {
+    "saved_summary_agrees": true,
+    "original_files_unchanged": 16,
+    "in_memory_contrary_cases_detected": 12,
+    "key_contents_or_blankness_claimed": false,
+    "independent_physical_boot_claimed": false
+  }
+}

@@ -28,8 +28,8 @@ The wireless explorer now has its own Rust protocol/client workspace and a
 separate ESP-IDF firmware workspace. Consult its result records for actual
 build and hardware coverage; directory presence alone establishes neither.
 
-[Device identity and privacy](device-identity/README.md) tracks MAC addresses,
-USB serials, factory identifiers and privacy experiments.
+[Device identity](device-identity/README.md) inventories per-board identifiers
+and documents their supported modification paths and verification limits.
 
 New Rust applications should choose and pin their own compatible toolchains
 and dependency sets. Establish a project-local Cargo workspace or an explicit

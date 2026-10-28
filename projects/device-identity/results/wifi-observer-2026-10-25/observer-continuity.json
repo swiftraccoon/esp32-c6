@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "source_fixed_state_unchanged": true,
+  "configuration_and_interface_state_unchanged": true,
+  "selected_source_mapping_unchanged": true,
+  "selected_driver_class_unchanged": true,
+  "preflight_passed": true,
+  "postflight_passed": true,
+  "no_packet_stream_requested_by_pre_or_postflight": true
+}

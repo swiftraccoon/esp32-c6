@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "kind": "retained_rejected_capture_invocation",
+  "freeze_commit": "ff03a3811b3aae26269ad14b89f9e7fce093500c",
+  "planned_captures": 2,
+  "attempted_invocations": 1,
+  "remote_stream_requests": 0,
+  "admitted_complete_captures": 0,
+  "output_directory_created": false,
+  "phase": "local profile validation",
+  "collector_exit_code": 1,
+  "reason": "Kismet UUID uppercase notation was not normalized to the canonical lowercase worker request",
+  "correction": "normalize profile UUID before existing strict request validation",
+  "private_profile_changed": false,
+  "receiver_changed": false,
+  "board_touched": false
+}

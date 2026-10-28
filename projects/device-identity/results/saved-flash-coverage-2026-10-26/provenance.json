@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "classification": "Retrospective byte coverage and source interpretation; snapshots were already explored.",
+  "original_esp_idf_revision": "4c2820d377d1375e787bcef612f0c32c1427d183",
+  "original_nimble_revision": "a9a4c701981b86c91fdc63fce4cb7bc05c69caac",
+  "tools": [
+    "Unmodified original ESP-IDF 5.4.1 partition and NVS tools",
+    "Unmodified esptool 4.12.0 offline image_info",
+    "Offline GDB/objdump against matching original ELF",
+    "Retained private byte-comparison and raw-record review invocations"
+  ],
+  "artifact_ranges": [
+    {
+      "kind": "bootloader",
+      "offset": 0,
+      "bytes": 21872
+    },
+    {
+      "kind": "partition_table",
+      "offset": 32768,
+      "bytes": 3072
+    },
+    {
+      "kind": "application",
+      "offset": 65536,
+      "bytes": 599904
+    }
+  ],
+  "nvs_offset": 36864,
+  "nvs_bytes": 24576,
+  "classifier_source_sha256": "989a2c6e8b494d4cc7c4bba4c7cb095a08f68ffe68d1d48ff91b2ab9ebba87c3",
+  "qualification": {
+    "whole_array_controls": 31,
+    "independent_whole_images": 5,
+    "independent_artifact_comparisons": 15,
+    "nvs_contrary_controls": 9,
+    "independent_nvs_bytes": 122880,
+    "independent_nvs_slots": 3780
+  },
+  "scope_limits": [
+    "No new physical access; saved snapshots do not attest live board state.",
+    "Every gap outside the known artifacts and NVS is FF; compiled contents and NVS retain semantic/provenance limits.",
+    "Child blob payload slots are not independent named keys; recognized historical heads were inspected but not reconstructed as live values.",
+    "Null original ELF store callbacks and generated-key branches are source/binary facts; volatile key values, random-generation success and pairing history were not measured.",
+    "Snapshot/NVS digests, addresses, binaries and complete raw tool output remain private."
+  ],
+  "primary_sources": [
+    "https://docs.espressif.com/projects/esp-idf/en/v5.4.1/esp32c6/api-guides/partition-tables.html",
+    "https://docs.espressif.com/projects/esp-idf/en/v5.4.1/esp32c6/api-reference/storage/nvs_partition_parse.html"
+  ]
+}

@@ -1,0 +1,4 @@
+ef7f9983ed212d29363b172a451af3ccd41ee873a5716898b88105a961026586  .cache/espressif/idf-5.5.6/espressif/esp-idf/v5.5.6/components/esp_hw_support/mac_addr.c
+fa9c52908578ab2db6163006af1caaadcd64226ddf108e55153a75a7e0985b28  .cache/espressif/idf-5.5.6/espressif/esp-idf/v5.5.6/components/esp_hw_support/include/esp_mac.h
+b6be3e2700ae592207b06e98c883b5699d6c7c33914e3aab2032ce9feafbb23a  .cache/espressif/idf-5.5.6/espressif/esp-idf/v5.5.6/components/esp_hw_support/port/esp32c6/Kconfig.mac
+76474312bc449ec5bf49e087fd4cccbe137a3086a92d2a7401b4ad19d3c105a0  .cache/espressif/idf-5.5.6/espressif/esp-idf/v5.5.6/components/soc/esp32c6/include/soc/soc_caps.h

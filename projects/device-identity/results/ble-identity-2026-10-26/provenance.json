@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "method_freeze": "0374ccd2ca4dc875594045db04519bdaff68cc6f",
+  "image_sha256": "59740f6165a3e3e97ecdcca7aecc335d62b1deb558fb290b8bd1eaa3ff71fd34",
+  "selected_image_rebuilt": false,
+  "trial_composition_sha256": "c464e0664affebe636181a32276f9aa70c33c82b262638c9eebb99b9978ba4cb",
+  "accepted_hci_checker_sha256": "0245edaf774da0e223ffaded84c4680ec4c1354eb10aca74cc25c068bb3b6750",
+  "tools": {
+    "esptool": "4.12.0",
+    "pyserial": "3.5",
+    "bluez": "5.84",
+    "tshark": "4.6.9"
+  },
+  "qualification": {
+    "validator_positive_controls": 9,
+    "validator_contrary_controls": 74,
+    "actual_host_mock_controls": 11,
+    "accepted_hci_controls": 23,
+    "independent_hci_controls": 8
+  },
+  "retained_failures": [
+    {
+      "stage": "BlueZ discovery attempt",
+      "result": "Busy; no accepted scan window, followed by separate passive monitoring"
+    },
+    {
+      "stage": "Original native console attempt",
+      "result": "Native port open failed; no complete interval or payload write"
+    },
+    {
+      "stage": "First backup preparation",
+      "result": "Wrong BASE MAC label assertion before backup or array write; normal release completed"
+    },
+    {
+      "stage": "First controlled trial",
+      "result": "Receiver cap expired before Start; only Status and cleanup Stop, followed by verified full restoration"
+    },
+    {
+      "stage": "HCI checker revision two",
+      "result": "Independent late-zero-report contrary input was incorrectly accepted; revision three rejects every unsupported report count before accepted collection"
+    }
+  ],
+  "limits": [
+    "Receiver-controller HCI presence, not raw over-the-air CRC or complete RF delivery.",
+    "No silence, full transition/startup coverage, hot change while advertising, cold boot, RPA/privacy, bonding or correlation-reduction result.",
+    "The shared nonce deliberately links both controls. The original application uses NimBLE; this controlled image uses Bluedroid.",
+    "Device-MD5 agreement covers the complete restored array at verification; later application persistence and independent boot attestation remain unmeasured.",
+    "Exact addresses, nonce, ambient records, USB paths and full-flash contents/hashes remain private."
+  ]
+}

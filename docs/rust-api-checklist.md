@@ -16,6 +16,7 @@ decisions cover all 54 entries:
 - [HAL firmware](../projects/os-evaluation/firmware/esp-hal/docs/api.md) and
   [IDF firmware](../projects/os-evaluation/firmware/esp-idf/docs/api.md).
 - [Wireless explorer](../projects/wireless-explorer/docs/api.md).
+- [Device identity host tools, protocol and firmware](../projects/device-identity/docs/api.md).
 
 The authority and embedded mappings are in [coding-standard.md](coding-standard.md).
 

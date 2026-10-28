@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "kind": "cp2102n_configuration_integrity",
+  "whole_usb_capture_replayed": true,
+  "configuration_bytes": 678,
+  "configuration_layout_version": 1,
+  "little_endian_size_matches_length": true,
+  "checksum_coverage_bytes": 676,
+  "big_endian_fletcher16_valid": true,
+  "update_byte_is_default_ff": true,
+  "lock_state_qualified": false,
+  "programming_permission_qualified": false
+}

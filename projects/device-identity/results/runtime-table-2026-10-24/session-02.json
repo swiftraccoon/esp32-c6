@@ -1,0 +1,39 @@
+{
+  "schema_version": 2,
+  "startup": {
+    "schema_version": 1,
+    "byte_count": 230,
+    "line_count": 9,
+    "rom_boot_observed": true
+  },
+  "table": {
+    "schema_version": 1,
+    "kind": "runtime_table_summary",
+    "observer": "uart_application_api",
+    "phase_count": 4,
+    "factory_unchanged": true,
+    "base_override_matches": true,
+    "cached_interfaces_unchanged_after_base_override": true,
+    "interface_overrides_match": true,
+    "initial_table_state_restored": true
+  },
+  "usb_host_properties": {
+    "schema_version": 1,
+    "source_format": "macos_sp_usb_host_data_type",
+    "observer": "attached_usb_host",
+    "domains": [
+      {
+        "domain": "native_usb_serial_jtag",
+        "before_count": 1,
+        "after_count": 1,
+        "serial_property": "unchanged"
+      },
+      {
+        "domain": "cp2102n_bridge",
+        "before_count": 1,
+        "after_count": 1,
+        "serial_property": "unchanged"
+      }
+    ]
+  }
+}

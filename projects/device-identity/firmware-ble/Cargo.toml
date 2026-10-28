@@ -1,0 +1,40 @@
+[package]
+name = "device-identity-ble-firmware"
+version = "0.1.0"
+edition = "2024"
+publish = false
+rust-version = "1.96"
+description = "Command-gated static-random BLE advertising controls"
+
+[workspace]
+
+[features]
+firmware = []
+
+[[bin]]
+name = "device-identity-ble-firmware"
+path = "src/main.rs"
+required-features = ["firmware"]
+
+[dependencies]
+serde = { version = "=1.0.229", default-features = false, features = ["derive"] }
+serde-json-core = "=0.6.0"
+
+[target.'cfg(target_os = "espidf")'.dependencies]
+esp-idf-hal = { git = "https://github.com/esp-rs/esp-idf", rev = "a209052f378be61dd0f2d566b7fbe0f9593b0cd5" }
+esp-idf-sys = { git = "https://github.com/esp-rs/esp-idf", rev = "a209052f378be61dd0f2d566b7fbe0f9593b0cd5" }
+
+[build-dependencies]
+embuild = { version = "=0.33.7", features = ["espidf"] }
+
+[profile.release]
+codegen-units = 1
+debug = 2
+lto = "thin"
+opt-level = 3
+panic = "abort"
+
+[package.metadata.esp-idf-sys]
+esp_idf_tools_install_dir = "workspace"
+esp_idf_version = "tag:v5.5.6"
+mcu = "esp32c6"

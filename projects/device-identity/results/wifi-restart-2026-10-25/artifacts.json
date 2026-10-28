@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "collector_artifact": "identityctl-v2",
+  "collector_sha256": "a98ef45de81d032584aa4b44a1e56322c9014234aa9e13ae1958086ca9f72b96",
+  "collector_target": "aarch64-apple-darwin",
+  "collector_rust": "1.96.0",
+  "firmware_binary": "device-identity-wifi-restart",
+  "firmware_target": "riscv32imac-esp-espidf",
+  "firmware_wire_version": 2,
+  "firmware_elf_sha256": "ed0e5a79040558320d1ccf0f74c5bc435ddbadcd871b4e4ef31870d9f3079eb4",
+  "segments": [
+    {
+      "artifact": "generated-bootloader.bin",
+      "bytes": 14112,
+      "flash_offset": 0,
+      "flash_offset_hex": "0x0",
+      "sha256": "4fda9b2d05b54c91949f6a4228f15b1ad1049c0946cda6b7b57cc77e3fdafbde"
+    },
+    {
+      "artifact": "generated-partition-table.bin",
+      "bytes": 3072,
+      "flash_offset": 32768,
+      "flash_offset_hex": "0x8000",
+      "sha256": "73c0b5c3e5fcba3a151cc70c453c93dd5f4798899e7f2f8cca76da1f32ffc501"
+    },
+    {
+      "artifact": "ap.bin",
+      "bytes": 936112,
+      "flash_offset": 65536,
+      "flash_offset_hex": "0x10000",
+      "sha256": "e78e1e4e6ceabba0dcb596a5d114cfccefb295f84bbefed6829f03619acebbec"
+    }
+  ],
+  "worker_sha256": "16e83bda1333b5c08b7232acf95e7675b9e2f9d32075a3dfdca7f7211f875b30",
+  "worker_rust": "1.90.0",
+  "planned_sessions": 2,
+  "phases_per_session": 2,
+  "session_kind": "one retained UART and driver; checked stop and original restoration between distinct AP controls; same nonce SSID",
+  "requested_phase_window_millis": 8000,
+  "receiver_packet_quota_per_phase": 32,
+  "receiver_deadline_seconds_per_phase": 120,
+  "receiver_ready_wait_seconds_per_phase": 30,
+  "backup_bytes_required": 8388608,
+  "restoration": "separately verified full fresh image before release",
+  "raw_data": "private",
+  "hardware_orchestration_sha256": "d478697d806b10d7d3a1a2cb3510cf1b366f49bfbcadf4bbfd6e1687e71d5eeb",
+  "receiver_check_orchestration_sha256": "539aeb4019a8e0ddcea0d3c0485d952abc5084591ab213e56b98d092c759aad0",
+  "deployment_mode": "separate aligned bootloader/partition/application segments; no merge or erase-all",
+  "flash_settings": "keep",
+  "restoration_attempt_limit": 2,
+  "profile_policy": "presence required per phase; whole-capture profile qualified only for entirely checked exact targets",
+  "clock_policy": "production monotonic Instant; test-only manual transport time; response deadline checked after received bytes",
+  "runtime_libraries_hermetic": false
+}

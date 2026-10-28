@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "receiver": {
+    "schema_version": 1,
+    "interface_count": 1,
+    "packet_count": 32,
+    "management_frame_count": 32,
+    "beacon_count": 32,
+    "other_frame_count": 0,
+    "bad_fcs_count": 0,
+    "unsupported_frame_count": 0,
+    "fcs_unqualified_count": 0,
+    "visible_ssid_beacon_count": 32,
+    "hidden_ssid_beacon_count": 0,
+    "channel_ie_beacon_count": 32,
+    "tim_ie_beacon_count": 32,
+    "rsn_ie_beacon_count": 0,
+    "vendor_ie_beacon_count": 32
+  },
+  "witness": {
+    "schema_version": 1,
+    "packet_count": 32,
+    "qualified_beacon_count": 32,
+    "matching_beacon_count": 32,
+    "matching_unqualified_fcs_beacon_count": 0,
+    "matching_ssid_wrong_mac_count": 0,
+    "matching_mac_wrong_ssid_count": 0
+  },
+  "uart_commands": 3,
+  "stop_confirmed": true
+}

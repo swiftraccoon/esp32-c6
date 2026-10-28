@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "state": "finalized_sanitized_derivative",
+  "reset_separated_boots": 2,
+  "per_boot": [
+    {
+      "boot": 1,
+      "selected_bytes": 311,
+      "original_descriptor_matches": true,
+      "host_synchronized_before_and_after": true,
+      "irk_default_nonzero": true,
+      "irk_current_nonzero": true,
+      "irk_default_equals_current": true,
+      "null_key_and_store_callbacks": 5,
+      "sc_generation_flag": 0,
+      "sc_public_key_captured": false,
+      "running_resume_checked": true
+    },
+    {
+      "boot": 2,
+      "selected_bytes": 311,
+      "original_descriptor_matches": true,
+      "host_synchronized_before_and_after": true,
+      "irk_default_nonzero": true,
+      "irk_current_nonzero": true,
+      "irk_default_equals_current": true,
+      "null_key_and_store_callbacks": 5,
+      "sc_generation_flag": 0,
+      "sc_public_key_captured": false,
+      "running_resume_checked": true
+    }
+  ],
+  "irk_default_differs_between_boots": true,
+  "irk_current_differs_between_boots": true,
+  "final_normal_reset_checked": true,
+  "final_reset_completed_utc": "2026-10-26T19:21:20.933696+00:00",
+  "final_boot_keys_captured": false,
+  "pairing_induced": false,
+  "private_scalar_or_link_keys_requested": false,
+  "entropy_or_population_uniqueness_qualified": false
+}

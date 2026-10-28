@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "kind": "retained_failed_cohort",
+  "transport_revision": 1,
+  "freeze_commit": "368d57f7b7dd3f35e494808add678d0d812a1d52",
+  "planned_sessions": 2,
+  "attempted_sessions": 1,
+  "accepted_sessions": 0,
+  "first_attempt": {
+    "outcome": "failed",
+    "reason": "runtime serial response timed out",
+    "received_bytes": 0,
+    "transmitted_bytes": 98,
+    "complete_exchanges": 0,
+    "cleanup_attempted": true,
+    "cleanup_success": false
+  },
+  "followup_diagnostic": {
+    "method": "existing UART client with explicit DTR/RTS deassertion",
+    "startup_bytes": 230,
+    "response_bytes": 68,
+    "expected_probe_rejection_observed": true,
+    "scope": "transport diagnostic; no accepted table phase or physical line-level isolation"
+  }
+}

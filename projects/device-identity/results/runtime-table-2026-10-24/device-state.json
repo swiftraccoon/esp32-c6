@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "verified-full-flash-restoration",
+  "board": "ESP32-C6-DevKitC-1-N8",
+  "restored_bytes": 8388608,
+  "backup": {
+    "fresh_read_exit": 0,
+    "separate_initial_verify_exit": 0,
+    "pre_probe_verify_exit": 0,
+    "original_sha256_record": "private",
+    "original_file_hash_rechecked": true
+  },
+  "probe_image": {
+    "written_bytes": 452944,
+    "write_exit": 0,
+    "separate_verify_exit": 0
+  },
+  "restoration": {
+    "write_exit": 0,
+    "separate_full_range_verify_exit": 0,
+    "reset_exit": 0,
+    "write_header_policy": "explicit mode/frequency/size keep",
+    "verify_header_policy": "keep defaults; ESPTOOL_FF, ESPTOOL_FM and ESPTOOL_FS absent",
+    "verified_at_utc": "2026-10-25T03:15:53Z",
+    "hard_reset_completion_at_utc": "2026-10-25T03:15:54Z",
+    "hard_reset_completion_message_observed": true
+  },
+  "scope": "Complete original image digest matched before reset. Existing application was released; application health and later persistence were not measured."
+}
