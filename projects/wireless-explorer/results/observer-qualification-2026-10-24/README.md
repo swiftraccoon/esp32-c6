@@ -13,9 +13,9 @@ file with archive-relative paths, excluding only itself.
 
 The [observation contract](../../docs/observation.md) defines the receive modes,
 window scheduling, timestamps, buffer loss, snapshots, wire records and replay
-checks. The [Rust review](../../docs/rust-review.md) covers applicability and
-execution contexts; the [adversarial review](../../docs/observer-adversarial-review.md)
-and [retained controls](review/README.md) preserve contrary tests and failures.
+checks. The [API and safety contract](../../docs/api.md) covers applicability
+and execution contexts; [retained controls](review/README.md) preserve contrary
+tests and failures.
 
 [source-inputs-01.sha256](source-inputs-01.sha256) freezes repository-relative
 source/configuration/method bytes before board capture. The firmware uses Rust

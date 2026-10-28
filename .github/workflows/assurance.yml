@@ -82,6 +82,27 @@ jobs:
           (cd results/ble-identity-2026-10-26 && sha256sum --check SHA256SUMS)
           (cd results/saved-flash-coverage-2026-10-26 && sha256sum --check SHA256SUMS)
           (cd results/factory-trim-2026-10-27 && sha256sum --check SHA256SUMS)
+      - name: Check anonymization identity library
+        working-directory: projects/anonymization
+        run: |
+          cargo +1.96.0 fmt --all -- --check
+          cargo +1.96.0 test --workspace --locked
+          cargo +1.96.0 clippy --workspace --locked --all-targets -- -D warnings
+          cargo +1.96.0 doc --workspace --locked --no-deps
+      - name: Check anonymization adapter plan and sequencing on the host
+        working-directory: projects/anonymization/esp-idf
+        run: |
+          cargo +1.96.0 fmt --all -- --check
+          cargo +1.96.0 test --locked --lib --target x86_64-unknown-linux-gnu --config 'unstable.build-std=[]'
+          cargo +1.96.0 clippy --locked --lib --tests --target x86_64-unknown-linux-gnu --config 'unstable.build-std=[]' -- -D warnings
+          cargo +1.96.0 doc --locked --no-deps --target x86_64-unknown-linux-gnu --config 'unstable.build-std=[]'
+      - name: Check anonymization example protocol on the host
+        working-directory: projects/anonymization/examples/softap
+        run: |
+          cargo +1.96.0 fmt --all -- --check
+          cargo +1.96.0 test --locked --lib --target x86_64-unknown-linux-gnu --config 'unstable.build-std=[]'
+          cargo +1.96.0 clippy --locked --lib --tests --target x86_64-unknown-linux-gnu --config 'unstable.build-std=[]' -- -D warnings
+          cargo +1.96.0 doc --locked --no-deps --target x86_64-unknown-linux-gnu --config 'unstable.build-std=[]'
       - name: Check BLE protocol and firmware controller on the host
         working-directory: projects/device-identity/firmware-ble
         run: |

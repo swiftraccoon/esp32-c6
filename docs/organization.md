@@ -9,6 +9,7 @@ workspace package when another project actually depends on it.
 | [OS evaluation](../projects/os-evaluation/README.md) | Its crates, collector, firmware, docs, results and quality ledger under `projects/os-evaluation/` |
 | [Wireless explorer](../projects/wireless-explorer/README.md) | Its firmware, host protocol/client, docs and functional captures |
 | [Device identity](../projects/device-identity/README.md) | Its inventory tools, identifier records, procedures and observations |
+| [Anonymization](../projects/anonymization/README.md) | Its Rust integration library, examples, deployment guidance and new anonymity-validation evidence |
 | [Workspace utilities](../tools/workspace-tools/README.md) | Privacy guard and offline style-source updater |
 | Shared references | Root `docs/`: hardware, standards, privacy/assurance policy and cross-project source catalogs |
 | [Publication metadata](../quality/README.md) | Root `quality/`: privacy policy and tracked-file availability/identity inventory |
@@ -46,9 +47,10 @@ the local additions below.
 ## Cargo and local resources
 
 The root Cargo workspace contains `workspace-tools`. OS evaluation, wireless
-explorer and device identity each own a host workspace, lockfile and compatible
-toolchain. Firmware has independent manifests and target configuration. Enter
-a firmware directory before invoking Cargo so its `.cargo/config.toml` is loaded.
+explorer, device identity and anonymization each own a workspace, lockfile and
+compatible toolchain. Anonymization's adapter and example have independent
+workspaces too. Firmware has independent manifests and target configuration.
+Enter a firmware directory before invoking Cargo so its `.cargo/config.toml` is loaded.
 
 Installed `ldproxy` lives in ignored `.tools/bin/`. The shared, unmodified
 IDF 5.5.6 SDK/tools live in ignored `.cache/espressif/idf-5.5.6/`; each consuming
@@ -71,15 +73,16 @@ review walkthrough needs a continuing use to remain in Git. Retire an obsolete
 study as a whole; do not remove unfavorable observations from a retained study.
 
 The [OS results index](../projects/os-evaluation/results/README.md) states each
-collection's purpose. Removed generated/review files remain recoverable from Git
-history, and the [publication inventory](../quality/publication.json) records
-unavailable historical inputs. Current documentation is maintained text, not an
-immutable copy of its former review page.
+collection's purpose. The [publication inventory](../quality/publication.json)
+records unavailable historical inputs. Current documentation is maintained text,
+not an immutable copy of its former review page.
 
 The inventory distinguishes omitted original inputs from retired publications
 added later. Both remain unavailable; a retired addition gains no invented
-original hash. Sealed result text can retain its historical links without
-requiring obsolete review pages to remain active documentation.
+original hash. Public documentation links to available resources; a missing
+historical input is an evidence limit, not a usable reader reference. When
+maintaining public result text, update its public seal and inventory hashes
+without changing the original observation or frozen-input identities.
 
 The inventory retains original recorded names/hashes and exact current
 `relocations`. Historical `results/`, `quality/evidence.json` and

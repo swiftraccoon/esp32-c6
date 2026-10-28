@@ -1,5 +1,6 @@
 [workspace]
 exclude = [
+    "projects/anonymization",
     "projects/device-identity",
     "projects/os-evaluation",
     "projects/wireless-explorer",

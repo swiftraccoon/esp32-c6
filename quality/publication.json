@@ -14,8 +14,8 @@
       "path": ".github/workflows/assurance.yml",
       "status": "modified",
       "original_sha256": "5d30bf32e3cbcb4d4a650e71ab45ab120ce7cb2a4e576e09c9302c1b1fb1e873",
-      "public_sha256": "a4afc6bff4aed62728ac7628c7ffa5d2c7fe7a69a075a46ebae13421af4fb44b",
-      "reason": "Vendor pinned style references, add explicit upstream updates and preserve independent updater controls. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Add qualified read-only USB/eFuse inventory tooling and sanitized baseline evidence. Record both accepted runtime-table sessions, the retained failed cohort, scoped USB observations and verified full-flash restoration. Seal the bounded ROM-state USB observation, retain both failed original-state cohorts, disclose tool-provenance limits and update inventory/CI coverage. Add qualified bounded Kismet Wi-Fi stream capture/replay, a remote credential-custody worker and strict private PCAPNG/beacon summaries; freeze the ambient receiver method before collection. Seal two independently replayed 32-EPB Wi-Fi prefixes, preserve both rejected cohorts and record zero-beacon/C6 coverage limits with unchanged observer-state snapshots. Seal two independently checked on-air SoftAP witnesses, recorded driver cleanup and verified full-image restoration; update active-address inventory, hardware boundary and CI seal coverage. Record the independently reproduced retrospective equality of selected beacon fields across the complete existing two-boot cohort; seal sanitized counts and preserve rotation/uniqueness limits. Seal two independently checked stop/restart AP address-change sessions, 120 target beacons with both collateral profiles unqualified, and verified fresh full-image restoration; update the inventory and latest hardware boundary. Seal retrospective whole-USB factory relation/configuration integrity and three original-image physical NVS audits, preserving failed cohorts and unknown credentials/lock state. Add built and independently reviewed BLE advertising firmware with explicit SDK callback/Stop limits; seal both corrected standalone receiver windows and retain the failed attempt. Record the accepted existing-API full UID/security read, retained failed attempt, key-block blankness receipts and retrospective logical PHY NVS inspection; maintain scope and existing-tool modification methods. Record independently replayed original BLE public-address reports and two stopped/restarted random-address HCI witnesses, preserve failed attempts and verify full fresh-image restoration. Resolve supported identity-change paths from vendor sources, identify volatile NimBLE key surfaces, and record independently reproduced whole-array/NVS coverage for five saved originals. Record the independently replayed stock-tool 27-row factory calibration export, close the retained trim-readout gap, and preserve the unverified bridge power-cycle activation boundary."
+      "public_sha256": "086726f439840c9a0d064f4fef8a3ff2325240960a822aee749a37f391d44702",
+      "reason": "Vendor pinned style references, add explicit upstream updates and preserve independent updater controls. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Add qualified read-only USB/eFuse inventory tooling and sanitized baseline evidence. Record both accepted runtime-table sessions, the retained failed cohort, scoped USB observations and verified full-flash restoration. Seal the bounded ROM-state USB observation, retain both failed original-state cohorts, disclose tool-provenance limits and update inventory/CI coverage. Add qualified bounded Kismet Wi-Fi stream capture/replay, a remote credential-custody worker and strict private PCAPNG/beacon summaries; freeze the ambient receiver method before collection. Seal two independently replayed 32-EPB Wi-Fi prefixes, preserve both rejected cohorts and record zero-beacon/C6 coverage limits with unchanged observer-state snapshots. Seal two independently checked on-air SoftAP witnesses, recorded driver cleanup and verified full-image restoration; update active-address inventory, hardware boundary and CI seal coverage. Record the independently reproduced retrospective equality of selected beacon fields across the complete existing two-boot cohort; seal sanitized counts and preserve rotation/uniqueness limits. Seal two independently checked stop/restart AP address-change sessions, 120 target beacons with both collateral profiles unqualified, and verified fresh full-image restoration; update the inventory and latest hardware boundary. Seal retrospective whole-USB factory relation/configuration integrity and three original-image physical NVS audits, preserving failed cohorts and unknown credentials/lock state. Add built and independently reviewed BLE advertising firmware with explicit SDK callback/Stop limits; seal both corrected standalone receiver windows and retain the failed attempt. Record the accepted existing-API full UID/security read, retained failed attempt, key-block blankness receipts and retrospective logical PHY NVS inspection; maintain scope and existing-tool modification methods. Record independently replayed original BLE public-address reports and two stopped/restarted random-address HCI witnesses, preserve failed attempts and verify full fresh-image restoration. Resolve supported identity-change paths from vendor sources, identify volatile NimBLE key surfaces, and record independently reproduced whole-array/NVS coverage for five saved originals. Record the independently replayed stock-tool 27-row factory calibration export, close the retained trim-readout gap, and preserve the unverified bridge power-cycle activation boundary. Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
     },
     {
       "path": ".gitignore",
@@ -42,15 +42,15 @@
       "path": "Cargo.toml",
       "status": "modified",
       "original_sha256": "17b699bded20cfd2e7101a795745e0f98953c892b18d01a1f0cf14a91c3b2645",
-      "public_sha256": "37f5e1ccaac36cc63c968876fee94dba5fe64970ce64a40f04e3387143bbbcf1",
-      "reason": "Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Add qualified read-only USB/eFuse inventory tooling and sanitized baseline evidence."
+      "public_sha256": "6b984f8c415d90616cf07bbde86c2e2c210bfdacda2b4c084a70e5110a1584b6",
+      "reason": "Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Add qualified read-only USB/eFuse inventory tooling and sanitized baseline evidence. Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
     },
     {
       "path": "README.md",
       "status": "modified",
       "original_sha256": "3c924a891550341fa47789421ddbab16a7cb2cc24ca17ad8fac092efe90faf52",
-      "public_sha256": "d81ad56119bca6b274ecd47c9a5ae0e84446f8d5e4ae3e145093b118537cf51b",
-      "reason": "Document device identity and work-focused writing; add reviewed passive multi-radio capture tooling and collecting qualification inputs. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Add qualified read-only USB/eFuse inventory tooling and sanitized baseline evidence. Record both accepted runtime-table sessions, the retained failed cohort, scoped USB observations and verified full-flash restoration. Retire archived application-role, Nordic, continuous-receiver and superseded ROM-record prototypes from the active identity workspace; preserve complete historical evidence and the focused experiment path."
+      "public_sha256": "5aedf8116e3ac73736ff7cea490f55839439a3b0f3328e6798e437f707bb907b",
+      "reason": "Document device identity and work-focused writing; add reviewed passive multi-radio capture tooling and collecting qualification inputs. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Add qualified read-only USB/eFuse inventory tooling and sanitized baseline evidence. Record both accepted runtime-table sessions, the retained failed cohort, scoped USB observations and verified full-flash restoration. Retire archived application-role, Nordic, continuous-receiver and superseded ROM-record prototypes from the active identity workspace; preserve complete historical evidence and the focused experiment path. Establish the anonymization project objective, planned Rust integration and independently verified deployment scope, with project ownership and explicit implementation status. Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
     },
     {
       "path": "crates/bench-core/Cargo.toml",
@@ -287,8 +287,8 @@
       "path": "docs/organization.md",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "99da2cdaf8b7955a94f8d998f5f53a00f5e4fc18d7508a658848b3a769ff8a46",
-      "reason": "Project-owned source, configuration or maintained documentation; new derived evidence is labeled with its source identity and scope. Define project instruction scopes and private native Codex overrides. Add qualified read-only USB/eFuse inventory tooling and sanitized baseline evidence."
+      "public_sha256": "addeed8ed6a8ae90cf63595c3b11a919ad705ad98833fb5d422ddfc791ecc62e",
+      "reason": "Project-owned source, configuration or maintained documentation; new derived evidence is labeled with its source identity and scope. Define project instruction scopes and private native Codex overrides. Add qualified read-only USB/eFuse inventory tooling and sanitized baseline evidence. Establish the anonymization project objective, planned Rust integration and independently verified deployment scope, with project ownership and explicit implementation status. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "docs/os/ariel-os.md",
@@ -525,8 +525,8 @@
       "path": "docs/research/timing-and-concurrency-contract.md",
       "status": "modified",
       "original_sha256": "8a06fe142e73140533bdece92b86ac2b757bd6bb7fa44fcde341a665fc00c83f",
-      "public_sha256": "df0d89c7b64e95f02bf9fc096feea7bf75a9c915805b8fc157cc3636a0d7be9b",
-      "reason": "Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities."
+      "public_sha256": "071ba2bc50962401942f17964f788fe80739941a58001686640600f6d8c4185a",
+      "reason": "Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "docs/research/utilization-audit.md",
@@ -1309,8 +1309,8 @@
       "path": "firmware/esp-hal/README.md",
       "status": "modified",
       "original_sha256": "95c6e1c4050a6c5fb4e0c45fdf837c0af836cf9e40c8016451e7c4b79e2a3e4f",
-      "public_sha256": "292541b9b5269300e1bc716bd85caa7ae1972fbf2b774e462204b71d58268466",
-      "reason": "Document device identity and work-focused writing; add reviewed passive multi-radio capture tooling and collecting qualification inputs. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities."
+      "public_sha256": "b9c345798c305fef6607b7fc86892d8ec67b947a3b82d8f97c68e90a7eac6f26",
+      "reason": "Document device identity and work-focused writing; add reviewed passive multi-radio capture tooling and collecting qualification inputs. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "firmware/esp-hal/build.rs",
@@ -1393,8 +1393,8 @@
       "path": "firmware/esp-idf/README.md",
       "status": "modified",
       "original_sha256": "f6d28dd79c5ee1f78a13961af43613f70bc48057b10b3778ea89291f69a03cea",
-      "public_sha256": "5be5f70466897ae08a7dd1c58239eea76d2923da2542c6d62506b0415d6dd7a0",
-      "reason": "Document device identity and work-focused writing; add reviewed passive multi-radio capture tooling and collecting qualification inputs. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities."
+      "public_sha256": "aed48c7a1ffb63b5c5ab72da968934323a0a676476e91e1b4d6306b3bfd55e87",
+      "reason": "Document device identity and work-focused writing; add reviewed passive multi-radio capture tooling and collecting qualification inputs. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "firmware/esp-idf/artifacts/build-inputs.sha256",
@@ -1610,8 +1610,8 @@
       "path": "projects/README.md",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "60460d85f5b22d2a1e987b5d0fc08c11a4ed005b3398264691d1a58efbb702a3",
-      "reason": "Document device identity and work-focused writing; add reviewed passive multi-radio capture tooling and collecting qualification inputs. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Define project instruction scopes and private native Codex overrides. Retire archived application-role, Nordic, continuous-receiver and superseded ROM-record prototypes from the active identity workspace; preserve complete historical evidence and the focused experiment path."
+      "public_sha256": "96923c29ebe230c91d2ec409d71d59f1e3fd15bdd0299b9024614a07f210fa99",
+      "reason": "Document device identity and work-focused writing; add reviewed passive multi-radio capture tooling and collecting qualification inputs. Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Define project instruction scopes and private native Codex overrides. Retire archived application-role, Nordic, continuous-receiver and superseded ROM-record prototypes from the active identity workspace; preserve complete historical evidence and the focused experiment path. Establish the anonymization project objective, planned Rust integration and independently verified deployment scope, with project ownership and explicit implementation status."
     },
     {
       "path": "projects/device-identity/AGENTS.md",
@@ -3003,8 +3003,8 @@
       "path": "projects/os-evaluation/docs/research/errata-exposure.md",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "ba3ae7a4c20c13cc457abf1eaa8415d7e23e40ae70d2414b0b11fd75ee886f72",
-      "reason": "Project-owned source, configuration or maintained documentation; new derived evidence is labeled with its source identity and scope."
+      "public_sha256": "52f02665c5d9b61fba313e80b4aae904abe7a4d4d3c4928386b7811fce58528e",
+      "reason": "Project-owned source, configuration or maintained documentation; new derived evidence is labeled with its source identity and scope. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "projects/os-evaluation/docs/research/prior-work-wasm.md",
@@ -3290,22 +3290,22 @@
       "path": "projects/wireless-explorer/results/README.md",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "53eb6c5bf98a4cd82535708329baa69530ee1614df557300770850c0bc83ed71",
-      "reason": "Record scoped UART/native USB radio observations, retained startup failure and verified restoration; keep raw data private."
+      "public_sha256": "62ca9c1cd99561c72c8cf37fddda415dd332a8071483a5346ed6b0f16e3f985a",
+      "reason": "Record scoped UART/native USB radio observations, retained startup failure and verified restoration; keep raw data private. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "projects/wireless-explorer/results/control-2026-10-24/README.md",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "53712871d3e2b4788cd8cf3292bffb66a291631040010483d6545484cf12a843",
-      "reason": "Enforce staged/history privacy checks and reconcile explicitly sanitized wireless evidence derivatives."
+      "public_sha256": "3f8fd41970c34a5079754da0cc938426dd4877c510feffd7f92b9b20e30a19a4",
+      "reason": "Enforce staged/history privacy checks and reconcile explicitly sanitized wireless evidence derivatives. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "projects/wireless-explorer/results/control-2026-10-24/SHA256SUMS",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "0eaa07b981cc97c5aa2b8bc72f9e26ae6fb15a020f71bd089309d4d5f36af140",
-      "reason": "Enforce staged/history privacy checks and reconcile explicitly sanitized wireless evidence derivatives."
+      "public_sha256": "60a7e57be21ad3ba61175b987e6cb590c87fb6a8919864e7d4bacd429d7f7e83",
+      "reason": "Enforce staged/history privacy checks and reconcile explicitly sanitized wireless evidence derivatives. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "projects/wireless-explorer/results/control-2026-10-24/boot-monitor-01.log",
@@ -3815,15 +3815,15 @@
       "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/README.md",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "e2d46a7a9c6021e307ea3b169e1bfdb371ebd3ee63e6f167831f5d8bf0ae5eba",
-      "reason": "Record scoped UART/native USB radio observations, retained startup failure and verified restoration; keep raw data private."
+      "public_sha256": "534353645884a06dc69cea4dda53a2e3485b0787f635a1a073caf5a21af5444b",
+      "reason": "Record scoped UART/native USB radio observations, retained startup failure and verified restoration; keep raw data private. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/SHA256SUMS",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "792bd87d25c9855bea3d9771cb240bba300eddcc71d6fb9a386b3b9abab335d3",
-      "reason": "Record scoped UART/native USB radio observations, retained startup failure and verified restoration; keep raw data private."
+      "public_sha256": "d032044615ac603b861ce3f1f2d51dab367ade06d533066a3e0a7ccbd9e1722d",
+      "reason": "Record scoped UART/native USB radio observations, retained startup failure and verified restoration; keep raw data private. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/builds/observer-build-01.log",
@@ -4039,15 +4039,15 @@
       "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/README.md",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "cf0f425c008401411b0861bf4571d7bc3391d88f48c0633bcfc06f8827b3ad89",
-      "reason": "Enforce staged/history privacy checks and reconcile explicitly sanitized wireless evidence derivatives."
+      "public_sha256": "f7a906691bc0179788abcb1344a00257afd49236299212a5bdad04151ecfcb02",
+      "reason": "Enforce staged/history privacy checks and reconcile explicitly sanitized wireless evidence derivatives. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/SHA256SUMS",
       "status": "added",
       "original_sha256": null,
-      "public_sha256": "6752cb19c1bd0c4f7b60ff91712523b1f757aee336960069b68f73d357091b0d",
-      "reason": "Enforce staged/history privacy checks and reconcile explicitly sanitized wireless evidence derivatives."
+      "public_sha256": "9a6fc47a1a37bbb9812bfd5e376cacee21e551f50009d0bb2491aa08ef9f3e69",
+      "reason": "Enforce staged/history privacy checks and reconcile explicitly sanitized wireless evidence derivatives. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "projects/wireless-explorer/results/observer-qualification-2026-10-24/review/buffer-controls.log",
@@ -6111,8 +6111,8 @@
       "path": "results/idf-accounting-qualification-2026-10-23/RESULTS.md",
       "status": "modified",
       "original_sha256": "b343c386dc699e482848810de628a308d552dede06fa2d15565a6d4c918a7c45",
-      "public_sha256": "0fb7be3a9121d80dec5dac088d6ead8791a7af0d3d4712560a2d0c14d1dcde01",
-      "reason": "Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities."
+      "public_sha256": "c6ed988b2bc589d2bee4622b4426172dbeaf06342e9d9450349648951980d628",
+      "reason": "Maintain project-owned sources, current documentation and explicit artifact availability; preserve original identities. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
     },
     {
       "path": "results/idf-accounting-qualification-2026-10-23/SHA256SUMS",
@@ -12000,6 +12000,230 @@
       "original_sha256": null,
       "public_sha256": null,
       "reason": "Retire archived application-role, Nordic, continuous-receiver and superseded ROM-record prototypes from the active identity workspace; preserve complete historical evidence and the focused experiment path. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
+    },
+    {
+      "path": "projects/anonymization/AGENTS.md",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "62be8749e2f054d9dcecddfcf83728f5cb0386a70142c270f0c4980161882965",
+      "reason": "Establish the anonymization project objective, planned Rust integration and independently verified deployment scope, with project ownership and explicit implementation status. Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
+    },
+    {
+      "path": "projects/anonymization/README.md",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "c58ee3c26a41d66d8699f2323e7843203a7d01f18a73f57009eaa5b0d90884ae",
+      "reason": "Establish the anonymization project objective, planned Rust integration and independently verified deployment scope, with project ownership and explicit implementation status. Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/docs/design.md",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "93c568d99c850bbf0e1c1c81cde086d463c7372c2a2865698067905c69dc6d0f",
+      "reason": "Establish the anonymization project objective, planned Rust integration and independently verified deployment scope, with project ownership and explicit implementation status. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
+    },
+    {
+      "path": "projects/anonymization/Cargo.lock",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "12d819ace885d0c42d108868ae462a5a52652f1c9141b9c40013b5a31dd854e2",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/Cargo.toml",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "9347423f1806a508b4cb06963fdd1f2e3111107a444f7e18c0bc61007da1b8e9",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/crates/identity/Cargo.toml",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "ccdb16bea6280f3bcde90b6636a432e83a1fa8fbc6c7787f49caa2560d8fe445",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/crates/identity/README.md",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "697640d99bb5870c3e15cc6ea6ccdcaa3cd98903921578364a6de2f59f397bfa",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/crates/identity/src/lib.rs",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "a3e779b9cee6bfbdccb383b6dfa4fda2e03aecb0160fa41dba18c11e4cfb15ef",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/docs/api.md",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "ef5f8ff421be5557572e0f1129a3f5103fb005dbf88429db3e54a3ed2a8c2302",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/.cargo/config.toml",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "9fd370664d2c050ee6f9be0c7e109787403a772ad44c361cb4f0db41d674b543",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/Cargo.lock",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "16caf9b54ae0592647799d8732cce713c4979580beb4f4c1fbefdd0d83e709c5",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/Cargo.toml",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "76e83d2f03ff521394f8b926b9eeded417ba7a63824518a1cf4c17799aaf112f",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/README.md",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "351913cfe240ba591f81c311fce43a3fe3caa3706bf278271601dc8343919c36",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/build.rs",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "ab3839ebeee41924fc47158bc0ba5950268274b1b639cfc11ba4a270a65fd781",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/rust-toolchain.toml",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "bdc08c3be2420714de02ee83157e5084a32e2f43f2b064684994e750245f7782",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/sdkconfig.defaults",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "90995ca4e3c86da74e0be9312ac484958c996ccfaf3ecae1906662d41a196601",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/src/backend.rs",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "2e8d5dd2f46682e98b7b79d520d6def85761b0dc74764bf5faf1102699fdb8fb",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/src/lib.rs",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "9f9d538b2e45714559d5d3464e8e32828da596bfbce4b030ea7908e2d696fbbb",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/src/plan.rs",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "a0f3d98cd96d9af08383201d4e69adfed3bed9321d001da66a1291b5c0d0b637",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/esp-idf/src/sequence.rs",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "9a50ed69ab95aa3f42712a14552bac5d18a55980c3633d8636a85521ed4a7a2e",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/examples/softap/.cargo/config.toml",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "5992a0124ac88886241d6d6c1e336dbb6e2807cdf18bad523228a01c5c253b76",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/examples/softap/Cargo.lock",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "052e7164e90af1b5300eb03a9034eee333ac1a6db14365cd553355bb440fef0c",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/examples/softap/Cargo.toml",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "a4d8089ac2adc0c9d9c905a2b05121d5adf26b64f260a72ccacad1c92e6df954",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/examples/softap/README.md",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "d63f05a12ffcabb4990fa15e951c42c786f7bd4335a9381831eb359190bc2243",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/examples/softap/build.rs",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "fdd5ff1697924b02f99704577f90b4e6da967ff363396c6a1f05847a4201058b",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/examples/softap/partitions.csv",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "71a3cb900540499c102c022634fd4458ae7fdc8a873f9f1ad87c8b53818fa224",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/examples/softap/sdkconfig.defaults",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "7ed8c69ad65ba0549d871b0d70a1be910399598552f702b79d5261612603e2ad",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/examples/softap/src/lib.rs",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "ed21e1577a4ec4b1af062436c707101336493b4f1175d734ae25cb8dfe870f2b",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/examples/softap/src/main.rs",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "f2e4d5715abc82e01a86eea68a30971081b3cf6a3ba670b0d3150dd879ae9e94",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/experiments/softap-identity.md",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "47f96c25e552ba79ae41cd0beef3ddfce3127959c48e6ff54c8a9633696f1db0",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries. Maintain publicly usable documentation references and current project status; remove inaccessible local archive navigation while preserving observation and original input identities."
+    },
+    {
+      "path": "projects/anonymization/rust-toolchain.toml",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "fa0addad5676243d360310f981a69528b0341d295cb5012253d9721aba4d30c0",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
+    },
+    {
+      "path": "projects/anonymization/rustfmt.toml",
+      "status": "added",
+      "original_sha256": null,
+      "public_sha256": "81488ae3bcd5756dc21762a103ca15beb799fde4c27672cd7c8e7118f2eef130",
+      "reason": "Implement the initial Rust identity library, exclusive-startup ESP-IDF SoftAP adapter and bounded integration example with host/target checks; retain explicit pending external board observation and evidence boundaries."
     }
   ],
   "limitations": [

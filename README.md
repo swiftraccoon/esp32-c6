@@ -10,6 +10,7 @@ references, Rust conventions and experiment tooling.
 | [OS evaluation](projects/os-evaluation/README.md) | Compare runtimes, Rust integration and hardware support; preserve the existing research and benchmarks | Ongoing; unfinished |
 | [Wireless explorer](projects/wireless-explorer/README.md) | Record Wi-Fi, BLE and IEEE 802.15.4 traffic and summarize activity; target iPhone USB-C power/data | UART/native USB receive windows observed; phone and controlled-peer checks open |
 | [Device identity](projects/device-identity/README.md) | Inventory per-board identifiers and their supported modification paths | Factory inventory and selected radio changes verified; bridge serial activation remains unverified |
+| [Anonymization](projects/anonymization/README.md) | Make ESP32-C6 anonymization as easy and complete as possible through Rust integration and deployment guidance | Initial Rust SoftAP integration builds; external on-board verification pending |
 
 The board is an **ESP32-C6-DevKitC-1-N8** with two USB-C ports.
 The hardware probe recorded C6

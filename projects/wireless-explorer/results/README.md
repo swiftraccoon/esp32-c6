@@ -17,6 +17,9 @@ The [results and limits](observer-qualification-2026-10-24/image-03-results.md)
 and [recorder coverage](observer-qualification-2026-10-24/coverage.json) describe
 that functional scope. Raw ambient captures and device identifiers remain private.
 
+The [component contract](../docs/api.md) records current API, safety and
+validation requirements.
+
 From the project directory, run
 `target/release/wxctl verify-probes --ledger results/evidence.json`.
 This replays successful post-request records; the original failed captures

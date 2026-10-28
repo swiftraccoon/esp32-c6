@@ -146,7 +146,7 @@ successful build's unused-helper warnings and final clean build are retained.
 The first converted candidate produced an
 [invalid-frequency warning](artifacts/preflight/accounting-image-info.log)
 despite a zero image-info exit status. It was retained and rejected **before
-flashing**. The selected [SDK-generated image](../../../../results/idf-accounting-qualification-2026-10-23/artifacts/image.bin), header
+flashing**. The [selected SDK-generated image's provenance](provenance.json), header
 inspection and transfer record are separate artifacts. Qualification concerns
 that selected image and its actual runtime readbacks, not the rejected candidate.
 

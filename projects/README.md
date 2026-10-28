@@ -31,6 +31,10 @@ build and hardware coverage; directory presence alone establishes neither.
 [Device identity](device-identity/README.md) inventories per-board identifiers
 and documents their supported modification paths and verification limits.
 
+[Anonymization](anonymization/README.md) develops easy Rust integration and
+deployment guidance for the strongest achievable ESP32-C6 anonymity, using
+the identity investigation's findings as its evidence base.
+
 New Rust applications should choose and pin their own compatible toolchains
 and dependency sets. Establish a project-local Cargo workspace or an explicit
 root membership/exclusion when adding its manifest. The root workspace serves

@@ -101,9 +101,11 @@ Rust 1.99.1 failed in upstream `std` because `libc::AT_FDCWD` is missing for
 ESP-IDF. `esp-idf-sys` 0.38.1 failed because its stdio restoration glue accesses
 newlib `_reent` fields absent from its generated bindings. Selected 0.37.2
 builds without source patches; `CONFIG_ESP_CONSOLE_SECONDARY_NONE=y` addresses
-its older console routing behavior. The [original build record](README.md)
-retains these setup failures. The [protocol 2 build record](README.md)
-identifies current artifacts and checks. Building is separate from board evidence.
+its older console routing behavior. The
+[initial results](../../results/initial-2026-10-22/README.md) describe the original
+build baseline, and the
+[clocked-handoff collection](../../results/clocked-handoff-2026-10-23/README.md)
+identifies the protocol-2 artifacts. Building is separate from board evidence.
 
 ## Default protocol 2 measurement contract
 

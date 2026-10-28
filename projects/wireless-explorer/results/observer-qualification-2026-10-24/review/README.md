@@ -1,7 +1,7 @@
 # Recorder review artifacts
 
-These files retain sanitized source snapshots, controls and output from the
-[passive recorder adversarial review](../../../docs/observer-adversarial-review.md).
+These files retain sanitized source snapshots, controls and output for the
+[passive recorder qualification](../README.md).
 Original evidence remains in ignored private storage. Public copies replace
 the personal home-directory prefix with `/Users/builduser`; their checksums
 describe those derivatives. Build outputs, Cargo targets,
@@ -43,7 +43,6 @@ constructor writes synthetic archives beside its Cargo manifest, so run copied
 sources rather than writing generated fixtures into this evidence directory.
 Keep new logs distinct from the retained originals.
 
-The original commands are in the review document. The first host snapshot is
-expected to fail its hidden-suffix control; the final snapshot is expected to
-pass. The reference-escape program is expected to fail compilation. These
-commands do not access serial hardware.
+The first host snapshot is expected to fail its hidden-suffix control; the final
+snapshot is expected to pass. The reference-escape program is expected to fail
+compilation. These controls do not access serial hardware.

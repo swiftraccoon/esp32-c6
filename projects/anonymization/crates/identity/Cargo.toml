@@ -1,0 +1,9 @@
+[package]
+name = "c6-anonymization-identity"
+version = "0.1.0"
+edition = "2024"
+publish = false
+rust-version = "1.96"
+description = "Local unicast MAC and bounded SSID construction from caller-provided randomness"
+
+[dependencies]

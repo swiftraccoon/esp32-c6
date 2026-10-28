@@ -1,7 +1,7 @@
 # Control and passive Wi-Fi bring-up, 2026-10-24
 
 [Project](../../README.md) · [Procedure](../../experiments/control-bringup.md) ·
-[Provenance](provenance.json) · [Independent review](../../docs/adversarial-review.md)
+[Provenance](provenance.json) · [API and safety contract](../../docs/api.md)
 
 The corrected Rust firmware completed UART info/ping exchanges and two passive
 Wi-Fi surveys on **ESP32-C6-DevKitC-1-N8**. The surveys reported

@@ -55,8 +55,10 @@ intervening instructions. These are existing upstream C/assembly dependencies;
 no implementation was authored for this review.
 
 Read-only `llvm-nm` and `llvm-objdump --disassemble-symbols=memcpy,memmove` on
-the **archived final** [IDF ELF](../../../../results/clocked-handoff-2026-10-23/artifacts/esp-idf-freertos/firmware.elf)
-confirmed the selection:
+the **archived final** IDF ELF confirmed the selection. Its recorded identity
+is in the [clocked-handoff provenance](../../results/clocked-handoff-2026-10-23/artifacts/esp-idf-freertos/provenance.json);
+the executable is omitted from this source checkout, as declared in the
+[publication inventory](../../../../quality/publication.json).
 
 | Symbol/path | Archived ELF evidence |
 | --- | --- |
@@ -94,16 +96,17 @@ Its `mem/impls.rs` has aligned-word/reassembly paths when `mem-unaligned` is
 absent; its build script only enables that feature for x86, AArch64 and BPF.
 This source is relevant when that implementation is actually linked. It does
 **not** identify the direct HAL's selected copy routines: the archived
-[bare-metal](../../../../results/clocked-handoff-2026-10-23/artifacts/bare-metal/firmware.elf),
-[Embassy](../../../../results/clocked-handoff-2026-10-23/artifacts/embassy/firmware.elf)
-and [Ariel threading](../../../../results/ariel-qualification-2026-10-22/hello-world-threading/firmware.elf)
-ELFs resolve `memcpy` to **ROM `0x400004ac`** and `memmove` to
+bare-metal, Embassy and Ariel threading ELFs resolve `memcpy` to
+**ROM `0x400004ac`** and `memmove` to
 **ROM `0x400004b0`**. Direct HAL's
 [esp-rom-sys C6 additional.ld](https://github.com/esp-rs/esp-hal/blob/160b10794227eb84805b8676fe188c1110801e9d/esp-rom-sys/ld/esp32c6/rom/additional.ld)
 supplies those aliases. ROM instructions are not contained in those ELFs;
 their internal alignment behavior was **not established** here. IDF's
 description of C6 ROM memory routines as suboptimal for misaligned access is
 a performance note, not proof of a CPU-863 correctness failure or mitigation.
+The [clocked-handoff](../../results/clocked-handoff-2026-10-23/README.md) and
+[Ariel](../../results/ariel-qualification-2026-10-22/README.md) collections retain
+their provenance; those executables are also omitted from the source checkout.
 
 HAL's [PMP setup](https://github.com/esp-rs/esp-hal/blob/dbd951f78c1276461ea3050c2ba71f552a3508ef/esp-hal/src/soc/mod.rs)
 uses different permissions for executable RAM, stack and data. Removing

@@ -194,10 +194,11 @@ states are outside timing and do not constitute an idle-power comparison.
 
 ## Evidence and primary sources
 
-Protocol-2 [build evidence](README.md) and
-[all 54 API review decisions](docs/api.md) describe this
-implementation. The earlier [build](README.md) and
-[review](docs/api.md) remain protocol-1 historical records.
+The build instructions above and [all 54 API review decisions](docs/api.md)
+describe this implementation. The
+[initial results](../../results/initial-2026-10-22/README.md) preserve protocol-1
+observations; [clocked-handoff results](../../results/clocked-handoff-2026-10-23/README.md)
+record protocol-2 observations and their artifact provenance.
 Compilation does not establish an on-board pass; raw hardware captures belong
 to their separate results directory.
 

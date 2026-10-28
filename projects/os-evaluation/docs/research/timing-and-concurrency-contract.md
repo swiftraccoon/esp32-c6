@@ -7,6 +7,11 @@ It also identifies the timing qualification that must precede interpreting its
 numbers. No implementation, build or physical qualification was performed in
 this review. A viable source path is not an on-board pass.
 
+The proposed queue comparison was subsequently implemented and collected.
+Its [results](../../results/idf-queue-api-2026-10-23/RESULTS.md) govern current
+physical claims; the prospective language below records the source-review
+boundary before that collection.
+
 The decision is whether a maintained native queue API is worth a small Rust
 wrapper before attributing our current application-channel cost to the OS or
 considering a custom kernel. A new esp-rtos native application-thread adapter
